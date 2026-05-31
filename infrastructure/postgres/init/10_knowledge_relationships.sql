@@ -48,11 +48,8 @@ CREATE TABLE relationships (
 -- Indexes
 -- ---------------------------------------------------------------------------
 
-CREATE INDEX idx_rel_subject   ON relationships(subject_id, subject_type);
-CREATE INDEX idx_rel_object    ON relationships(object_id, object_type);
-CREATE INDEX idx_rel_predicate ON relationships(predicate);
-CREATE INDEX idx_rel_status    ON relationships(status);
-CREATE INDEX idx_rel_asset     ON relationships(asset_id);
+CREATE INDEX idx_rel_object ON relationships(object_id, object_type);
+CREATE INDEX idx_rel_asset  ON relationships(asset_id);
 
 -- ---------------------------------------------------------------------------
 -- Triggers

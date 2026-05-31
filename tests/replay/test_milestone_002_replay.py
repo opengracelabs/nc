@@ -11,10 +11,7 @@ Traceability guarantee tested here:
 """
 import json
 from pathlib import Path
-from typing import Any
-from uuid import UUID, uuid4
-
-import pytest
+from uuid import uuid4
 
 from workers.discovery_worker.normalize import normalize_unesco_whc
 from workers.discovery_worker.sources.base import RawRecord
@@ -42,7 +39,7 @@ _VALID_PREDICATES = {
 _VALID_VALUE_TYPES = {"text", "number", "date", "boolean", "uri", "geometry", "jsonb"}
 
 _VALID_FACT_TRANSITIONS = {
-    "dispute": ("disputed", {"active", "draft"}),
+    "dispute": ("disputed", {"active"}),
     "retract": ("retracted", {"disputed"}),
 }
 
@@ -431,9 +428,9 @@ def test_dispute_action_allowed_from_active() -> None:
     assert new_status == "disputed"
 
 
-def test_dispute_action_allowed_from_draft() -> None:
+def test_dispute_action_not_allowed_from_draft() -> None:
     _, allowed_from = _VALID_FACT_TRANSITIONS["dispute"]
-    assert "draft" in allowed_from
+    assert "draft" not in allowed_from
 
 
 def test_retract_action_allowed_from_disputed_only() -> None:
@@ -448,7 +445,6 @@ def test_retract_directly_from_active_is_not_allowed() -> None:
 
 def test_fact_governance_requires_reviewer() -> None:
     from services.api.routers.knowledge import FactAction
-    from pydantic import ValidationError
 
     action = FactAction(action="dispute", reviewer="auditor@example.com")
     assert action.reviewer == "auditor@example.com"

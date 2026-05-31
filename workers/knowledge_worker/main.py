@@ -4,10 +4,8 @@ Pipeline:
     claim active places (FOR UPDATE SKIP LOCKED)
     → extract_facts (field mapping, pure function)
     → build_place_concept_relationships (derived, pure function)
-    → upsert_facts (supersede on value change, skip exact duplicates)
-    → upsert_relationships (ON CONFLICT DO NOTHING)
-    → build_co_inscribed_relationships (join query across all active facts)
-    → release place (mark extraction complete)
+    → upsert_facts + upsert_relationships + release_places (single transaction)
+    → build_co_inscribed_relationships (bounded to current batch)
 """
 import argparse
 import asyncio
@@ -20,7 +18,7 @@ from .extract import build_place_concept_relationships, extract_facts
 from .store import (
     build_co_inscribed_relationships,
     claim_places_for_extraction,
-    release_place,
+    release_places,
     reset_stale_extracting,
     upsert_facts,
     upsert_relationships,
@@ -30,21 +28,26 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname
 log = logging.getLogger("knowledge_worker")
 
 
-async def process_place(pool: asyncpg.Pool, place: dict) -> None:
-    place_id = place["id"]
-    source = place.get("source", "unknown")
+async def process_places(pool: asyncpg.Pool, places: list[dict]) -> None:
+    all_facts = []
+    all_rels = []
+    place_ids = [p["id"] for p in places]
 
-    facts = extract_facts(place)
-    rels = build_place_concept_relationships(place_id, facts, source)
+    for place in places:
+        facts = extract_facts(place)
+        rels = build_place_concept_relationships(place["id"], facts, place.get("source", "unknown"))
+        all_facts.extend(facts)
+        all_rels.extend(rels)
 
     async with pool.acquire() as conn:
-        written, superseded = await upsert_facts(conn, facts)
-        rel_written = await upsert_relationships(conn, rels)
-        await release_place(conn, place_id)
+        async with conn.transaction():
+            written, superseded = await upsert_facts(conn, all_facts)
+            rel_written = await upsert_relationships(conn, all_rels)
+            await release_places(conn, place_ids)
 
     log.info(
-        "place_id=%s facts_written=%d superseded=%d relationships=%d",
-        place_id, written, superseded, rel_written,
+        "places=%d facts_written=%d superseded=%d relationships=%d",
+        len(places), written, superseded, rel_written,
     )
 
 
@@ -56,16 +59,17 @@ async def poll_active_places(pool: asyncpg.Pool) -> int:
     if not places:
         return 0
 
-    for place in places:
-        try:
-            await process_place(pool, place)
-        except Exception as exc:
-            log.error("Extraction error place_id=%s: %s", place.get("id"), exc, exc_info=True)
-            async with pool.acquire() as conn:
-                await release_place(conn, place["id"])
+    place_ids = [p["id"] for p in places]
+
+    try:
+        await process_places(pool, places)
+    except Exception as exc:
+        log.error("Extraction batch error: %s", exc, exc_info=True)
+        async with pool.acquire() as conn:
+            await release_places(conn, place_ids)
 
     async with pool.acquire() as conn:
-        co = await build_co_inscribed_relationships(conn)
+        co = await build_co_inscribed_relationships(conn, place_ids)
     if co:
         log.info("Built %d co_inscribed_with relationships", co)
 

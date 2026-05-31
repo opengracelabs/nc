@@ -31,6 +31,7 @@ CREATE TABLE concept_aliases (
     source           TEXT NOT NULL,
     confidence_score NUMERIC(4,3) CHECK (confidence_score BETWEEN 0 AND 1),
     created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     UNIQUE (concept_id, alias, language)
 );
 
@@ -51,6 +52,10 @@ CREATE INDEX idx_aliases_alias    ON concept_aliases(alias);
 
 CREATE TRIGGER trg_concepts_updated_at
     BEFORE UPDATE ON concepts
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER trg_concept_aliases_updated_at
+    BEFORE UPDATE ON concept_aliases
     FOR EACH ROW EXECUTE FUNCTION set_updated_at();
 
 -- Anti-cycle guard: walk the broader_id chain before any insert/update.

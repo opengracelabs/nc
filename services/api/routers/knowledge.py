@@ -1,8 +1,8 @@
 """Knowledge API: concepts, facts, relationships.
 
 Every fact is traceable to its source evidence via provenance.source_field.
-Governance endpoints (PATCH /facts/{id}) require a reviewer and follow the
-same state-machine pattern as /discovery/candidates and /places.
+Governance endpoints (PATCH /facts/{id}, PATCH /relationships/{id}) require a
+reviewer and follow the same state-machine pattern as /discovery/candidates.
 """
 import json
 from uuid import UUID
@@ -27,12 +27,19 @@ _FACT_COLS = """
 
 _REL_COLS = """
     id, subject_id, subject_type, predicate, object_id, object_type,
-    confidence_score, status, asset_id, provenance, created_at, updated_at
+    confidence_score, status, asset_id, provenance, agent_notes,
+    created_at, updated_at
 """
 
 _FACT_TRANSITIONS = {
-    "dispute": ("disputed", {"active", "draft"}),
+    "dispute": ("disputed", {"active"}),
     "retract": ("retracted", {"disputed"}),
+}
+
+_REL_TRANSITIONS = {
+    "activate": ("active",    {"proposed"}),
+    "dispute":  ("disputed",  {"active", "proposed"}),
+    "retract":  ("retracted", {"disputed"}),
 }
 
 _JSON_DECODE = {"label", "description", "value", "provenance", "agent_notes"}
@@ -232,6 +239,12 @@ async def act_on_fact(fact_id: UUID, body: FactAction, auth: Auth, conn: DB) -> 
 # Relationships
 # ---------------------------------------------------------------------------
 
+class RelationshipAction(BaseModel):
+    action: str       # activate | dispute | retract
+    reviewer: str
+    reason: str | None = None
+
+
 @router.get("/relationships")
 async def list_relationships(
     auth: Auth,
@@ -276,13 +289,64 @@ async def list_relationships(
     return [_decode(r) for r in rows]
 
 
+@router.get("/relationships/{rel_id}")
+async def get_relationship(rel_id: UUID, auth: Auth, conn: DB) -> dict:
+    row = await conn.fetchrow(
+        f"SELECT {_REL_COLS} FROM relationships WHERE id = $1", rel_id
+    )
+    if not row:
+        raise HTTPException(404, "Relationship not found")
+    return _decode(row)
+
+
+@router.patch("/relationships/{rel_id}")
+async def act_on_relationship(
+    rel_id: UUID, body: RelationshipAction, auth: Auth, conn: DB
+) -> dict:
+    if not body.reviewer.strip():
+        raise HTTPException(422, "reviewer is required")
+    if body.action not in _REL_TRANSITIONS:
+        raise HTTPException(422, f"action must be one of: {sorted(_REL_TRANSITIONS)}")
+    if body.action == "retract" and not body.reason:
+        raise HTTPException(422, "reason is required for retract")
+
+    row = await conn.fetchrow("SELECT status FROM relationships WHERE id = $1", rel_id)
+    if not row:
+        raise HTTPException(404, "Relationship not found")
+
+    new_status, allowed_from = _REL_TRANSITIONS[body.action]
+    if row["status"] not in allowed_from:
+        raise HTTPException(
+            422,
+            f"Cannot '{body.action}' a relationship with status '{row['status']}'. "
+            f"Allowed from: {sorted(allowed_from)}",
+        )
+
+    audit = {"action": body.action, "reviewer": body.reviewer, "reason": body.reason}
+    await conn.execute(
+        """UPDATE relationships
+           SET status = $1,
+               agent_notes = agent_notes || $2::jsonb,
+               updated_at = NOW()
+           WHERE id = $3""",
+        new_status,
+        json.dumps({"governance": audit}),
+        rel_id,
+    )
+    return {"id": str(rel_id), "status": new_status, "reviewed_by": body.reviewer}
+
+
 # ---------------------------------------------------------------------------
 # Place knowledge aggregate
 # ---------------------------------------------------------------------------
 
 @router.get("/places/{place_id}/knowledge")
 async def get_place_knowledge(place_id: UUID, auth: Auth, conn: DB) -> dict:
-    """All active facts and relationships for a place in one call."""
+    """All active facts and relationships for a place in one call.
+
+    Relationships are returned for both subject and object sides so that
+    co_inscribed_with edges (where this place may be the object) are included.
+    """
     facts = await conn.fetch(
         f"SELECT {_FACT_COLS} FROM facts"
         f" WHERE place_id = $1 AND status = 'active'"
@@ -291,7 +355,11 @@ async def get_place_knowledge(place_id: UUID, auth: Auth, conn: DB) -> dict:
     )
     rels = await conn.fetch(
         f"SELECT {_REL_COLS} FROM relationships"
-        f" WHERE subject_id = $1 AND subject_type = 'place' AND status = 'active'"
+        f" WHERE status = 'active'"
+        f"   AND ("
+        f"       (subject_id = $1 AND subject_type = 'place')"
+        f"    OR (object_id  = $1 AND object_type  = 'place')"
+        f"   )"
         f" ORDER BY predicate",
         place_id,
     )

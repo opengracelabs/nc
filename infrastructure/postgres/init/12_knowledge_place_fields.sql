@@ -8,7 +8,4 @@ ALTER TABLE places
     ADD COLUMN IF NOT EXISTS last_knowledge_extracted_at TIMESTAMPTZ,
     ADD COLUMN IF NOT EXISTS knowledge_score             DOUBLE PRECISION;
 
--- Queue index: fast lookup of places needing extraction.
-CREATE INDEX IF NOT EXISTS idx_places_knowledge_queue
-    ON places(last_knowledge_extracted_at NULLS FIRST, created_at)
-    WHERE status = 'active' AND knowledge_extracting = FALSE;
+-- Queue index is in 13_knowledge_performance_indexes.sql (idx_places_knowledge_claim_active).

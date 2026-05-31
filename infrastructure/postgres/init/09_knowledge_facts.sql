@@ -14,7 +14,7 @@ CREATE TABLE facts (
     asset_id         UUID REFERENCES assets(id),   -- evidence; NULL when derived from places.*
     source           TEXT NOT NULL,
     confidence_score NUMERIC(4,3) NOT NULL CHECK (confidence_score BETWEEN 0 AND 1),
-    status           TEXT NOT NULL DEFAULT 'draft',
+    status           TEXT NOT NULL DEFAULT 'active',
     provenance       JSONB NOT NULL DEFAULT '{}',   -- PROV-O lineage on every row
     agent_notes      JSONB NOT NULL DEFAULT '{}',
     created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -39,7 +39,7 @@ CREATE TABLE facts (
         'text','number','date','boolean','uri','geometry','jsonb'
     )),
     CONSTRAINT chk_fact_status CHECK (status IN (
-        'draft','active','disputed','superseded','retracted'
+        'active','disputed','superseded','retracted'
     ))
 );
 
@@ -53,13 +53,10 @@ CREATE UNIQUE INDEX uniq_facts_slot
 -- Performance indexes
 -- ---------------------------------------------------------------------------
 
-CREATE INDEX idx_facts_place      ON facts(place_id);
-CREATE INDEX idx_facts_predicate  ON facts(predicate);
-CREATE INDEX idx_facts_status     ON facts(status);
-CREATE INDEX idx_facts_concept    ON facts(concept_id);
-CREATE INDEX idx_facts_asset      ON facts(asset_id);
-CREATE INDEX idx_facts_place_pred ON facts(place_id, predicate, status);
-CREATE INDEX idx_facts_provenance ON facts USING GIN(provenance);
+CREATE INDEX idx_facts_place    ON facts(place_id);
+CREATE INDEX idx_facts_predicate ON facts(predicate);
+CREATE INDEX idx_facts_concept   ON facts(concept_id);
+CREATE INDEX idx_facts_asset     ON facts(asset_id);
 
 -- ---------------------------------------------------------------------------
 -- Triggers
@@ -69,8 +66,8 @@ CREATE TRIGGER trg_facts_updated_at
     BEFORE UPDATE ON facts
     FOR EACH ROW EXECUTE FUNCTION set_updated_at();
 
--- When a place's authority fields change, mark it so the knowledge worker
--- knows to supersede derived facts on its next extraction pass.
+-- When a place's authority fields change, flag stale facts AND force re-queue
+-- by nulling last_knowledge_extracted_at so the worker picks it up immediately.
 CREATE OR REPLACE FUNCTION flag_stale_facts_on_place_update()
 RETURNS TRIGGER LANGUAGE plpgsql AS $$
 BEGIN
@@ -86,6 +83,8 @@ BEGIN
             'stale_facts_flagged_at',
             to_char(NOW(), 'YYYY-MM-DD"T"HH24:MI:SS"Z"')
         );
+        NEW.last_knowledge_extracted_at = NULL;
+        NEW.knowledge_extracting = FALSE;
     END IF;
     RETURN NEW;
 END;
@@ -94,3 +93,32 @@ $$;
 CREATE TRIGGER trg_places_stale_facts
     BEFORE UPDATE ON places
     FOR EACH ROW EXECUTE FUNCTION flag_stale_facts_on_place_update();
+
+-- When inscription_year is superseded, retract co_inscribed_with relationships
+-- for that place. They will be rebuilt by the next extraction pass.
+CREATE OR REPLACE FUNCTION retract_stale_co_inscribed()
+RETURNS TRIGGER LANGUAGE plpgsql AS $$
+BEGIN
+    IF NEW.predicate = 'inscription_year'
+       AND OLD.status = 'active'
+       AND NEW.status = 'superseded'
+    THEN
+        UPDATE relationships
+        SET status     = 'retracted',
+            agent_notes = agent_notes || jsonb_build_object(
+                'retraction_reason', 'inscription_year_superseded',
+                'retracted_at',      to_char(NOW(), 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
+                'superseded_fact_id', NEW.id::text
+            ),
+            updated_at = NOW()
+        WHERE predicate = 'co_inscribed_with'
+          AND status    = 'active'
+          AND (subject_id = NEW.place_id OR object_id = NEW.place_id);
+    END IF;
+    RETURN NEW;
+END;
+$$;
+
+CREATE TRIGGER trg_facts_retract_co_inscribed
+    AFTER UPDATE ON facts
+    FOR EACH ROW EXECUTE FUNCTION retract_stale_co_inscribed();
