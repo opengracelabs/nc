@@ -21,8 +21,10 @@ def validate_candidate(candidate: dict[str, Any]) -> list[str]:
     if not any(name.values()):
         errors.append("name has no non-empty language values")
 
-    if candidate.get("status") != "approved":
-        errors.append(f"candidate status is '{candidate.get('status')}', expected 'approved'")
+    if candidate.get("status") not in {"approved", "ingesting"}:
+        errors.append(
+            f"candidate status is '{candidate.get('status')}', expected 'approved' or 'ingesting'"
+        )
 
     country_codes = candidate.get("country_codes") or []
     for code in country_codes:

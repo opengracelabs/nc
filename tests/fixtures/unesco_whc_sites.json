@@ -1,0 +1,13 @@
+[
+  {
+    "id_number": 31,
+    "site": "Great Barrier Reef",
+    "short_description": "<p>A globally significant coral reef ecosystem.</p>",
+    "criteria_txt": "(vii)(viii)(ix)(x)",
+    "date_inscribed": "1981",
+    "category": "Natural",
+    "latitude": -18.2871,
+    "longitude": 147.6992,
+    "states": [{"iso_code": "au"}]
+  }
+]

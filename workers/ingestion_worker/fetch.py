@@ -4,6 +4,7 @@ Returns bytes and the final URL (after redirects).
 """
 import asyncio
 import logging
+from pathlib import Path
 from typing import Any
 
 import httpx
@@ -23,6 +24,8 @@ def _source_url(source: str, source_id: str, config: dict[str, Any]) -> str:
         base = config.get("api_base", "https://whc.unesco.org/api/v2")
         return f"{base}/sites/{source_id}/?format=json"
     if source == "wikidata":
+        if not source_id.startswith("Q"):
+            raise ValueError(f"Wikidata source_id must be a QID, got {source_id!r}")
         return f"https://www.wikidata.org/wiki/Special:EntityData/{source_id}.json"
     raise ValueError(f"No URL builder for source: {source}")
 
@@ -37,6 +40,10 @@ async def fetch_raw(
     Returns (raw_bytes, url).
     Raises httpx.HTTPError on unrecoverable failure.
     """
+    if source == "unesco_whc" and settings.unesco_replay_fixture:
+        raw_bytes = await asyncio.to_thread(Path(settings.unesco_replay_fixture).read_bytes)
+        return raw_bytes, settings.unesco_replay_fixture
+
     url = _source_url(source, source_id, config)
     headers = dict(_HEADERS)
     if source == "unesco_whc" and settings.unesco_api_key:
@@ -55,10 +62,16 @@ async def fetch_raw(
 
                 if len(resp.content) > settings.fetch_max_bytes:
                     raise ValueError(
-                        f"Response size {len(resp.content)} exceeds limit {settings.fetch_max_bytes}"
+                        f"Response size {len(resp.content)} exceeds limit "
+                        f"{settings.fetch_max_bytes}"
                     )
 
-                log.info("Fetched source=%s source_id=%s bytes=%d", source, source_id, len(resp.content))
+                log.info(
+                    "Fetched source=%s source_id=%s bytes=%d",
+                    source,
+                    source_id,
+                    len(resp.content),
+                )
                 return resp.content, str(resp.url)
 
         except (httpx.HTTPStatusError, httpx.HTTPError, ValueError) as exc:

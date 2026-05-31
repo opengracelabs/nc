@@ -42,15 +42,19 @@ CREATE TABLE places (
     osm_relation_id     BIGINT,
     source_id           TEXT,
     source              TEXT REFERENCES sources(source_id),
+    unesco_ref_id       TEXT,
 
     -- Names and descriptions — {lang: value}
     name                JSONB NOT NULL DEFAULT '{}',
     description         JSONB NOT NULL DEFAULT '{}',
+    statement_of_ouv    JSONB NOT NULL DEFAULT '{}',
+    justification       JSONB NOT NULL DEFAULT '{}',
 
     -- Classification
     heritage_type       TEXT,                           -- cultural | natural | mixed
     ouv_criteria        TEXT[] NOT NULL DEFAULT '{}',  -- ["i","ii","vii"]
     category_skos       TEXT[] NOT NULL DEFAULT '{}',  -- SKOS concept URIs
+    transboundary       BOOLEAN NOT NULL DEFAULT FALSE,
 
     -- Geography
     country_codes       TEXT[] NOT NULL DEFAULT '{}',  -- ISO 3166-1 alpha-2
@@ -58,6 +62,9 @@ CREATE TABLE places (
     centroid            GEOMETRY(Point, 4326),
     boundary            GEOMETRY(Geometry, 4326),
     area_ha             DOUBLE PRECISION,
+    core_area_ha        DOUBLE PRECISION,
+    buffer_area_ha      DOUBLE PRECISION,
+    spatial_precision   TEXT,
 
     -- Inscription
     inscription_year    INT,
@@ -126,15 +133,22 @@ CREATE TABLE discovery_candidates (
     source              TEXT NOT NULL REFERENCES sources(source_id),
     source_id           TEXT NOT NULL,
     wikidata_qid        TEXT,
+    unesco_ref_id       TEXT,
 
     name                JSONB NOT NULL DEFAULT '{}',
     description         JSONB NOT NULL DEFAULT '{}',
+    statement_of_ouv    JSONB NOT NULL DEFAULT '{}',
+    justification       JSONB NOT NULL DEFAULT '{}',
     country_codes       TEXT[] NOT NULL DEFAULT '{}',
     heritage_type       TEXT,
     ouv_criteria        TEXT[] NOT NULL DEFAULT '{}',
+    transboundary       BOOLEAN NOT NULL DEFAULT FALSE,
     inscription_year    INT,
     centroid            GEOMETRY(Point, 4326),
     boundary            GEOMETRY(Geometry, 4326),
+    core_area_ha        DOUBLE PRECISION,
+    buffer_area_ha      DOUBLE PRECISION,
+    spatial_precision   TEXT,
 
     confidence_score    DOUBLE PRECISION,
     agent_suggestions   JSONB NOT NULL DEFAULT '{}',

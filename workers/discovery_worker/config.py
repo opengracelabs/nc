@@ -13,16 +13,13 @@ class Settings(BaseSettings):
     minio_secure: bool = False
 
     unesco_api_key: str = ""
-    unesco_replay_fixture: str = ""
+    wikidata_sparql_endpoint: str = "https://query.wikidata.org/sparql"
     wikimedia_user_agent: str = "NatureAndCulture/1.0 (opengracelabs@protonmail.com)"
 
-    fetch_timeout_seconds: int = 30
+    fetch_timeout_seconds: int = 60
     fetch_retry_max: int = 3
-    fetch_max_bytes: int = 52_428_800   # 50 MB default artifact cap
-
-    poll_interval_seconds: int = 10
-    worker_concurrency: int = 4
-    ingesting_timeout_seconds: int = 900
+    discovery_auto_approve: bool = False
+    unesco_replay_fixture: str = ""
 
 
 settings = Settings()
