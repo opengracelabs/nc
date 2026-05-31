@@ -3,7 +3,7 @@ from uuid import UUID
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
-from ..dependencies import Auth, DB
+from ..dependencies import DB, Auth
 
 router = APIRouter(prefix="/discovery/candidates", tags=["discovery"])
 
@@ -13,9 +13,11 @@ _VALID_TRANSITIONS = {
 }
 
 _COLS = """
-    id, source, source_id, wikidata_qid,
-    name, country_codes, heritage_type, ouv_criteria,
-    inscription_year, confidence_score,
+    id, source, source_id, wikidata_qid, unesco_ref_id,
+    name, description, statement_of_ouv, justification,
+    country_codes, heritage_type, ouv_criteria, transboundary,
+    inscription_year, core_area_ha, buffer_area_ha, spatial_precision,
+    confidence_score,
     status, discovered_at, reviewed_by, reviewed_at, rejection_reason,
     promoted_place_id
 """

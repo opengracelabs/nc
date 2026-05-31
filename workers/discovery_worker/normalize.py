@@ -29,7 +29,7 @@ def normalize_unesco_whc(record: RawRecord) -> dict[str, Any]:
     out: dict[str, Any] = {
         "source": "unesco_whc",
         "source_id": record.source_id,
-        "unesco_ref_id": p.get("id_number"),
+        "unesco_ref_id": str(p["id_number"]) if p.get("id_number") is not None else None,
         "wikidata_qid": None,
         "name": {},
         "description": {},
@@ -73,12 +73,12 @@ def normalize_unesco_whc(record: RawRecord) -> dict[str, Any]:
         except (ValueError, TypeError):
             pass
 
-    category = p.get("category", "")
-    if "Cultural" in category and "Natural" in category:
+    category = str(p.get("category", "")).lower()
+    if "mixed" in category or ("cultural" in category and "natural" in category):
         out["heritage_type"] = "mixed"
-    elif "Natural" in category:
+    elif "natural" in category:
         out["heritage_type"] = "natural"
-    elif "Cultural" in category:
+    elif "cultural" in category:
         out["heritage_type"] = "cultural"
 
     lat = p.get("latitude")

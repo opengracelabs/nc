@@ -8,6 +8,748 @@
     "category": "Natural",
     "latitude": -18.2871,
     "longitude": 147.6992,
-    "states": [{"iso_code": "au"}]
+    "states": [
+      {
+        "iso_code": "au"
+      }
+    ]
+  },
+  {
+    "id_number": 1,
+    "site": "Galapagos Islands",
+    "short_description": "<p>Volcanic islands with exceptional endemic biodiversity.</p>",
+    "criteria_txt": "(vii)(viii)(ix)(x)",
+    "date_inscribed": "1978",
+    "category": "Natural",
+    "latitude": -0.9538,
+    "longitude": -90.9656,
+    "states": [
+      {
+        "iso_code": "ec"
+      }
+    ]
+  },
+  {
+    "id_number": 2,
+    "site": "City of Quito",
+    "short_description": "<p>A well-preserved historic city in the Andes.</p>",
+    "criteria_txt": "(ii)(iv)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": -0.2202,
+    "longitude": -78.5127,
+    "states": [
+      {
+        "iso_code": "ec"
+      }
+    ]
+  },
+  {
+    "id_number": 3,
+    "site": "Aachen Cathedral",
+    "short_description": "<p>A major monument of Carolingian architecture and sacred art.</p>",
+    "criteria_txt": "(i)(ii)(iv)(vi)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 50.7749,
+    "longitude": 6.0839,
+    "states": [
+      {
+        "iso_code": "de"
+      }
+    ]
+  },
+  {
+    "id_number": 4,
+    "site": "L’Anse aux Meadows National Historic Site",
+    "short_description": "<p>Archaeological remains of an early Norse settlement in North America.</p>",
+    "criteria_txt": "(vi)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 51.5964,
+    "longitude": -55.533,
+    "states": [
+      {
+        "iso_code": "ca"
+      }
+    ]
+  },
+  {
+    "id_number": 5,
+    "site": "Nahanni National Park",
+    "short_description": "<p>A wild river landscape with canyons, caves, and waterfalls.</p>",
+    "criteria_txt": "(vii)(viii)",
+    "date_inscribed": "1978",
+    "category": "Natural",
+    "latitude": 61.5472,
+    "longitude": -125.589,
+    "states": [
+      {
+        "iso_code": "ca"
+      }
+    ]
+  },
+  {
+    "id_number": 6,
+    "site": "Simien National Park",
+    "short_description": "<p>Highland landscapes supporting rare Ethiopian wildlife.</p>",
+    "criteria_txt": "(vii)(x)",
+    "date_inscribed": "1978",
+    "category": "Natural",
+    "latitude": 13.1833,
+    "longitude": 38.0667,
+    "states": [
+      {
+        "iso_code": "et"
+      }
+    ]
+  },
+  {
+    "id_number": 7,
+    "site": "Rock-Hewn Churches, Lalibela",
+    "short_description": "<p>Monolithic churches representing a major Christian pilgrimage center.</p>",
+    "criteria_txt": "(i)(ii)(iii)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 12.0317,
+    "longitude": 39.0476,
+    "states": [
+      {
+        "iso_code": "et"
+      }
+    ]
+  },
+  {
+    "id_number": 8,
+    "site": "Island of Gorée",
+    "short_description": "<p>A historic island associated with Atlantic trade and memory.</p>",
+    "criteria_txt": "(vi)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 14.6672,
+    "longitude": -17.3983,
+    "states": [
+      {
+        "iso_code": "sn"
+      }
+    ]
+  },
+  {
+    "id_number": 9,
+    "site": "Mesa Verde National Park",
+    "short_description": "<p>Ancestral Puebloan cliff dwellings and archaeological landscapes.</p>",
+    "criteria_txt": "(iii)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 37.2309,
+    "longitude": -108.4618,
+    "states": [
+      {
+        "iso_code": "us"
+      }
+    ]
+  },
+  {
+    "id_number": 10,
+    "site": "Yellowstone National Park",
+    "short_description": "<p>A large protected volcanic landscape with geysers and wildlife.</p>",
+    "criteria_txt": "(vii)(viii)(ix)(x)",
+    "date_inscribed": "1978",
+    "category": "Natural",
+    "latitude": 44.428,
+    "longitude": -110.5885,
+    "states": [
+      {
+        "iso_code": "us"
+      }
+    ]
+  },
+  {
+    "id_number": 11,
+    "site": "Kraków Historic Centre",
+    "short_description": "<p>A historic urban center with medieval, Renaissance, and Baroque fabric.</p>",
+    "criteria_txt": "(iv)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 50.0614,
+    "longitude": 19.9372,
+    "states": [
+      {
+        "iso_code": "pl"
+      }
+    ]
+  },
+  {
+    "id_number": 12,
+    "site": "Wieliczka and Bochnia Royal Salt Mines",
+    "short_description": "<p>Historic underground salt mines with extensive chambers and galleries.</p>",
+    "criteria_txt": "(iv)",
+    "date_inscribed": "1978",
+    "category": "Cultural",
+    "latitude": 49.9833,
+    "longitude": 20.0667,
+    "states": [
+      {
+        "iso_code": "pl"
+      }
+    ]
+  },
+  {
+    "id_number": 13,
+    "site": "Historic Centre of Warsaw",
+    "short_description": "<p>A meticulously reconstructed historic city center.</p>",
+    "criteria_txt": "(ii)(vi)",
+    "date_inscribed": "1980",
+    "category": "Cultural",
+    "latitude": 52.2499,
+    "longitude": 21.0122,
+    "states": [
+      {
+        "iso_code": "pl"
+      }
+    ]
+  },
+  {
+    "id_number": 14,
+    "site": "Old City of Dubrovnik",
+    "short_description": "<p>A fortified Adriatic city with outstanding medieval architecture.</p>",
+    "criteria_txt": "(i)(iii)(iv)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 42.6403,
+    "longitude": 18.1105,
+    "states": [
+      {
+        "iso_code": "hr"
+      }
+    ]
+  },
+  {
+    "id_number": 15,
+    "site": "Plitvice Lakes National Park",
+    "short_description": "<p>A karst lake system with travertine barriers and waterfalls.</p>",
+    "criteria_txt": "(vii)(viii)(ix)",
+    "date_inscribed": "1979",
+    "category": "Natural",
+    "latitude": 44.8654,
+    "longitude": 15.582,
+    "states": [
+      {
+        "iso_code": "hr"
+      }
+    ]
+  },
+  {
+    "id_number": 16,
+    "site": "Memphis and its Necropolis",
+    "short_description": "<p>Ancient Egyptian pyramids, tombs, and sacred landscapes.</p>",
+    "criteria_txt": "(i)(iii)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 29.9765,
+    "longitude": 31.1313,
+    "states": [
+      {
+        "iso_code": "eg"
+      }
+    ]
+  },
+  {
+    "id_number": 17,
+    "site": "Ancient Thebes with its Necropolis",
+    "short_description": "<p>Monuments and necropoleis of ancient Thebes.</p>",
+    "criteria_txt": "(i)(iii)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 25.7333,
+    "longitude": 32.6,
+    "states": [
+      {
+        "iso_code": "eg"
+      }
+    ]
+  },
+  {
+    "id_number": 18,
+    "site": "Nubian Monuments from Abu Simbel to Philae",
+    "short_description": "<p>Temples and monuments preserved through an international safeguarding campaign.</p>",
+    "criteria_txt": "(i)(iii)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 22.3372,
+    "longitude": 31.6258,
+    "states": [
+      {
+        "iso_code": "eg"
+      }
+    ]
+  },
+  {
+    "id_number": 19,
+    "site": "Islamic Cairo",
+    "short_description": "<p>A historic urban landscape with major Islamic architecture.</p>",
+    "criteria_txt": "(i)(v)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 30.0478,
+    "longitude": 31.2625,
+    "states": [
+      {
+        "iso_code": "eg"
+      }
+    ]
+  },
+  {
+    "id_number": 20,
+    "site": "Abu Mena",
+    "short_description": "<p>An early Christian pilgrimage city and archaeological site.</p>",
+    "criteria_txt": "(iv)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 30.8419,
+    "longitude": 29.6636,
+    "states": [
+      {
+        "iso_code": "eg"
+      }
+    ]
+  },
+  {
+    "id_number": 21,
+    "site": "Mont-Saint-Michel and its Bay",
+    "short_description": "<p>A monastery and fortified village set in a tidal bay.</p>",
+    "criteria_txt": "(i)(iii)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 48.636,
+    "longitude": -1.5115,
+    "states": [
+      {
+        "iso_code": "fr"
+      }
+    ]
+  },
+  {
+    "id_number": 22,
+    "site": "Chartres Cathedral",
+    "short_description": "<p>A landmark Gothic cathedral with exceptional sculpture and stained glass.</p>",
+    "criteria_txt": "(i)(ii)(iv)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 48.4479,
+    "longitude": 1.4878,
+    "states": [
+      {
+        "iso_code": "fr"
+      }
+    ]
+  },
+  {
+    "id_number": 23,
+    "site": "Palace and Park of Versailles",
+    "short_description": "<p>A royal palace and garden ensemble influential across Europe.</p>",
+    "criteria_txt": "(i)(ii)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 48.8049,
+    "longitude": 2.1204,
+    "states": [
+      {
+        "iso_code": "fr"
+      }
+    ]
+  },
+  {
+    "id_number": 24,
+    "site": "Vézelay, Church and Hill",
+    "short_description": "<p>A Romanesque basilica and pilgrimage hill town.</p>",
+    "criteria_txt": "(i)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 47.4667,
+    "longitude": 3.75,
+    "states": [
+      {
+        "iso_code": "fr"
+      }
+    ]
+  },
+  {
+    "id_number": 25,
+    "site": "Prehistoric Sites and Decorated Caves of the Vézère Valley",
+    "short_description": "<p>Palaeolithic cave art and prehistoric archaeological sites.</p>",
+    "criteria_txt": "(i)(iii)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 45.0536,
+    "longitude": 1.1686,
+    "states": [
+      {
+        "iso_code": "fr"
+      }
+    ]
+  },
+  {
+    "id_number": 26,
+    "site": "Auschwitz Birkenau",
+    "short_description": "<p>A preserved site of Nazi German concentration and extermination camps.</p>",
+    "criteria_txt": "(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 50.0359,
+    "longitude": 19.1783,
+    "states": [
+      {
+        "iso_code": "pl"
+      }
+    ]
+  },
+  {
+    "id_number": 27,
+    "site": "Tikal National Park",
+    "short_description": "<p>Maya monumental architecture embedded in tropical forest.</p>",
+    "criteria_txt": "(i)(iii)(iv)(ix)(x)",
+    "date_inscribed": "1979",
+    "category": "Mixed",
+    "latitude": 17.222,
+    "longitude": -89.6237,
+    "states": [
+      {
+        "iso_code": "gt"
+      }
+    ]
+  },
+  {
+    "id_number": 28,
+    "site": "Antigua Guatemala",
+    "short_description": "<p>A colonial city with Baroque architecture and volcanic setting.</p>",
+    "criteria_txt": "(ii)(iii)(iv)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 14.5586,
+    "longitude": -90.7339,
+    "states": [
+      {
+        "iso_code": "gt"
+      }
+    ]
+  },
+  {
+    "id_number": 29,
+    "site": "Natural and Culturo-Historical Region of Kotor",
+    "short_description": "<p>A historic Adriatic bay landscape and fortified towns.</p>",
+    "criteria_txt": "(i)(ii)(iii)(iv)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 42.4247,
+    "longitude": 18.7712,
+    "states": [
+      {
+        "iso_code": "me"
+      }
+    ]
+  },
+  {
+    "id_number": 30,
+    "site": "Sagarmatha National Park",
+    "short_description": "<p>A high Himalayan landscape including Mount Everest.</p>",
+    "criteria_txt": "(vii)",
+    "date_inscribed": "1979",
+    "category": "Natural",
+    "latitude": 27.9656,
+    "longitude": 86.9139,
+    "states": [
+      {
+        "iso_code": "np"
+      }
+    ]
+  },
+  {
+    "id_number": 32,
+    "site": "Kathmandu Valley",
+    "short_description": "<p>Historic palace squares, temples, and urban settlements.</p>",
+    "criteria_txt": "(iii)(iv)(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 27.7044,
+    "longitude": 85.3078,
+    "states": [
+      {
+        "iso_code": "np"
+      }
+    ]
+  },
+  {
+    "id_number": 33,
+    "site": "Dinosaur Provincial Park",
+    "short_description": "<p>Badlands preserving exceptional dinosaur fossil deposits.</p>",
+    "criteria_txt": "(vii)(viii)",
+    "date_inscribed": "1979",
+    "category": "Natural",
+    "latitude": 50.7667,
+    "longitude": -111.4833,
+    "states": [
+      {
+        "iso_code": "ca"
+      }
+    ]
+  },
+  {
+    "id_number": 34,
+    "site": "Grand Canyon National Park",
+    "short_description": "<p>A vast canyon exposing geological history and desert ecosystems.</p>",
+    "criteria_txt": "(vii)(viii)(ix)(x)",
+    "date_inscribed": "1979",
+    "category": "Natural",
+    "latitude": 36.1069,
+    "longitude": -112.1129,
+    "states": [
+      {
+        "iso_code": "us"
+      }
+    ]
+  },
+  {
+    "id_number": 35,
+    "site": "Everglades National Park",
+    "short_description": "<p>A subtropical wetland supporting rich wildlife and ecological processes.</p>",
+    "criteria_txt": "(viii)(ix)(x)",
+    "date_inscribed": "1979",
+    "category": "Natural",
+    "latitude": 25.2866,
+    "longitude": -80.8987,
+    "states": [
+      {
+        "iso_code": "us"
+      }
+    ]
+  },
+  {
+    "id_number": 36,
+    "site": "Independence Hall",
+    "short_description": "<p>A landmark associated with democratic constitutional history.</p>",
+    "criteria_txt": "(vi)",
+    "date_inscribed": "1979",
+    "category": "Cultural",
+    "latitude": 39.9489,
+    "longitude": -75.15,
+    "states": [
+      {
+        "iso_code": "us"
+      }
+    ]
+  },
+  {
+    "id_number": 37,
+    "site": "Białowieża Forest",
+    "short_description": "<p>A transboundary old-growth forest supporting European bison.</p>",
+    "criteria_txt": "(ix)(x)",
+    "date_inscribed": "1979",
+    "category": "Natural",
+    "latitude": 52.75,
+    "longitude": 23.8667,
+    "states": [
+      {
+        "iso_code": "pl"
+      },
+      {
+        "iso_code": "by"
+      }
+    ]
+  },
+  {
+    "id_number": 38,
+    "site": "Ichkeul National Park",
+    "short_description": "<p>A wetland critical for migratory waterbirds.</p>",
+    "criteria_txt": "(x)",
+    "date_inscribed": "1980",
+    "category": "Natural",
+    "latitude": 37.1667,
+    "longitude": 9.6667,
+    "states": [
+      {
+        "iso_code": "tn"
+      }
+    ]
+  },
+  {
+    "id_number": 39,
+    "site": "Burgos Cathedral",
+    "short_description": "<p>A major Gothic cathedral on the pilgrimage routes of Spain.</p>",
+    "criteria_txt": "(ii)(iv)(vi)",
+    "date_inscribed": "1984",
+    "category": "Cultural",
+    "latitude": 42.3409,
+    "longitude": -3.7044,
+    "states": [
+      {
+        "iso_code": "es"
+      }
+    ]
+  },
+  {
+    "id_number": 40,
+    "site": "Alhambra, Generalife and Albayzín, Granada",
+    "short_description": "<p>Islamic palaces, gardens, and a historic urban quarter.</p>",
+    "criteria_txt": "(i)(iii)(iv)",
+    "date_inscribed": "1984",
+    "category": "Cultural",
+    "latitude": 37.1761,
+    "longitude": -3.5881,
+    "states": [
+      {
+        "iso_code": "es"
+      }
+    ]
+  },
+  {
+    "id_number": 41,
+    "site": "Historic Centre of Cordoba",
+    "short_description": "<p>A historic city shaped by Roman, Islamic, Jewish, and Christian heritage.</p>",
+    "criteria_txt": "(i)(ii)(iii)(iv)",
+    "date_inscribed": "1984",
+    "category": "Cultural",
+    "latitude": 37.879,
+    "longitude": -4.7794,
+    "states": [
+      {
+        "iso_code": "es"
+      }
+    ]
+  },
+  {
+    "id_number": 42,
+    "site": "Monastery and Site of the Escurial, Madrid",
+    "short_description": "<p>A royal monastery and palace complex of the Spanish Golden Age.</p>",
+    "criteria_txt": "(i)(ii)(vi)",
+    "date_inscribed": "1984",
+    "category": "Cultural",
+    "latitude": 40.5892,
+    "longitude": -4.1477,
+    "states": [
+      {
+        "iso_code": "es"
+      }
+    ]
+  },
+  {
+    "id_number": 43,
+    "site": "Works of Antoni Gaudí",
+    "short_description": "<p>Architectural works demonstrating Gaudí’s creative contribution.</p>",
+    "criteria_txt": "(i)(ii)(iv)",
+    "date_inscribed": "1984",
+    "category": "Cultural",
+    "latitude": 41.4036,
+    "longitude": 2.1744,
+    "states": [
+      {
+        "iso_code": "es"
+      }
+    ]
+  },
+  {
+    "id_number": 44,
+    "site": "Acropolis, Athens",
+    "short_description": "<p>Classical Greek monuments of outstanding universal value.</p>",
+    "criteria_txt": "(i)(ii)(iii)(iv)(vi)",
+    "date_inscribed": "1987",
+    "category": "Cultural",
+    "latitude": 37.9715,
+    "longitude": 23.7257,
+    "states": [
+      {
+        "iso_code": "gr"
+      }
+    ]
+  },
+  {
+    "id_number": 45,
+    "site": "Meteora",
+    "short_description": "<p>Monasteries built on dramatic sandstone pillars.</p>",
+    "criteria_txt": "(i)(ii)(iv)(v)(vii)",
+    "date_inscribed": "1988",
+    "category": "Mixed",
+    "latitude": 39.7217,
+    "longitude": 21.6306,
+    "states": [
+      {
+        "iso_code": "gr"
+      }
+    ]
+  },
+  {
+    "id_number": 46,
+    "site": "Mount Athos",
+    "short_description": "<p>A monastic landscape with long Orthodox Christian traditions.</p>",
+    "criteria_txt": "(i)(ii)(iv)(v)(vi)(vii)",
+    "date_inscribed": "1988",
+    "category": "Mixed",
+    "latitude": 40.157,
+    "longitude": 24.326,
+    "states": [
+      {
+        "iso_code": "gr"
+      }
+    ]
+  },
+  {
+    "id_number": 47,
+    "site": "Delphi",
+    "short_description": "<p>The sanctuary of Apollo and a major oracle of the ancient world.</p>",
+    "criteria_txt": "(i)(ii)(iii)(iv)(vi)",
+    "date_inscribed": "1987",
+    "category": "Cultural",
+    "latitude": 38.4824,
+    "longitude": 22.501,
+    "states": [
+      {
+        "iso_code": "gr"
+      }
+    ]
+  },
+  {
+    "id_number": 48,
+    "site": "Historic Sanctuary of Machu Picchu",
+    "short_description": "<p>An Inca sanctuary integrated with Andean mountain landscapes.</p>",
+    "criteria_txt": "(i)(iii)(vii)(ix)",
+    "date_inscribed": "1983",
+    "category": "Mixed",
+    "latitude": -13.1631,
+    "longitude": -72.545,
+    "states": [
+      {
+        "iso_code": "pe"
+      }
+    ]
+  },
+  {
+    "id_number": 49,
+    "site": "Cuzco",
+    "short_description": "<p>A historic Andean city shaped by Inca and colonial heritage.</p>",
+    "criteria_txt": "(iii)(iv)",
+    "date_inscribed": "1983",
+    "category": "Cultural",
+    "latitude": -13.532,
+    "longitude": -71.9675,
+    "states": [
+      {
+        "iso_code": "pe"
+      }
+    ]
+  },
+  {
+    "id_number": 50,
+    "site": "Chavín Archaeological Site",
+    "short_description": "<p>A ceremonial center of an early Andean civilization.</p>",
+    "criteria_txt": "(iii)",
+    "date_inscribed": "1985",
+    "category": "Cultural",
+    "latitude": -9.5939,
+    "longitude": -77.1775,
+    "states": [
+      {
+        "iso_code": "pe"
+      }
+    ]
   }
 ]

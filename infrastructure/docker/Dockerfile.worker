@@ -12,5 +12,3 @@ RUN pip install --no-cache-dir \
     "pydantic-settings>=2.6"
 
 COPY . .
-
-CMD ["python", "-m", "workers.ingestion_worker.main"]

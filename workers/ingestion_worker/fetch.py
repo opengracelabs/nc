@@ -3,6 +3,7 @@ Fetch raw evidence for an approved candidate.
 Returns bytes and the final URL (after redirects).
 """
 import asyncio
+import json
 import logging
 from pathlib import Path
 from typing import Any
@@ -41,7 +42,17 @@ async def fetch_raw(
     Raises httpx.HTTPError on unrecoverable failure.
     """
     if source == "unesco_whc" and settings.unesco_replay_fixture:
-        raw_bytes = await asyncio.to_thread(Path(settings.unesco_replay_fixture).read_bytes)
+        fixture_path = Path(settings.unesco_replay_fixture)
+        raw_bytes = await asyncio.to_thread(fixture_path.read_bytes)
+        records = json.loads(raw_bytes)
+        if isinstance(records, list):
+            for record in records:
+                if str(record.get("id_number", record.get("id"))) == str(source_id):
+                    return (
+                        json.dumps(record, ensure_ascii=False, sort_keys=True).encode(),
+                        f"{settings.unesco_replay_fixture}#{source_id}",
+                    )
+            raise ValueError(f"UNESCO replay fixture has no source_id={source_id!r}")
         return raw_bytes, settings.unesco_replay_fixture
 
     url = _source_url(source, source_id, config)

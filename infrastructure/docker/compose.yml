@@ -8,7 +8,6 @@ x-app-env: &app-env
   MINIO_BUCKET_RAW: ${MINIO_BUCKET_RAW:-nc-raw}
   MINIO_BUCKET_NORMALIZED: ${MINIO_BUCKET_NORMALIZED:-nc-normalized}
   MINIO_BUCKET_CURATED: ${MINIO_BUCKET_CURATED:-nc-curated}
-  REDIS_URL: redis://redis:6379/0
 
 x-worker: &worker-defaults
   build:
@@ -22,8 +21,6 @@ x-worker: &worker-defaults
       condition: service_healthy
     minio-init:
       condition: service_completed_successfully
-    redis:
-      condition: service_healthy
   networks:
     - backend
 
@@ -86,20 +83,6 @@ services:
         mc mb --ignore-existing "local/$${MINIO_BUCKET_CURATED}"
     restart: "no"
 
-  redis:
-    image: redis:7.4-alpine
-    restart: unless-stopped
-    command: redis-server --save 60 1 --loglevel warning
-    volumes:
-      - redis_data:/data
-    networks:
-      - backend
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
   api:
     build:
       context: ../..
@@ -112,8 +95,6 @@ services:
         condition: service_healthy
       minio-init:
         condition: service_completed_successfully
-      redis:
-        condition: service_healthy
     environment:
       <<: *app-env
       NC_SECRET_KEY: ${NC_SECRET_KEY:-dev-secret}
@@ -139,8 +120,8 @@ services:
       UNESCO_API_KEY: ${UNESCO_API_KEY:-}
       WIKIDATA_SPARQL_ENDPOINT: ${WIKIDATA_SPARQL_ENDPOINT:-https://query.wikidata.org/sparql}
       FETCH_TIMEOUT_SECONDS: ${FETCH_TIMEOUT_SECONDS:-60}
-      DISCOVERY_AUTO_APPROVE: ${DISCOVERY_AUTO_APPROVE:-true}
-      UNESCO_REPLAY_FIXTURE: ${UNESCO_REPLAY_FIXTURE:-/app/tests/fixtures/unesco_whc_sites.json}
+      DISCOVERY_AUTO_APPROVE: ${DISCOVERY_AUTO_APPROVE:-false}
+      UNESCO_REPLAY_FIXTURE: ${UNESCO_REPLAY_FIXTURE:-/app/tests/fixtures/unesco_whc_50_sites.json}
 
   ingestion-worker:
     <<: *worker-defaults
@@ -149,10 +130,19 @@ services:
       <<: *app-env
       WORKER_NAME: ingestion_worker
       UNESCO_API_KEY: ${UNESCO_API_KEY:-}
-      UNESCO_REPLAY_FIXTURE: ${UNESCO_REPLAY_FIXTURE:-/app/tests/fixtures/unesco_whc_sites.json}
+      UNESCO_REPLAY_FIXTURE: ${UNESCO_REPLAY_FIXTURE:-/app/tests/fixtures/unesco_whc_50_sites.json}
       WIKIMEDIA_USER_AGENT: ${WIKIMEDIA_USER_AGENT:-NatureAndCulture/1.0}
       FETCH_TIMEOUT_SECONDS: ${FETCH_TIMEOUT_SECONDS:-30}
       INGESTING_TIMEOUT_SECONDS: ${INGESTING_TIMEOUT_SECONDS:-900}
+
+  preservation-worker:
+    <<: *worker-defaults
+    command: ["python", "-m", "workers.preservation_worker.main"]
+    environment:
+      <<: *app-env
+      WORKER_NAME: preservation_worker
+      BATCH_SIZE: ${PRESERVATION_BATCH_SIZE:-5}
+      PRESERVATION_TIMEOUT_SECONDS: ${PRESERVATION_TIMEOUT_SECONDS:-300}
 
   neo4j:
     image: neo4j:5.23-community
@@ -236,6 +226,5 @@ volumes:
   minio_data:
   neo4j_data:
   neo4j_logs:
-  redis_data:
   prometheus_data:
   grafana_data:

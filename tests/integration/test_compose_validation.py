@@ -19,3 +19,4 @@ def test_docker_compose_config_validates() -> None:
     assert result.returncode == 0, result.stderr
     assert "discovery-worker:" in result.stdout
     assert "ingestion-worker:" in result.stdout
+    assert "preservation-worker:" in result.stdout
