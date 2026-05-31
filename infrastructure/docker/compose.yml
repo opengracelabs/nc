@@ -144,6 +144,14 @@ services:
       BATCH_SIZE: ${PRESERVATION_BATCH_SIZE:-5}
       PRESERVATION_TIMEOUT_SECONDS: ${PRESERVATION_TIMEOUT_SECONDS:-300}
 
+  knowledge-worker:
+    <<: *worker-defaults
+    command: ["python", "-m", "workers.knowledge_worker.main"]
+    environment:
+      <<: *app-env
+      WORKER_NAME: knowledge_worker
+      POLL_INTERVAL_SECONDS: ${KNOWLEDGE_POLL_INTERVAL_SECONDS:-30}
+
   neo4j:
     image: neo4j:5.23-community
     restart: unless-stopped
