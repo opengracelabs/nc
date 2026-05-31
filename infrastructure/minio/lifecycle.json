@@ -1,0 +1,35 @@
+{
+  "Rules": [
+    {
+      "ID": "expire-quarantine",
+      "Status": "Enabled",
+      "Filter": {
+        "Prefix": "raw/quarantine/"
+      },
+      "Expiration": {
+        "Days": 90
+      }
+    },
+    {
+      "ID": "transition-raw-to-cold",
+      "Status": "Enabled",
+      "Filter": {
+        "Prefix": "raw/ingestion/"
+      },
+      "Transition": {
+        "Days": 365,
+        "StorageClass": "COLD"
+      }
+    },
+    {
+      "ID": "expire-temp-exports",
+      "Status": "Enabled",
+      "Filter": {
+        "Prefix": "exports/temp/"
+      },
+      "Expiration": {
+        "Days": 7
+      }
+    }
+  ]
+}
