@@ -5,7 +5,7 @@ Every fact carries a PROV-O provenance object recording worker version,
 source authority, extraction method, and the specific place field used.
 """
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from .config import settings
@@ -15,7 +15,7 @@ _WORKER_ID = "knowledge_worker:v0.2.0"
 
 
 def _now_iso() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _prov(source: str, source_field: str) -> dict:

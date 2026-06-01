@@ -12,7 +12,8 @@ import pytest
 from services.api.routers import knowledge
 from workers.discovery_worker.normalize import normalize_unesco_whc
 from workers.discovery_worker.sources.base import RawRecord
-from workers.knowledge_worker.extract import extract_facts
+from workers.knowledge_worker.extract import build_place_concept_relationships, extract_facts
+from workers.knowledge_worker.store import upsert_facts, upsert_relationships
 
 FIXTURE = Path("tests/fixtures/unesco_whc_50_sites.json")
 
@@ -308,6 +309,27 @@ async def test_act_on_fact_retract_requires_reason() -> None:
     assert exc_info.value.status_code == 422
 
 
+async def test_act_on_fact_retracts_disputed_fact_with_reason() -> None:
+    class FakeDisputedConn(FakeFactsConn):
+        async def fetchrow(self, query, *args):
+            return {"status": "disputed"}
+
+    conn = FakeDisputedConn()
+    result = await knowledge.act_on_fact(
+        fact_id=UUID(str(_FACT_ID)),
+        body=knowledge.FactAction(
+            action="retract",
+            reviewer="auditor",
+            reason="Source evidence was withdrawn",
+        ),
+        auth="dev-secret",
+        conn=conn,
+    )
+
+    assert result["status"] == "retracted"
+    assert "Source evidence was withdrawn" in conn.args[1]
+
+
 async def test_act_on_fact_invalid_action_rejected() -> None:
     from fastapi import HTTPException
     conn = FakeFactsConn()
@@ -361,3 +383,112 @@ def test_all_50_sites_facts_are_traceable() -> None:
             assert "prov:wasGeneratedBy" in prov
             assert "source_field" in prov
             assert "extraction_version" in prov
+
+
+
+async def test_upsert_facts_keeps_multi_value_predicates_active() -> None:
+    class FakeStoreConn:
+        def __init__(self) -> None:
+            self.queries: list[str] = []
+
+        async def fetchval(self, query: str, *args):
+            self.queries.append(query)
+            if "INSERT INTO facts" in query:
+                return 2
+            return 0
+
+    conn = FakeStoreConn()
+    facts = [
+        {
+            "place_id": _PLACE_ID,
+            "predicate": "country_code",
+            "value": {"text": "AU"},
+            "value_type": "text",
+            "language": None,
+            "asset_id": None,
+            "source": "unesco_whc",
+            "confidence_score": 0.95,
+            "provenance": {"source_field": "places.country_codes"},
+        },
+        {
+            "place_id": _PLACE_ID,
+            "predicate": "country_code",
+            "value": {"text": "PG"},
+            "value_type": "text",
+            "language": None,
+            "asset_id": None,
+            "source": "unesco_whc",
+            "confidence_score": 0.95,
+            "provenance": {"source_field": "places.country_codes"},
+        },
+    ]
+
+    written, superseded = await upsert_facts(conn, facts)
+
+    supersede_queries = [q for q in conn.queries if "UPDATE facts" in q]
+    assert written == 2
+    assert superseded == 0
+    assert supersede_queries
+    assert "predicate <> ALL" in supersede_queries[0]
+
+
+async def test_upsert_relationships_uses_set_based_replay_insert() -> None:
+    class FakeRelationshipConn:
+        def __init__(self) -> None:
+            self.query = ""
+
+        async def fetchval(self, query: str, *args):
+            self.query = query
+            return 2
+
+    rels = [
+        {
+            "subject_id": _PLACE_ID,
+            "subject_type": "place",
+            "predicate": "exemplifies",
+            "object_id": _CONCEPT_ID,
+            "object_type": "concept",
+            "confidence_score": 0.95,
+            "status": "active",
+            "asset_id": None,
+            "provenance": {"derived_from_predicate": "ouv_criterion"},
+        },
+        {
+            "subject_id": _PLACE_ID,
+            "subject_type": "place",
+            "predicate": "classified_as",
+            "object_id": _CONCEPT_ID,
+            "object_type": "concept",
+            "confidence_score": 0.95,
+            "status": "active",
+            "asset_id": None,
+            "provenance": {"derived_from_predicate": "heritage_type"},
+        },
+    ]
+
+    written = await upsert_relationships(FakeRelationshipConn(), rels)
+
+    assert written == 2
+
+
+def test_relationship_replay_is_deterministic_for_great_barrier_reef() -> None:
+    place = _gbr_place()
+    facts = extract_facts(place)
+    first = build_place_concept_relationships(place["id"], facts, place["source"])
+    second = build_place_concept_relationships(place["id"], facts, place["source"])
+
+    first_keys = [(r["subject_id"], r["predicate"], r.get("concept_uri")) for r in first]
+    second_keys = [(r["subject_id"], r["predicate"], r.get("concept_uri")) for r in second]
+    assert first_keys == second_keys
+    assert {r["predicate"] for r in first} >= {"classified_as", "exemplifies"}
+
+
+def test_knowledge_performance_migration_contains_search_indexes() -> None:
+    sql = Path("infrastructure/postgres/init/13_knowledge_performance_indexes.sql").read_text()
+    for index_name in (
+        "idx_facts_active_predicate_created_at",
+        "idx_relationships_active_place_co_inscribed",
+        "idx_places_description_trgm",
+        "idx_places_active_updated_at_desc",
+    ):
+        assert index_name in sql
