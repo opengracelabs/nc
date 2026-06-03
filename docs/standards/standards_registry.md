@@ -45,6 +45,10 @@ Canonical external standards adopted by Nature & Culture. All schemas, ingestion
 - **URI:** `https://dwc.tdwg.org/terms/`
 - **Use:** Biodiversity and ecological occurrence records. Mandatory for species, specimen, and observation data.
 
+### Biodiversity Heritage Library
+- **URI:** `https://www.biodiversitylibrary.org/`
+- **Use:** Public-domain biodiversity illustration assets. BHL books and pages are provenance containers, not the product focus.
+
 ---
 
 ## Provenance & Preservation

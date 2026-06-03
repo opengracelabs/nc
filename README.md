@@ -1,6 +1,6 @@
 # Nature & Culture
 
-> Preserve, model, discover, publish and activate humanity's cultural and ecological knowledge.
+> A place-centered public-domain illustration discovery and commerce platform.
 
 ## Core Doctrine
 
@@ -14,11 +14,20 @@
 | Humans | Approval — required for consequential actions |
 | AI | Advisory — inference and enrichment, never authority |
 
-## Initial Goal
+## Current Direction
 
-**UNESCO Discovery → Search Pipeline**
+Nature & Culture is not a biodiversity inventory system. It is a place-centered public-domain illustration discovery and commerce platform.
 
-Discover UNESCO World Heritage Sites and associated cultural/ecological records, ingest and preserve source materials, model knowledge relationships, and surface them through a governed search interface.
+Nature & Culture is no longer building infrastructure. The platform foundation is in place; current work is Milestone 3 public-domain illustration opportunity discovery.
+
+| Milestone | Focus | Status |
+|---|---|---|
+| 1 | UNESCO Pipeline | Complete |
+| 2 | Knowledge Modeling | Complete |
+| 2.1 | Knowledge Hardening | Complete |
+| 3 | Taxon Discovery | Active |
+
+Milestone 3 produces ranked public-domain illustration opportunities for a place. Taxa from GBIF and Wikidata are search handles for BHL targets, not the optimization goal. Commercial assets attach to concepts; places connect to concepts. The output is Illustration Opportunity, not Species.
 
 ## Repository Structure
 

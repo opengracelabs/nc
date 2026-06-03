@@ -110,5 +110,17 @@ VALUES
         ARRAY['cultural_object'],
         ARRAY['cidoc_crm', 'skos', 'prov_o', 'premis'],
         '{"api_endpoint": "https://api.europeana.eu/record/v2", "rate_limit": {"requests_per_second": 2, "burst": 10}}'
+    ),
+    (
+        'bhl',
+        'Biodiversity Heritage Library',
+        'Biodiversity Heritage Library',
+        'https://www.biodiversitylibrary.org',
+        'api',
+        'none',
+        10,
+        ARRAY['image', 'taxon', 'illustration'],
+        ARRAY['darwin_core', 'prov_o', 'premis'],
+        '{"api_endpoint": "https://www.biodiversitylibrary.org/api3", "scope": "public_domain_illustrations", "rate_limit": {"requests_per_second": 1, "burst": 3}}'
     )
 ON CONFLICT (source_id) DO NOTHING;

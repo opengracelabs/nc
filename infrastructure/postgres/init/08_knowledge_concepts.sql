@@ -16,7 +16,7 @@ CREATE TABLE concepts (
 
     CONSTRAINT chk_concept_type   CHECK (type IN (
         'criterion','heritage_type','ecosystem','biome',
-        'geographic','thematic','actor'
+        'geographic','thematic','actor','taxon'
     )),
     CONSTRAINT chk_concept_status CHECK (status IN ('active','deprecated'))
 );

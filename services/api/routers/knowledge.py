@@ -46,7 +46,7 @@ _JSON_DECODE = {"label", "description", "value", "provenance", "agent_notes"}
 
 _VALID_CONCEPT_TYPES = {
     "criterion", "heritage_type", "ecosystem", "biome",
-    "geographic", "thematic", "actor",
+    "geographic", "thematic", "actor", "taxon",
 }
 
 

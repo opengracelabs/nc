@@ -464,7 +464,7 @@ def test_concept_create_requires_english_label() -> None:
 def test_concept_type_validated_against_vocabulary() -> None:
     valid_types = {
         "criterion", "heritage_type", "ecosystem", "biome",
-        "geographic", "thematic", "actor",
+        "geographic", "thematic", "actor", "taxon",
     }
     for t in valid_types:
         from services.api.routers.knowledge import ConceptCreate

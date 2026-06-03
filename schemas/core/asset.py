@@ -21,6 +21,7 @@ class AssetType(StrEnum):
 
     # Media
     IMAGE = "image"
+    BHL_ILLUSTRATION = "bhl_illustration"
     VIDEO = "video"
     AUDIO = "audio"
 
@@ -46,10 +47,11 @@ class AssetStatus(StrEnum):
 
 
 class Asset(NCRecord):
-    """A stored artifact — raw or normalized — for a Place."""
+    """A stored artifact — raw or normalized — anchored to a concept or legacy place."""
 
     # Ownership
-    place_id: UUID
+    place_id: UUID | None = None
+    concept_id: UUID | None = None
     source_id: str                  # FK → Source.source_id
     ingest_id: str                  # ingestion run that produced this asset
 
@@ -59,8 +61,8 @@ class Asset(NCRecord):
     language: str | None = None     # ISO 639-1; None = language-neutral
 
     # Storage — MinIO paths
-    raw_path: str | None = None         # raw/ingestion/{place_id}/{ingest_id}/{name}
-    normalized_path: str | None = None  # normalized/ingestion/{place_id}/{ingest_id}/{name}
+    raw_path: str | None = None         # raw/ingestion/{anchor}/{ingest_id}/{name}
+    normalized_path: str | None = None  # normalized/ingestion/{anchor}/{ingest_id}/{name}
 
     # Integrity
     checksum_sha256: str | None = None

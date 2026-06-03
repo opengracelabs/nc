@@ -152,6 +152,51 @@ services:
       WORKER_NAME: knowledge_worker
       POLL_INTERVAL_SECONDS: ${KNOWLEDGE_POLL_INTERVAL_SECONDS:-30}
 
+  taxon-discovery-worker:
+    <<: *worker-defaults
+    command: ["python", "-m", "workers.taxon_discovery_worker.main"]
+    environment:
+      <<: *app-env
+      WORKER_NAME: taxon_discovery_worker
+      POLL_INTERVAL_SECONDS: ${TAXON_DISCOVERY_POLL_INTERVAL_SECONDS:-30}
+      TAXON_DISCOVERY_VERSION: ${TAXON_DISCOVERY_VERSION:-1}
+      TAXON_DISCOVERY_TOP_LIMIT: ${TAXON_DISCOVERY_TOP_LIMIT:-50}
+      GBIF_API_BASE_URL: ${GBIF_API_BASE_URL:-https://api.gbif.org/v1}
+      WIKIDATA_SPARQL_ENDPOINT: ${WIKIDATA_SPARQL_ENDPOINT:-https://query.wikidata.org/sparql}
+
+  research-worker:
+    <<: *worker-defaults
+    command: ["python", "-m", "workers.research_worker.main"]
+    environment:
+      <<: *app-env
+      WORKER_NAME: research_worker
+      POLL_INTERVAL_SECONDS: ${RESEARCH_POLL_INTERVAL_SECONDS:-30}
+      RESEARCH_VERSION: ${RESEARCH_VERSION:-1}
+      RESEARCH_OUTPUT_TYPE: ${RESEARCH_OUTPUT_TYPE:-place_brief}
+
+  illustration-opportunity-worker:
+    <<: *worker-defaults
+    command: ["python", "-m", "workers.illustration_opportunity_worker.main"]
+    environment:
+      <<: *app-env
+      WORKER_NAME: illustration_opportunity_worker
+      POLL_INTERVAL_SECONDS: ${ILLUSTRATION_OPPORTUNITY_POLL_INTERVAL_SECONDS:-30}
+      BATCH_SIZE: ${ILLUSTRATION_OPPORTUNITY_BATCH_SIZE:-10}
+      BHL_API_BASE_URL: ${BHL_API_BASE_URL:-https://www.biodiversitylibrary.org/api3}
+      BHL_API_KEY: ${BHL_API_KEY:-}
+
+  bhl-asset-ingestion-worker:
+    <<: *worker-defaults
+    command: ["python", "-m", "workers.bhl_asset_ingestion_worker.main"]
+    environment:
+      <<: *app-env
+      WORKER_NAME: bhl_asset_ingestion_worker
+      POLL_INTERVAL_SECONDS: ${BHL_ASSET_INGESTION_POLL_INTERVAL_SECONDS:-30}
+      BATCH_SIZE: ${BHL_ASSET_INGESTION_BATCH_SIZE:-5}
+      BHL_PAGE_IMAGE_URL_TEMPLATE: ${BHL_PAGE_IMAGE_URL_TEMPLATE:-https://www.biodiversitylibrary.org/pageimage/{bhl_page_id}}
+      FETCH_TIMEOUT_SECONDS: ${BHL_ASSET_FETCH_TIMEOUT_SECONDS:-60}
+      FETCH_MAX_BYTES: ${BHL_ASSET_FETCH_MAX_BYTES:-52428800}
+
   neo4j:
     image: neo4j:5.23-community
     restart: unless-stopped

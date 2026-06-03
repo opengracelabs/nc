@@ -20,3 +20,7 @@ def test_docker_compose_config_validates() -> None:
     assert "discovery-worker:" in result.stdout
     assert "ingestion-worker:" in result.stdout
     assert "preservation-worker:" in result.stdout
+    assert "research-worker:" in result.stdout
+    assert "taxon-discovery-worker:" in result.stdout
+    assert "illustration-opportunity-worker:" in result.stdout
+    assert "bhl-asset-ingestion-worker:" in result.stdout
