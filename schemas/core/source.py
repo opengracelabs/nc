@@ -26,6 +26,21 @@ class SourceStatus(StrEnum):
     DEPRECATED = "deprecated"   # replaced by another source
 
 
+class GovernanceState(StrEnum):
+    PROPOSED   = "proposed"    # registered, under review, no ingestion permitted
+    APPROVED   = "approved"    # human-approved, adapter in development
+    ACTIVE     = "active"      # adapter validated, ingestion permitted
+    SUSPENDED  = "suspended"   # temporarily halted, rights or legal review
+    DEPRECATED = "deprecated"  # replaced, no new ingestion
+    RETIRED    = "retired"     # permanently removed from pipeline
+
+
+class OperationalStatus(StrEnum):
+    HEALTHY     = "healthy"     # last fetch succeeded within expected window
+    DEGRADED    = "degraded"    # reachable but returning errors or partial data
+    UNAVAILABLE = "unavailable" # unreachable or no fetch attempted yet
+
+
 class RateLimit(NCBase):  # NCBase
     requests_per_second: float = 1.0
     burst: int = 5
@@ -56,7 +71,11 @@ class Source(NCRecord):
     # Standards
     standards: list[str] = Field(default_factory=list)     # e.g. ["darwin_core", "prov_o"]
 
-    # Status
+    # Governance (human-managed lifecycle)
+    governance_state: GovernanceState = GovernanceState.PROPOSED
+    # Operational health (system-monitored)
+    operational_status: OperationalStatus = OperationalStatus.UNAVAILABLE
+    # Legacy status field — kept for backward compatibility; governance_state supersedes it
     status: SourceStatus = SourceStatus.ACTIVE
     last_fetched_at: str | None = None      # ISO 8601
     last_error: str | None = None
