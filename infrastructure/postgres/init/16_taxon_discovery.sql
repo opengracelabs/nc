@@ -363,3 +363,171 @@ CREATE CONSTRAINT TRIGGER trg_illustration_opportunity_supported
     AFTER INSERT OR UPDATE ON illustration_opportunities
     DEFERRABLE INITIALLY DEFERRED
     FOR EACH ROW EXECUTE FUNCTION check_illustration_opportunity_supported();
+
+-- COLLECTION-000001 commercial collections.
+-- Collections are governed product groupings of verified public-domain BHL assets.
+
+CREATE TABLE collections (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    slug                TEXT NOT NULL UNIQUE,
+    title               TEXT NOT NULL,
+    summary             TEXT,
+    collection_type     TEXT NOT NULL DEFAULT 'place_theme',
+    status              TEXT NOT NULL DEFAULT 'draft',
+    reviewed_by         TEXT,
+    reviewed_at         TIMESTAMPTZ,
+    published_at        TIMESTAMPTZ,
+    export_version      TEXT NOT NULL DEFAULT '1',
+    provenance          JSONB NOT NULL DEFAULT '{}',
+    agent_notes         JSONB NOT NULL DEFAULT '{}',
+    created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT chk_collection_type CHECK (collection_type IN (
+        'place_theme','taxon_theme','seasonal','curated_set'
+    )),
+    CONSTRAINT chk_collection_status CHECK (status IN (
+        'draft','approved','published','rejected','disputed','retracted'
+    )),
+    CONSTRAINT chk_collection_slug CHECK (slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$')
+);
+
+CREATE TABLE collection_places (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    collection_id       UUID NOT NULL REFERENCES collections(id) ON DELETE CASCADE,
+    place_id            UUID NOT NULL REFERENCES places(id),
+    role                TEXT NOT NULL DEFAULT 'primary',
+    provenance          JSONB NOT NULL DEFAULT '{}',
+    created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT chk_collection_place_role CHECK (role IN (
+        'primary','supporting'
+    )),
+    UNIQUE (collection_id, place_id)
+);
+
+CREATE TABLE collection_assets (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    collection_id       UUID NOT NULL REFERENCES collections(id) ON DELETE CASCADE,
+    asset_id            UUID NOT NULL REFERENCES assets(id),
+    opportunity_id      UUID REFERENCES illustration_opportunities(id),
+    sequence            INT NOT NULL CHECK (sequence > 0),
+    role                TEXT NOT NULL DEFAULT 'primary',
+    title               TEXT,
+    caption             TEXT,
+    credit_line         TEXT,
+    provenance          JSONB NOT NULL DEFAULT '{}',
+    created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT chk_collection_asset_role CHECK (role IN (
+        'primary','cover','supporting'
+    )),
+    UNIQUE (collection_id, asset_id),
+    UNIQUE (collection_id, sequence)
+);
+
+CREATE TABLE collection_exports (
+    id                  UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    collection_id       UUID NOT NULL REFERENCES collections(id) ON DELETE CASCADE,
+    export_format       TEXT NOT NULL DEFAULT 'manifest_json',
+    export_path         TEXT NOT NULL,
+    checksum_sha256     TEXT NOT NULL,
+    size_bytes          BIGINT NOT NULL CHECK (size_bytes > 0),
+    status              TEXT NOT NULL DEFAULT 'created',
+    created_by          TEXT NOT NULL,
+    provenance          JSONB NOT NULL DEFAULT '{}',
+    created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT chk_collection_export_format CHECK (export_format IN (
+        'manifest_json','commerce_zip'
+    )),
+    CONSTRAINT chk_collection_export_status CHECK (status IN (
+        'created','published','revoked'
+    )),
+    UNIQUE (collection_id, export_format, checksum_sha256)
+);
+
+CREATE INDEX idx_collections_status_updated
+    ON collections(status, updated_at DESC);
+CREATE INDEX idx_collection_places_place
+    ON collection_places(place_id);
+CREATE INDEX idx_collection_assets_collection_sequence
+    ON collection_assets(collection_id, sequence);
+CREATE INDEX idx_collection_assets_asset
+    ON collection_assets(asset_id);
+CREATE INDEX idx_collection_exports_collection
+    ON collection_exports(collection_id, created_at DESC);
+
+CREATE TRIGGER trg_collections_updated_at
+    BEFORE UPDATE ON collections
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER trg_collection_assets_updated_at
+    BEFORE UPDATE ON collection_assets
+    FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+CREATE OR REPLACE FUNCTION check_collection_asset_commercial_ready()
+RETURNS TRIGGER LANGUAGE plpgsql AS $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1
+        FROM assets a
+        JOIN asset_rights r ON r.asset_id = a.id
+        WHERE a.id = NEW.asset_id
+          AND a.asset_type = 'bhl_illustration'
+          AND a.status IN ('fetched','valid','active')
+          AND r.rights_status IN ('Public Domain','CC0')
+    ) THEN
+        RAISE EXCEPTION 'collection asset % is not a verified public-domain BHL illustration',
+            NEW.asset_id;
+    END IF;
+
+    IF NEW.opportunity_id IS NOT NULL
+       AND NOT EXISTS (
+           SELECT 1
+           FROM illustration_opportunity_assets ioa
+           WHERE ioa.opportunity_id = NEW.opportunity_id
+             AND ioa.asset_id = NEW.asset_id
+       )
+    THEN
+        RAISE EXCEPTION 'collection asset % does not match opportunity %',
+            NEW.asset_id, NEW.opportunity_id;
+    END IF;
+    RETURN NEW;
+END;
+$$;
+
+CREATE CONSTRAINT TRIGGER trg_collection_asset_commercial_ready
+    AFTER INSERT OR UPDATE ON collection_assets
+    DEFERRABLE INITIALLY DEFERRED
+    FOR EACH ROW EXECUTE FUNCTION check_collection_asset_commercial_ready();
+
+CREATE OR REPLACE FUNCTION check_collection_publishable()
+RETURNS TRIGGER LANGUAGE plpgsql AS $$
+BEGIN
+    IF NEW.status IN ('approved','published') THEN
+        IF NOT EXISTS (
+            SELECT 1 FROM collection_places p WHERE p.collection_id = NEW.id
+        ) THEN
+            RAISE EXCEPTION 'collection % has no place connection', NEW.id;
+        END IF;
+
+        IF NOT EXISTS (
+            SELECT 1 FROM collection_assets a WHERE a.collection_id = NEW.id
+        ) THEN
+            RAISE EXCEPTION 'collection % has no verified assets', NEW.id;
+        END IF;
+
+        IF NEW.reviewed_by IS NULL OR btrim(NEW.reviewed_by) = '' THEN
+            RAISE EXCEPTION 'collection % has no reviewer', NEW.id;
+        END IF;
+    END IF;
+    RETURN NEW;
+END;
+$$;
+
+CREATE CONSTRAINT TRIGGER trg_collection_publishable
+    AFTER INSERT OR UPDATE OF status, reviewed_by ON collections
+    DEFERRABLE INITIALLY DEFERRED
+    FOR EACH ROW EXECUTE FUNCTION check_collection_publishable();

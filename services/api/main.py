@@ -5,7 +5,16 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .config import settings
 from .database import close_pool, init_pool
-from .routers import discovery, health, knowledge, places, research, sources, taxa
+from .routers import (
+    collections,
+    discovery,
+    health,
+    knowledge,
+    places,
+    research,
+    sources,
+    taxa,
+)
 
 
 @asynccontextmanager
@@ -36,5 +45,6 @@ app.include_router(sources.router)
 app.include_router(places.router)
 app.include_router(knowledge.router)
 app.include_router(research.router)
+app.include_router(collections.router)
 app.include_router(taxa.router)
 app.include_router(discovery.router)
