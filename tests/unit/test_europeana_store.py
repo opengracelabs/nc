@@ -171,3 +171,32 @@ async def test_review_required_rights_enter_pipeline_with_workflow_item() -> Non
         "source_item",
         "workflow_items",
     ]
+
+
+async def test_write_record_serializes_database_uuid_ids_in_json_evidence() -> None:
+    from uuid import UUID
+
+    class UUIDConn(FakeConn):
+        async def fetchrow(self, sql: str, *args):
+            self._count += 1
+            table = _table_name(sql)
+            self.events.append(("fetchrow", table, args))
+            return {"id": UUID(f"00000000-0000-0000-0000-{self._count:012d}")}
+
+    conn = UUIDConn()
+
+    result = await write_record(
+        conn,
+        _yellowstone_payload(),
+        source_id="source-europeana",
+        media_type_id="map",
+    )
+
+    assert result["status"] == "written"
+    media_rights_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "media_rights"
+    )
+    evidence = json.loads(media_rights_args[2])
+    assert evidence["source_record_id"] == "00000000-0000-0000-0000-000000000002"

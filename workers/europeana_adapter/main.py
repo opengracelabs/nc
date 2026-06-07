@@ -146,7 +146,7 @@ async def _run(args: argparse.Namespace) -> dict[str, Any]:
 def main() -> None:
     args = _parser().parse_args()
     result = asyncio.run(_run(args))
-    print(json.dumps(result, sort_keys=True, indent=2))
+    print(json.dumps(result, sort_keys=True, indent=2, default=str))
 
 
 if __name__ == "__main__":

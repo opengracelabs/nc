@@ -21,7 +21,7 @@ SCHEMA_STANDARD = "edm"
 
 
 def _json(payload: dict[str, Any]) -> str:
-    return json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return json.dumps(payload, sort_keys=True, separators=(",", ":"), default=str)
 
 
 def _now_iso() -> str:
