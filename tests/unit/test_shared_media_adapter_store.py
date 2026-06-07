@@ -1,6 +1,12 @@
 import json
 
-from workers.shared_media_adapter.replay import M36_WRITE_ORDER, ReplayConn
+from workers.shared_media_adapter.replay import (
+    M36_WRITE_ORDER,
+    ReplayConn,
+    assert_m36_write_order,
+    assert_no_writes,
+    assert_rights_evidence_contract,
+)
 from workers.shared_media_adapter.store import (
     StoreRuntime,
     build_rights_evidence,
@@ -68,6 +74,7 @@ def _runtime(
         anchor_type="cultural",
         parameterize_anchor_type=parameterize_anchor_type,
         reject_missing_rights=reject_missing_rights,
+        generated_at_time="2026-06-07T00:00:00+00:00",
     )
 
 
@@ -97,6 +104,7 @@ async def test_write_normalized_record_preserves_m36_write_order_and_statuses() 
         "writes": 7,
     }
     assert conn.sql_order == M36_WRITE_ORDER
+    assert_m36_write_order(conn)
     media_rights_args = conn.args_by_table["media_rights"]
     evidence = json.loads(media_rights_args[2])
     assert media_rights_args[1] == "https://creativecommons.org/publicdomain/mark/1.0/"
@@ -125,6 +133,7 @@ async def test_write_normalized_record_rejects_missing_rights_when_runtime_requi
         "writes": 0,
     }
     assert conn.sql_order == []
+    assert_no_writes(conn)
 
 
 def test_build_rights_evidence_contains_shared_contract_fields() -> None:
@@ -150,3 +159,72 @@ def test_build_rights_evidence_contains_shared_contract_fields() -> None:
     assert evidence["applying_policy"] == "europeana_rights_matrix_v1.0"
     assert evidence["oai_pmh_identifier"] == "shared/1"
     assert evidence["evidence_status"] == "pending_human_review"
+
+
+def test_store_runtime_rejects_invalid_freeze_configuration() -> None:
+    try:
+        StoreRuntime(
+            worker_id="shared_adapter:test",
+            source_slug="shared_source",
+            technical_schema_version="shared-technical-v1",
+            validator_name="shared.validator",
+            validator_version="v1",
+            build_technical_metadata=_build_technical_metadata,
+            validation_status=_validation_status,
+            anchor_type="invalid",
+        )
+    except ValueError as exc:
+        assert str(exc) == "invalid_anchor_type:invalid"
+    else:
+        raise AssertionError("invalid anchor type was accepted")
+
+
+async def test_write_normalized_record_uses_runtime_schema_standard_and_replay_time() -> None:
+    conn = ReplayConn()
+    runtime = StoreRuntime(
+        worker_id="shared_adapter:test",
+        source_slug="shared_source",
+        technical_schema_version="shared-technical-v1",
+        validator_name="shared.validator",
+        validator_version="v1",
+        build_technical_metadata=_build_technical_metadata,
+        validation_status=_validation_status,
+        schema_standard="custom_edm",
+        anchor_type="cultural",
+        parameterize_anchor_type=True,
+        generated_at_time="2026-06-07T00:00:00+00:00",
+    )
+
+    await write_normalized_record(
+        conn,
+        runtime=runtime,
+        raw_payload={"raw": "payload"},
+        normalized=_normalized(),
+        source_id="shared-source",
+        media_type_id="image",
+    )
+
+    source_record_args = conn.args_by_table["source_record"]
+    source_item_args = conn.args_by_table["source_item"]
+    assert source_record_args[3] == "custom_edm"
+    assert source_item_args[5] == "cultural"
+    provenance = json.loads(source_item_args[6])
+    assert provenance["prov:generatedAtTime"] == "2026-06-07T00:00:00+00:00"
+
+
+def test_replay_rights_evidence_contract_assertion() -> None:
+    rights = {
+        "decision": "ALLOWED",
+        "allowed": True,
+        "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "rights_status": "verified_pd",
+        "rights_basis": "public_domain_mark",
+    }
+    evidence = build_rights_evidence(
+        runtime=_runtime(),
+        source_record_id="source-record-1",
+        normalized=_normalized(),
+        rights=rights,
+    )
+
+    assert_rights_evidence_contract(evidence, source="shared_source")

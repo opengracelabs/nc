@@ -9,6 +9,8 @@ from typing import Any
 
 from .rights import RIGHTS_POLICY_ID, RightsDecision, classify_rights
 
+ALLOWED_ANCHOR_TYPES = {"biological", "geographic", "cultural", "mixed"}
+
 
 def _json(payload: dict[str, Any]) -> str:
     return json.dumps(payload, sort_keys=True, separators=(",", ":"), default=str)
@@ -35,12 +37,34 @@ class StoreRuntime:
     anchor_type: str = "mixed"
     parameterize_anchor_type: bool = False
     reject_missing_rights: bool = False
+    generated_at_time: str | None = None
+
+    def __post_init__(self) -> None:
+        required_values = {
+            "worker_id": self.worker_id,
+            "source_slug": self.source_slug,
+            "schema_standard": self.schema_standard,
+            "technical_schema_version": self.technical_schema_version,
+            "validator_name": self.validator_name,
+            "validator_version": self.validator_version,
+            "rights_policy_id": self.rights_policy_id,
+            "workflow_record_id_key": self.workflow_record_id_key,
+        }
+        empty = [name for name, value in required_values.items() if not value]
+        if empty:
+            raise ValueError(f"missing_store_runtime_fields:{','.join(sorted(empty))}")
+        if self.anchor_type not in ALLOWED_ANCHOR_TYPES:
+            raise ValueError(f"invalid_anchor_type:{self.anchor_type}")
+        if not callable(self.build_technical_metadata):
+            raise ValueError("build_technical_metadata_not_callable")
+        if not callable(self.validation_status):
+            raise ValueError("validation_status_not_callable")
 
 
 def build_provenance(normalized: dict[str, Any], runtime: StoreRuntime) -> dict[str, Any]:
     return {
         "prov:wasGeneratedBy": runtime.worker_id,
-        "prov:generatedAtTime": _now_iso(),
+        "prov:generatedAtTime": runtime.generated_at_time or _now_iso(),
         "nc:source": runtime.source_slug,
         "nc:source_identifier": normalized.get("record_id"),
         "nc:raw_payload_hash": normalized.get("raw_payload_hash"),
@@ -147,13 +171,14 @@ async def insert_source_record(
             raw_payload, raw_payload_hash, normalized_payload, fetched_at,
             fetched_by, provenance, created_at, updated_at
         ) VALUES (
-            $1, $2, $3, 'edm', $4::jsonb, $5, $6::jsonb, NOW(), $7, $8::jsonb, NOW(), NOW()
+            $1, $2, $3, $4, $5::jsonb, $6, $7::jsonb, NOW(), $8, $9::jsonb, NOW(), NOW()
         )
         RETURNING id
         """,
         source_item_id,
         source_id,
         normalized["record_id"],
+        runtime.schema_standard,
         _json(raw_payload),
         normalized["raw_payload_hash"],
         _json(normalized),

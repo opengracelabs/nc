@@ -81,3 +81,35 @@ class ReplayConn:
         self.events.append(("execute", table, args))
         self.args_by_table[f"execute:{table}"] = args
         return "UPDATE 1"
+
+
+REQUIRED_RIGHTS_EVIDENCE_FIELDS = {
+    "source",
+    "source_record_id",
+    "edm_rights_uri",
+    "rights_matrix_classification",
+    "applying_policy",
+    "oai_pmh_identifier",
+    "raw_payload_hash",
+    "worker_classified_status",
+    "evidence_status",
+}
+
+
+def assert_m36_write_order(conn: ReplayConn, *, review_required: bool = False) -> None:
+    expected = M36_REVIEW_REQUIRED_WRITE_ORDER if review_required else M36_WRITE_ORDER
+    assert conn.sql_order == expected
+
+
+def assert_no_writes(conn: ReplayConn) -> None:
+    assert conn.sql_order == []
+    assert conn.events == []
+
+
+def assert_rights_evidence_contract(evidence: dict[str, Any], *, source: str) -> None:
+    assert REQUIRED_RIGHTS_EVIDENCE_FIELDS.issubset(evidence.keys())
+    assert evidence["source"] == source
+    assert evidence["evidence_status"] == "pending_human_review"
+    assert evidence["rights_matrix_classification"] in {"allowed", "review_required", "blocked"}
+    assert isinstance(evidence["raw_payload_hash"], str)
+    assert len(evidence["raw_payload_hash"]) == 64
