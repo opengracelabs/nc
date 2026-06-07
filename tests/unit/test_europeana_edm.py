@@ -87,4 +87,7 @@ def test_raw_payload_hash_is_stable() -> None:
     right = {"object": {"title": ["Yellowstone map"], "id": "/123/abc"}}
 
     assert canonical_json_hash(left) == canonical_json_hash(right)
-    assert normalize_edm_record(left)["raw_payload_hash"] == normalize_edm_record(right)["raw_payload_hash"]
+    assert (
+        normalize_edm_record(left)["raw_payload_hash"]
+        == normalize_edm_record(right)["raw_payload_hash"]
+    )
