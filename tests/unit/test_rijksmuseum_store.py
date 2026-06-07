@@ -223,7 +223,7 @@ async def test_review_required_rights_enter_pipeline_with_workflow_item() -> Non
     ]
 
 
-async def test_write_record_routes_absent_rights_to_review_workflow() -> None:
+async def test_write_record_rejects_absent_rights_before_database_writes() -> None:
     xml = _xml().replace(
         '<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />',
         "",
@@ -238,19 +238,13 @@ async def test_write_record_routes_absent_rights_to_review_workflow() -> None:
         media_type_id="image",
     )
 
-    assert result["status"] == "written"
-    assert result["workflow_item_id"] == "workflow_items-7"
-    assert result["writes"] == 8
-    media_rights_args = next(
-        args
-        for kind, table, args in conn.events
-        if kind == "fetchrow" and table == "media_rights"
-    )
-    evidence = json.loads(media_rights_args[2])
-    assert media_rights_args[1] is None
-    assert evidence["edm_rights_uri"] is None
-    assert evidence["rights_basis"] == "missing_rights"
-    assert evidence["rights_matrix_classification"] == "review_required"
+    assert result == {
+        "status": "rejected",
+        "reason": "missing_rights_uri",
+        "record_id": "https://id.rijksmuseum.nl/200343467",
+        "writes": 0,
+    }
+    assert conn.events == []
 
 
 async def test_write_record_passes_anchor_type_biological_to_source_item() -> None:

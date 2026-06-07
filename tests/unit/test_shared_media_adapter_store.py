@@ -119,16 +119,13 @@ async def test_write_normalized_record_routes_missing_rights_to_review_workflow(
         media_type_id="image",
     )
 
-    assert result["status"] == "written"
-    assert result["workflow_item_id"] == "workflow_items-7"
-    assert result["writes"] == 8
-    assert_m36_write_order(conn, review_required=True)
-    media_rights_args = conn.args_by_table["media_rights"]
-    evidence = json.loads(media_rights_args[2])
-    assert media_rights_args[1] is None
-    assert evidence["edm_rights_uri"] is None
-    assert evidence["rights_basis"] == "missing_rights"
-    assert evidence["rights_matrix_classification"] == "review_required"
+    assert result == {
+        "status": "rejected",
+        "reason": "missing_rights_uri",
+        "record_id": "shared/1",
+        "writes": 0,
+    }
+    assert conn.sql_order == []
 
 
 def test_build_rights_evidence_contains_shared_contract_fields() -> None:

@@ -381,6 +381,14 @@ async def write_normalized_record(
     source_id: str,
     media_type_id: str,
 ) -> dict[str, Any]:
+    if not normalized.get("rights_uri"):
+        return {
+            "status": "rejected",
+            "reason": "missing_rights_uri",
+            "record_id": normalized.get("record_id"),
+            "writes": 0,
+        }
+
     rights = classify_rights(normalized.get("rights_uri"))
     if rights["decision"] == RightsDecision.BLOCKED:
         return {

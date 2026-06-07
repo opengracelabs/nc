@@ -78,7 +78,7 @@ def _xml_with_set_spec(set_spec: str) -> str:
 
 # V1 ──────────────────────────────────────────────────────────────────────────
 
-async def test_sprint4_v1_absent_rights_uses_shared_review_workflow() -> None:
+async def test_sprint4_v1_absent_rights_blocked_without_source_record() -> None:
     xml = _xml().replace(
         '<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />',
         "",
@@ -93,28 +93,13 @@ async def test_sprint4_v1_absent_rights_uses_shared_review_workflow() -> None:
         media_type_id="image",
     )
 
-    assert result["status"] == "written"
-    assert result["workflow_item_id"] == "workflow_items-7"
-    assert result["writes"] == 8
-    assert conn.sql_order == [
-        "BEGIN",
-        "source_item",
-        "source_record",
-        "media_file",
-        "media_rights",
-        "preservation_event",
-        "media_technical_metadata",
-        "source_item",
-        "workflow_items",
-        "COMMIT",
-    ]
-    evidence = json.loads(conn.args_by_table["media_rights"][2])
-    assert evidence["edm_rights_uri"] is None
-    assert evidence["rights_basis"] == "missing_rights"
-    assert evidence["rights_matrix_classification"] == "review_required"
+    assert result["status"] == "rejected"
+    assert result["reason"] == "missing_rights_uri"
+    assert result["writes"] == 0
+    assert conn.sql_order == []
 
 
-async def test_sprint4_v1_absent_rights_review_path_is_deterministic() -> None:
+async def test_sprint4_v1_absent_rights_rejection_is_deterministic() -> None:
     xml = _xml().replace(
         '<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />',
         "",
@@ -132,11 +117,7 @@ async def test_sprint4_v1_absent_rights_review_path_is_deterministic() -> None:
     )
 
     assert left_result == right_result
-    assert left.sql_order == right.sql_order
-    assert json.loads(left.args_by_table["media_rights"][2]) == json.loads(
-        right.args_by_table["media_rights"][2]
-    )
-    assert left.args_by_table["workflow_items"][1] == right.args_by_table["workflow_items"][1]
+    assert left.sql_order == right.sql_order == []
 
 
 # V2 ──────────────────────────────────────────────────────────────────────────
@@ -262,21 +243,18 @@ async def test_sprint4_full_write_path_with_all_three_fixes_applied() -> None:
         '<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />',
         "",
     )
-    conn_review = ReplayConn()
-    review_result = await write_record(
-        conn_review,
+    conn_blocked = ReplayConn()
+    blocked_result = await write_record(
+        conn_blocked,
         _search_response(),
         xml_no_rights,
         source_id="source-rijksmuseum",
         media_type_id="image",
         anchor_type="biological",
     )
-    assert review_result["status"] == "written"
-    assert review_result["workflow_item_id"] == "workflow_items-7"
-    assert conn_review.args_by_table["source_item"][5] == "biological"
-    review_evidence = json.loads(conn_review.args_by_table["media_rights"][2])
-    assert review_evidence["rights_basis"] == "missing_rights"
-    assert review_evidence["rights_matrix_classification"] == "review_required"
+    assert blocked_result["status"] == "rejected"
+    assert blocked_result["reason"] == "missing_rights_uri"
+    assert conn_blocked.sql_order == []
 
     conn_written = ReplayConn()
     written_result = await write_record(
