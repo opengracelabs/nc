@@ -56,6 +56,7 @@ def test_missing_rights_requires_review_but_is_not_allowed() -> None:
 
     assert result["decision"] == RightsDecision.REVIEW_REQUIRED
     assert result["allowed"] is False
+    assert result["rights_status"] == "pending_verification"
     assert result["rights_basis"] == "missing_rights"
 
 
@@ -64,7 +65,22 @@ def test_unknown_rights_requires_review_but_is_not_allowed() -> None:
 
     assert result["decision"] == RightsDecision.REVIEW_REQUIRED
     assert result["allowed"] is False
+    assert result["rights_status"] == "pending_verification"
     assert result["rights_basis"] == "unknown_rights_statement"
+
+
+def test_review_required_statements_are_not_blocked() -> None:
+    for uri in (
+        "https://rightsstatements.org/vocab/NoC-CR/1.0/",
+        "https://rightsstatements.org/vocab/NoC-OKLR/1.0/",
+        "https://rightsstatements.org/vocab/NKC/1.0/",
+    ):
+        result = classify_rights(uri)
+
+        assert result["decision"] == RightsDecision.REVIEW_REQUIRED
+        assert result["allowed"] is False
+        assert result["rights_status"] == "pending_verification"
+        assert result["rights_basis"] == "review_required_statement"
 
 
 def test_is_allowed_rights_matches_allowlist() -> None:

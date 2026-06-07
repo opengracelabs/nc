@@ -13,6 +13,9 @@ class RightsDecision(StrEnum):
 CC0_URI = "https://creativecommons.org/publicdomain/zero/1.0/"
 PDM_URI = "https://creativecommons.org/publicdomain/mark/1.0/"
 NOC_US_URI = "https://rightsstatements.org/vocab/NoC-US/1.0/"
+NOC_CR_URI = "https://rightsstatements.org/vocab/NoC-CR/1.0/"
+NOC_OKLR_URI = "https://rightsstatements.org/vocab/NoC-OKLR/1.0/"
+NKC_URI = "https://rightsstatements.org/vocab/NKC/1.0/"
 
 _ALLOWED_RIGHTS = {
     CC0_URI: {"rights_status": "verified_cc0", "rights_basis": "cc0_statement"},
@@ -20,11 +23,12 @@ _ALLOWED_RIGHTS = {
     NOC_US_URI: {"rights_status": "verified_pd", "rights_basis": "noc_us_statement"},
 }
 
+_REVIEW_REQUIRED_URIS = {NOC_CR_URI, NOC_OKLR_URI, NKC_URI}
+
 _BLOCKED_TOKENS = (
     "/InC/",
     "/InC-EDU/",
     "/InC-NC/",
-    "/NoC-OKLR/",
     "/CNE/",
     "creativecommons.org/licenses/",
 )
@@ -59,8 +63,17 @@ def classify_rights(value: str | None) -> dict[str, str | bool | None]:
             "decision": RightsDecision.REVIEW_REQUIRED.value,
             "allowed": False,
             "rights_statement_uri": None,
-            "rights_status": "blocked",
+            "rights_status": "pending_verification",
             "rights_basis": "missing_rights",
+        }
+
+    if uri in _REVIEW_REQUIRED_URIS:
+        return {
+            "decision": RightsDecision.REVIEW_REQUIRED.value,
+            "allowed": False,
+            "rights_statement_uri": uri,
+            "rights_status": "pending_verification",
+            "rights_basis": "review_required_statement",
         }
 
     if any(token.lower() in uri.lower() for token in _BLOCKED_TOKENS):
@@ -76,7 +89,7 @@ def classify_rights(value: str | None) -> dict[str, str | bool | None]:
         "decision": RightsDecision.REVIEW_REQUIRED.value,
         "allowed": False,
         "rights_statement_uri": uri,
-        "rights_status": "blocked",
+        "rights_status": "pending_verification",
         "rights_basis": "unknown_rights_statement",
     }
 
