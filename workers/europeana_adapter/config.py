@@ -7,7 +7,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    postgres_dsn: str
+    postgres_dsn: str = "postgresql://nc:nc-dev-password@localhost:5432/nc"
     europeana_api_key: str = ""
     europeana_api_base_url: str = "https://api.europeana.eu/record/v2"
     europeana_requests_per_second: int = 2
