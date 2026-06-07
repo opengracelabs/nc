@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:ore="http://www.openarchives.org/ore/terms/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ebucore="http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#">
+  <responseDate>2026-06-07T00:00:00Z</responseDate>
+  <request verb="GetRecord" metadataPrefix="edm" identifier="https://id.rijksmuseum.nl/200343467">https://data.rijksmuseum.nl/oai</request>
+  <GetRecord>
+    <record>
+      <header>
+        <identifier>https://id.rijksmuseum.nl/200343467</identifier>
+        <datestamp>2025-07-08T18:28:45Z</datestamp>
+      </header>
+      <metadata>
+        <rdf:RDF>
+          <edm:ProvidedCHO rdf:about="https://id.rijksmuseum.nl/200343467">
+            <dc:title>Yellowstone National Park</dc:title>
+            <dc:description>Photographic view of Yellowstone National Park.</dc:description>
+            <dcterms:created>1891</dcterms:created>
+            <dc:creator>Rijksmuseum</dc:creator>
+            <dc:subject>Yellowstone</dc:subject>
+            <dc:subject>National parks</dc:subject>
+            <edm:type>IMAGE</edm:type>
+          </edm:ProvidedCHO>
+          <ore:Aggregation rdf:about="https://id.rijksmuseum.nl/aggregation/200343467">
+            <edm:aggregatedCHO rdf:resource="https://id.rijksmuseum.nl/200343467" />
+            <edm:dataProvider>Rijksmuseum</edm:dataProvider>
+            <edm:provider>Rijksmuseum</edm:provider>
+            <edm:isShownAt rdf:resource="https://www.rijksmuseum.nl/en/collection/RP-F-2001-7-1062" />
+            <edm:isShownBy rdf:resource="https://iiif.micr.io/example/full/max/0/default.jpg" />
+            <edm:object rdf:resource="https://iiif.micr.io/example/full/400,/0/default.jpg" />
+            <edm:preview rdf:resource="https://iiif.micr.io/example/full/200,/0/default.jpg" />
+            <edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />
+          </ore:Aggregation>
+          <edm:WebResource rdf:about="https://iiif.micr.io/example/full/max/0/default.jpg">
+            <ebucore:width>2500</ebucore:width>
+            <ebucore:height>2002</ebucore:height>
+          </edm:WebResource>
+        </rdf:RDF>
+      </metadata>
+    </record>
+  </GetRecord>
+</OAI-PMH>

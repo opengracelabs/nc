@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
+  <responseDate>2026-06-07T00:00:00Z</responseDate>
+  <request verb="GetRecord">https://data.rijksmuseum.nl/oai</request>
+  <error code="idDoesNotExist">Unknown identifier</error>
+</OAI-PMH>
