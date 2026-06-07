@@ -1,12 +1,8 @@
-"""Rijksmuseum rights classification.
-
-Rijksmuseum uses the same governed rights statement vocabulary as the Europeana
-adapter. Keep this module as a thin source-specific wrapper so future
-Rijksmuseum-specific rights policy can be added without changing callers.
-"""
+"""Rijksmuseum rights compatibility wrapper."""
 from __future__ import annotations
 
-from workers.europeana_adapter.rights import (
+from workers.shared_media_adapter.rights import (
+    RIGHTS_POLICY_ID,
     RightsDecision,
     classify_rights,
     is_allowed_rights,
@@ -14,6 +10,7 @@ from workers.europeana_adapter.rights import (
 )
 
 __all__ = [
+    "RIGHTS_POLICY_ID",
     "RightsDecision",
     "classify_rights",
     "is_allowed_rights",
