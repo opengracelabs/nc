@@ -38,7 +38,15 @@ class ReplayConn:
 
 def _table_name(sql: str) -> str:
     compact = " ".join(sql.split()).lower()
-    for table in ("source_item", "source_record", "media_rights", "media_technical_metadata"):
+    for table in (
+        "workflow_items",
+        "preservation_event",
+        "media_technical_metadata",
+        "media_rights",
+        "media_file",
+        "source_record",
+        "source_item",
+    ):
         if f"insert into {table}" in compact or f"update {table}" in compact:
             return table
     return "unknown"
@@ -71,7 +79,9 @@ async def test_europeana_sprint3_replay_is_deterministic_for_same_yellowstone_pa
         "BEGIN",
         "source_item",
         "source_record",
+        "media_file",
         "media_rights",
+        "preservation_event",
         "media_technical_metadata",
         "source_item",
         "COMMIT",
