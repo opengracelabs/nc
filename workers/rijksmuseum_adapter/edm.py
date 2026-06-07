@@ -176,6 +176,7 @@ def normalize_oai_edm_record(
 
     return {
         "record_id": str(source_id).strip() if source_id else None,
+        "set_specs": _all_text(root, (".//oai:header/oai:setSpec",)),
         "title": title,
         "description": description,
         "date": date,

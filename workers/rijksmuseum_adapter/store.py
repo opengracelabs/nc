@@ -15,9 +15,10 @@ from .technical import (
     validation_status,
 )
 
-WORKER_ID = "rijksmuseum_adapter:sprint3"
+WORKER_ID = "rijksmuseum_adapter:sprint4"
 SOURCE_SLUG = "rijksmuseum"
 SCHEMA_STANDARD = "edm"
+PILOT_BIOLOGICAL_SET_SPEC = "261222"
 
 
 def _json(payload: dict[str, Any]) -> str:
@@ -46,12 +47,20 @@ def build_provenance(normalized: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def derive_anchor_type(normalized: dict[str, Any]) -> str:
+    """Derive the governed source_item anchor type from OAI-PMH set membership."""
+    if PILOT_BIOLOGICAL_SET_SPEC in (normalized.get("set_specs") or []):
+        return "biological"
+    return "cultural"
+
+
 async def upsert_source_item(
     conn: Any,
     *,
     source_id: str,
     normalized: dict[str, Any],
     media_type_id: str,
+    anchor_type: str = "cultural",
 ) -> Any:
     """Create or update the Rijksmuseum source_item shell."""
     row = await conn.fetchrow(
@@ -60,7 +69,7 @@ async def upsert_source_item(
             source_id, source_identifier, media_type_id, canonical_source_url,
             title, status, anchor_type, provenance, created_at, updated_at
         ) VALUES (
-            $1, $2, $3, $4, $5, 'proposed', 'mixed', $6::jsonb, NOW(), NOW()
+            $1, $2, $3, $4, $5, 'proposed', $6, $7::jsonb, NOW(), NOW()
         )
         ON CONFLICT (source_id, source_identifier)
         DO UPDATE SET
@@ -75,6 +84,7 @@ async def upsert_source_item(
         media_type_id,
         normalized.get("source_url"),
         normalized.get("title"),
+        anchor_type,
         _json(build_provenance(normalized)),
     )
     return row["id"]
@@ -160,6 +170,10 @@ async def insert_media_rights(
         "source": SOURCE_SLUG,
         "schema_standard": SCHEMA_STANDARD,
         "source_record_id": source_record_id,
+        "edm_rights_uri": rights["rights_statement_uri"],
+        "rights_matrix_classification": rights["decision"].lower(),
+        "applying_policy": "europeana_rights_matrix_v1.0",
+        "oai_pmh_identifier": normalized.get("record_id"),
         "rights_basis": rights["rights_basis"],
         "rights_statement_uri": rights["rights_statement_uri"],
         "raw_payload_hash": normalized["raw_payload_hash"],
@@ -331,9 +345,19 @@ async def write_record(
     *,
     source_id: str,
     media_type_id: str,
+    anchor_type: str | None = None,
 ) -> dict[str, Any]:
     """Write one non-blocked Rijksmuseum Search/GetRecord record into M36 tables."""
     normalized = normalize_search_getrecord(search_response, oai_xml)
+
+    if not normalized.get("rights_uri"):
+        return {
+            "status": "rejected",
+            "reason": "missing_rights_uri",
+            "record_id": normalized.get("record_id"),
+            "writes": 0,
+        }
+
     rights = classify_rights(normalized.get("rights_uri"))
     if rights["decision"] == RightsDecision.BLOCKED:
         return {
@@ -353,6 +377,7 @@ async def write_record(
         }
 
     raw_payload = build_raw_payload(search_response, oai_xml)
+    derived_anchor_type = anchor_type if anchor_type is not None else derive_anchor_type(normalized)
     workflow_item_id = None
     async with conn.transaction():
         source_item_id = await upsert_source_item(
@@ -360,6 +385,7 @@ async def write_record(
             source_id=source_id,
             normalized=normalized,
             media_type_id=media_type_id,
+            anchor_type=derived_anchor_type,
         )
         source_record_id = await insert_source_record(
             conn,

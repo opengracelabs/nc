@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from uuid import UUID
 
-from workers.rijksmuseum_adapter.store import build_raw_payload, write_record
+from workers.rijksmuseum_adapter.store import build_raw_payload, derive_anchor_type, write_record
 
 _FIXTURE = Path("tests/fixtures/rijksmuseum/yellowstone_getrecord_edm.xml")
 
@@ -57,6 +57,14 @@ def _table_name(sql: str) -> str:
 def _xml() -> str:
     return _FIXTURE.read_text()
 
+
+
+
+def _xml_with_set_spec(set_spec: str) -> str:
+    return _xml().replace(
+        "<datestamp>2025-07-08T18:28:45Z</datestamp>",
+        f"<datestamp>2025-07-08T18:28:45Z</datestamp>\n        <setSpec>{set_spec}</setSpec>",
+    )
 
 def _search_response() -> dict:
     return {
@@ -213,6 +221,220 @@ async def test_review_required_rights_enter_pipeline_with_workflow_item() -> Non
         "source_item",
         "workflow_items",
     ]
+
+
+async def test_write_record_rejects_absent_rights_before_database_writes() -> None:
+    xml = _xml().replace(
+        '<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />',
+        "",
+    )
+    conn = FakeConn()
+
+    result = await write_record(
+        conn,
+        _search_response(),
+        xml,
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    assert result == {
+        "status": "rejected",
+        "reason": "missing_rights_uri",
+        "record_id": "https://id.rijksmuseum.nl/200343467",
+        "writes": 0,
+    }
+    assert conn.events == []
+
+
+async def test_write_record_absent_rights_not_misrouted_as_review_required() -> None:
+    xml = _xml().replace(
+        '<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/" />',
+        "",
+    )
+    conn = FakeConn()
+
+    result = await write_record(
+        conn,
+        _search_response(),
+        xml,
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    assert result["reason"] == "missing_rights_uri"
+    assert result.get("workflow_item_id") is None
+    assert conn.events == []
+
+
+async def test_write_record_passes_anchor_type_biological_to_source_item() -> None:
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        _xml(),
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+        anchor_type="biological",
+    )
+
+    source_item_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "source_item"
+    )
+    assert source_item_args[5] == "biological"
+
+
+
+def test_derive_anchor_type_returns_biological_for_pilot_set_261222() -> None:
+    assert derive_anchor_type({"set_specs": ["261222"]}) == "biological"
+
+
+def test_derive_anchor_type_defaults_to_cultural() -> None:
+    assert derive_anchor_type({"set_specs": ["260239"]}) == "cultural"
+    assert derive_anchor_type({}) == "cultural"
+
+
+async def test_write_record_derives_biological_anchor_type_for_pilot_set_261222() -> None:
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        _xml_with_set_spec("261222"),
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    source_item_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "source_item"
+    )
+    assert source_item_args[5] == "biological"
+
+
+async def test_write_record_explicit_anchor_type_overrides_set_derivation() -> None:
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        _xml_with_set_spec("261222"),
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+        anchor_type="cultural",
+    )
+
+    source_item_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "source_item"
+    )
+    assert source_item_args[5] == "cultural"
+
+async def test_write_record_defaults_anchor_type_to_cultural() -> None:
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        _xml(),
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    source_item_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "source_item"
+    )
+    assert source_item_args[5] == "cultural"
+    assert source_item_args[5] != "mixed"
+
+
+async def test_media_rights_evidence_contains_all_required_a1_fields() -> None:
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        _xml(),
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    media_rights_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "media_rights"
+    )
+    evidence = json.loads(media_rights_args[2])
+
+    required_fields = {
+        "source",
+        "source_record_id",
+        "edm_rights_uri",
+        "rights_matrix_classification",
+        "applying_policy",
+        "oai_pmh_identifier",
+        "raw_payload_hash",
+        "worker_classified_status",
+        "evidence_status",
+    }
+    assert required_fields.issubset(evidence.keys())
+
+
+async def test_media_rights_evidence_edm_rights_uri_value_is_correct() -> None:
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        _xml(),
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    media_rights_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "media_rights"
+    )
+    evidence = json.loads(media_rights_args[2])
+
+    assert evidence["edm_rights_uri"] == "https://creativecommons.org/publicdomain/mark/1.0/"
+    assert evidence["rights_matrix_classification"] == "allowed"
+    assert evidence["applying_policy"] == "europeana_rights_matrix_v1.0"
+    assert evidence["oai_pmh_identifier"] == "https://id.rijksmuseum.nl/200343467"
+
+
+async def test_media_rights_evidence_classification_is_review_required_for_noc_oklr() -> None:
+    xml = _xml().replace(
+        "http://creativecommons.org/publicdomain/mark/1.0/",
+        "https://rightsstatements.org/vocab/NoC-OKLR/1.0/",
+    )
+    conn = FakeConn()
+
+    await write_record(
+        conn,
+        _search_response(),
+        xml,
+        source_id="source-rijksmuseum",
+        media_type_id="image",
+    )
+
+    media_rights_args = next(
+        args
+        for kind, table, args in conn.events
+        if kind == "fetchrow" and table == "media_rights"
+    )
+    evidence = json.loads(media_rights_args[2])
+
+    assert evidence["rights_matrix_classification"] == "review_required"
+    assert evidence["applying_policy"] == "europeana_rights_matrix_v1.0"
 
 
 async def test_write_record_serializes_database_uuid_ids_in_json_evidence() -> None:

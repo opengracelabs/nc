@@ -45,6 +45,7 @@ def test_normalize_oai_edm_record_maps_m36_fields() -> None:
     normalized = normalize_oai_edm_record(_xml())
 
     assert normalized["record_id"] == "https://id.rijksmuseum.nl/200343467"
+    assert normalized["set_specs"] == []
     assert normalized["title"] == "Yellowstone National Park"
     assert normalized["description"] == "Photographic view of Yellowstone National Park."
     assert normalized["date"] == "1891"
@@ -69,6 +70,7 @@ def test_normalize_search_getrecord_preserves_oai_authority() -> None:
     normalized = normalize_search_getrecord(_search_response(), _xml())
 
     assert normalized["record_id"] == "https://id.rijksmuseum.nl/200343467"
+    assert normalized["set_specs"] == []
     assert normalized["title"] == "Yellowstone National Park"
 
 
