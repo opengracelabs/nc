@@ -75,6 +75,8 @@ def test_mandatory_field_warnings_report_missing_fields() -> None:
     assert mandatory_field_warnings(normalized) == [
         "missing_title",
         "missing_rights_uri",
+        "missing_description",
+        "missing_date",
         "missing_provider",
         "missing_data_provider",
     ]

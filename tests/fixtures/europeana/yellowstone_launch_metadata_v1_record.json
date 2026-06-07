@@ -1,0 +1,19 @@
+{
+  "object": {
+    "id": "/9200518/ark__12148_btv1b530248434",
+    "title": ["Map of Yellowstone Lake"],
+    "description": ["Yellowstone Launch Metadata Package v1 asset EU-YEL-001."],
+    "date": ["1871"],
+    "creator": ["National Library of France"],
+    "subject": ["Yellowstone Lake", "Maps", "National parks"],
+    "rights": ["http://creativecommons.org/publicdomain/mark/1.0/"],
+    "provider": ["Europeana"],
+    "dataProvider": ["National Library of France"],
+    "type": ["IMAGE"],
+    "isShownAt": ["https://www.europeana.eu/en/item/9200518/ark__12148_btv1b530248434"],
+    "isShownBy": ["https://api.europeana.eu/thumbnail/v3/400/9200518/ark__12148_btv1b530248434"],
+    "edmPreview": ["https://api.europeana.eu/thumbnail/v3/200/9200518/ark__12148_btv1b530248434"],
+    "width": [4500],
+    "height": [3200]
+  }
+}
