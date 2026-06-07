@@ -51,8 +51,6 @@ def _runtime(anchor_type: str) -> StoreRuntime:
         validation_status=validation_status,
         workflow_record_id_key="rijksmuseum_record_id",
         anchor_type=anchor_type,
-        parameterize_anchor_type=True,
-        reject_missing_rights=True,
     )
 
 

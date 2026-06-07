@@ -92,9 +92,9 @@ async def test_v2_v4_source_item_stays_proposed_with_governed_anchor_type() -> N
         media_type_id="map",
     )
 
-    _, _, insert_sql, _ = _event(conn, "source_item", kind="fetchrow")
+    _, _, insert_sql, insert_args = _event(conn, "source_item", kind="fetchrow")
     _, _, update_sql, _ = _event(conn, "source_item", kind="execute")
-    assert "'mixed'" in insert_sql
+    assert insert_args[5] == "mixed"
     assert "europeana_record" not in insert_sql
     assert "activation_eligible" not in update_sql
 

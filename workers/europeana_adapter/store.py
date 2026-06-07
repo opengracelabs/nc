@@ -34,8 +34,6 @@ _RUNTIME = StoreRuntime(
     validation_status=validation_status,
     workflow_record_id_key="europeana_record_id",
     anchor_type="mixed",
-    parameterize_anchor_type=False,
-    reject_missing_rights=False,
 )
 
 

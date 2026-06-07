@@ -34,9 +34,7 @@ class StoreRuntime:
     schema_standard: str = "edm"
     rights_policy_id: str = RIGHTS_POLICY_ID
     workflow_record_id_key: str = "source_record_id"
-    anchor_type: str = "mixed"
-    parameterize_anchor_type: bool = False
-    reject_missing_rights: bool = False
+    anchor_type: str = "cultural"
     generated_at_time: str | None = None
 
     def __post_init__(self) -> None:
@@ -102,55 +100,30 @@ async def upsert_source_item(
     normalized: dict[str, Any],
     media_type_id: str,
 ) -> Any:
-    if runtime.parameterize_anchor_type:
-        sql = """
-        INSERT INTO source_item (
-            source_id, source_identifier, media_type_id, canonical_source_url,
-            title, status, anchor_type, provenance, created_at, updated_at
-        ) VALUES (
-            $1, $2, $3, $4, $5, 'proposed', $6, $7::jsonb, NOW(), NOW()
-        )
-        ON CONFLICT (source_id, source_identifier)
-        DO UPDATE SET
-            media_type_id = EXCLUDED.media_type_id,
-            canonical_source_url = EXCLUDED.canonical_source_url,
-            title = EXCLUDED.title,
-            updated_at = NOW()
-        RETURNING id
-        """
-        args = (
-            source_id,
-            normalized["record_id"],
-            media_type_id,
-            normalized.get("source_url"),
-            normalized.get("title"),
-            runtime.anchor_type,
-            _json(build_provenance(normalized, runtime)),
-        )
-    else:
-        sql = """
-        INSERT INTO source_item (
-            source_id, source_identifier, media_type_id, canonical_source_url,
-            title, status, anchor_type, provenance, created_at, updated_at
-        ) VALUES (
-            $1, $2, $3, $4, $5, 'proposed', 'mixed', $6::jsonb, NOW(), NOW()
-        )
-        ON CONFLICT (source_id, source_identifier)
-        DO UPDATE SET
-            media_type_id = EXCLUDED.media_type_id,
-            canonical_source_url = EXCLUDED.canonical_source_url,
-            title = EXCLUDED.title,
-            updated_at = NOW()
-        RETURNING id
-        """
-        args = (
-            source_id,
-            normalized["record_id"],
-            media_type_id,
-            normalized.get("source_url"),
-            normalized.get("title"),
-            _json(build_provenance(normalized, runtime)),
-        )
+    sql = """
+    INSERT INTO source_item (
+        source_id, source_identifier, media_type_id, canonical_source_url,
+        title, status, anchor_type, provenance, created_at, updated_at
+    ) VALUES (
+        $1, $2, $3, $4, $5, 'proposed', $6, $7::jsonb, NOW(), NOW()
+    )
+    ON CONFLICT (source_id, source_identifier)
+    DO UPDATE SET
+        media_type_id = EXCLUDED.media_type_id,
+        canonical_source_url = EXCLUDED.canonical_source_url,
+        title = EXCLUDED.title,
+        updated_at = NOW()
+    RETURNING id
+    """
+    args = (
+        source_id,
+        normalized["record_id"],
+        media_type_id,
+        normalized.get("source_url"),
+        normalized.get("title"),
+        runtime.anchor_type,
+        _json(build_provenance(normalized, runtime)),
+    )
     row = await conn.fetchrow(sql, *args)
     return row["id"]
 
@@ -232,8 +205,8 @@ async def insert_media_rights(
     source_item_id: str,
     source_record_id: str,
     normalized: dict[str, Any],
+    rights: dict[str, str | bool | None],
 ) -> Any:
-    rights = classify_rights(normalized.get("rights_uri"))
     evidence = build_rights_evidence(
         runtime=runtime,
         source_record_id=source_record_id,
@@ -408,14 +381,6 @@ async def write_normalized_record(
     source_id: str,
     media_type_id: str,
 ) -> dict[str, Any]:
-    if runtime.reject_missing_rights and not normalized.get("rights_uri"):
-        return {
-            "status": "rejected",
-            "reason": "missing_rights_uri",
-            "record_id": normalized.get("record_id"),
-            "writes": 0,
-        }
-
     rights = classify_rights(normalized.get("rights_uri"))
     if rights["decision"] == RightsDecision.BLOCKED:
         return {
@@ -465,6 +430,7 @@ async def write_normalized_record(
             source_item_id=source_item_id,
             source_record_id=source_record_id,
             normalized=normalized,
+            rights=rights,
         )
         await insert_preservation_event(
             conn,

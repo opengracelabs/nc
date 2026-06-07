@@ -4,7 +4,6 @@ from workers.shared_media_adapter.replay import (
     M36_WRITE_ORDER,
     ReplayConn,
     assert_m36_write_order,
-    assert_no_writes,
     assert_rights_evidence_contract,
 )
 from workers.shared_media_adapter.store import (
@@ -57,11 +56,7 @@ def _validation_status(content: dict) -> str:
     return "valid"
 
 
-def _runtime(
-    *,
-    reject_missing_rights: bool = False,
-    parameterize_anchor_type: bool = True,
-) -> StoreRuntime:
+def _runtime(*, anchor_type: str = "cultural") -> StoreRuntime:
     return StoreRuntime(
         worker_id="shared_adapter:test",
         source_slug="shared_source",
@@ -71,9 +66,7 @@ def _runtime(
         build_technical_metadata=_build_technical_metadata,
         validation_status=_validation_status,
         workflow_record_id_key="shared_record_id",
-        anchor_type="cultural",
-        parameterize_anchor_type=parameterize_anchor_type,
-        reject_missing_rights=reject_missing_rights,
+        anchor_type=anchor_type,
         generated_at_time="2026-06-07T00:00:00+00:00",
     )
 
@@ -113,27 +106,29 @@ async def test_write_normalized_record_preserves_m36_write_order_and_statuses() 
     assert evidence["rights_matrix_classification"] == "allowed"
 
 
-async def test_write_normalized_record_rejects_missing_rights_when_runtime_requires_it() -> None:
+async def test_write_normalized_record_routes_missing_rights_to_review_workflow() -> None:
     conn = ReplayConn()
     normalized = {**_normalized(), "rights_uri": None}
 
     result = await write_normalized_record(
         conn,
-        runtime=_runtime(reject_missing_rights=True),
+        runtime=_runtime(),
         raw_payload={"raw": "payload"},
         normalized=normalized,
         source_id="shared-source",
         media_type_id="image",
     )
 
-    assert result == {
-        "status": "rejected",
-        "reason": "missing_rights_uri",
-        "record_id": "shared/1",
-        "writes": 0,
-    }
-    assert conn.sql_order == []
-    assert_no_writes(conn)
+    assert result["status"] == "written"
+    assert result["workflow_item_id"] == "workflow_items-7"
+    assert result["writes"] == 8
+    assert_m36_write_order(conn, review_required=True)
+    media_rights_args = conn.args_by_table["media_rights"]
+    evidence = json.loads(media_rights_args[2])
+    assert media_rights_args[1] is None
+    assert evidence["edm_rights_uri"] is None
+    assert evidence["rights_basis"] == "missing_rights"
+    assert evidence["rights_matrix_classification"] == "review_required"
 
 
 def test_build_rights_evidence_contains_shared_contract_fields() -> None:
@@ -159,6 +154,10 @@ def test_build_rights_evidence_contains_shared_contract_fields() -> None:
     assert evidence["applying_policy"] == "europeana_rights_matrix_v1.0"
     assert evidence["oai_pmh_identifier"] == "shared/1"
     assert evidence["evidence_status"] == "pending_human_review"
+
+
+def test_store_runtime_defaults_anchor_type_to_cultural() -> None:
+    assert _runtime().anchor_type == "cultural"
 
 
 def test_store_runtime_rejects_invalid_freeze_configuration() -> None:
@@ -191,7 +190,6 @@ async def test_write_normalized_record_uses_runtime_schema_standard_and_replay_t
         validation_status=_validation_status,
         schema_standard="custom_edm",
         anchor_type="cultural",
-        parameterize_anchor_type=True,
         generated_at_time="2026-06-07T00:00:00+00:00",
     )
 

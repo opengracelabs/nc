@@ -86,7 +86,7 @@ def _fetchrow_args(conn: ComplianceConn, table: str) -> tuple:
     )
 
 
-async def test_v1_missing_edm_rights_is_blocked_before_any_write() -> None:
+async def test_v1_missing_edm_rights_uses_shared_review_workflow() -> None:
     conn = ComplianceConn()
 
     result = await write_record(
@@ -97,13 +97,13 @@ async def test_v1_missing_edm_rights_is_blocked_before_any_write() -> None:
         media_type_id="image",
     )
 
-    assert result == {
-        "status": "rejected",
-        "reason": "missing_rights_uri",
-        "record_id": "https://id.rijksmuseum.nl/200343467",
-        "writes": 0,
-    }
-    assert conn.events == []
+    assert result["status"] == "written"
+    assert result["workflow_item_id"] == "workflow_items-7"
+    assert result["writes"] == 8
+    evidence = json.loads(_fetchrow_args(conn, "media_rights")[2])
+    assert evidence["edm_rights_uri"] is None
+    assert evidence["rights_basis"] == "missing_rights"
+    assert evidence["rights_matrix_classification"] == "review_required"
 
 
 async def test_v2_pilot_set_261222_derives_biological_anchor_type() -> None:
