@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livre>
+  <structure>
+    <nbVueImages>2</nbVueImages>
+  </structure>
+  <pages>
+    <page ordre="1" numero="1" pagination_type="Page"/>
+    <page ordre="2" numero="2" pagination_type="Page"/>
+  </pages>
+</livre>
+

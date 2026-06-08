@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "asset_id": "NC-GA-001",
+  "name": "The Catalan Atlas (1375)",
+  "ark": "ark:/12148/btv1b55002481n",
+  "iiif_manifest": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b55002481n/manifest.json",
+  "rights": "Public Domain Mark",
+  "creator": "Abraham Cresques",
+  "institution": "Bibliothèque nationale de France",
+  "department": "Département des Manuscrits",
+  "date": "1375",
+  "dimensions_physical": "645 x 250 mm",
+  "language": "Catalan",
+  "subjects": ["Map", "Portolan Atlas", "Medieval", "World Map"],
+  "atmosphere": {
+    "vibe": "Golden Wonder",
+    "palette": ["#D4AF37", "#F3E5AB", "#4B0082"],
+    "audio_triggers": ["sand_winds", "merchant_bells", "catalan_chant"]
+  },
+  "geospatial_anchors": [
+    {"name": "Timbuktu", "geonames_id": "2449066"},
+    {"name": "Majorca", "geonames_id": "2514301"}
+  ]
+}

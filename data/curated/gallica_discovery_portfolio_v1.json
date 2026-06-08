@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "Gallica Top 50 Discovery Portfolio",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-GA-001",
+    "name": "The Catalan Atlas (1375)",
+    "creator": "Abraham Cresques",
+    "institution": "Bibliothèque nationale de France",
+    "rights": "Public Domain Mark",
+    "category": "Maps"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-GA-001", "category": "Maps", "name": "The Catalan Atlas (1375)", "institution": "BnF"},
+      {"id": "NC-GA-002", "category": "Botanical Art", "name": "Les Roses (1817)", "institution": "BnF"},
+      {"id": "NC-GA-003", "category": "Maps", "name": "Cassini Map of France", "institution": "BnF"},
+      {"id": "NC-GA-004", "category": "Natural History", "name": "Histoire Naturelle (Selection)", "institution": "BnF"},
+      {"id": "NC-GA-015", "category": "Maps", "name": "Turgot Map of Paris (1739)", "institution": "BnF"},
+      {"id": "NC-GA-006", "category": "Colonial", "name": "Map of New France (1632)", "institution": "BnF"},
+      {"id": "NC-GA-007", "category": "Exploration", "name": "Voyage autour du monde (Atlas)", "institution": "BnF"},
+      {"id": "NC-GA-008", "category": "Exploration", "name": "Voyage de La Pérouse (Atlas)", "institution": "BnF"},
+      {"id": "NC-GA-009", "category": "Natural History", "name": "Histoire naturelle des poissons (Plates)", "institution": "BnF"},
+      {"id": "NC-GA-010", "category": "Natural History", "name": "Voyage au Pôle Sud (Oceania)", "institution": "BnF"},
+      {"id": "NC-GA-011", "category": "Exploration", "name": "Voyage aux régions équinoxiales", "institution": "BnF"},
+      {"id": "NC-GA-012", "category": "Colonial", "name": "Map of Indochina (Pavie Mission)", "institution": "BnF"},
+      {"id": "NC-GA-013", "category": "Colonial", "name": "Photos of Angkor Wat (c. 1860s)", "institution": "BnF"},
+      {"id": "NC-GA-014", "category": "Colonial", "name": "Carte de la Louisiane (1718)", "institution": "BnF"},
+      {"id": "NC-GA-005", "category": "Maps", "name": "Cosmographie universelle (1556)", "institution": "BnF"}
+    ],
+    "should_ingest": [
+      {"id": "NC-GA-016", "category": "Botanical Art", "name": "Les Liliacées"},
+      {"id": "NC-GA-017", "category": "Botanical Art", "name": "Traité des arbres et arbustes"},
+      {"id": "NC-GA-018", "category": "Natural History", "name": "Le Règne animal"},
+      {"id": "NC-GA-019", "category": "Maps", "name": "Portolan Chart of the Mediterranean (1489)"},
+      {"id": "NC-GA-020", "category": "Maps", "name": "Plan of Versailles (1746)"},
+      {"id": "NC-GA-021", "category": "Exploration", "name": "Voyage dans l'intérieur de l'Afrique"},
+      {"id": "NC-GA-022", "category": "Exploration", "name": "Les Six Voyages (Diamonds Plates)"},
+      {"id": "NC-GA-023", "category": "Exploration", "name": "Voyage à Temboctou (1830)"},
+      {"id": "NC-GA-024", "category": "Maps", "name": "Cordiform World Map (1531)"},
+      {"id": "NC-GA-025", "category": "Maps", "name": "L'Amérique (1698)"},
+      {"id": "NC-GA-026", "category": "Colonial", "name": "Photos of Algiers (Late 19th c)"},
+      {"id": "NC-GA-027", "category": "Colonial", "name": "Photos of Senegal (1900s)"},
+      {"id": "NC-GA-028", "category": "Colonial", "name": "Imagerie d'Épinal (Colonial series)"},
+      {"id": "NC-GA-029", "category": "Colonial", "name": "Map of Martinique/Guadeloupe (18th c)"},
+      {"id": "NC-GA-030", "category": "Colonial", "name": "Map of Madagascar (19th c)"},
+      {"id": "NC-GA-031", "category": "Botanical Art", "name": "Description des plantes de l'Amérique"},
+      {"id": "NC-GA-032", "category": "Botanical Art", "name": "Canadensium plantarum"},
+      {"id": "NC-GA-033", "category": "Natural History", "name": "Ornithologie (Martinet plates)"},
+      {"id": "NC-GA-034", "category": "Natural History", "name": "Voyage dans l'Amérique méridionale"},
+      {"id": "NC-GA-035", "category": "Natural History", "name": "Histoire naturelle des mammifères"}
+    ],
+    "optional": [
+      {"id": "NC-GA-036", "category": "Maps", "name": "Plan de Lyon (1735)"},
+      {"id": "NC-GA-037", "category": "Colonial", "name": "Map of Quebec (1699)"},
+      {"id": "NC-GA-038", "category": "Colonial", "name": "Colonial Exposition Posters"},
+      {"id": "NC-GA-039", "category": "Botanical Art", "name": "Flora Parisiensis"},
+      {"id": "NC-GA-040", "category": "Maps", "name": "Map of the Moon (19th c)"},
+      {"id": "NC-GA-041", "category": "Colonial", "name": "Ethnographic Photos of Cambodia"},
+      {"id": "NC-GA-042", "category": "Maps", "name": "Map of West Africa (1751)"},
+      {"id": "NC-GA-043", "category": "Maps", "name": "Map of the Ganges (18th c)"},
+      {"id": "NC-GA-044", "category": "Botanical Art", "name": "Diverses Fleurs (1660)"},
+      {"id": "NC-GA-045", "category": "Botanical Art", "name": "Elémens de botanique"},
+      {"id": "NC-GA-046", "category": "Botanical Art", "name": "Encyclopédie botanique"},
+      {"id": "NC-GA-047", "category": "Colonial", "name": "Photos of Tahiti/Oceania (19th c)"},
+      {"id": "NC-GA-048", "category": "Colonial", "name": "Map of the Mississippi (Franquelin)"},
+      {"id": "NC-GA-049", "category": "Maps", "name": "Map of Morocco (19th c)"},
+      {"id": "NC-GA-050", "category": "Botanical Art", "name": "Hortus Eystettensis (Plates)"}
+    ]
+  }
+}

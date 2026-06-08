@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "DPLA Top 50 Discovery Portfolio",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-DP-001",
+    "name": "Wild Turkey (Plate 1)",
+    "creator": "John James Audubon",
+    "institution": "New York Historical Society",
+    "rights": "Public Domain Mark",
+    "category": "Natural History"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-DP-001", "category": "Natural History", "name": "Wild Turkey (Plate 1)", "institution": "New York Historical Society"},
+      {"id": "NC-DP-002", "category": "Posters", "name": "WPA Yellowstone National Park Poster", "institution": "Library of Congress"},
+      {"id": "NC-DP-003", "category": "Maps", "name": "Lewis and Clark Map of the West (1814)", "institution": "Library of Congress"},
+      {"id": "NC-DP-004", "category": "Photography", "name": "Old Faithful in Eruption (1871)", "institution": "US Geological Survey"},
+      {"id": "NC-DP-005", "category": "Indigenous Heritage", "name": "Portrait of Chief Joseph", "institution": "Northwestern University"},
+      {"id": "NC-DP-006", "category": "Natural History", "name": "The Snowy Heron (Plate 242)", "institution": "New York Historical Society"},
+      {"id": "NC-DP-007", "category": "Posters", "name": "WPA 'See America' Travel Poster", "institution": "Library of Congress"},
+      {"id": "NC-DP-008", "category": "Photography", "name": "The Three Brothers, Yosemite (1861)", "institution": "Getty Research Institute"},
+      {"id": "NC-DP-009", "category": "Maps", "name": "Americae Sive Novi Orbis (1570)", "institution": "Library of Congress"},
+      {"id": "NC-DP-010", "category": "Exploration", "name": "Journal of the Voyage of the HMS Beagle", "institution": "Smithsonian Institution"},
+      {"id": "NC-DP-011", "category": "Indigenous Heritage", "name": "Tlingit Place Names of SE Alaska Map", "institution": "Alaska State Library"},
+      {"id": "NC-DP-012", "category": "Photography", "name": "Portrait of Frederick Douglass (1847)", "institution": "Library of Congress"},
+      {"id": "NC-DP-013", "category": "Natural History", "name": "The Magnolia Altissima (1731)", "institution": "Smithsonian Institution"},
+      {"id": "NC-DP-014", "category": "Posters", "name": "WPA 'Protect Our Wildlife' Poster", "institution": "Library of Congress"},
+      {"id": "NC-DP-015", "category": "Maps", "name": "Waldseemüller Map (1507)", "institution": "Library of Congress"}
+    ],
+    "should_ingest": [
+      {"id": "NC-DP-016", "category": "Posters", "name": "WPA Zion National Park Poster"},
+      {"id": "NC-DP-017", "category": "Natural History", "name": "The American Flamingo"},
+      {"id": "NC-DP-018", "category": "Maps", "name": "Plan of the City of Washington (1791)"},
+      {"id": "NC-DP-019", "category": "Photography", "name": "The Trestle at Promontory Point (1869)"},
+      {"id": "NC-DP-020", "category": "Indigenous Heritage", "name": "Geronimo (Goyathlay), Apache"},
+      {"id": "NC-DP-021", "category": "Natural History", "name": "Giant Saguaro Cactus Lithograph"},
+      {"id": "NC-DP-022", "category": "Exploration", "name": "Map of the Oregon Trail (1846)"},
+      {"id": "NC-DP-023", "category": "Photography", "name": "Dead Horse Canyon, Utah (1872)"},
+      {"id": "NC-DP-024", "category": "Posters", "name": "WPA 'Keep Your Teeth Clean'"},
+      {"id": "NC-DP-025", "category": "Maps", "name": "Map of the American Revolution (Yorktown)"},
+      {"id": "NC-DP-026", "category": "Indigenous Heritage", "name": "Trail of Tears Removal Map"},
+      {"id": "NC-DP-027", "category": "Natural History", "name": "The American Buffalo (Bison)"},
+      {"id": "NC-DP-028", "category": "Photography", "name": "San Francisco after the 1906 Earthquake"},
+      {"id": "NC-DP-029", "category": "Posters", "name": "Buffalo Bill's Wild West Poster"},
+      {"id": "NC-DP-030", "category": "Maps", "name": "Geological Map of the United States (1872)"},
+      {"id": "NC-DP-031", "category": "Indigenous Heritage", "name": "Navajo Weavers at the Loom"},
+      {"id": "NC-DP-032", "category": "Exploration", "name": "Spanish Mission San Carlos Borromeo"},
+      {"id": "NC-DP-033", "category": "Photography", "name": "Ellis Island Immigrants (1905)"},
+      {"id": "NC-DP-034", "category": "Natural History", "name": "Pitcher Plant (Sarracenia)"},
+      {"id": "NC-DP-035", "category": "Posters", "name": "WPA 'Visit the Grand Canyon'"}
+    ],
+    "optional": [
+      {"id": "NC-DP-036", "category": "Posters", "name": "WPA 'Work with Care' Poster"},
+      {"id": "NC-DP-037", "category": "Natural History", "name": "The Common Loon"},
+      {"id": "NC-DP-038", "category": "Maps", "name": "Map of the State of Vermont (1795)"},
+      {"id": "NC-DP-039", "category": "Photography", "name": "Main Street, Gopher Prairie"},
+      {"id": "NC-DP-040", "category": "Natural History", "name": "Florida Shells and Coral"},
+      {"id": "NC-DP-041", "category": "Indigenous Heritage", "name": "Iroquois Beadwork"},
+      {"id": "NC-DP-042", "category": "Exploration", "name": "Pike's Peak Discovery Sketch"},
+      {"id": "NC-DP-043", "category": "Maps", "name": "Map of the Moon (Beer and Mädler)"},
+      {"id": "NC-DP-044", "category": "Photography", "name": "Children at Play in NYC (1930s)"},
+      {"id": "NC-DP-045", "category": "Posters", "name": "WWII 'Save Your Paper' Poster"},
+      {"id": "NC-DP-046", "category": "Natural History", "name": "Oak Leaf Variations"},
+      {"id": "NC-DP-047", "category": "Indigenous Heritage", "name": "Totem Poles of Sitka National Park"},
+      {"id": "NC-DP-048", "category": "Exploration", "name": "Sutter's Mill (Gold Discovery Site)"},
+      {"id": "NC-DP-049", "category": "Maps", "name": "Canals and Waterways of the US"},
+      {"id": "NC-DP-050", "category": "Photography", "name": "Automobile on a Mountain Road (1920)"}
+    ]
+  }
+}

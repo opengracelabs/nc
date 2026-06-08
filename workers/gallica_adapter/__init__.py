@@ -1,0 +1,2 @@
+"""Gallica adapter connectivity package."""
+

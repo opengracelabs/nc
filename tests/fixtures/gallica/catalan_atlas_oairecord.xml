@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results countResults="1">
+  <notice>
+    <record>
+      <header>
+        <identifier>oai:bnf.fr:gallica/ark:/12148/btv1b55002481n</identifier>
+        <datestamp>2026-06-08</datestamp>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <dc:identifier>https://gallica.bnf.fr/ark:/12148/btv1b55002481n</dc:identifier>
+          <dc:title>Atlas de cartes celestes et de cartes de navigation</dc:title>
+          <dc:description>The Catalan Atlas, attributed to Abraham Cresques.</dc:description>
+          <dc:date>1375</dc:date>
+          <dc:creator>Abraham Cresques</dc:creator>
+          <dc:subject>Map</dc:subject>
+          <dc:subject>Portolan Atlas</dc:subject>
+          <dc:subject>Medieval</dc:subject>
+          <dc:type>map</dc:type>
+          <dc:rights>public domain</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+  </notice>
+</results>
+

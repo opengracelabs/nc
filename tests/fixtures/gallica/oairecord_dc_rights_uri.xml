@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results countResults="1">
+  <notice>
+    <record>
+      <header>
+        <identifier>oai:bnf.fr:gallica/ark:/12148/btv1b53066668g</identifier>
+        <datestamp>2025-01-15</datestamp>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
+                   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <dc:identifier>https://gallica.bnf.fr/ark:/12148/btv1b53066668g</dc:identifier>
+          <dc:title>Carte de test Gallica</dc:title>
+          <dc:description>Document cartographique de test.</dc:description>
+          <dc:date>1890</dc:date>
+          <dc:creator>Bibliotheque nationale de France</dc:creator>
+          <dc:subject>Cartes</dc:subject>
+          <dc:type>image</dc:type>
+          <dc:rights>https://creativecommons.org/publicdomain/mark/1.0/</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+  </notice>
+</results>
+

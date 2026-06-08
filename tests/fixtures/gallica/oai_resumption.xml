@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
+  <ListIdentifiers>
+    <header>
+      <identifier>oai:bnf.fr:gallica/ark:/12148/bpt6k254088g</identifier>
+      <datestamp>2025-01-15</datestamp>
+    </header>
+    <resumptionToken cursor="0" completeListSize="200">next-token</resumptionToken>
+  </ListIdentifiers>
+</OAI-PMH>
+
