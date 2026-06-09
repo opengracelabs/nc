@@ -1,9 +1,9 @@
 from tests.unit.test_gallica_store import catalan_payload, fixture
-from workers.gallica_adapter.store import write_record
-from workers.shared_media_adapter.replay import M36_WRITE_ORDER, ReplayConn
+from workers.gallica_adapter.store import GALLICA_DEACTIVATION_REASON, write_record
+from workers.shared_media_adapter.replay import ReplayConn, assert_no_writes
 
 
-async def test_gallica_sprint3_replay_is_deterministic_for_catalan_atlas() -> None:
+async def test_gallica_sprint3_replay_rejects_catalan_atlas_after_deactivation() -> None:
     left_conn = ReplayConn()
     right_conn = ReplayConn()
 
@@ -20,9 +20,14 @@ async def test_gallica_sprint3_replay_is_deterministic_for_catalan_atlas() -> No
         media_type_id="map",
     )
 
-    assert left["raw_payload_hash"] == right["raw_payload_hash"]
-    assert left["technical_content_hash"] == right["technical_content_hash"]
-    assert left_conn.sql_order == right_conn.sql_order == M36_WRITE_ORDER
+    assert left == right == {
+        "status": "rejected",
+        "reason": GALLICA_DEACTIVATION_REASON,
+        "record_id": None,
+        "writes": 0,
+    }
+    assert_no_writes(left_conn)
+    assert_no_writes(right_conn)
 
 
 async def test_gallica_sprint3_replay_rejects_restricted_rights_without_writes() -> None:
@@ -36,5 +41,6 @@ async def test_gallica_sprint3_replay_rejects_restricted_rights_without_writes()
     )
 
     assert result["status"] == "rejected"
+    assert result["reason"] == GALLICA_DEACTIVATION_REASON
     assert result["writes"] == 0
-    assert conn.sql_order == []
+    assert_no_writes(conn)
