@@ -76,7 +76,14 @@ def build_rights_evidence(
     normalized: dict[str, Any],
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
-    return {
+    worker_classified_status = rights["rights_status"]
+    if runtime.source_slug == "met":
+        worker_classified_status = {
+            "verified_cc0": "classified_cc0",
+            "verified_pd": "classified_pd",
+        }.get(str(worker_classified_status), worker_classified_status)
+
+    evidence = {
         "source": runtime.source_slug,
         "schema_standard": runtime.schema_standard,
         "source_record_id": source_record_id,
@@ -87,9 +94,12 @@ def build_rights_evidence(
         "rights_basis": rights["rights_basis"],
         "rights_statement_uri": rights["rights_statement_uri"],
         "raw_payload_hash": normalized["raw_payload_hash"],
-        "worker_classified_status": rights["rights_status"],
+        "worker_classified_status": worker_classified_status,
         "evidence_status": "pending_human_review",
     }
+    if runtime.source_slug == "met":
+        evidence["met_is_public_domain"] = normalized.get("met_is_public_domain")
+    return evidence
 
 
 async def upsert_source_item(

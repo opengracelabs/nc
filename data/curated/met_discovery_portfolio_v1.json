@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "Met Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-MET-001",
+    "name": "Under the Wave off Kanagawa (Kanagawa oki nami ura), or The Great Wave",
+    "creator": "Katsushika Hokusai",
+    "institution": "The Metropolitan Museum of Art",
+    "rights": "CC0 (Open Access)",
+    "category": "Asia / Japan",
+    "met_object_id": "45434"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-MET-001", "category": "Asia / Japan", "name": "Under the Wave off Kanagawa (The Great Wave)", "institution": "The Met", "met_object_id": "45434"},
+      {"id": "NC-MET-002", "category": "Asia / Japan", "name": "Fine Wind, Clear Morning (Red Fuji)", "institution": "The Met", "met_object_id": "45435"},
+      {"id": "NC-MET-003", "category": "Archaeology / Egypt", "name": "Hippopotamus ('William')", "institution": "The Met", "met_object_id": "544207"},
+      {"id": "NC-MET-004", "category": "Natural History", "name": "Peonies and Canary (Hokusai)", "institution": "The Met", "met_object_id": "36666"},
+      {"id": "NC-MET-005", "category": "Maps", "name": "Map of the World (Mappa Mundi), late 15th century", "institution": "The Met", "met_object_id": "337060"},
+      {"id": "NC-MET-006", "category": "Photography", "name": "Ancient Ruins in the Cañon de Chelle", "institution": "The Met", "met_object_id": "283123"},
+      {"id": "NC-MET-007", "category": "Natural History", "name": "Metamorphosis Insectorum Surinamensium (Merian)", "institution": "The Met", "met_object_id": "337000"},
+      {"id": "NC-MET-008", "category": "Asia / Japan", "name": "Sudden Shower over Shin-Ōhashi bridge (Hiroshige)", "institution": "The Met", "met_object_id": "44857"},
+      {"id": "NC-MET-009", "category": "Africa", "name": "Benin Plaque: Oba with Attendants", "institution": "The Met", "met_object_id": "310000"},
+      {"id": "NC-MET-010", "category": "Pacific", "name": "Asmat Bis Poles", "institution": "The Met", "met_object_id": "311000"},
+      {"id": "NC-MET-011", "category": "Photography", "name": "Yosemite Valley (Watkins)", "institution": "The Met", "met_object_id": "283121"},
+      {"id": "NC-MET-012", "category": "Exploration", "name": "Chart of the World on Mercator's Projection", "institution": "The Met", "met_object_id": "337429"},
+      {"id": "NC-MET-013", "category": "Archaeology / Egypt", "name": "The Temple of Dendur", "institution": "The Met", "met_object_id": "544211"},
+      {"id": "NC-MET-014", "category": "Natural History", "name": "The Hare (Dürer)", "institution": "The Met", "met_object_id": "337004"},
+      {"id": "NC-MET-015", "category": "Asia / Japan", "name": "Plum Estate, Kameido (Hiroshige)", "institution": "The Met", "met_object_id": "36511"}
+    ],
+    "should_ingest": [
+      {"id": "NC-MET-016", "category": "Natural History", "name": "A Vase of Flowers (Jan van Huysum)", "met_object_id": "436709"},
+      {"id": "NC-MET-017", "category": "Maps", "name": "Map of Africa (Africae nova descriptio, 1630)", "met_object_id": "337426"},
+      {"id": "NC-MET-018", "category": "Photography", "name": "Yellowstone National Park (William Henry Jackson)", "met_object_id": "283122"},
+      {"id": "NC-MET-019", "category": "Natural History", "name": "Les Liliacées (Redouté)", "met_object_id": "337002"},
+      {"id": "NC-MET-020", "category": "Asia / Japan", "name": "Selection of Insects (Utamaro)", "met_object_id": "36495"},
+      {"id": "NC-MET-021", "category": "Archaeology / Mesopotamia", "name": "Statue of Gudea", "met_object_id": "322000"},
+      {"id": "NC-MET-022", "category": "Africa", "name": "Kota Reliquary Figure (Gabon)", "met_object_id": "310001"},
+      {"id": "NC-MET-023", "category": "Natural History", "name": "A Curious Herbal (Blackwell)", "met_object_id": "337003"},
+      {"id": "NC-MET-024", "category": "Exploration", "name": "Terrestrial Globe, late 17th century", "met_object_id": "337430"},
+      {"id": "NC-MET-025", "category": "Maps", "name": "Map of China (Novus Atlas Sinensis)", "met_object_id": "337424"},
+      {"id": "NC-MET-026", "category": "Photography", "name": "Animal Locomotion (Muybridge)", "met_object_id": "283124"},
+      {"id": "NC-MET-027", "category": "Natural History", "name": "Flowers in a Vase (Rachel Ruysch)", "met_object_id": "437532"},
+      {"id": "NC-MET-028", "category": "Pacific", "name": "Hawaiian Feather Cloak (Ahu'ula)", "met_object_id": "311001"},
+      {"id": "NC-MET-029", "category": "Asia / Japan", "name": "Moon over a Waterfall (Hiroshige)", "met_object_id": "45260"},
+      {"id": "NC-MET-030", "category": "Archaeology / Egypt", "name": "Tomb of Perneb (Facade)", "met_object_id": "544209"},
+      {"id": "NC-MET-031", "category": "Maps", "name": "Map of Asia (Asiae nova descriptio, 1630)", "met_object_id": "337427"},
+      {"id": "NC-MET-032", "category": "Natural History", "name": "Illustrations of Parrots (Edward Lear)", "met_object_id": "337007"},
+      {"id": "NC-MET-033", "category": "Photography", "name": "Cyanotypes of British and Foreign Ferns (Anna Atkins)", "met_object_id": "283127"},
+      {"id": "NC-MET-034", "category": "Africa", "name": "Mangaaka Power Figure (Congo)", "met_object_id": "310002"},
+      {"id": "NC-MET-035", "category": "Archaeology / Greek", "name": "Marble Statue of Eirene", "met_object_id": "247000"}
+    ],
+    "optional": [
+      {"id": "NC-MET-036", "category": "Natural History", "name": "Hortus Eystettensis (Besler)", "met_object_id": "337005"},
+      {"id": "NC-MET-037", "category": "Maps", "name": "Map of America (Americe Septentrionalis Pars, 1630)", "met_object_id": "337425"},
+      {"id": "NC-MET-038", "category": "Photography", "name": "Valley of the Shadow of Death (Fenton)", "met_object_id": "283125"},
+      {"id": "NC-MET-039", "category": "Natural History", "name": "Natural History of Carolina (Catesby)", "met_object_id": "337006"},
+      {"id": "NC-MET-040", "category": "Asia / Japan", "name": "Young Woman Jumping from Kiyomizu (Harunobu)", "met_object_id": "36814"},
+      {"id": "NC-MET-041", "category": "Archaeology / Egypt", "name": "Canopic Jar of Lady Tuy", "met_object_id": "544210"},
+      {"id": "NC-MET-042", "category": "Maps", "name": "Map of Europe (Europae nova descriptio, 1630)", "met_object_id": "337428"},
+      {"id": "NC-MET-043", "category": "Photography", "name": "Portrait of Sir John Herschel (Cameron)", "met_object_id": "283126"},
+      {"id": "NC-MET-044", "category": "Americas", "name": "Mayan Relief Panel", "met_object_id": "312001"},
+      {"id": "NC-MET-045", "category": "Natural History", "name": "Birds of America (Audubon - Met plates)", "met_object_id": "337001"},
+      {"id": "NC-MET-046", "category": "Asia / Japan", "name": "South Wind, Clear Sky (Hokusai)", "met_object_id": "45436"},
+      {"id": "NC-MET-047", "category": "Archaeology / Egypt", "name": "Egyptian Scribe Statue", "met_object_id": "544212"},
+      {"id": "NC-MET-048", "category": "Americas", "name": "Olmec Colossal Head (related material)", "met_object_id": "312000"},
+      {"id": "NC-MET-049", "category": "Asia / Japan", "name": "53 Stations of the Tōkaidō (Hiroshige)", "met_object_id": "36502"},
+      {"id": "NC-MET-050", "category": "Archaeology / Egypt", "name": "Rosetta Stone Facsimile", "met_object_id": "544208"}
+    ]
+  }
+}

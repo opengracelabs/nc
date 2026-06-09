@@ -1,0 +1,42 @@
+{
+  "objectID": 45434,
+  "isHighlight": true,
+  "accessionNumber": "JP1847",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/as/original/DP130155.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/as/original/DP130156.jpg"
+  ],
+  "objectName": "Print",
+  "title": "The Great Wave off Kanagawa",
+  "culture": "Japan",
+  "period": "Edo period",
+  "department": "Asian Art",
+  "objectDate": "ca. 1830-32",
+  "objectBeginDate": 1830,
+  "objectEndDate": 1832,
+  "artistDisplayName": "Katsushika Hokusai",
+  "artistWikidata_URL": "https://www.wikidata.org/wiki/Q5586",
+  "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500060426",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/45434",
+  "country": "Japan",
+  "region": "",
+  "subregion": "",
+  "city": "",
+  "geographyType": "Made in",
+  "rightsAndReproduction": "",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "tags": [
+    {
+      "term": "Waves",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300011660",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q371519"
+    },
+    {
+      "term": "Mount Fuji",
+      "AAT_URL": "",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q86406"
+    }
+  ]
+}
+
