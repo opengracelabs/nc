@@ -35,6 +35,12 @@ class GovernanceState(StrEnum):
     RETIRED    = "retired"     # permanently removed from pipeline
 
 
+class CommercialStatus(StrEnum):
+    UNRESTRICTED = "unrestricted"
+    RESTRICTED = "restricted"
+    UNKNOWN = "unknown"
+
+
 class OperationalStatus(StrEnum):
     HEALTHY     = "healthy"     # last fetch succeeded within expected window
     DEGRADED    = "degraded"    # reachable but returning errors or partial data
@@ -75,6 +81,7 @@ class Source(NCRecord):
     governance_state: GovernanceState = GovernanceState.PROPOSED
     # Operational health (system-monitored)
     operational_status: OperationalStatus = OperationalStatus.UNAVAILABLE
+    commercial_status: CommercialStatus = CommercialStatus.UNKNOWN
     # Legacy status field — kept for backward compatibility; governance_state supersedes it
     status: SourceStatus = SourceStatus.ACTIVE
     last_fetched_at: str | None = None      # ISO 8601

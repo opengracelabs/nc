@@ -1,13 +1,11 @@
-import json
 from pathlib import Path
 
-from workers.gallica_adapter.store import derive_anchor_type, write_record
-from workers.shared_media_adapter.replay import (
-    M36_WRITE_ORDER,
-    ReplayConn,
-    assert_m36_write_order,
-    assert_no_writes,
+from workers.gallica_adapter.store import (
+    GALLICA_DEACTIVATION_REASON,
+    derive_anchor_type,
+    write_record,
 )
+from workers.shared_media_adapter.replay import ReplayConn, assert_no_writes
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "gallica"
 
@@ -35,7 +33,7 @@ def test_derive_anchor_type_marks_maps_as_geographic() -> None:
     assert derive_anchor_type(normalized, "map") == "geographic"
 
 
-async def test_write_record_uses_shared_m36_write_path_for_catalan_atlas() -> None:
+async def test_write_record_rejects_gallica_ingestion_under_dd_gallica_003() -> None:
     conn = ReplayConn()
 
     result = await write_record(
@@ -45,22 +43,13 @@ async def test_write_record_uses_shared_m36_write_path_for_catalan_atlas() -> No
         media_type_id="map",
     )
 
-    assert result["status"] == "written"
-    assert result["record_id"] == "ark:/12148/btv1b55002481n"
-    assert result["writes"] == 7
-    assert conn.sql_order == M36_WRITE_ORDER
-    assert_m36_write_order(conn)
-    assert conn.args_by_table["source_item"][5] == "geographic"
-    assert conn.args_by_table["source_record"][3] == "gallica_api_profile_v1"
-    assert conn.args_by_table["media_file"][3] == (
-        "https://gallica.bnf.fr/iiif/ark:/12148/btv1b55002481n/f1/full/full/0/native.jpg"
-    )
-
-    normalized_payload = json.loads(conn.args_by_table["source_record"][6])
-    assert normalized_payload["pagination_pages"] == 6
-    assert normalized_payload["iiif_image_service_url"] == (
-        "https://gallica.bnf.fr/iiif/ark:/12148/btv1b55002481n/f1"
-    )
+    assert result == {
+        "status": "rejected",
+        "reason": GALLICA_DEACTIVATION_REASON,
+        "record_id": None,
+        "writes": 0,
+    }
+    assert_no_writes(conn)
 
 
 async def test_write_record_rejects_restricted_gallica_rights_without_writes() -> None:
@@ -74,7 +63,6 @@ async def test_write_record_rejects_restricted_gallica_rights_without_writes() -
     )
 
     assert result["status"] == "rejected"
-    assert result["reason"] == "missing_rights_uri"
+    assert result["reason"] == GALLICA_DEACTIVATION_REASON
     assert result["writes"] == 0
     assert_no_writes(conn)
-

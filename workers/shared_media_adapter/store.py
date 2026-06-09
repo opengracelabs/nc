@@ -77,7 +77,7 @@ def build_rights_evidence(
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
     worker_classified_status = rights["rights_status"]
-    if runtime.source_slug in {"met", "aic", "cma", "smk"}:
+    if runtime.source_slug in {"met", "aic", "cma", "nga", "smk", "walters"}:
         worker_classified_status = {
             "verified_cc0": "classified_cc0",
             "verified_pd": "classified_pd",
@@ -115,6 +115,22 @@ def build_rights_evidence(
         evidence["cma_image_web_url"] = normalized.get("cma_image_web_url")
         evidence["cma_image_print_url"] = normalized.get("cma_image_print_url")
         evidence["cma_image_full_url"] = normalized.get("cma_image_full_url")
+    if runtime.source_slug == "nga":
+        evidence["nga_openaccess"] = normalized.get("nga_openaccess")
+        evidence["nga_image_uuid"] = normalized.get("nga_image_uuid")
+        evidence["nga_iiifurl"] = normalized.get("nga_iiifurl")
+        evidence["nga_iiif_thumb_url"] = normalized.get("nga_iiif_thumb_url")
+        evidence["nga_viewtype"] = normalized.get("nga_viewtype")
+        evidence["nga_objectid"] = normalized.get("nga_objectid")
+        evidence["nga_accessionnum"] = normalized.get("nga_accessionnum")
+    if runtime.source_slug == "walters":
+        evidence["walters_object_id"] = normalized.get("walters_object_id")
+        evidence["walters_object_number"] = normalized.get("walters_object_number")
+        evidence["walters_image_url"] = normalized.get("walters_image_url")
+        evidence["walters_media_xref_id"] = normalized.get("walters_media_xref_id")
+        evidence["walters_is_primary"] = normalized.get("walters_is_primary")
+        evidence["walters_collection_ids"] = normalized.get("walters_collection_ids")
+        evidence["walters_collection_names"] = normalized.get("walters_collection_names")
     return evidence
 
 

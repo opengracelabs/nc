@@ -17,6 +17,7 @@ from .technical import (
 WORKER_ID = "gallica_adapter:sprint3"
 SOURCE_SLUG = "gallica"
 SCHEMA_STANDARD = "gallica_api_profile_v1"
+GALLICA_DEACTIVATION_REASON = "gallica_deprecated_restricted"
 
 
 def derive_anchor_type(normalized: dict[str, Any], media_type_id: str) -> str:
@@ -51,7 +52,7 @@ def _runtime(anchor_type: str) -> StoreRuntime:
     )
 
 
-async def write_record(
+async def _write_record_unchecked(
     conn: Any,
     raw_payload: dict[str, Any],
     *,
@@ -59,7 +60,7 @@ async def write_record(
     media_type_id: str,
     anchor_type: str | None = None,
 ) -> dict[str, Any]:
-    """Write one non-blocked Gallica record into the M36 substrate tables."""
+    """Retained research-only Gallica M36 writer; not used by production entrypoint."""
     normalized = normalize_edm_record(raw_payload)
     derived_anchor_type = anchor_type if anchor_type is not None else derive_anchor_type(
         normalized,
@@ -73,3 +74,20 @@ async def write_record(
         source_id=source_id,
         media_type_id=media_type_id,
     )
+
+
+async def write_record(
+    conn: Any,
+    raw_payload: dict[str, Any],
+    *,
+    source_id: str,
+    media_type_id: str,
+    anchor_type: str | None = None,
+) -> dict[str, Any]:
+    """Reject Gallica production writes under DD-GALLICA-003 deactivation."""
+    return {
+        "status": "rejected",
+        "reason": GALLICA_DEACTIVATION_REASON,
+        "record_id": None,
+        "writes": 0,
+    }

@@ -1,32 +1,27 @@
-import json
-
 from tests.unit.test_gallica_store import catalan_payload, fixture
-from workers.gallica_adapter.store import write_record
+from workers.gallica_adapter.config import settings
+from workers.gallica_adapter.store import GALLICA_DEACTIVATION_REASON, write_record
 from workers.shared_media_adapter.replay import ReplayConn, assert_no_writes
 
 
-async def test_gallica_compliance_catalan_atlas_writes_required_m36_tables() -> None:
+async def test_gallica_compliance_catalan_atlas_is_deactivated_before_m36_write_path() -> None:
     conn = ReplayConn()
 
-    await write_record(
+    result = await write_record(
         conn,
         catalan_payload(),
         source_id="source-gallica",
         media_type_id="map",
     )
 
-    assert {
-        "source_item",
-        "source_record",
-        "media_file",
-        "media_rights",
-        "media_technical_metadata",
-        "preservation_event",
-    }.issubset(set(conn.sql_order))
+    assert result["status"] == "rejected"
+    assert result["reason"] == GALLICA_DEACTIVATION_REASON
+    assert result["writes"] == 0
+    assert_no_writes(conn)
 
-    technical = json.loads(conn.args_by_table["media_technical_metadata"][3])
-    assert technical["record_id"] == "ark:/12148/btv1b55002481n"
-    assert technical["quality_flag"] == "meets_minimum"
+
+def test_gallica_dry_run_remains_default_enabled() -> None:
+    assert settings.gallica_dry_run is True
 
 
 async def test_gallica_compliance_missing_rights_does_not_enter_m36_write_path() -> None:
@@ -40,6 +35,7 @@ async def test_gallica_compliance_missing_rights_does_not_enter_m36_write_path()
     )
 
     assert result["status"] == "rejected"
+    assert result["reason"] == GALLICA_DEACTIVATION_REASON
     assert result["writes"] == 0
     assert_no_writes(conn)
 
@@ -58,7 +54,6 @@ async def test_gallica_compliance_blocked_uri_does_not_enter_m36_write_path() ->
     )
 
     assert result["status"] == "rejected"
-    assert result["reason"] == "blocked_rights_statement"
+    assert result["reason"] == GALLICA_DEACTIVATION_REASON
     assert result["writes"] == 0
     assert_no_writes(conn)
-
