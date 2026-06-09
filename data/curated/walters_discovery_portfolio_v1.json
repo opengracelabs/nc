@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "Walters Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-WLT-001",
+    "name": "Illuminated Psalter (W.174) - David Playing the Harp",
+    "creator": "Unknown Medieval Illuminator",
+    "institution": "Walters Art Museum",
+    "rights": "CC0 (Open Access)",
+    "category": "Masterwork / Illuminated Manuscripts",
+    "walters_object_number": "W.174"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-WLT-001", "category": "Masterwork / Illuminated Manuscripts", "name": "Illuminated Psalter (W.174) - David Playing the Harp", "institution": "Walters", "walters_object_number": "W.174"},
+      {"id": "NC-NGA-002", "category": "Ancient Egypt", "name": "Statue of the Goddess Sekhmet", "institution": "Walters", "walters_object_number": "22.285"},
+      {"id": "NC-WLT-003", "category": "Islamic Art", "name": "Illuminated Qur'an (W.561)", "institution": "Walters", "walters_object_number": "W.561"},
+      {"id": "NC-WLT-004", "category": "Byzantine", "name": "Icon of the Virgin and Child (Hodegetria)", "institution": "Walters", "walters_object_number": "37.1001"},
+      {"id": "NC-WLT-005", "category": "Medieval Europe", "name": "Gothic Ivory Diptych with Scenes of the Passion", "institution": "Walters", "walters_object_number": "71.123"},
+      {"id": "NC-WLT-006", "category": "Illuminated Manuscripts", "name": "Book of Hours (W.105) - Annunciation", "institution": "Walters", "walters_object_number": "W.105"},
+      {"id": "NC-WLT-007", "category": "Ancient Egypt", "name": "Mummy Mask of a Priest", "institution": "Walters", "walters_object_number": "22.124"},
+      {"id": "NC-WLT-008", "category": "Islamic Art", "name": "Mamluk Glass Mosque Lamp", "institution": "Walters", "walters_object_number": "47.18"},
+      {"id": "NC-WLT-009", "category": "Byzantine", "name": "Byzantine Silver Cross", "institution": "Walters", "walters_object_number": "57.534"},
+      {"id": "NC-WLT-010", "category": "Medieval Europe", "name": "Limoges Enamel Chasse", "institution": "Walters", "walters_object_number": "44.4"},
+      {"id": "NC-WLT-011", "category": "Illuminated Manuscripts", "name": "Ethiopian Gospel Book (W.850)", "institution": "Walters", "walters_object_number": "W.850"},
+      {"id": "NC-WLT-012", "category": "Ancient Egypt", "name": "Canopic Jar of Duamutef", "institution": "Walters", "walters_object_number": "22.345"},
+      {"id": "NC-WLT-013", "category": "Islamic Art", "name": "Safavid Tile Panel", "institution": "Walters", "walters_object_number": "48.2001"},
+      {"id": "NC-WLT-014", "category": "Byzantine", "name": "Steatite Plaque of Saint George", "institution": "Walters", "walters_object_number": "41.222"},
+      {"id": "NC-WLT-015", "category": "Medieval Europe", "name": "Reliquary Arm of Saint Pantaleon", "institution": "Walters", "walters_object_number": "53.21"}
+    ],
+    "should_ingest": [
+      {"id": "NC-WLT-016", "category": "Illuminated Manuscripts", "name": "Flemish Book of Hours (W.164)", "walters_object_number": "W.164"},
+      {"id": "NC-WLT-017", "category": "Ancient Egypt", "name": "Ushabti Box of Padiamun", "walters_object_number": "22.402"},
+      {"id": "NC-WLT-018", "category": "Islamic Art", "name": "Ottoman Iznik Plate", "walters_object_number": "48.2050"},
+      {"id": "NC-WLT-019", "category": "Byzantine", "name": "Gold Marriage Ring", "walters_object_number": "57.1000"},
+      {"id": "NC-WLT-020", "category": "Medieval Europe", "name": "Champlevé Enamel Plaque", "walters_object_number": "44.50"},
+      {"id": "NC-WLT-021", "category": "Illuminated Manuscripts", "name": "Armenian Gospel Book (W.830)", "walters_object_number": "W.830"},
+      {"id": "NC-WLT-022", "category": "Ancient Egypt", "name": "Bronze Cat of Bastet", "walters_object_number": "54.400"},
+      {"id": "NC-WLT-023", "category": "Islamic Art", "name": "Persian Astrolabe", "walters_object_number": "54.2010"},
+      {"id": "NC-WLT-024", "category": "Byzantine", "name": "Bronze Processional Cross", "walters_object_number": "54.102"},
+      {"id": "NC-WLT-025", "category": "Medieval Europe", "name": "Gothic Processional Cross", "walters_object_number": "53.150"},
+      {"id": "NC-WLT-026", "category": "Illuminated Manuscripts", "name": "Dutch Prayer Book (W.188)", "walters_object_number": "W.188"},
+      {"id": "NC-WLT-027", "category": "Ancient Egypt", "name": "Faience Amulet of Thoth", "walters_object_number": "48.110"},
+      {"id": "NC-WLT-028", "category": "Islamic Art", "name": "Seljuk Bronze Mirror", "walters_object_number": "54.205"},
+      {"id": "NC-WLT-029", "category": "Byzantine", "name": "Eucharistic Dove (Pyx)", "walters_object_number": "53.11"},
+      {"id": "NC-WLT-030", "category": "Medieval Europe", "name": "Stained Glass Panel (French Gothic)", "walters_object_number": "46.60"},
+      {"id": "NC-WLT-031", "category": "Illuminated Manuscripts", "name": "English Bestiary (W.110)", "walters_object_number": "W.110"},
+      {"id": "NC-WLT-032", "category": "Ancient Egypt", "name": "Alabaster Hippo", "walters_object_number": "41.50"},
+      {"id": "NC-WLT-033", "category": "Islamic Art", "name": "Lusterware Bowl (Kashan)", "walters_object_number": "48.2100"},
+      {"id": "NC-WLT-034", "category": "Byzantine", "name": "Silver Spoon with Inscription", "walters_object_number": "57.500"},
+      {"id": "NC-WLT-035", "category": "Medieval Europe", "name": "Romanesque Ivory Madonna", "walters_object_number": "71.200"}
+    ],
+    "optional": [
+      {"id": "NC-WLT-036", "category": "Illuminated Manuscripts", "name": "German Missal (W.120)", "walters_object_number": "W.120"},
+      {"id": "NC-WLT-037", "category": "Ancient Egypt", "name": "Scarab with Cartouche of Thutmose III", "walters_object_number": "42.105"},
+      {"id": "NC-WLT-038", "category": "Islamic Art", "name": "Brass Candlestick with Silver Inlay", "walters_object_number": "54.215"},
+      {"id": "NC-WLT-039", "category": "Byzantine", "name": "Gold and Pearl Earring", "walters_object_number": "57.600"},
+      {"id": "NC-WLT-040", "category": "Medieval Europe", "name": "Aquamanile in the Form of a Lion", "walters_object_number": "53.250"},
+      {"id": "NC-WLT-041", "category": "Illuminated Manuscripts", "name": "Italian Gradual (W.135)", "walters_object_number": "W.135"},
+      {"id": "NC-WLT-042", "category": "Ancient Egypt", "name": "Limestone Cosmetic Vessel", "walters_object_number": "41.110"},
+      {"id": "NC-WLT-043", "category": "Islamic Art", "name": "Silk Textile Fragment (Safavid)", "walters_object_number": "83.100"},
+      {"id": "NC-WLT-044", "category": "Byzantine", "name": "Bone Plaque with Figure", "walters_object_number": "71.250"},
+      {"id": "NC-WLT-045", "category": "Medieval Europe", "name": "Enamel Crozier Head", "walters_object_number": "44.150"},
+      {"id": "NC-WLT-046", "category": "Illuminated Manuscripts", "name": "French Pontifical (W.150)", "walters_object_number": "W.150"},
+      {"id": "NC-WLT-047", "category": "Ancient Egypt", "name": "Wooden Ptah-Sokar-Osiris Figure", "walters_object_number": "22.500"},
+      {"id": "NC-WLT-048", "category": "Islamic Art", "name": "Fritware Jug", "walters_object_number": "48.2200"},
+      {"id": "NC-WLT-049", "category": "Byzantine", "name": "Lead Seal", "walters_object_number": "55.10"},
+      {"id": "NC-WLT-050", "category": "Medieval Europe", "name": "Carved Oak Capital", "walters_object_number": "61.50"}
+    ]
+  }
+}

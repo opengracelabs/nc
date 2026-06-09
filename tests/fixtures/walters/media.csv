@@ -1,0 +1,7 @@
+ObjectID,MediaXrefID,ImageURL,Filename,MediaType,MediaView,Rank,IsPrimary
+1001,2002,https://art.thewalters.org/images/raw/W174_det.jpg,W174_det.jpg,Image,Detail,2,0
+1001,2001,https://art.thewalters.org/images/raw/W174_fnt.jpg,W174_fnt.jpg,Image,Front,1,1
+1001,2003,https://art.thewalters.org/files/pdf/W174.pdf,W174.pdf,PDF,Digitized Manuscript,3,0
+1002,2005,https://art.thewalters.org/images/raw/zeus_side.jpg,zeus_side.jpg,Image,Side,2,0
+1002,2004,https://art.thewalters.org/images/raw/zeus_front.jpg,zeus_front.jpg,Image,Front,1,0
+1003,2006,,dish_front.jpg,Image,Front,1,1
