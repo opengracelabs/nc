@@ -1,0 +1,4 @@
+uuid,iiifurl,iiifthumburl,viewtype,sequence,width,height,maxpixels,openaccess,created,modified,depictstmsobjectid,assistivetext
+img-alt-2001,https://api.nga.gov/iiif/img-alt-2001,"https://api.nga.gov/iiif/img-alt-2001/full/200,200/0/default.jpg",alternate,2,1600,1200,,1,2025-01-01 00:00:00,2025-01-02 00:00:00,2001,Alternate view
+img-primary-2001,https://api.nga.gov/iiif/img-primary-2001,"https://api.nga.gov/iiif/img-primary-2001/full/200,200/0/default.jpg",primary,1,3200,2400,,1,2025-01-01 00:00:00,2025-01-02 00:00:00,2001,Primary view
+img-restricted-2002,https://api.nga.gov/iiif/img-restricted-2002,"https://api.nga.gov/iiif/img-restricted-2002/full/200,200/0/default.jpg",primary,1,800,600,400,0,2025-01-01 00:00:00,2025-01-02 00:00:00,2002,Restricted image

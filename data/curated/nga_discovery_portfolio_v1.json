@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "NGA Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-NGA-001",
+    "name": "The Voyage of Life: Youth",
+    "creator": "Thomas Cole",
+    "institution": "National Gallery of Art",
+    "rights": "CC0 (Open Access)",
+    "category": "American Art / Landscape Painting",
+    "nga_objectid": "1942.8.16"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-NGA-001", "category": "American Art / Landscape Painting", "name": "The Voyage of Life: Youth", "institution": "NGA", "nga_objectid": "1942.8.16"},
+      {"id": "NC-NGA-002", "category": "Photography / National Parks", "name": "Yosemite Valley (Carleton Watkins)", "institution": "NGA", "nga_objectid": "100001"},
+      {"id": "NC-NGA-003", "category": "American Art / Landscape Painting", "name": "Autumn - On the Hudson River", "institution": "NGA", "nga_objectid": "1942.8.6"},
+      {"id": "NC-NGA-004", "category": "Photography", "name": "The Steerage (Alfred Stieglitz)", "institution": "NGA", "nga_objectid": "1949.3.291"},
+      {"id": "NC-NGA-005", "category": "Exploration", "name": "The Grand Canyon of the Yellowstone (Moran print)", "institution": "NGA", "nga_objectid": "100002"},
+      {"id": "NC-NGA-006", "category": "American Art / Portrait", "name": "George Washington (Gilbert Stuart)", "institution": "NGA", "nga_objectid": "1942.8.27"},
+      {"id": "NC-NGA-007", "category": "Maps", "name": "Map of the World (Blaeu)", "institution": "NGA", "nga_objectid": "100003"},
+      {"id": "NC-NGA-008", "category": "Photography / Exploration", "name": "Canyon de Chelly (Timothy O'Sullivan)", "institution": "NGA", "nga_objectid": "100004"},
+      {"id": "NC-NGA-009", "category": "American Art / Landscape Painting", "name": "A View of the Mountain Pass Called the Notch of the White Mountains", "institution": "NGA", "nga_objectid": "1942.8.18"},
+      {"id": "NC-NGA-010", "category": "Photography", "name": "Georgia O'Keeffe (Alfred Stieglitz)", "institution": "NGA", "nga_objectid": "1980.70.1"},
+      {"id": "NC-NGA-011", "category": "American Art / Realism", "name": "New York (George Bellows)", "institution": "NGA", "nga_objectid": "1930.1.1"},
+      {"id": "NC-NGA-012", "category": "Exploration / Landscape", "name": "Mount Corcoran (Bierstadt)", "institution": "NGA", "nga_objectid": "100005"},
+      {"id": "NC-NGA-013", "category": "Maps", "name": "Plan of the City of Washington (L'Enfant)", "institution": "NGA", "nga_objectid": "100006"},
+      {"id": "NC-NGA-014", "category": "Photography / National Parks", "name": "Old Faithful Geyser (William Henry Jackson)", "institution": "NGA", "nga_objectid": "100007"},
+      {"id": "NC-NGA-015", "category": "American Art / Landscape Painting", "name": "Breezing Up (A Fair Wind) (Winslow Homer)", "institution": "NGA", "nga_objectid": "1943.1.2"}
+    ],
+    "should_ingest": [
+      {"id": "NC-NGA-016", "category": "American Art / Landscape Painting", "name": "The Voyage of Life: Childhood", "nga_objectid": "1942.8.15"},
+      {"id": "NC-NGA-017", "category": "American Art / Landscape Painting", "name": "The Voyage of Life: Manhood", "nga_objectid": "1942.8.17"},
+      {"id": "NC-NGA-018", "category": "Photography / Exploration", "name": "Shoshone Falls, Snake River (O'Sullivan)", "nga_objectid": "100008"},
+      {"id": "NC-NGA-019", "category": "Maps", "name": "Map of North America (17th C)", "nga_objectid": "100009"},
+      {"id": "NC-NGA-020", "category": "Photography", "name": "Equivalent (Alfred Stieglitz)", "nga_objectid": "1949.3.900"},
+      {"id": "NC-NGA-021", "category": "American Art", "name": "Watson and the Shark (John Singleton Copley)", "nga_objectid": "1963.6.1"},
+      {"id": "NC-NGA-022", "category": "Photography / National Parks", "name": "Mammoth Hot Springs (Jackson)", "nga_objectid": "100010"},
+      {"id": "NC-NGA-023", "category": "American Art / Landscape Painting", "name": "Lake George (John Frederick Kensett)", "nga_objectid": "1942.8.14"},
+      {"id": "NC-NGA-024", "category": "Exploration", "name": "Expedition Sketches of the American West", "nga_objectid": "100011"},
+      {"id": "NC-NGA-025", "category": "Photography", "name": "Animal Locomotion (Muybridge)", "nga_objectid": "100012"},
+      {"id": "NC-NGA-026", "category": "American Art", "name": "Allies Day, May 1917 (Childe Hassam)", "nga_objectid": "1943.1.5"},
+      {"id": "NC-NGA-027", "category": "Maps", "name": "Map of Virginia (John Smith)", "nga_objectid": "100013"},
+      {"id": "NC-NGA-028", "category": "American Art / Landscape Painting", "name": "Right and Left (Winslow Homer)", "nga_objectid": "1951.8.1"},
+      {"id": "NC-NGA-029", "category": "Photography", "name": "The Flatiron (Stieglitz)", "nga_objectid": "1949.3.272"},
+      {"id": "NC-NGA-030", "category": "Exploration / Landscape", "name": "Niagara Falls (Church print)", "nga_objectid": "100014"},
+      {"id": "NC-NGA-031", "category": "Photography / National Parks", "name": "Yellowstone River (Watkins)", "nga_objectid": "100015"},
+      {"id": "NC-NGA-032", "category": "American Art", "name": "The Skater (Thomas Sully)", "nga_objectid": "1942.8.29"},
+      {"id": "NC-NGA-033", "category": "Maps", "name": "Topographical Map of the Rocky Mountains", "nga_objectid": "100016"},
+      {"id": "NC-NGA-034", "category": "American Art / Landscape Painting", "name": "View of the Yosemite Valley (Thomas Hill)", "nga_objectid": "100017"},
+      {"id": "NC-NGA-035", "category": "Photography", "name": "Looking North from the Flatiron Building", "nga_objectid": "100018"}
+    ],
+    "optional": [
+      {"id": "NC-NGA-036", "category": "American Art / Landscape Painting", "name": "The Voyage of Life: Old Age", "nga_objectid": "1942.8.18_b"},
+      {"id": "NC-NGA-037", "category": "Photography / Exploration", "name": "Ancient Ruins in the Cañon de Chelle", "nga_objectid": "100019"},
+      {"id": "NC-NGA-038", "category": "Maps", "name": "Nautical Chart of the Atlantic Coast", "nga_objectid": "100020"},
+      {"id": "NC-NGA-039", "category": "American Art", "name": "Family Group (Peale)", "nga_objectid": "1942.8.12"},
+      {"id": "NC-NGA-040", "category": "Photography", "name": "Gondola, Venice (Stieglitz)", "nga_objectid": "1949.3.111"},
+      {"id": "NC-NGA-041", "category": "Exploration", "name": "Sketches of Native American Tribes", "nga_objectid": "100021"},
+      {"id": "NC-NGA-042", "category": "American Art / Landscape Painting", "name": "Approaching Thunder Storm (Martin Johnson Heade)", "nga_objectid": "100022"},
+      {"id": "NC-NGA-043", "category": "Photography / National Parks", "name": "Glacier Point, Yosemite", "nga_objectid": "100023"},
+      {"id": "NC-NGA-044", "category": "Maps", "name": "Map of the Western Territories", "nga_objectid": "100024"},
+      {"id": "NC-NGA-045", "category": "American Art", "name": "Penn's Treaty with the Indians (Benjamin West)", "nga_objectid": "100025"},
+      {"id": "NC-NGA-046", "category": "Photography", "name": "Portrait of Abraham Lincoln (Brady)", "nga_objectid": "100026"},
+      {"id": "NC-NGA-047", "category": "Exploration / Landscape", "name": "The Rocky Mountains, Lander's Peak (print)", "nga_objectid": "100027"},
+      {"id": "NC-NGA-048", "category": "American Art", "name": "The White Girl (Whistler)", "nga_objectid": "1943.1.2"},
+      {"id": "NC-NGA-049", "category": "Photography", "name": "Clouds (Stieglitz)", "nga_objectid": "1949.3.901"},
+      {"id": "NC-NGA-050", "category": "American Art / Landscape Painting", "name": "Sunset in the Yosemite Valley (Bierstadt print)", "nga_objectid": "100028"}
+    ]
+  }
+}

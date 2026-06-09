@@ -1,0 +1,3 @@
+constituentid,uuid,ulanid,preferreddisplayname,forwarddisplayname,lastname,displaydate,artistofngaobject,beginyear,endyear,visualbrowsertimespan,nationality,visualbrowsernationality,constituenttype,wikidataid
+501,const-501,500019968,"Monet, Claude",Claude Monet,Monet,1840-1926,1,1840,1926,19th century,French,French,individual,Q296
+502,const-502,,"Artist, Test",Test Artist,Artist,1900-1980,1,1900,1980,20th century,American,American,individual,
