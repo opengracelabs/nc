@@ -1,0 +1,7 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://api.artic.edu/api/v1/artworks/27992/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "A Sunday on La Grande Jatte -- 1884"
+}
+

@@ -77,7 +77,7 @@ def build_rights_evidence(
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
     worker_classified_status = rights["rights_status"]
-    if runtime.source_slug == "met":
+    if runtime.source_slug in {"met", "aic"}:
         worker_classified_status = {
             "verified_cc0": "classified_cc0",
             "verified_pd": "classified_pd",
@@ -99,6 +99,10 @@ def build_rights_evidence(
     }
     if runtime.source_slug == "met":
         evidence["met_is_public_domain"] = normalized.get("met_is_public_domain")
+    if runtime.source_slug == "aic":
+        evidence["aic_is_public_domain"] = normalized.get("aic_is_public_domain")
+        evidence["aic_copyright_notice"] = normalized.get("aic_copyright_notice")
+        evidence["aic_manifest_url"] = normalized.get("aic_manifest_url")
     return evidence
 
 

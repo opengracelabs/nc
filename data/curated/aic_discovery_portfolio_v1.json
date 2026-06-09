@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "AIC Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-AIC-001",
+    "name": "A Sunday on La Grande Jatte — 1884",
+    "creator": "Georges Seurat",
+    "institution": "Art Institute of Chicago",
+    "rights": "CC0 (Open Access)",
+    "category": "Masterwork / Impressionism",
+    "aic_id": "27992"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-AIC-001", "category": "Masterwork / Impressionism", "name": "A Sunday on La Grande Jatte — 1884", "institution": "AIC", "aic_id": "27992"},
+      {"id": "NC-AIC-002", "category": "Asia / Japan", "name": "The Great Wave off Kanagawa (Hokusai)", "institution": "AIC", "aic_id": "24645"},
+      {"id": "NC-AIC-003", "category": "Natural History", "name": "The Two Hummingbirds (Audubon)", "institution": "AIC", "aic_id": "191427"},
+      {"id": "NC-AIC-004", "category": "Photography", "name": "Flatiron Building (Steichen)", "institution": "AIC", "aic_id": "102434"},
+      {"id": "NC-AIC-005", "category": "Archaeology", "name": "Statue of a Seated Woman (Ancient Greek)", "institution": "AIC", "aic_id": "100001"},
+      {"id": "NC-AIC-006", "category": "Africa", "name": "Plaque: Oba with Attendants (Benin)", "institution": "AIC", "aic_id": "100002"},
+      {"id": "NC-AIC-007", "category": "Asia / Japan", "name": "Sudden Shower over Shin-Ōhashi Bridge (Hiroshige)", "institution": "AIC", "aic_id": "100003"},
+      {"id": "NC-AIC-008", "category": "Maps", "name": "Map of the World (1507 Waldseemüller - copy)", "institution": "AIC", "aic_id": "100004"},
+      {"id": "NC-AIC-009", "category": "Pacific", "name": "Malagan Mask (New Ireland)", "institution": "AIC", "aic_id": "100005"},
+      {"id": "NC-AIC-010", "category": "Photography", "name": "The Steerage (Stieglitz)", "institution": "AIC", "aic_id": "100006"},
+      {"id": "NC-AIC-011", "category": "Impressionism", "name": "Paris Street; Rainy Day (Caillebotte)", "institution": "AIC", "aic_id": "20684"},
+      {"id": "NC-AIC-012", "category": "Natural History", "name": "Flower Study (Redouté)", "institution": "AIC", "aic_id": "100007"},
+      {"id": "NC-AIC-013", "category": "Asia / Japan", "name": "Fine Wind, Clear Morning (Red Fuji) (Hokusai)", "institution": "AIC", "aic_id": "100008"},
+      {"id": "NC-AIC-014", "category": "Africa", "name": "Kifwebe Mask (Songye)", "institution": "AIC", "aic_id": "100009"},
+      {"id": "NC-AIC-015", "category": "Photography", "name": "Self-Portrait with Newsboy (Hine)", "institution": "AIC", "aic_id": "100010"}
+    ],
+    "should_ingest": [
+      {"id": "NC-AIC-016", "category": "Asia / Japan", "name": "Moon over a Waterfall (Hiroshige)", "aic_id": "100011"},
+      {"id": "NC-AIC-017", "category": "Natural History", "name": "Botanical Study of Roses", "aic_id": "100012"},
+      {"id": "NC-AIC-018", "category": "Maps", "name": "Plan of the City of Chicago (1909 Burnham Plan)", "aic_id": "100013"},
+      {"id": "NC-AIC-019", "category": "Photography", "name": "The Terminal (Stieglitz)", "aic_id": "100014"},
+      {"id": "NC-AIC-020", "category": "Archaeology", "name": "Roman Sarcophagus with Labors of Hercules", "aic_id": "100015"},
+      {"id": "NC-AIC-021", "category": "Africa", "name": "Reliquary Guardian Figure (Kota)", "aic_id": "100016"},
+      {"id": "NC-AIC-022", "category": "Asia / China", "name": "Buddhist Stele (Northern Wei)", "aic_id": "100017"},
+      {"id": "NC-AIC-023", "category": "Pacific", "name": "Ancestral Figure (Moai Cavacava)", "aic_id": "100018"},
+      {"id": "NC-AIC-024", "category": "Natural History", "name": "The Great Horned Owl (Audubon)", "aic_id": "100019"},
+      {"id": "NC-AIC-025", "category": "Photography", "name": "Equilibrium (Moholy-Nagy)", "aic_id": "100020"},
+      {"id": "NC-AIC-026", "category": "Asia / Japan", "name": "53 Stations of the Tōkaidō (Hiroshige Selection)", "aic_id": "100021"},
+      {"id": "NC-AIC-027", "category": "Archaeology", "name": "Vessel in the Form of a Feline (Peru)", "aic_id": "100022"},
+      {"id": "NC-AIC-028", "category": "Africa", "name": "Power Figure (Nkisi N'Kondi)", "aic_id": "100023"},
+      {"id": "NC-AIC-029", "category": "Maps", "name": "Celestial Map of the Northern Hemisphere", "aic_id": "100024"},
+      {"id": "NC-AIC-030", "category": "Natural History", "name": "Studies of Sea Shells", "aic_id": "100025"},
+      {"id": "NC-AIC-031", "category": "Photography", "name": "Nude (Weston)", "aic_id": "100026"},
+      {"id": "NC-AIC-032", "category": "Asia / Japan", "name": "The Actor Otani Oniji (Sharaku)", "aic_id": "100027"},
+      {"id": "NC-AIC-033", "category": "Archaeology", "name": "Egyptian Funerary Stela", "aic_id": "100028"},
+      {"id": "NC-AIC-034", "category": "Pacific", "name": "Tapa Cloth (Polynesia)", "aic_id": "100029"},
+      {"id": "NC-AIC-035", "category": "Natural History", "name": "Bird Studies by Dürer (Copy)", "aic_id": "100030"}
+    ],
+    "optional": [
+      {"id": "NC-AIC-036", "category": "Photography", "name": "Portrait of Abraham Lincoln (Gardner)", "aic_id": "100031"},
+      {"id": "NC-AIC-037", "category": "Asia / Japan", "name": "Selection of Insects (Utamaro Selection)", "aic_id": "100032"},
+      {"id": "NC-AIC-038", "category": "Africa", "name": "Yoruba Beaded Crown", "aic_id": "100033"},
+      {"id": "NC-AIC-039", "category": "Archaeology", "name": "Mayan Cylinder Vase", "aic_id": "100034"},
+      {"id": "NC-AIC-040", "category": "Maps", "name": "Hand-Colored Map of the Americas (17th C)", "aic_id": "100035"},
+      {"id": "NC-AIC-041", "category": "Natural History", "name": "Entomological Plates (Merian)", "aic_id": "100036"},
+      {"id": "NC-AIC-042", "category": "Photography", "name": "Main Street, Chicago (1900s)", "aic_id": "100037"},
+      {"id": "NC-AIC-043", "category": "Asia / India", "name": "Vishnu as Varaha", "aic_id": "100038"},
+      {"id": "NC-AIC-044", "category": "Pacific", "name": "Maori Door Lintel (Pare)", "aic_id": "100039"},
+      {"id": "NC-AIC-045", "category": "Natural History", "name": "Botanical Prints (Besler)", "aic_id": "100040"},
+      {"id": "NC-AIC-046", "category": "Asia / Japan", "name": "Plum Estate, Kameido (Hiroshige)", "aic_id": "100041"},
+      {"id": "NC-AIC-047", "category": "Africa", "name": "Luba Bowstand", "aic_id": "100042"},
+      {"id": "NC-AIC-048", "category": "Archaeology", "name": "Cycladic Female Figure", "aic_id": "100043"},
+      {"id": "NC-AIC-049", "category": "Photography", "name": "Clouds (Stieglitz)", "aic_id": "100044"},
+      {"id": "NC-AIC-050", "category": "Natural History", "name": "Marine Life Illustrations", "aic_id": "100045"}
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "pagination": {
+    "total": 2,
+    "limit": 2,
+    "offset": 0,
+    "total_pages": 2,
+    "current_page": 1,
+    "next_url": "https://api.artic.edu/api/v1/artworks?page=2&limit=2"
+  },
+  "data": [
+    {
+      "id": 27992,
+      "title": "A Sunday on La Grande Jatte -- 1884",
+      "is_public_domain": true,
+      "image_id": "12345678-aaaa-bbbb-cccc-123456789abc"
+    },
+    {
+      "id": 14620,
+      "title": "Water Lilies",
+      "is_public_domain": true,
+      "image_id": "87654321-aaaa-bbbb-cccc-123456789abc"
+    }
+  ]
+}
+

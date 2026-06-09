@@ -1,0 +1,19 @@
+{
+  "pagination": {
+    "total": 1,
+    "limit": 100,
+    "offset": 0,
+    "total_pages": 1,
+    "current_page": 1,
+    "next_url": null
+  },
+  "data": [
+    {
+      "id": 27992,
+      "title": "A Sunday on La Grande Jatte -- 1884",
+      "is_public_domain": true,
+      "image_id": "12345678-aaaa-bbbb-cccc-123456789abc"
+    }
+  ]
+}
+

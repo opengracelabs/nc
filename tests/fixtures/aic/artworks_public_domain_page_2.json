@@ -1,0 +1,12 @@
+{
+  "pagination": {
+    "total": 2,
+    "limit": 2,
+    "offset": 2,
+    "total_pages": 2,
+    "current_page": 2,
+    "next_url": null
+  },
+  "data": []
+}
+

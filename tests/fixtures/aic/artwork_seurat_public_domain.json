@@ -1,0 +1,41 @@
+{
+  "data": {
+    "id": 27992,
+    "api_model": "artworks",
+    "api_link": "https://api.artic.edu/api/v1/artworks/27992",
+    "title": "A Sunday on La Grande Jatte -- 1884",
+    "is_public_domain": true,
+    "image_id": "12345678-aaaa-bbbb-cccc-123456789abc",
+    "alt_image_ids": [
+      "22222222-aaaa-bbbb-cccc-123456789abc"
+    ],
+    "date_display": "1884-86",
+    "date_start": 1884,
+    "date_end": 1886,
+    "artist_display": "Georges Seurat\\nFrench, 1859-1891",
+    "artist_title": "Georges Seurat",
+    "place_of_origin": "France",
+    "department_title": "Painting and Sculpture of Europe",
+    "department_id": "PC-10",
+    "artwork_type_title": "Painting",
+    "medium_display": "Oil on canvas",
+    "subject_titles": [
+      "France",
+      "Leisure"
+    ],
+    "classification_titles": [
+      "painting"
+    ],
+    "style_titles": [
+      "Post-Impressionism"
+    ],
+    "copyright_notice": null,
+    "main_reference_number": "1926.224",
+    "thumbnail": {
+      "lqip": "data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==",
+      "width": 843,
+      "height": 536
+    }
+  }
+}
+
