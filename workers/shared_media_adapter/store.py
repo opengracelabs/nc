@@ -77,7 +77,7 @@ def build_rights_evidence(
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
     worker_classified_status = rights["rights_status"]
-    if runtime.source_slug in {"met", "aic"}:
+    if runtime.source_slug in {"met", "aic", "cma", "smk"}:
         worker_classified_status = {
             "verified_cc0": "classified_cc0",
             "verified_pd": "classified_pd",
@@ -103,6 +103,18 @@ def build_rights_evidence(
         evidence["aic_is_public_domain"] = normalized.get("aic_is_public_domain")
         evidence["aic_copyright_notice"] = normalized.get("aic_copyright_notice")
         evidence["aic_manifest_url"] = normalized.get("aic_manifest_url")
+    if runtime.source_slug == "smk":
+        evidence["smk_public_domain"] = normalized.get("smk_public_domain")
+        evidence["smk_object_number"] = normalized.get("smk_object_number")
+        evidence["smk_manifest_url"] = normalized.get("smk_manifest_url")
+        evidence["smk_image_rights"] = normalized.get("smk_image_rights")
+    if runtime.source_slug == "cma":
+        evidence["cma_share_license_status"] = normalized.get("cma_share_license_status")
+        evidence["cma_copyright"] = normalized.get("cma_copyright")
+        evidence["cma_accession_number"] = normalized.get("accession_number")
+        evidence["cma_image_web_url"] = normalized.get("cma_image_web_url")
+        evidence["cma_image_print_url"] = normalized.get("cma_image_print_url")
+        evidence["cma_image_full_url"] = normalized.get("cma_image_full_url")
     return evidence
 
 

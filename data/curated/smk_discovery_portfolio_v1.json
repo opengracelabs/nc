@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "SMK Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-SMK-001",
+    "name": "Dust Motes Dancing in the Sunbeams",
+    "creator": "Vilhelm Hammershøi",
+    "institution": "Statens Museum for Kunst (SMK)",
+    "rights": "CC0 (Open Access)",
+    "category": "Masterwork / Nordic Light",
+    "smk_object_number": "KMS3374"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-SMK-001", "category": "Masterwork / Nordic Light", "name": "Dust Motes Dancing in the Sunbeams", "institution": "SMK", "smk_object_number": "KMS3374"},
+      {"id": "NC-SMK-002", "category": "Nordic Landscapes", "name": "View from the Artist's Window", "institution": "SMK", "smk_object_number": "KMS3563"},
+      {"id": "NC-SMK-003", "category": "Exploration / Greenland", "name": "Inuit in a Kayak", "institution": "SMK", "smk_object_number": "100001"},
+      {"id": "NC-SMK-004", "category": "Natural History / Botanical", "name": "Study of a Tulip", "institution": "SMK", "smk_object_number": "100002"},
+      {"id": "NC-SMK-005", "category": "Archaeology / Mediterranean", "name": "Head of a Roman Emperor", "institution": "SMK", "smk_object_number": "100003"},
+      {"id": "NC-SMK-006", "category": "Nordic Landscapes", "name": "A View through Three of the North-Western Arches of the Third Story of the Colosseum", "institution": "SMK", "smk_object_number": "KMS3123"},
+      {"id": "NC-SMK-007", "category": "Maps / Nordic", "name": "Chart of the Kattegat and Skagerrak (18th C)", "institution": "SMK", "smk_object_number": "100004"},
+      {"id": "NC-SMK-008", "category": "Photography / Early Denmark", "name": "View of Copenhagen Harbor (Daguerreotype)", "institution": "SMK", "smk_object_number": "100005"},
+      {"id": "NC-SMK-009", "category": "Asia / China", "name": "Chinese Landscape Scroll (Copy)", "institution": "SMK", "smk_object_number": "100006"},
+      {"id": "NC-SMK-010", "category": "Natural History / Zoological", "name": "Study of a Red Deer", "institution": "SMK", "smk_object_number": "100007"},
+      {"id": "NC-SMK-011", "category": "Nordic Landscapes", "name": "View of Lake Esrum", "institution": "SMK", "smk_object_number": "100008"},
+      {"id": "NC-SMK-012", "category": "Exploration / Arctic", "name": "The Iceberg (Arctic Scene)", "institution": "SMK", "smk_object_number": "100009"},
+      {"id": "NC-SMK-013", "category": "Natural History / Botanical", "name": "Flora Danica (Plates Selection)", "institution": "SMK", "smk_object_number": "100010"},
+      {"id": "NC-SMK-014", "category": "Nordic Landscapes", "name": "Chalk Cliffs on Møn", "institution": "SMK", "smk_object_number": "100011"},
+      {"id": "NC-SMK-015", "category": "Archaeology", "name": "Greek Tanagra Figurine", "institution": "SMK", "smk_object_number": "100012"}
+    ],
+    "should_ingest": [
+      {"id": "NC-SMK-016", "category": "Nordic Landscapes", "name": "Winter Day in Copenhagen", "smk_object_number": "100013"},
+      {"id": "NC-SMK-017", "category": "Natural History", "name": "Anatomical Study of a Horse", "smk_object_number": "100014"},
+      {"id": "NC-SMK-018", "category": "Maps", "name": "Plan of Copenhagen (1728)", "smk_object_number": "100015"},
+      {"id": "NC-SMK-019", "category": "Photography", "name": "Portrait of Bertel Thorvaldsen", "smk_object_number": "100016"},
+      {"id": "NC-SMK-020", "category": "Exploration", "name": "Expedition to North Greenland (Sketches)", "smk_object_number": "100017"},
+      {"id": "NC-SMK-021", "category": "Asia / Japan", "name": "Japanese Woodblock Print (Ukiyo-e selection)", "smk_object_number": "100018"},
+      {"id": "NC-SMK-022", "category": "Natural History / Botanical", "name": "Mushrooms and Fungi (Scientific Illustration)", "smk_object_number": "100019"},
+      {"id": "NC-SMK-023", "category": "Nordic Landscapes", "name": "Moonlight over the Sound", "smk_object_number": "100020"},
+      {"id": "NC-SMK-024", "category": "Maps", "name": "Maritime Chart of the North Sea", "smk_object_number": "100021"},
+      {"id": "NC-SMK-025", "category": "Archaeology", "name": "Egyptian Funerary Mask", "smk_object_number": "100022"},
+      {"id": "NC-SMK-026", "category": "Nordic Landscapes", "name": "Forest Scene in Jutland", "smk_object_number": "100023"},
+      {"id": "NC-SMK-027", "category": "Natural History / Zoological", "name": "Birds of Denmark (Selection)", "smk_object_number": "100024"},
+      {"id": "NC-SMK-028", "category": "Photography", "name": "Street Life in Old Copenhagen", "smk_object_number": "100025"},
+      {"id": "NC-SMK-029", "category": "Asia / India", "name": "Indian Miniature Painting", "smk_object_number": "100026"},
+      {"id": "NC-SMK-030", "category": "Exploration", "name": "Whaling in the Greenland Sea", "smk_object_number": "100027"},
+      {"id": "NC-SMK-031", "category": "Natural History / Botanical", "name": "Spring Flowers in the Nordic Region", "smk_object_number": "100028"},
+      {"id": "NC-SMK-032", "category": "Nordic Landscapes", "name": "The Little Mermaid Statue (Historical Photo)", "smk_object_number": "100029"},
+      {"id": "NC-SMK-033", "category": "Maps", "name": "Topographical Map of Zealand", "smk_object_number": "100030"},
+      {"id": "NC-SMK-034", "category": "Archaeology", "name": "Viking Age Brooch", "smk_object_number": "100031"},
+      {"id": "NC-SMK-035", "category": "Photography", "name": "Rural Life on Bornholm (1900s)", "smk_object_number": "100032"}
+    ],
+    "optional": [
+      {"id": "NC-SMK-036", "category": "Natural History", "name": "Geological Formations of the Faroe Islands", "smk_object_number": "100033"},
+      {"id": "NC-SMK-037", "category": "Nordic Landscapes", "name": "Summer Evening on Skagen Beach", "smk_object_number": "100034"},
+      {"id": "NC-SMK-038", "category": "Exploration", "name": "Map of the North-West Passage", "smk_object_number": "100035"},
+      {"id": "NC-SMK-039", "category": "Asia", "name": "Persian Manuscript Illumination", "smk_object_number": "100036"},
+      {"id": "NC-SMK-040", "category": "Natural History / Zoological", "name": "Studies of Arctic Wildlife", "smk_object_number": "100037"},
+      {"id": "NC-SMK-041", "category": "Photography", "name": "The Royal Palace of Amalienborg (1890)", "smk_object_number": "100038"},
+      {"id": "NC-SMK-042", "category": "Maps", "name": "Early Map of Iceland", "smk_object_number": "100039"},
+      {"id": "NC-SMK-043", "category": "Archaeology", "name": "Roman Glass Bowl", "smk_object_number": "100040"},
+      {"id": "NC-SMK-044", "category": "Nordic Landscapes", "name": "The Great Belt at Sunset", "smk_object_number": "100041"},
+      {"id": "NC-SMK-045", "category": "Natural History / Botanical", "name": "Herbier of Nordic Plants", "smk_object_number": "100042"},
+      {"id": "NC-SMK-046", "category": "Exploration", "name": "Danish Expedition to Arabia (Sketches)", "smk_object_number": "100043"},
+      {"id": "NC-SMK-047", "category": "Asia", "name": "Thai Buddhist Sculpture", "smk_object_number": "100044"},
+      {"id": "NC-SMK-048", "category": "Photography", "name": "Copenhagen Canals in Winter", "smk_object_number": "100045"},
+      {"id": "NC-SMK-049", "category": "Maps", "name": "Plan of the Citadel (Copenhagen)", "smk_object_number": "100046"},
+      {"id": "NC-SMK-050", "category": "Nordic Landscapes", "name": "Stormy Sea off the Coast of Jutland", "smk_object_number": "100047"}
+    ]
+  }
+}

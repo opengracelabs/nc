@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "CMA Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-CMA-001",
+    "name": "Cloudy Mountains",
+    "creator": "Mi Youren",
+    "institution": "Cleveland Museum of Art",
+    "rights": "CC0 (Open Access)",
+    "category": "Masterwork / Chinese Painting",
+    "cma_id": "1933.220"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-CMA-001", "category": "Masterwork / Chinese Painting", "name": "Cloudy Mountains", "institution": "CMA", "cma_id": "1933.220"},
+      {"id": "NC-CMA-002", "category": "Asia / Japan", "name": "Dragon and Tiger", "institution": "CMA", "cma_id": "1959.136"},
+      {"id": "NC-CMA-003", "category": "Asia / Korea", "name": "Water-Moon Avalokiteshvara", "institution": "CMA", "cma_id": "1991.1"},
+      {"id": "NC-CMA-004", "category": "Asia / Cambodia", "name": "Krishna Goverdhana", "institution": "CMA", "cma_id": "1973.106"},
+      {"id": "NC-CMA-005", "category": "Africa", "name": "Benin Plaque: Oba and Attendants", "institution": "CMA", "cma_id": "1991.160"},
+      {"id": "NC-CMA-006", "category": "Archaeology / Medieval", "name": "Medallion with Christ from the Guelph Treasure", "institution": "CMA", "cma_id": "1930.504"},
+      {"id": "NC-CMA-007", "category": "Photography", "name": "The Steerage", "institution": "CMA", "cma_id": "1949.828"},
+      {"id": "NC-CMA-008", "category": "Natural History", "name": "Botanical Study of Roses", "institution": "CMA", "cma_id": "100001"},
+      {"id": "NC-CMA-009", "category": "Asia / China", "name": "Dragon", "institution": "CMA", "cma_id": "1952.585"},
+      {"id": "NC-CMA-010", "category": "Archaeology / Pre-Columbian", "name": "Mayan Relief Panel", "institution": "CMA", "cma_id": "100002"},
+      {"id": "NC-CMA-011", "category": "Asia / Japan", "name": "Fujin and Raijin (Screens)", "institution": "CMA", "cma_id": "100003"},
+      {"id": "NC-CMA-012", "category": "Maps", "name": "Celestial Map of the Northern Hemisphere", "institution": "CMA", "cma_id": "100004"},
+      {"id": "NC-CMA-013", "category": "Africa", "name": "Reliquary Guardian Figure (Kota)", "institution": "CMA", "cma_id": "1953.422"},
+      {"id": "NC-CMA-014", "category": "Asia / India", "name": "Dancing Ganesha", "institution": "CMA", "cma_id": "100005"},
+      {"id": "NC-CMA-015", "category": "Photography", "name": "Yosemite Valley (Watkins)", "institution": "CMA", "cma_id": "100006"}
+    ],
+    "should_ingest": [
+      {"id": "NC-CMA-016", "category": "Asia / China", "name": "The Nine Songs", "cma_id": "1959.138"},
+      {"id": "NC-CMA-017", "category": "Natural History", "name": "Entomological Studies (Merian)", "cma_id": "100007"},
+      {"id": "NC-CMA-018", "category": "Archaeology / Byzantine", "name": "Byzantine Enamel Medallion", "cma_id": "100008"},
+      {"id": "NC-CMA-019", "category": "Photography", "name": "Nude (Edward Weston)", "cma_id": "100009"},
+      {"id": "NC-CMA-020", "category": "Africa", "name": "Luba Bowstand", "cma_id": "100010"},
+      {"id": "NC-CMA-021", "category": "Asia / Korea", "name": "Celadon Prunus Vase", "cma_id": "100011"},
+      {"id": "NC-CMA-022", "category": "Asia / Japan", "name": "Bamboo in the Four Seasons", "cma_id": "100012"},
+      {"id": "NC-CMA-023", "category": "Natural History", "name": "Bird Illustration (Audubon Selection)", "cma_id": "100013"},
+      {"id": "NC-CMA-024", "category": "Maps", "name": "Map of Asia (17th C)", "cma_id": "100014"},
+      {"id": "NC-CMA-025", "category": "Archaeology / Pre-Columbian", "name": "Moche Feline Vessel", "cma_id": "100015"},
+      {"id": "NC-CMA-026", "category": "Asia / India", "name": "Stele of Vishnu", "cma_id": "100016"},
+      {"id": "NC-CMA-027", "category": "Africa", "name": "Power Figure (Nkisi N'Kondi)", "cma_id": "100017"},
+      {"id": "NC-CMA-028", "category": "Photography", "name": "Portrait of Alfred Stieglitz", "cma_id": "100018"},
+      {"id": "NC-CMA-029", "category": "Natural History", "name": "Studies of Sea Shells", "cma_id": "100019"},
+      {"id": "NC-CMA-030", "category": "Asia / China", "name": "Morning Mist in the Valley", "cma_id": "100020"},
+      {"id": "NC-CMA-031", "category": "Asia / Japan", "name": "Mount Fuji from the Tokaido", "cma_id": "100021"},
+      {"id": "NC-CMA-032", "category": "Archaeology / Islamic", "name": "Islamic Metalwork (Persian Bowl)", "cma_id": "100022"},
+      {"id": "NC-CMA-033", "category": "Pacific", "name": "Maori Door Lintel", "cma_id": "100023"},
+      {"id": "NC-CMA-034", "category": "Natural History", "name": "Botanical Prints (Besler)", "cma_id": "100024"},
+      {"id": "NC-CMA-035", "category": "Photography", "name": "The Flatiron (Steichen - CMA copy)", "cma_id": "100025"}
+    ],
+    "optional": [
+      {"id": "NC-CMA-036", "category": "Asia / China", "name": "Fishermen's Evening Song", "cma_id": "100026"},
+      {"id": "NC-CMA-037", "category": "Africa", "name": "Yoruba Beaded Crown", "cma_id": "100027"},
+      {"id": "NC-CMA-042", "category": "Maps", "name": "Plan of the City of Cleveland (19th C)", "cma_id": "100028"},
+      {"id": "NC-CMA-039", "category": "Archaeology", "name": "Cycladic Female Figure", "cma_id": "100029"},
+      {"id": "NC-CMA-040", "category": "Natural History", "name": "Marine Life Illustrations", "cma_id": "100030"},
+      {"id": "NC-CMA-041", "category": "Photography", "name": "Clouds (Stieglitz - CMA copy)", "cma_id": "100031"},
+      {"id": "NC-CMA-038", "category": "Asia / India", "name": "Head of Buddha (Gandhara)", "cma_id": "100032"},
+      {"id": "NC-CMA-043", "category": "Pacific", "name": "Hawaiian Feather Cape", "cma_id": "100033"},
+      {"id": "NC-CMA-044", "category": "Natural History", "name": "Flower Study by Dürer (Copy)", "cma_id": "100034"},
+      {"id": "NC-CMA-045", "category": "Asia / China", "name": "Pine and Rocks", "cma_id": "100035"},
+      {"id": "NC-CMA-046", "category": "Africa", "name": "Senufo Mask", "cma_id": "100036"},
+      {"id": "NC-CMA-047", "category": "Archaeology", "name": "Roman Glass Vessel", "cma_id": "100037"},
+      {"id": "NC-CMA-048", "category": "Photography", "name": "Self-Portrait (Cameron)", "cma_id": "100038"},
+      {"id": "NC-CMA-049", "category": "Maps", "name": "Hand-Colored Map of America (17th C)", "cma_id": "100039"},
+      {"id": "NC-CMA-050", "category": "Asia / Japan", "name": "Screens of the Four Seasons", "cma_id": "100040"}
+    ]
+  }
+}
