@@ -41,6 +41,21 @@ def _build_technical_metadata(normalized: dict[str, Any], media_type_id: str) ->
     return build_technical_metadata(normalized, media_type_id=media_type_id)
 
 
+def _build_evidence_extension(normalized: dict[str, Any]) -> dict[str, Any]:
+    source_slug = str(normalized.get("yale_source_slug") or "").strip()
+    evidence = {
+        "yale_object_id": normalized.get("yale_object_id"),
+        "yale_iiif_manifest": normalized.get("yale_iiif_manifest"),
+        "yale_image_service": normalized.get("yale_image_service"),
+    }
+    if source_slug == "ycba":
+        evidence["ycba_rights_uri"] = normalized.get("ycba_rights_uri")
+        evidence["ycba_attribution"] = normalized.get("ycba_attribution")
+    if source_slug == "yuag":
+        evidence["yuag_rights_uri"] = normalized.get("yuag_rights_uri")
+    return evidence
+
+
 def _runtime(source_slug: str, anchor_type: str) -> StoreRuntime:
     return StoreRuntime(
         worker_id=WORKER_ID,
@@ -51,6 +66,7 @@ def _runtime(source_slug: str, anchor_type: str) -> StoreRuntime:
         validator_version=VALIDATOR_VERSION,
         build_technical_metadata=_build_technical_metadata,
         validation_status=validation_status,
+        build_evidence_extension=_build_evidence_extension,
         rights_policy_id=YALE_RIGHTS_POLICY_ID,
         workflow_record_id_key="yale_object_id",
         anchor_type=anchor_type,

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import Any
 
@@ -31,6 +31,9 @@ class StoreRuntime:
     validator_version: str
     build_technical_metadata: Callable[[dict[str, Any], str], dict[str, Any]]
     validation_status: Callable[[dict[str, Any]], str]
+    build_evidence_extension: Callable[[dict[str, Any]], dict[str, Any]] = field(
+        default=lambda _: {}
+    )
     schema_standard: str = "edm"
     rights_policy_id: str = RIGHTS_POLICY_ID
     workflow_record_id_key: str = "source_record_id"
@@ -57,6 +60,14 @@ class StoreRuntime:
             raise ValueError("build_technical_metadata_not_callable")
         if not callable(self.validation_status):
             raise ValueError("validation_status_not_callable")
+        if not callable(self.build_evidence_extension):
+            raise ValueError("build_evidence_extension_not_callable")
+
+
+WORKER_STATUS_REMAP = {
+    "verified_cc0": "classified_cc0",
+    "verified_pd": "classified_pd",
+}
 
 
 def build_provenance(normalized: dict[str, Any], runtime: StoreRuntime) -> dict[str, Any]:
@@ -76,22 +87,10 @@ def build_rights_evidence(
     normalized: dict[str, Any],
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
-    worker_classified_status = rights["rights_status"]
-    if runtime.source_slug in {
-        "met",
-        "aic",
-        "cma",
-        "nga",
-        "smk",
-        "walters",
-        "ycba",
-        "yuag",
-        "getty",
-    }:
-        worker_classified_status = {
-            "verified_cc0": "classified_cc0",
-            "verified_pd": "classified_pd",
-        }.get(str(worker_classified_status), worker_classified_status)
+    worker_classified_status = WORKER_STATUS_REMAP.get(
+        str(rights["rights_status"]),
+        rights["rights_status"],
+    )
 
     evidence = {
         "source": runtime.source_slug,
@@ -107,57 +106,7 @@ def build_rights_evidence(
         "worker_classified_status": worker_classified_status,
         "evidence_status": "pending_human_review",
     }
-    if runtime.source_slug == "met":
-        evidence["met_is_public_domain"] = normalized.get("met_is_public_domain")
-    if runtime.source_slug == "aic":
-        evidence["aic_is_public_domain"] = normalized.get("aic_is_public_domain")
-        evidence["aic_copyright_notice"] = normalized.get("aic_copyright_notice")
-        evidence["aic_manifest_url"] = normalized.get("aic_manifest_url")
-    if runtime.source_slug == "smk":
-        evidence["smk_public_domain"] = normalized.get("smk_public_domain")
-        evidence["smk_object_number"] = normalized.get("smk_object_number")
-        evidence["smk_manifest_url"] = normalized.get("smk_manifest_url")
-        evidence["smk_image_rights"] = normalized.get("smk_image_rights")
-    if runtime.source_slug == "cma":
-        evidence["cma_share_license_status"] = normalized.get("cma_share_license_status")
-        evidence["cma_copyright"] = normalized.get("cma_copyright")
-        evidence["cma_accession_number"] = normalized.get("accession_number")
-        evidence["cma_image_web_url"] = normalized.get("cma_image_web_url")
-        evidence["cma_image_print_url"] = normalized.get("cma_image_print_url")
-        evidence["cma_image_full_url"] = normalized.get("cma_image_full_url")
-    if runtime.source_slug == "nga":
-        evidence["nga_openaccess"] = normalized.get("nga_openaccess")
-        evidence["nga_image_uuid"] = normalized.get("nga_image_uuid")
-        evidence["nga_iiifurl"] = normalized.get("nga_iiifurl")
-        evidence["nga_iiif_thumb_url"] = normalized.get("nga_iiif_thumb_url")
-        evidence["nga_viewtype"] = normalized.get("nga_viewtype")
-        evidence["nga_objectid"] = normalized.get("nga_objectid")
-        evidence["nga_accessionnum"] = normalized.get("nga_accessionnum")
-    if runtime.source_slug == "walters":
-        evidence["walters_object_id"] = normalized.get("walters_object_id")
-        evidence["walters_object_number"] = normalized.get("walters_object_number")
-        evidence["walters_image_url"] = normalized.get("walters_image_url")
-        evidence["walters_media_xref_id"] = normalized.get("walters_media_xref_id")
-        evidence["walters_is_primary"] = normalized.get("walters_is_primary")
-        evidence["walters_collection_ids"] = normalized.get("walters_collection_ids")
-        evidence["walters_collection_names"] = normalized.get("walters_collection_names")
-    if runtime.source_slug == "ycba":
-        evidence["ycba_rights_uri"] = normalized.get("ycba_rights_uri")
-        evidence["ycba_attribution"] = normalized.get("ycba_attribution")
-        evidence["yale_object_id"] = normalized.get("yale_object_id")
-        evidence["yale_iiif_manifest"] = normalized.get("yale_iiif_manifest")
-        evidence["yale_image_service"] = normalized.get("yale_image_service")
-    if runtime.source_slug == "yuag":
-        evidence["yuag_rights_uri"] = normalized.get("yuag_rights_uri")
-        evidence["yale_object_id"] = normalized.get("yale_object_id")
-        evidence["yale_iiif_manifest"] = normalized.get("yale_iiif_manifest")
-        evidence["yale_image_service"] = normalized.get("yale_image_service")
-    if runtime.source_slug == "getty":
-        evidence["getty_object_id"] = normalized.get("getty_object_id")
-        evidence["getty_rights_uri"] = normalized.get("getty_rights_uri")
-        evidence["getty_manifest_uri"] = normalized.get("getty_manifest_uri")
-        evidence["getty_image_service"] = normalized.get("getty_image_service")
-        evidence["getty_accession_number"] = normalized.get("getty_accession_number")
+    evidence.update(runtime.build_evidence_extension(normalized))
     return evidence
 
 

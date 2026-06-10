@@ -68,6 +68,15 @@ def _build_technical_metadata(normalized: dict[str, Any], media_type_id: str) ->
     return build_technical_metadata(normalized, media_type_id=media_type_id)
 
 
+def _build_evidence_extension(normalized: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "smk_public_domain": normalized.get("smk_public_domain"),
+        "smk_object_number": normalized.get("smk_object_number"),
+        "smk_manifest_url": normalized.get("smk_manifest_url"),
+        "smk_image_rights": normalized.get("smk_image_rights"),
+    }
+
+
 def _runtime(anchor_type: str) -> StoreRuntime:
     return StoreRuntime(
         worker_id=WORKER_ID,
@@ -78,6 +87,7 @@ def _runtime(anchor_type: str) -> StoreRuntime:
         validator_version=VALIDATOR_VERSION,
         build_technical_metadata=_build_technical_metadata,
         validation_status=validation_status,
+        build_evidence_extension=_build_evidence_extension,
         rights_policy_id=SMK_RIGHTS_POLICY_ID,
         workflow_record_id_key="smk_object_number",
         anchor_type=anchor_type,

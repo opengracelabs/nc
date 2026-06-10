@@ -83,6 +83,17 @@ def _build_technical_metadata(normalized: dict[str, Any], media_type_id: str) ->
     return build_technical_metadata(normalized, media_type_id=media_type_id)
 
 
+def _build_evidence_extension(normalized: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "cma_share_license_status": normalized.get("cma_share_license_status"),
+        "cma_copyright": normalized.get("cma_copyright"),
+        "cma_accession_number": normalized.get("accession_number"),
+        "cma_image_web_url": normalized.get("cma_image_web_url"),
+        "cma_image_print_url": normalized.get("cma_image_print_url"),
+        "cma_image_full_url": normalized.get("cma_image_full_url"),
+    }
+
+
 def _runtime(anchor_type: str) -> StoreRuntime:
     return StoreRuntime(
         worker_id=WORKER_ID,
@@ -93,6 +104,7 @@ def _runtime(anchor_type: str) -> StoreRuntime:
         validator_version=VALIDATOR_VERSION,
         build_technical_metadata=_build_technical_metadata,
         validation_status=validation_status,
+        build_evidence_extension=_build_evidence_extension,
         rights_policy_id=CMA_RIGHTS_POLICY_ID,
         workflow_record_id_key="cma_artwork_id",
         anchor_type=anchor_type,

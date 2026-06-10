@@ -78,7 +78,7 @@ async def test_v1_v3_media_rights_are_pending_human_verification() -> None:
     assert "verified_at" not in compact_sql
     assert "true" not in compact_sql
     assert evidence["evidence_status"] == "pending_human_review"
-    assert evidence["worker_classified_status"] == "verified_pd"
+    assert evidence["worker_classified_status"] == "classified_pd"
     assert "automated_allowlist" not in evidence
 
 

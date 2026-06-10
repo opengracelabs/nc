@@ -191,7 +191,7 @@ async def test_sprint4_v3_evidence_contains_all_required_fields_for_pdm_record()
     assert evidence["rights_matrix_classification"] == "allowed"
     assert evidence["applying_policy"] == "europeana_rights_matrix_v1.0"
     assert evidence["oai_pmh_identifier"] == "https://id.rijksmuseum.nl/200343467"
-    assert evidence["worker_classified_status"] == "verified_pd"
+    assert evidence["worker_classified_status"] == "classified_pd"
     assert evidence["evidence_status"] == "pending_human_review"
     assert len(evidence["raw_payload_hash"]) == 64
 

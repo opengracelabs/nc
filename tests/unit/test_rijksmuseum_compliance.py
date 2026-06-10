@@ -153,5 +153,5 @@ async def test_v3_rights_evidence_contains_article_3f_dictionary() -> None:
     assert evidence["applying_policy"] == "europeana_rights_matrix_v1.0"
     assert evidence["oai_pmh_identifier"] == "https://id.rijksmuseum.nl/200343467"
     assert len(evidence["raw_payload_hash"]) == 64
-    assert evidence["worker_classified_status"] == "verified_pd"
+    assert evidence["worker_classified_status"] == "classified_pd"
     assert evidence["evidence_status"] == "pending_human_review"

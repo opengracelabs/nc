@@ -40,6 +40,16 @@ def _build_technical_metadata(normalized: dict[str, Any], media_type_id: str) ->
     return build_technical_metadata(normalized, media_type_id=media_type_id)
 
 
+def _build_evidence_extension(normalized: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "getty_object_id": normalized.get("getty_object_id"),
+        "getty_rights_uri": normalized.get("getty_rights_uri"),
+        "getty_manifest_uri": normalized.get("getty_manifest_uri"),
+        "getty_image_service": normalized.get("getty_image_service"),
+        "getty_accession_number": normalized.get("getty_accession_number"),
+    }
+
+
 def _runtime(anchor_type: str) -> StoreRuntime:
     return StoreRuntime(
         worker_id=WORKER_ID,
@@ -50,6 +60,7 @@ def _runtime(anchor_type: str) -> StoreRuntime:
         validator_version=VALIDATOR_VERSION,
         build_technical_metadata=_build_technical_metadata,
         validation_status=validation_status,
+        build_evidence_extension=_build_evidence_extension,
         rights_policy_id=RIGHTS_POLICY_ID,
         workflow_record_id_key="getty_object_id",
         anchor_type=anchor_type,

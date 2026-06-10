@@ -188,7 +188,7 @@ async def test_media_rights_payload_records_pending_human_review_evidence() -> N
     evidence = json.loads(media_rights_args[2])
     assert evidence["source"] == "rijksmuseum"
     assert evidence["evidence_status"] == "pending_human_review"
-    assert evidence["worker_classified_status"] == "verified_pd"
+    assert evidence["worker_classified_status"] == "classified_pd"
     assert evidence["rights_basis"] == "public_domain_mark"
     assert media_rights_args[1] == "https://creativecommons.org/publicdomain/mark/1.0/"
 

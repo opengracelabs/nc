@@ -48,6 +48,14 @@ def _build_technical_metadata(normalized: dict[str, Any], media_type_id: str) ->
     return build_technical_metadata(normalized, media_type_id=media_type_id)
 
 
+def _build_evidence_extension(normalized: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "aic_is_public_domain": normalized.get("aic_is_public_domain"),
+        "aic_copyright_notice": normalized.get("aic_copyright_notice"),
+        "aic_manifest_url": normalized.get("aic_manifest_url"),
+    }
+
+
 def _runtime(anchor_type: str) -> StoreRuntime:
     return StoreRuntime(
         worker_id=WORKER_ID,
@@ -58,6 +66,7 @@ def _runtime(anchor_type: str) -> StoreRuntime:
         validator_version=VALIDATOR_VERSION,
         build_technical_metadata=_build_technical_metadata,
         validation_status=validation_status,
+        build_evidence_extension=_build_evidence_extension,
         rights_policy_id=AIC_RIGHTS_POLICY_ID,
         workflow_record_id_key="aic_artwork_id",
         anchor_type=anchor_type,

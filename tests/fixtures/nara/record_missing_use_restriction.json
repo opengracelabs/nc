@@ -1,0 +1,16 @@
+{
+  "naId": 777,
+  "recordType": "description",
+  "levelOfDescription": "item",
+  "title": "Missing use restriction photograph",
+  "digitalObjects": [
+    {
+      "objectFilename": "missing.jpg",
+      "objectUrl": "https://catalog.archives.gov/objects/missing.jpg",
+      "objectFileSize": 2000,
+      "objectId": "missing-1",
+      "objectDescription": "Missing restriction image",
+      "objectType": "Image (JPG)"
+    }
+  ]
+}

@@ -102,7 +102,7 @@ async def test_write_normalized_record_preserves_m36_write_order_and_statuses() 
     evidence = json.loads(media_rights_args[2])
     assert media_rights_args[1] == "https://creativecommons.org/publicdomain/mark/1.0/"
     assert evidence["evidence_status"] == "pending_human_review"
-    assert evidence["worker_classified_status"] == "verified_pd"
+    assert evidence["worker_classified_status"] == "classified_pd"
     assert evidence["rights_matrix_classification"] == "allowed"
 
 
