@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "Getty Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-GETTY-001",
+    "name": "Vase of Flowers",
+    "creator": "Jan van Huysum",
+    "institution": "J. Paul Getty Museum",
+    "rights": "CC0 1.0 Universal",
+    "category": "Natural History / European Painting",
+    "accession_id": "82.PB.70"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-GETTY-001", "category": "Natural History", "name": "Vase of Flowers (Van Huysum)", "institution": "Getty", "accession_id": "82.PB.70"},
+      {"id": "NC-GETTY-002", "category": "Masterwork", "name": "Irises (Van Gogh)", "institution": "Getty", "accession_id": "90.PA.20"},
+      {"id": "NC-GETTY-003", "category": "Antiquity", "name": "Statue of a Victorious Youth (The Getty Bronze)", "institution": "Getty", "accession_id": "77.AB.30"},
+      {"id": "NC-GETTY-004", "category": "Antiquity", "name": "The Lansdowne Herakles", "institution": "Getty", "accession_id": "70.AA.109"},
+      {"id": "NC-GETTY-005", "category": "Antiquity", "name": "Cult Statue of a Goddess (Aphrodite)", "institution": "Getty", "accession_id": "88.AA.76"},
+      {"id": "NC-GETTY-006", "category": "Antiquity", "name": "Cycladic Harp Player", "institution": "Getty", "accession_id": "85.AA.103"},
+      {"id": "NC-GETTY-007", "category": "Manuscript", "name": "The Stammheim Missal", "institution": "Getty", "accession_id": "97.MS.18"},
+      {"id": "NC-GETTY-008", "category": "Manuscript", "name": "The Prayer Book of Albrecht of Brandenburg", "institution": "Getty", "accession_id": "91.MS.81"},
+      {"id": "NC-GETTY-009", "category": "Manuscript", "name": "The Northumberland Bestiary", "institution": "Getty", "accession_id": "100.MS.73"},
+      {"id": "NC-GETTY-010", "category": "Photography", "name": "Yosemite Valley from the Best General View (Watkins)", "institution": "Getty", "accession_id": "84.XM.1001.1"},
+      {"id": "NC-GETTY-011", "category": "Photography", "name": "Self-Portrait (Nadar, 1855)", "institution": "Getty", "accession_id": "84.XM.436.4"},
+      {"id": "NC-GETTY-012", "category": "Photography", "name": "Annie (Julia Margaret Cameron, 1864)", "institution": "Getty", "accession_id": "84.XM.443.14"},
+      {"id": "NC-GETTY-013", "category": "Natural History", "name": "Metamorphosis Insectorum Surinamensium (Merian)", "institution": "Getty", "accession_id": "2002.34"},
+      {"id": "NC-GETTY-014", "category": "Archaeology", "name": "Romano-Egyptian Mummy Portrait of a Man", "institution": "Getty", "accession_id": "81.AP.42"},
+      {"id": "NC-GETTY-015", "category": "Antiquity", "name": "Attic Red-Figure Calyx-Krater", "institution": "Getty", "accession_id": "92.AE.6"}
+    ],
+    "should_ingest": [
+      {"id": "NC-GETTY-016", "category": "Masterwork", "name": "Modern Rome - Campo Vaccino (Turner)", "accession_id": "2010.50"},
+      {"id": "NC-GETTY-017", "category": "Antiquity", "name": "Statue of a Seated Muse", "accession_id": "94.AA.22"},
+      {"id": "NC-GETTY-018", "category": "Antiquity", "name": "Roman Mosaic of the Labors of Hercules", "accession_id": "81.AH.165"},
+      {"id": "NC-GETTY-019", "category": "Manuscript", "name": "The Spinola Hours", "accession_id": "83.MS.117"},
+      {"id": "NC-GETTY-020", "category": "Manuscript", "name": "Mira calligraphiae monumenta (Bocskay & Hoefnagel)", "accession_id": "86.MV.527"},
+      {"id": "NC-GETTY-021", "category": "Photography", "name": "El Capitan, Yosemite (Watkins)", "accession_id": "84.XM.489.1"},
+      {"id": "NC-GETTY-022", "category": "Photography", "name": "Sarah Bernhardt (Nadar)", "accession_id": "84.XM.436.1"},
+      {"id": "NC-GETTY-023", "category": "Photography", "name": "Charles Darwin (Julia Margaret Cameron)", "accession_id": "84.XM.172.1"},
+      {"id": "NC-GETTY-024", "category": "Natural History", "name": "Flower Study with Insects (Hoefnagel)", "accession_id": "86.MV.527.1"},
+      {"id": "NC-GETTY-025", "category": "Antiquity", "name": "Marbury Hall Zeus", "accession_id": "73.AA.32"},
+      {"id": "NC-GETTY-026", "category": "Antiquity", "name": "Bronze Head of a Roman (Augustus?)", "accession_id": "71.AB.458"},
+      {"id": "NC-GETTY-027", "category": "Manuscript", "name": "The Gualenghi-d'Este Hours", "accession_id": "94.MS.13"},
+      {"id": "NC-GETTY-028", "category": "Manuscript", "name": "The Book of the Marvels of the World", "accession_id": "2012.14"},
+      {"id": "NC-GETTY-029", "category": "Photography", "name": "Mirror Lake, Yosemite (Watkins)", "accession_id": "84.XM.489.3"},
+      {"id": "NC-GETTY-030", "category": "Photography", "name": "The Trestle at Promontory Point (A.J. Russell)", "accession_id": "84.XM.483.1"},
+      {"id": "NC-GETTY-031", "category": "Antiquity", "name": "Egyptian Funerary Stela", "accession_id": "71.AP.46"},
+      {"id": "NC-GETTY-032", "category": "Antiquity", "name": "Etruscan Bronze Mirror", "accession_id": "82.AC.122"},
+      {"id": "NC-GETTY-033", "category": "Manuscript", "name": "The Ruskin Hours", "accession_id": "83.MS.118"},
+      {"id": "NC-GETTY-034", "category": "Natural History", "name": "Still Life with Flowers (Maria van Oosterwyck)", "accession_id": "2011.14"},
+      {"id": "NC-GETTY-035", "category": "Photography", "name": "Portrait of Lewis Carroll (Rejlander)", "accession_id": "84.XM.260.1"}
+    ],
+    "optional": [
+      {"id": "NC-GETTY-036", "category": "Antiquity", "name": "Roman Portrait of a Woman (The \"Getty Cybele\")", "accession_id": "71.AA.274"},
+      {"id": "NC-GETTY-037", "category": "Antiquity", "name": "Attic Black-Figure Hydria", "accession_id": "86.AE.196"},
+      {"id": "NC-GETTY-038", "category": "Antiquity", "name": "Tanagra Figurine", "accession_id": "71.AD.302"},
+      {"id": "NC-GETTY-039", "category": "Manuscript", "name": "Gospel Book from Helmarshausen", "accession_id": "83.MS.49"},
+      {"id": "NC-GETTY-040", "category": "Manuscript", "name": "Romanesque Psalter", "accession_id": "83.MS.54"},
+      {"id": "NC-GETTY-041", "category": "Photography", "name": "Cathedral Rock, Yosemite (Watkins)", "accession_id": "84.XM.489.2"},
+      {"id": "NC-GETTY-042", "category": "Photography", "name": "The Steerage (Stieglitz)", "accession_id": "84.XM.258.1"},
+      {"id": "NC-GETTY-043", "category": "Natural History", "name": "Studies of Sea Shells (Hoefnagel)", "accession_id": "86.MV.527.2"},
+      {"id": "NC-GETTY-044", "category": "Antiquity", "name": "Roman Silver Cup with Reliefs", "accession_id": "82.AM.161"},
+      {"id": "NC-GETTY-045", "category": "Antiquity", "name": "Greek Gold Earrings with Nikai", "accession_id": "77.AM.75"},
+      {"id": "NC-GETTY-046", "category": "Manuscript", "name": "Franciscan Missal", "accession_id": "83.MS.59"},
+      {"id": "NC-GETTY-047", "category": "Photography", "name": "Portrait of Abraham Lincoln (Gardner)", "accession_id": "84.XM.1018.1"},
+      {"id": "NC-GETTY-048", "category": "Natural History", "name": "Botanical Study of Irises (Redouté)", "accession_id": "85.PC.277"},
+      {"id": "NC-GETTY-049", "category": "Antiquity", "name": "South Italian Red-Figure Skyphos", "accession_id": "82.AE.102"},
+      {"id": "NC-GETTY-050", "category": "Archaeology", "name": "Fragments of a Roman Wall Painting", "accession_id": "71.AG.454"}
+    ]
+  }
+}

@@ -77,7 +77,17 @@ def build_rights_evidence(
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
     worker_classified_status = rights["rights_status"]
-    if runtime.source_slug in {"met", "aic", "cma", "nga", "smk", "walters", "ycba", "yuag"}:
+    if runtime.source_slug in {
+        "met",
+        "aic",
+        "cma",
+        "nga",
+        "smk",
+        "walters",
+        "ycba",
+        "yuag",
+        "getty",
+    }:
         worker_classified_status = {
             "verified_cc0": "classified_cc0",
             "verified_pd": "classified_pd",
@@ -142,6 +152,12 @@ def build_rights_evidence(
         evidence["yale_object_id"] = normalized.get("yale_object_id")
         evidence["yale_iiif_manifest"] = normalized.get("yale_iiif_manifest")
         evidence["yale_image_service"] = normalized.get("yale_image_service")
+    if runtime.source_slug == "getty":
+        evidence["getty_object_id"] = normalized.get("getty_object_id")
+        evidence["getty_rights_uri"] = normalized.get("getty_rights_uri")
+        evidence["getty_manifest_uri"] = normalized.get("getty_manifest_uri")
+        evidence["getty_image_service"] = normalized.get("getty_image_service")
+        evidence["getty_accession_number"] = normalized.get("getty_accession_number")
     return evidence
 
 

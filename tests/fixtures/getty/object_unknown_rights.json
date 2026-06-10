@@ -1,0 +1,23 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.getty.edu/museum/collection/object/00000000-0000-4000-8000-000000000002",
+  "type": "HumanMadeObject",
+  "_label": "Restricted Object",
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "subject_to": [
+        {
+          "type": "Right",
+          "classified_as": [
+            {
+              "id": "https://rightsstatements.org/vocab/InC/1.0/",
+              "_label": "In Copyright"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,63 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.getty.edu/museum/collection/object/c88b3df0-de91-4f5b-a9ef-7b2b9a6d8abb",
+  "type": "HumanMadeObject",
+  "_label": "Irises",
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Irises",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "_label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "content": "90.PA.20",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300312355",
+          "_label": "Accession Number"
+        }
+      ]
+    }
+  ],
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Open Content statement",
+      "subject_to": [
+        {
+          "type": "Right",
+          "classified_as": [
+            {
+              "id": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "_label": "CC0 1.0 Universal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subject_of": [
+    {
+      "type": "LinguisticObject",
+      "digitally_carried_by": [
+        {
+          "type": "DigitalObject",
+          "access_point": [
+            {
+              "id": "https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b",
+              "type": "DigitalObject",
+              "_label": "IIIF Manifest"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

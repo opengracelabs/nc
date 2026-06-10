@@ -1,0 +1,14 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.getty.edu/museum/collection/object/00000000-0000-4000-8000-000000000004",
+  "type": "HumanMadeObject",
+  "_label": "No Subject To Evidence",
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Object description",
+      "content": "A record with descriptive text but no rights subject_to assertion."
+    }
+  ]
+}
+

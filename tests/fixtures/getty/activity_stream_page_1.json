@@ -1,0 +1,27 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "https://data.getty.edu/museum/collection/activity-stream/page/1",
+  "type": "OrderedCollectionPage",
+  "next": "https://data.getty.edu/museum/collection/activity-stream/page/2",
+  "orderedItems": [
+    {
+      "id": "https://data.getty.edu/museum/collection/activity/evt-1",
+      "type": "Create",
+      "object": {
+        "id": "https://data.getty.edu/museum/collection/object/c88b3df0-de91-4f5b-a9ef-7b2b9a6d8abb",
+        "type": "HumanMadeObject"
+      }
+    },
+    {
+      "id": "https://data.getty.edu/museum/collection/activity/evt-2",
+      "type": "Update",
+      "object": "https://data.getty.edu/museum/collection/object/00000000-0000-4000-8000-000000000002"
+    },
+    {
+      "id": "https://data.getty.edu/museum/collection/activity/evt-3",
+      "type": "Delete",
+      "object": "https://data.getty.edu/museum/collection/object/deleted"
+    }
+  ]
+}
+

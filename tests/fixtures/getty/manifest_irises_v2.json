@@ -1,0 +1,31 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b",
+  "@type": "sc:Manifest",
+  "label": "Irises",
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "https://media.getty.edu/iiif/canvas/53be857e-41e8-4198-b45d-2e0f52d3051b/canvas-1",
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "resource": {
+                "@id": "https://media.getty.edu/iiif/image/7ff0a543-569a-4cb0-b92b-cd78877d4141/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "service": {
+                  "@id": "https://media.getty.edu/iiif/image/7ff0a543-569a-4cb0-b92b-cd78877d4141",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

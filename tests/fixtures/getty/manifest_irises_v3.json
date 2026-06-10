@@ -1,0 +1,34 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://media.getty.edu/iiif/manifest/v3-example",
+  "type": "Manifest",
+  "items": [
+    {
+      "id": "https://media.getty.edu/iiif/canvas/v3-example/canvas-1",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "https://media.getty.edu/iiif/page/v3-example/page-1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://media.getty.edu/iiif/annotation/v3-example/annotation-1",
+              "type": "Annotation",
+              "body": {
+                "id": "https://media.getty.edu/iiif/image/v3-image/full/max/0/default.jpg",
+                "type": "Image",
+                "service": [
+                  {
+                    "id": "https://media.getty.edu/iiif/image/v3-image",
+                    "type": "ImageService3"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
