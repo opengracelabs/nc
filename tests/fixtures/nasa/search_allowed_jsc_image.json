@@ -1,0 +1,44 @@
+{
+  "collection": {
+    "href": "https://images-api.nasa.gov/search",
+    "items": [
+      {
+        "data": [
+          {
+            "center": "JSC",
+            "date_created": "1969-07-11T00:00:00Z",
+            "description": "NASA image fixture.",
+            "keywords": [
+              "Apollo",
+              "NASA"
+            ],
+            "media_type": "image",
+            "nasa_id": "jsc2007e034221",
+            "title": "NASA fixture jsc2007e034221"
+          }
+        ],
+        "href": "https://images-assets.nasa.gov/image/jsc2007e034221/collection.json",
+        "links": [
+          {
+            "height": 480,
+            "href": "https://images-assets.nasa.gov/image/jsc2007e034221/jsc2007e034221~thumb.jpg",
+            "rel": "preview",
+            "render": "image",
+            "width": 640
+          },
+          {
+            "height": 1280,
+            "href": "https://images-assets.nasa.gov/image/jsc2007e034221/jsc2007e034221~large.jpg",
+            "rel": "alternate",
+            "render": "image",
+            "width": 1920
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "total_hits": 1
+    },
+    "version": "1.1"
+  }
+}

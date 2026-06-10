@@ -1,0 +1,17 @@
+{
+  "collection": {
+    "href": "https://images-api.nasa.gov/asset/AS17-148-22727",
+    "items": [
+      {
+        "href": "https://images-assets.nasa.gov/image/AS17-148-22727/AS17-148-22727~thumb.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/AS17-148-22727/AS17-148-22727~large.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/AS17-148-22727/AS17-148-22727~orig.jpg"
+      }
+    ],
+    "version": "1.1"
+  }
+}

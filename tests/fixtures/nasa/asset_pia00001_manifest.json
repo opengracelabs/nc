@@ -1,0 +1,23 @@
+{
+  "collection": {
+    "href": "https://images-api.nasa.gov/asset/PIA00001",
+    "items": [
+      {
+        "href": "https://images-assets.nasa.gov/image/PIA00001/PIA00001~thumb.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/PIA00001/PIA00001~medium.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/PIA00001/PIA00001~large.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/PIA00001/PIA00001~orig.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/PIA00001/metadata.json"
+      }
+    ],
+    "version": "1.1"
+  }
+}

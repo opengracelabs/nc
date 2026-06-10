@@ -1,0 +1,17 @@
+{
+  "collection": {
+    "href": "https://images-api.nasa.gov/asset/AS08-14-2383",
+    "items": [
+      {
+        "href": "https://images-assets.nasa.gov/image/AS08-14-2383/AS08-14-2383~thumb.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/AS08-14-2383/AS08-14-2383~large.jpg"
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/AS08-14-2383/AS08-14-2383~orig.jpg"
+      }
+    ],
+    "version": "1.1"
+  }
+}

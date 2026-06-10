@@ -1,0 +1,82 @@
+{
+  "asset_manifest": {
+    "collection": {
+      "href": "http://images-api.nasa.gov/asset/SL2-04-018",
+      "items": [
+        {
+          "href": "http://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~orig.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~large.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~medium.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~small.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~thumb.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/SL2-04-018/metadata.json"
+        }
+      ],
+      "version": "1.1"
+    }
+  },
+  "item": {
+    "data": [
+      {
+        "center": "JSC",
+        "date_created": "1973-06-22T00:00:00Z",
+        "description": "SL2-04-018 (June 1973) --- A vertical view of the Arizona-Utah border area showing the Colorado River and Grand Canyon photographed from the Skylab 1/2 space station in Earth orbit. Photo credit: NASA",
+        "keywords": [
+          "CANYONS",
+          "DESERTS",
+          "EARTH OBSERVATIONS (FROM SPACE)",
+          "FORESTS",
+          "LAKES",
+          "MOUNTAINS GRAND CANYON (AZ)",
+          "RIVERS",
+          "SKYLAB 2"
+        ],
+        "media_type": "image",
+        "nasa_id": "SL2-04-018",
+        "title": "Lake Powell, Colorado River, Utah and Grand Canyon, Arizona"
+      }
+    ],
+    "href": "https://images-assets.nasa.gov/image/SL2-04-018/collection.json",
+    "links": [
+      {
+        "height": 1280,
+        "href": "https://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~medium.jpg",
+        "rel": "alternate",
+        "render": "image",
+        "width": 1248
+      },
+      {
+        "height": 1920,
+        "href": "https://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~large.jpg",
+        "rel": "alternate",
+        "render": "image",
+        "width": 1872
+      },
+      {
+        "href": "https://images-assets.nasa.gov/image/SL2-04-018/SL2-04-018~orig.jpg",
+        "rel": "canonical",
+        "render": "image"
+      }
+    ]
+  },
+  "live_verified_date": "2026-06-10",
+  "query": "Grand Canyon",
+  "source_api": "images-api.nasa.gov",
+  "verification": {
+    "center": "JSC",
+    "expected_pilot_eligible": true,
+    "expected_rights_basis": "federal_center_clean_rights",
+    "nasa_id": "SL2-04-018",
+    "title": "Lake Powell, Colorado River, Utah and Grand Canyon, Arizona"
+  }
+}

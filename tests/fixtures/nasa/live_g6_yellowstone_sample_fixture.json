@@ -1,0 +1,74 @@
+{
+  "asset_manifest": {
+    "collection": {
+      "href": "http://images-api.nasa.gov/asset/sts068-247-061",
+      "items": [
+        {
+          "href": "http://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~orig.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~large.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~medium.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~small.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~thumb.jpg"
+        },
+        {
+          "href": "http://images-assets.nasa.gov/image/sts068-247-061/metadata.json"
+        }
+      ],
+      "version": "1.1"
+    }
+  },
+  "item": {
+    "data": [
+      {
+        "center": "JSC",
+        "date_created": "1994-09-30T00:00:00Z",
+        "description": "STS068-247-061 (30 September-11 October 1994) --- Photographed through the Space Shuttle Endeavour's flight windows, this 70mm frame centers on Yellowstone Lake in the Yellowstone National Park. North will be at the top if picture is oriented with series of sun glinted creeks and river branches at top center. The lake, at 2,320 meters (7,732 feet) above sea level, is the largest high altitude lake in North America.",
+        "media_type": "image",
+        "nasa_id": "sts068-247-061",
+        "title": "Yellowstone Lake/National Park"
+      }
+    ],
+    "href": "https://images-assets.nasa.gov/image/sts068-247-061/collection.json",
+    "links": [
+      {
+        "height": 1280,
+        "href": "https://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~medium.jpg",
+        "rel": "alternate",
+        "render": "image",
+        "width": 1266
+      },
+      {
+        "height": 1920,
+        "href": "https://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~large.jpg",
+        "rel": "alternate",
+        "render": "image",
+        "width": 1899
+      },
+      {
+        "height": 4095,
+        "href": "https://images-assets.nasa.gov/image/sts068-247-061/sts068-247-061~orig.jpg",
+        "rel": "canonical",
+        "render": "image",
+        "width": 4051
+      }
+    ]
+  },
+  "live_verified_date": "2026-06-10",
+  "query": "Yellowstone",
+  "source_api": "images-api.nasa.gov",
+  "verification": {
+    "center": "JSC",
+    "expected_pilot_eligible": true,
+    "expected_rights_basis": "federal_center_clean_rights",
+    "nasa_id": "sts068-247-061",
+    "title": "Yellowstone Lake/National Park"
+  }
+}
