@@ -77,7 +77,7 @@ def build_rights_evidence(
     rights: dict[str, str | bool | None],
 ) -> dict[str, Any]:
     worker_classified_status = rights["rights_status"]
-    if runtime.source_slug in {"met", "aic", "cma", "nga", "smk", "walters"}:
+    if runtime.source_slug in {"met", "aic", "cma", "nga", "smk", "walters", "ycba", "yuag"}:
         worker_classified_status = {
             "verified_cc0": "classified_cc0",
             "verified_pd": "classified_pd",
@@ -131,6 +131,17 @@ def build_rights_evidence(
         evidence["walters_is_primary"] = normalized.get("walters_is_primary")
         evidence["walters_collection_ids"] = normalized.get("walters_collection_ids")
         evidence["walters_collection_names"] = normalized.get("walters_collection_names")
+    if runtime.source_slug == "ycba":
+        evidence["ycba_rights_uri"] = normalized.get("ycba_rights_uri")
+        evidence["ycba_attribution"] = normalized.get("ycba_attribution")
+        evidence["yale_object_id"] = normalized.get("yale_object_id")
+        evidence["yale_iiif_manifest"] = normalized.get("yale_iiif_manifest")
+        evidence["yale_image_service"] = normalized.get("yale_image_service")
+    if runtime.source_slug == "yuag":
+        evidence["yuag_rights_uri"] = normalized.get("yuag_rights_uri")
+        evidence["yale_object_id"] = normalized.get("yale_object_id")
+        evidence["yale_iiif_manifest"] = normalized.get("yale_iiif_manifest")
+        evidence["yale_image_service"] = normalized.get("yale_image_service")
     return evidence
 
 

@@ -1,0 +1,25 @@
+{
+  "id": "https://lux.collections.yale.edu/data/object/ycba-obj-55555",
+  "type": "HumanMadeObject",
+  "_label": "Copyright Undetermined Volume",
+  "object_id": "55555",
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/ycba",
+      "_label": "Yale Center for British Art"
+    }
+  ],
+  "subject_to": [
+    {
+      "id": "https://rightsstatements.org/vocab/UND/1.0/",
+      "type": "Right",
+      "_label": "Copyright Undetermined"
+    }
+  ],
+  "representation": [
+    {
+      "id": "https://media.collections.yale.edu/ycba/obj/55555"
+    }
+  ]
+}
+

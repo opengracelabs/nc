@@ -1,0 +1,16 @@
+{
+  "id": "https://lux.collections.yale.edu/api/search/item?page=1",
+  "type": "OrderedCollectionPage",
+  "totalItems": 2,
+  "orderedItems": [
+    {
+      "id": "https://lux.collections.yale.edu/data/object/ycba-obj-12345",
+      "_label": "A View of Snowdon"
+    },
+    {
+      "id": "https://lux.collections.yale.edu/data/object/ycba-obj-55555",
+      "_label": "Copyright Undetermined Volume"
+    }
+  ]
+}
+

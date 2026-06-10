@@ -1,0 +1,43 @@
+{
+  "id": "https://lux.collections.yale.edu/data/object/ycba-obj-12345",
+  "type": "HumanMadeObject",
+  "_label": "A View of Snowdon",
+  "object_id": "12345",
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "A View of Snowdon"
+    },
+    {
+      "type": "Identifier",
+      "_label": "Object ID",
+      "content": "12345"
+    }
+  ],
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/ycba",
+      "_label": "Yale Center for British Art"
+    }
+  ],
+  "subject_to": [
+    {
+      "id": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "type": "Right",
+      "_label": "CC0 1.0 Universal"
+    }
+  ],
+  "representation": [
+    {
+      "id": "https://media.collections.yale.edu/ycba/obj/12345"
+    }
+  ],
+  "subject_of": [
+    {
+      "id": "https://manifests.collections.yale.edu/ycba/obj/12345",
+      "type": "LinguisticObject",
+      "_label": "IIIF Manifest"
+    }
+  ]
+}
+

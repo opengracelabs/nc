@@ -1,0 +1,36 @@
+{
+  "id": "https://lux.collections.yale.edu/data/object/yuag-obj-98765",
+  "type": "HumanMadeObject",
+  "_label": "The Windmill",
+  "object_id": "98765",
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "The Windmill"
+    },
+    {
+      "type": "Identifier",
+      "_label": "Object ID",
+      "content": "98765"
+    }
+  ],
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/yuag",
+      "_label": "Yale University Art Gallery"
+    }
+  ],
+  "subject_to": [
+    {
+      "id": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "type": "Right",
+      "_label": "No Copyright - United States"
+    }
+  ],
+  "representation": [
+    {
+      "id": "https://media.collections.yale.edu/yuag/obj/98765"
+    }
+  ]
+}
+

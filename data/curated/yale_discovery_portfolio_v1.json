@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "Yale Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-YALE-001",
+    "name": "Staffa, Fingal's Cave",
+    "creator": "Joseph Mallord William Turner",
+    "institution": "Yale Center for British Art",
+    "rights": "CC0 1.0 Universal",
+    "category": "Turner / Maritime / Landscape",
+    "accession_id": "B1978.43.14"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-YALE-001", "category": "Turner", "name": "Staffa, Fingal's Cave", "institution": "YCBA", "accession_id": "B1978.43.14"},
+      {"id": "NC-YALE-002", "category": "Constable", "name": "Hadleigh Castle, The Mouth of the Thames--Morning after a Stormy Night", "institution": "YCBA", "accession_id": "B1977.14.11"},
+      {"id": "NC-YALE-003", "category": "Turner", "name": "Dort or Dordrecht: The Dort Packet-Boat from Rotterdam Becalmed", "institution": "YCBA", "accession_id": "B1977.14.77"},
+      {"id": "NC-YALE-004", "category": "Constable", "name": "Stratford Mill", "institution": "YCBA", "accession_id": "B1977.14.12"},
+      {"id": "NC-YALE-005", "category": "Ancient Mediterranean", "name": "Mithraeum of Dura-Europos (Cult Relief)", "institution": "YUAG", "accession_id": "1935.101"},
+      {"id": "NC-YALE-006", "category": "British Landscape", "name": "Snowdon from Llyn Nantlle", "institution": "YCBA", "accession_id": "B1977.14.82"},
+      {"id": "NC-YALE-007", "category": "Maritime Heritage", "name": "A Dutch Ship of War under Sail", "institution": "YCBA", "accession_id": "B1977.14.6358"},
+      {"id": "NC-YALE-008", "category": "Colonial-era Mapping", "name": "Map of the British Empire in America (1733)", "institution": "YUAG", "accession_id": "1980.20"},
+      {"id": "NC-YALE-009", "category": "Turner", "name": "Harlech Castle", "institution": "YCBA", "accession_id": "B1977.14.76"},
+      {"id": "NC-YALE-010", "category": "Ancient Mediterranean", "name": "Roman Mosaic of a Hunting Scene (Antioch)", "institution": "YUAG", "accession_id": "1938.74"},
+      {"id": "NC-YALE-011", "category": "British Landscape", "name": "Mountain Landscape with Bridge", "institution": "YCBA", "accession_id": "B1977.14.53"},
+      {"id": "NC-YALE-012", "category": "Maritime Heritage", "name": "The Thames at Westminster Bridge", "institution": "YCBA", "accession_id": "B1977.14.72"},
+      {"id": "NC-YALE-013", "category": "Colonial-era Mapping", "name": "A Map of New England and New York (1676)", "institution": "YUAG", "accession_id": "1980.21"},
+      {"id": "NC-YALE-014", "category": "Constable", "name": "Hampstead Heath with a Rainbow", "institution": "YCBA", "accession_id": "B1981.25.132"},
+      {"id": "NC-YALE-015", "category": "Ancient Mediterranean", "name": "The Shield of Achilles (Dura-Europos)", "institution": "YUAG", "accession_id": "1933.250"}
+    ],
+    "should_ingest": [
+      {"id": "NC-YALE-016", "category": "Turner", "name": "Inverary Pier, Loch Fyne: Morning", "institution": "YCBA", "accession_id": "B1977.14.79"},
+      {"id": "NC-YALE-017", "category": "Constable", "name": "East Bergholt Common", "institution": "YCBA", "accession_id": "B1977.14.10"},
+      {"id": "NC-YALE-018", "category": "British Landscape", "name": "The North Terrace at Windsor Castle", "institution": "YCBA", "accession_id": "B1977.14.6300"},
+      {"id": "NC-YALE-019", "category": "Maritime Heritage", "name": "The Battle of the Saintes", "institution": "YCBA", "accession_id": "B1977.14.65"},
+      {"id": "NC-YALE-020", "category": "Colonial-era Mapping", "name": "Plan of the Town of Boston (1775)", "institution": "YUAG", "accession_id": "1980.22"},
+      {"id": "NC-YALE-021", "category": "Ancient Mediterranean", "name": "Greek Attic Red-figure Vase (Berlin Painter)", "institution": "YUAG", "accession_id": "1913.133"},
+      {"id": "NC-YALE-022", "category": "British Landscape", "name": "The Lonely Tower", "institution": "YCBA", "accession_id": "B1977.14.11124"},
+      {"id": "NC-YALE-023", "category": "Maritime Heritage", "name": "The Capture of Havana, 1762", "institution": "YCBA", "accession_id": "B1977.14.74"},
+      {"id": "NC-YALE-024", "category": "Colonial-era Mapping", "name": "Chart of the Atlantic Ocean (1777)", "institution": "YUAG", "accession_id": "1980.23"},
+      {"id": "NC-YALE-025", "category": "Turner", "name": "Mount Vesuvius in Eruption", "institution": "YCBA", "accession_id": "B1977.14.6293"},
+      {"id": "NC-YALE-026", "category": "Constable", "name": "Osmington Bay", "institution": "YCBA", "accession_id": "B1977.14.13"},
+      {"id": "NC-YALE-027", "category": "British Landscape", "name": "The Ploughed Field", "institution": "YCBA", "accession_id": "B1977.14.4172"},
+      {"id": "NC-YALE-028", "category": "Maritime Heritage", "name": "Ships in a Light Breeze", "institution": "YCBA", "accession_id": "B1977.14.6"},
+      {"id": "NC-YALE-029", "category": "Colonial-era Mapping", "name": "Map of the Colony of Connecticut (1766)", "institution": "YUAG", "accession_id": "1980.24"},
+      {"id": "NC-YALE-030", "category": "Ancient Mediterranean", "name": "Egyptian Mummy Portrait of a Young Woman", "institution": "YUAG", "accession_id": "1939.522"},
+      {"id": "NC-YALE-031", "category": "British Landscape", "name": "Westminster from the River", "institution": "YCBA", "accession_id": "B1977.14.4287"},
+      {"id": "NC-YALE-032", "category": "Maritime Heritage", "name": "The Morning of the First of June, 1794", "institution": "YCBA", "accession_id": "B1977.14.8"},
+      {"id": "NC-YALE-033", "category": "Colonial-era Mapping", "name": "A General Map of the Middle British Colonies in America", "institution": "YUAG", "accession_id": "1980.25"},
+      {"id": "NC-YALE-034", "category": "Ancient Mediterranean", "name": "Etruscan Bronze Mirror", "institution": "YUAG", "accession_id": "1913.136"},
+      {"id": "NC-YALE-035", "category": "British Landscape", "name": "The White House at Chelsea", "institution": "YCBA", "accession_id": "B1977.14.5516"}
+    ],
+    "optional": [
+      {"id": "NC-YALE-036", "category": "Turner", "name": "The 'Sun of Venice' Going to Sea (Study)", "institution": "YCBA", "accession_id": "B1977.14.80"},
+      {"id": "NC-YALE-037", "category": "British Landscape", "name": "Rhyl Sands", "institution": "YCBA", "accession_id": "B1977.14.4184"},
+      {"id": "NC-YALE-038", "category": "Maritime Heritage", "name": "The Abandoned (Study)", "institution": "YCBA", "accession_id": "B1977.14.75"},
+      {"id": "NC-YALE-039", "category": "Colonial-era Mapping", "name": "Map of the West Indies (1740)", "institution": "YUAG", "accession_id": "1980.26"},
+      {"id": "NC-YALE-040", "category": "Ancient Mediterranean", "name": "Roman Bust of the Emperor Augustus", "institution": "YUAG", "accession_id": "1930.521"},
+      {"id": "NC-YALE-041", "category": "British Landscape", "name": "Coastal Scene in Normandy", "institution": "YCBA", "accession_id": "B1977.14.5"},
+      {"id": "NC-YALE-042", "category": "Maritime Heritage", "name": "The Racehorse and Carcass in the Ice", "institution": "YCBA", "accession_id": "B1977.14.4137"},
+      {"id": "NC-YALE-043", "category": "Colonial-era Mapping", "name": "Plan of the City of New York (1766)", "institution": "YUAG", "accession_id": "1980.27"},
+      {"id": "NC-YALE-044", "category": "Ancient Mediterranean", "name": "Mycenaean Stirrup Jar", "institution": "YUAG", "accession_id": "1913.101"},
+      {"id": "NC-YALE-045", "category": "British Landscape", "name": "A Wall in Naples", "institution": "YCBA", "accession_id": "B1977.14.59"},
+      {"id": "NC-YALE-046", "category": "Maritime Heritage", "name": "War Boats of the Island of Otaheite", "institution": "YCBA", "accession_id": "B1977.14.56"},
+      {"id": "NC-YALE-047", "category": "Colonial-era Mapping", "name": "Map of the World (Double Hemisphere, 17th C)", "institution": "YUAG", "accession_id": "1980.28"},
+      {"id": "NC-YALE-048", "category": "Ancient Mediterranean", "name": "Cypriot Female Figurine", "institution": "YUAG", "accession_id": "1913.151"},
+      {"id": "NC-YALE-049", "category": "Maritime Heritage", "name": "The Shipwreck", "institution": "YCBA", "accession_id": "B1977.14.81"},
+      {"id": "NC-YALE-050", "category": "Colonial-era Mapping", "name": "Chart of the Coast of New South Wales (Cook, 1770)", "institution": "YCBA", "accession_id": "B1977.14.1"}
+    ]
+  }
+}

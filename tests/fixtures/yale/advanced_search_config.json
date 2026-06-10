@@ -1,0 +1,21 @@
+{
+  "terms": {
+    "item": {
+      "hasDigitalImage": {
+        "label": "have a digital image available",
+        "relation": "boolean"
+      },
+      "isOnline": {
+        "label": "have an online version available",
+        "relation": "boolean"
+      }
+    },
+    "work": {
+      "isPublicDomain": {
+        "label": "are in the public domain",
+        "relation": "boolean"
+      }
+    }
+  }
+}
+

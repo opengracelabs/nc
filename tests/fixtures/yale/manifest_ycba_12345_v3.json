@@ -1,0 +1,47 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://manifests.collections.yale.edu/ycba/obj/12345",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "A View of Snowdon"
+    ]
+  },
+  "rights": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "items": [
+    {
+      "id": "https://manifests.collections.yale.edu/ycba/obj/12345/canvas/1",
+      "type": "Canvas",
+      "height": 2400,
+      "width": 3200,
+      "items": [
+        {
+          "id": "https://manifests.collections.yale.edu/ycba/obj/12345/canvas/1/page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://manifests.collections.yale.edu/ycba/obj/12345/annotation/1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://media.collections.yale.edu/iiif/2/ycba-12345/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2400,
+                "width": 3200,
+                "service": [
+                  {
+                    "id": "https://media.collections.yale.edu/iiif/2/ycba-12345",
+                    "type": "ImageService3",
+                    "profile": "level2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
