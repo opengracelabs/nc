@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "ALA Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-ALA-001",
+    "name": "Koala (Phascolarctos cinereus)",
+    "category": "Endemic / Threatened / Iconic",
+    "lsid": "urn:lsid:biodiversity.org.au:afd.taxon:29884c7e-8519-4598-a1b7-66a9a08e0638",
+    "status": "Endangered (QLD/NSW/ACT)"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-ALA-001", "category": "Endemic", "name": "Koala (Phascolarctos cinereus)", "status": "Endangered"},
+      {"id": "NC-ALA-002", "category": "Endemic", "name": "Platypus (Ornithorhynchus anatinus)", "status": "Iconic"},
+      {"id": "NC-ALA-003", "category": "Endemic", "name": "Short-beaked Echidna (Tachyglossus aculeatus)", "status": "Iconic"},
+      {"id": "NC-ALA-004", "category": "Pollinator", "name": "Blue Banded Bee (Amegilla cingulata)", "type": "Buzz Pollinator"},
+      {"id": "NC-ALA-005", "category": "Threatened", "name": "Leadbeater's Possum (Gymnobelideus leadbeateri)", "status": "Critically Endangered"},
+      {"id": "NC-ALA-006", "category": "Ramsar", "name": "Kakadu Wetlands (Alligator Rivers)", "site_type": "Ramsar/NP"},
+      {"id": "NC-ALA-007", "category": "Endemic", "name": "Red Kangaroo (Osphranter rufus)", "type": "Arid Anchor"},
+      {"id": "NC-ALA-008", "category": "Pollinator", "name": "Sugar Glider (Petaurus breviceps)", "type": "Mammal Pollinator"},
+      {"id": "NC-ALA-009", "category": "Threatened", "name": "Orange-bellied Parrot (Neophema chrysogaster)", "status": "Critically Endangered"},
+      {"id": "NC-ALA-010", "category": "National Park", "name": "Uluru-Kata Tjuta National Park", "site_type": "UNESCO/NP"},
+      {"id": "NC-ALA-011", "category": "Endemic", "name": "Wombat (Vombatus ursinus)", "type": "Ecosystem Engineer"},
+      {"id": "NC-ALA-012", "category": "Pollinator", "name": "Rainbow Lorikeet (Trichoglossus moluccanus)", "type": "Nectar Specialist"},
+      {"id": "NC-ALA-013", "category": "Ramsar", "name": "Moreton Bay", "site_type": "Ramsar"},
+      {"id": "NC-ALA-014", "category": "Threatened", "name": "Mountain Pygmy-possum (Burramys parvus)", "status": "Endangered"},
+      {"id": "NC-ALA-015", "category": "National Park", "name": "Daintree Rainforest", "site_type": "UNESCO/NP"}
+    ],
+    "should_ingest": [
+      {"id": "NC-ALA-016", "category": "Pollinator", "name": "Teddy Bear Bee (Amegilla bombiformis)"},
+      {"id": "NC-ALA-017", "category": "Endemic", "name": "Quokka (Setonix brachyurus)"},
+      {"id": "NC-ALA-018", "category": "Threatened", "name": "Regent Honeyeater (Anthochaera phrygia)"},
+      {"id": "NC-ALA-019", "category": "Ramsar", "name": "The Coorong"},
+      {"id": "NC-ALA-020", "category": "National Park", "name": "Blue Mountains National Park"},
+      {"id": "NC-ALA-021", "category": "Endemic", "name": "Emu (Dromaius novaehollandiae)"},
+      {"id": "NC-ALA-022", "category": "Pollinator", "name": "Swift Parrot (Lathamus discolor)"},
+      {"id": "NC-ALA-023", "category": "Threatened", "name": "Corroboree Frog (Pseudophryne corroboree)"},
+      {"id": "NC-ALA-024", "category": "Ramsar", "name": "Gippsland Lakes"},
+      {"id": "NC-ALA-025", "category": "National Park", "name": "Purnululu National Park"},
+      {"id": "NC-ALA-026", "category": "Endemic", "name": "Tasmanian Devil (Sarcophilus harrisii)"},
+      {"id": "NC-ALA-027", "category": "Pollinator", "name": "Grey-headed Flying-fox (Pteropus poliocephalus)"},
+      {"id": "NC-ALA-028", "category": "Threatened", "name": "Eastern Barred Bandicoot (Perameles gunnii)"},
+      {"id": "NC-ALA-029", "category": "Ramsar", "name": "Macquarie Marshes"},
+      {"id": "NC-ALA-030", "category": "National Park", "name": "Grampians National Park"},
+      {"id": "NC-ALA-031", "category": "Endemic", "name": "Superb Lyrebird (Menura novaehollandiae)"},
+      {"id": "NC-ALA-032", "category": "Pollinator", "name": "Bogong Moth (Agrotis infusa)"},
+      {"id": "NC-ALA-033", "category": "Threatened", "name": "Northern Quoll (Dasyurus hallucatus)"},
+      {"id": "NC-ALA-034", "category": "Ramsar", "name": "Currawinya Lakes"},
+      {"id": "NC-ALA-035", "category": "National Park", "name": "Wilsons Promontory National Park"}
+    ],
+    "optional": [
+      {"id": "NC-ALA-036", "category": "Pollinator", "name": "Resin Bee (Megachile spp.)"},
+      {"id": "NC-ALA-037", "category": "Endemic", "name": "Tree-Kangaroo (Dendrolagus spp.)"},
+      {"id": "NC-ALA-038", "category": "Threatened", "name": "Gouldian Finch (Chloebia gouldiae)"},
+      {"id": "NC-ALA-039", "category": "Ramsar", "name": "Shoalwater and Corio Bays"},
+      {"id": "NC-ALA-040", "category": "National Park", "name": "Cradle Mountain-Lake St Clair"},
+      {"id": "NC-ALA-041", "category": "Endemic", "name": "Kookaburra (Dacelo novaeguineae)"},
+      {"id": "NC-ALA-042", "category": "Pollinator", "name": "Australian Painted Lady Butterfly"},
+      {"id": "NC-ALA-043", "category": "Threatened", "name": "Black-footed Rock-wallaby"},
+      {"id": "NC-ALA-044", "category": "Ramsar", "name": "Western Port"},
+      {"id": "NC-ALA-045", "category": "National Park", "name": "Ningaloo Marine Park"},
+      {"id": "NC-ALA-046", "category": "Endemic", "name": "Frilled-neck Lizard"},
+      {"id": "NC-ALA-047", "category": "Pollinator", "name": "Jewel Beetle (Buprestidae)"},
+      {"id": "NC-ALA-048", "category": "Threatened", "name": "Numbat (Myrmecobius fasciatus)"},
+      {"id": "NC-ALA-049", "category": "Ramsar", "name": "Hunter Estuary Wetlands"},
+      {"id": "NC-ALA-050", "category": "National Park", "name": "Royal National Park"}
+    ]
+  }
+}

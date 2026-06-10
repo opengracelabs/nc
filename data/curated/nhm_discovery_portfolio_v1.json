@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "portfolio_name": "NHM Discovery Portfolio v1",
+  "total_records": 50,
+  "asset_zero": {
+    "id": "NC-NHM-001",
+    "name": "Banks' Florilegium (Banksia serrata)",
+    "creator": "Sydney Parkinson / Frederick Nodder",
+    "date": "1770–1784",
+    "institution": "Natural History Museum, London",
+    "rights": "Public Domain",
+    "category": "Botanical Illustration / Pacific Heritage"
+  },
+  "tiers": {
+    "must_ingest": [
+      {"id": "NC-NHM-001", "category": "Botanical", "name": "Banks' Florilegium (Banksia serrata)", "creator": "Parkinson / Nodder"},
+      {"id": "NC-NHM-002", "category": "Marine Life", "name": "Kunstformen der Natur (Discomedusae)", "creator": "Ernst Haeckel"},
+      {"id": "NC-NHM-003", "category": "Birds", "name": "The Birds of Australia (Lyrebird)", "creator": "John Gould"},
+      {"id": "NC-NHM-004", "category": "Insects", "name": "Metamorphosis Insectorum Surinamensium (Morpho)", "creator": "Maria Sibylla Merian"},
+      {"id": "NC-NHM-005", "category": "Fossils", "name": "Skeleton of Megatherium americanum", "creator": "Richard Owen"},
+      {"id": "NC-NHM-006", "category": "Botanical", "name": "The Endeavour Botanical Drawings (Hibiscus)", "creator": "Parkinson / Nodder"},
+      {"id": "NC-NHM-007", "category": "Birds", "name": "Tropical Birds (Hummingbirds)", "creator": "John Gould"},
+      {"id": "NC-NHM-008", "category": "Marine Life", "name": "Challenger Expedition Marine Fauna", "creator": "Various / Challenger"},
+      {"id": "NC-NHM-009", "category": "Fossils", "name": "Ichthyosaurus communis", "creator": "Mary Anning / Owen"},
+      {"id": "NC-NHM-010", "category": "Insects", "name": "Illustrations of Exotic Entomology", "creator": "Dru Drury"},
+      {"id": "NC-NHM-011", "category": "Species Heritage", "name": "Charles Darwin's Galapagos Finches (Type Specimens)", "creator": "Darwin / Gould"},
+      {"id": "NC-NHM-012", "category": "Botanical", "name": "North American Silva (Oak)", "creator": "François André Michaux"},
+      {"id": "NC-NHM-013", "category": "Birds", "name": "A Century of Birds from the Himalaya Mountains", "creator": "John Gould"},
+      {"id": "NC-NHM-014", "category": "Marine Life", "name": "Corals of the Great Barrier Reef", "creator": "Saville-Kent"},
+      {"id": "NC-NHM-015", "category": "Fossils", "name": "Archaeopteryx lithographica (London Specimen)", "creator": "Richard Owen"}
+    ],
+    "should_ingest": [
+      {"id": "NC-NHM-016", "category": "Botanical", "name": "Curtis's Botanical Magazine (Strelitzia)"},
+      {"id": "NC-NHM-017", "category": "Birds", "name": "Birds of Great Britain (Puffin)"},
+      {"id": "NC-NHM-018", "category": "Insects", "name": "Naturalist's Miscellany (Butterflies)"},
+      {"id": "NC-NHM-019", "category": "Marine Life", "name": "Medusae of the World"},
+      {"id": "NC-NHM-020", "category": "Fossils", "name": "Plesiosaurus dolichodeirus"},
+      {"id": "NC-NHM-021", "category": "Species Heritage", "name": "Giant Tortoise of the Galapagos (Drawing)"},
+      {"id": "NC-NHM-022", "category": "Botanical", "name": "Flora of the West Indies"},
+      {"id": "NC-NHM-023", "category": "Birds", "name": "Trogonidae (Trogons)"},
+      {"id": "NC-NHM-024", "category": "Insects", "name": "British Entomology"},
+      {"id": "NC-NHM-025", "category": "Marine Life", "name": "Deep Sea Fishes of the Challenger"},
+      {"id": "NC-NHM-026", "category": "Fossils", "name": "Mastodon giganteus"},
+      {"id": "NC-NHM-027", "category": "Species Heritage", "name": "The Dodo (Historical Reconstruction)"},
+      {"id": "NC-NHM-028", "category": "Botanical", "name": "Orchidaceae of Mexico and Guatemala"},
+      {"id": "NC-NHM-029", "category": "Birds", "name": "Ramphastidae (Toucans)"},
+      {"id": "NC-NHM-030", "category": "Insects", "name": "Exotic Butterflies"},
+      {"id": "NC-NHM-031", "category": "Marine Life", "name": "Sea Anemones and Corals"},
+      {"id": "NC-NHM-032", "category": "Fossils", "name": "Hylaeosaurus armatus"},
+      {"id": "NC-NHM-033", "category": "Species Heritage", "name": "Platypus (Early Anatomical Drawing)"},
+      {"id": "NC-NHM-034", "category": "Botanical", "name": "Plants of the Coast of Coromandel"},
+      {"id": "NC-NHM-035", "category": "Birds", "name": "Monograph of the Pittidae"}
+    ],
+    "optional": [
+      {"id": "NC-NHM-036", "category": "Botanical", "name": "Medical Botany"},
+      {"id": "NC-NHM-037", "category": "Birds", "name": "British Birds (Kingfisher)"},
+      {"id": "NC-NHM-038", "category": "Insects", "name": "Natural History of the Insects of India"},
+      {"id": "NC-NHM-039", "category": "Marine Life", "name": "Starfishes of the Challenger"},
+      {"id": "NC-NHM-040", "category": "Fossils", "name": "Diprotodon australis"},
+      {"id": "NC-NHM-041", "category": "Species Heritage", "name": "Tasmanian Tiger (Thylacine)"},
+      {"id": "NC-NHM-042", "category": "Botanical", "name": "The Vegetable Kingdom"},
+      {"id": "NC-NHM-043", "category": "Birds", "name": "Birds of Asia (Pheasants)"},
+      {"id": "NC-NHM-044", "category": "Insects", "name": "Lepidoptera of Ceylon"},
+      {"id": "NC-NHM-045", "category": "Marine Life", "name": "Oceanic Ichthyology"},
+      {"id": "NC-NHM-046", "category": "Fossils", "name": "Pterodactylus antiquus"},
+      {"id": "NC-NHM-047", "category": "Species Heritage", "name": "Aye-Aye (Anatomical Study)"},
+      {"id": "NC-NHM-048", "category": "Botanical", "name": "Pomona Herefordiensis (Apples)"},
+      {"id": "NC-NHM-049", "category": "Birds", "name": "Birds of Paradise"},
+      {"id": "NC-NHM-050", "category": "Marine Life", "name": "Alcyonaria (Soft Corals)"}
+    ]
+  }
+}
