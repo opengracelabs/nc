@@ -1,0 +1,2 @@
+"""National Archives Catalog adapter."""
+

@@ -1,0 +1,91 @@
+{
+  "body": {
+    "hits": {
+      "total": {
+        "value": 2,
+        "relation": "eq"
+      },
+      "hits": [
+        {
+          "_id": "1667751",
+          "_source": {
+            "metadata": {
+              "uuid": "2acd3cbc-7d47-4670-b3e9-555f27289a0c"
+            },
+            "record": {
+              "naId": 1667751,
+              "recordType": "description",
+              "levelOfDescription": "item",
+              "title": "Constitution of the United States",
+              "useRestriction": {
+                "status": "Unrestricted"
+              },
+              "accessRestriction": {
+                "status": "Unrestricted"
+              },
+              "generalRecordsTypes": [
+                "Textual Records"
+              ],
+              "digitalObjects": [
+                {
+                  "objectFilename": "00303_2003_001_AC.jpg",
+                  "objectUrl": "https://catalog.archives.gov/medialive/51/6677/1667751/content/harvest/1667751-00303/00303_2003_001_AC.jpg",
+                  "objectFileSize": 62296840,
+                  "objectDesignator": "Page 1",
+                  "objectId": "14721029",
+                  "objectDescription": "Reproduction scan of 8x10 transparency",
+                  "objectType": "Image (JPG)"
+                },
+                {
+                  "objectFilename": "00303.pdf",
+                  "objectUrl": "https://catalog.archives.gov/medialive/51/6677/1667751/content/arcmedia/congress/00303.pdf",
+                  "objectFileSize": 7520444,
+                  "objectId": "14721034",
+                  "objectDescription": "Download the PDF",
+                  "objectType": "Portable Document File (PDF)"
+                }
+              ]
+            }
+          },
+          "sort": [
+            7143046.5,
+            "1667751"
+          ]
+        },
+        {
+          "_id": "999",
+          "_source": {
+            "record": {
+              "naId": 999,
+              "recordType": "description",
+              "levelOfDescription": "item",
+              "title": "Restricted donated photograph",
+              "useRestriction": {
+                "status": "Restricted - Possibly Copyright"
+              },
+              "accessRestriction": {
+                "status": "Unrestricted"
+              },
+              "digitalObjects": [
+                {
+                  "objectFilename": "restricted.jpg",
+                  "objectUrl": "https://catalog.archives.gov/objects/restricted.jpg",
+                  "objectFileSize": 1000,
+                  "objectId": "restricted-1",
+                  "objectDescription": "Restricted image",
+                  "objectType": "Image (JPG)"
+                }
+              ]
+            }
+          },
+          "sort": [
+            1,
+            "999"
+          ]
+        }
+      ]
+    }
+  },
+  "statusCode": 200
+}
+

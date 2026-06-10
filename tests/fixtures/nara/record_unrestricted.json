@@ -1,0 +1,44 @@
+{
+  "naId": 1667751,
+  "recordType": "description",
+  "levelOfDescription": "item",
+  "title": "Constitution of the United States",
+  "useRestriction": {
+    "status": "Unrestricted"
+  },
+  "accessRestriction": {
+    "status": "Unrestricted"
+  },
+  "generalRecordsTypes": [
+    "Textual Records"
+  ],
+  "digitalObjects": [
+    {
+      "objectFilename": "00303_2003_001_AC.jpg",
+      "objectUrl": "https://catalog.archives.gov/medialive/51/6677/1667751/content/harvest/1667751-00303/00303_2003_001_AC.jpg",
+      "objectFileSize": 62296840,
+      "objectDesignator": "Page 1",
+      "objectId": "14721029",
+      "objectDescription": "Reproduction scan of 8x10 transparency",
+      "objectType": "Image (JPG)"
+    },
+    {
+      "objectFilename": "00303_2003_002_AC.jpg",
+      "objectUrl": "https://catalog.archives.gov/medialive/51/6677/1667751/content/harvest/1667751-00303/00303_2003_002_AC.jpg",
+      "objectFileSize": 62952972,
+      "objectDesignator": "Page 2",
+      "objectId": "14721030",
+      "objectDescription": "Reproduction scan of 8x10 transparency",
+      "objectType": "Image (JPG)"
+    },
+    {
+      "objectFilename": "00303.pdf",
+      "objectUrl": "https://catalog.archives.gov/medialive/51/6677/1667751/content/arcmedia/congress/00303.pdf",
+      "objectFileSize": 7520444,
+      "objectId": "14721034",
+      "objectDescription": "Download the PDF",
+      "objectType": "Portable Document File (PDF)"
+    }
+  ]
+}
+

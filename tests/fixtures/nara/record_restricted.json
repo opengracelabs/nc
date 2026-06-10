@@ -1,0 +1,23 @@
+{
+  "naId": 999,
+  "recordType": "description",
+  "levelOfDescription": "item",
+  "title": "Restricted donated photograph",
+  "useRestriction": {
+    "status": "Restricted - Possibly Copyright"
+  },
+  "accessRestriction": {
+    "status": "Unrestricted"
+  },
+  "digitalObjects": [
+    {
+      "objectFilename": "restricted.jpg",
+      "objectUrl": "https://catalog.archives.gov/objects/restricted.jpg",
+      "objectFileSize": 1000,
+      "objectId": "restricted-1",
+      "objectDescription": "Restricted image",
+      "objectType": "Image (JPG)"
+    }
+  ]
+}
+
