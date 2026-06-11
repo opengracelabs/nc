@@ -10,7 +10,7 @@
 ## 1. Earthrise: The Master Restoration
 *   **Product Type:** Large-Format Fine Art Print (Framed)
 *   **Audience:** Global mass market, environmentalists, design enthusiasts.
-*   **Story:** The 1968 Apollo 8 photograph that fundamentally shifted human consciousness. Restored from the original NASA Hasselblad frame for museum-grade clarity.
+*   **Story:** The 1968 Apollo 8 photograph that fundamentally shifted human consciousness. Restored from the original NASA Hasselblad frame for museum-grade clarity. Image credit: NASA. NASA does not endorse this product.
 *   **Price:** $150 (Premium Framed)
 *   **Margin:** High (Est. 65%)
 *   **Launch Priority:** **CRITICAL**

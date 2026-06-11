@@ -20,13 +20,12 @@ Using the **Earthrise: Master Restoration** as the gold standard.
 *   **Headline:** "The Click That Changed the World."
 *   **Copy:** "Christmas Eve, 1968. As Apollo 8 rounded the moon, Bill Anders captured the first human-witnessed rise of our home. This restoration removes decades of film degradation to reveal the Earth as the astronauts saw it: a fragile blue jewel in the infinite dark."
 *   **Intelligence Stack Proof:**
-    *   **NARA:** Verified archival source.
-    *   **NASA:** Mission context (Apollo 8).
+    *   **NASA:** Public-domain source record AS08-14-2383 and Apollo 8 mission context.
     *   **Wikidata:** Linked to the "Overview Effect" concept.
 
 ### **Zone 3: The Science & Provenance (Technical)**
 *   **Details:** "310gsm Hahnemühle Photo Rag, pigment-based archival inks."
-*   **Verification:** "Each print carries a Nature & Culture Certificate of Provenance, linking the physical artifact to its digital record in the National Archives."
+*   **Verification:** "Each print carries a Nature & Culture Certificate of Provenance, linking the physical artifact to NASA public-domain source record AS08-14-2383."
 
 ---
 
@@ -34,7 +33,7 @@ Using the **Earthrise: Master Restoration** as the gold standard.
 
 A 4-step flow designed to maintain the "Museum-Quality" feel.
 
-1.  **Cart:** "Your Selected Heritage"—Showing the asset title and its institutional source (e.g., NASA / NARA).
+1.  **Cart:** "Your Selected Heritage"—Showing the asset title and its institutional source (e.g., NASA).
 2.  **Information:** Standard fields + "Gift of Knowledge" option (Add a personalized curator's note).
 3.  **Shipping:** "Archival Protection"—Detailed explanation of the flat-pack/tube protection for fine art.
 4.  **Confirmation:** "Ownership Verified"—The final screen provides the digital provenance link and the story of the asset you just purchased.
@@ -46,7 +45,7 @@ A 4-step flow designed to maintain the "Museum-Quality" feel.
 **Headline:** Nature & Culture: The World's Archives, Restored for Your Home.
 
 **Public Narrative:**
-"For centuries, the world's greatest discoveries have been locked in archival drawers. Today, we unlock them. Nature & Culture is proud to announce the launch of our Pilot Collection—seven anchors of human discovery, from the geothermal heart of Yellowstone to the deep-space perspective of Earthrise. Every item we sell is an artifact of truth, verified by the world's leading scientific institutions."
+"For centuries, the world's greatest discoveries have been locked in archival drawers. Today, we unlock them. Nature & Culture is proud to announce the launch of our Pilot Collection—seven anchors of human discovery, from the geothermal heart of Yellowstone to the deep-space perspective of Earthrise. Every first-sale item is built from governed public-domain evidence. Image credit: NASA. NASA does not endorse this product."
 
 ---
 
@@ -77,7 +76,7 @@ A 4-step flow designed to maintain the "Museum-Quality" feel.
 
 *   **Format:** 30" x 30" Acrylic Glass Master.
 *   **Quantity:** 50 hand-numbered units.
-*   **Premium Feature:** Includes a physical 1968 Apollo 8 Mission Plan reproduction (NARA) and a gold-foil embossed Certificate of Provenance.
+*   **Premium Feature:** Includes a gold-foil embossed Certificate of Authenticity and NASA-source provenance statement. No flight-plan reproduction is included in the first-sale package.
 *   **Story:** "The ultimate artifact of the 20th century. For the serious collector who understands that Earthrise is not just a photo—it is the birth of global consciousness."
 *   **Price:** $850.
 *   **Exclusivity:** Waitlist-only access for the first 24 hours.

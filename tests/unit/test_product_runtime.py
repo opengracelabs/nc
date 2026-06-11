@@ -25,6 +25,7 @@ def test_product_router_is_registered() -> None:
     assert "/products/publications/{publication_id}/audit-events" in paths
     assert "/products/publications/{publication_id}/workflow" in paths
     assert "/products/first-sale-activations" in paths
+    assert "/products/production-packages" in paths
     assert "/products/health" in paths
 
 

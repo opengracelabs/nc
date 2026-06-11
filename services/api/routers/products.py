@@ -65,6 +65,14 @@ _FIRST_SALE_COLS = """
     activated_by, activated_at, provenance, created_at, updated_at
 """
 
+_PRODUCTION_PACKAGE_COLS = """
+    id, product_code, product_publication_id, product_package_id, package_version,
+    final_publication_snapshot, final_snapshot_sha256, final_manual_export_package,
+    final_package_sha256, attribution_manifest, disclaimer_manifest,
+    rights_evidence_manifest, verification, production_status, manual_provider_only,
+    generated_by, generated_at, provenance, created_at, updated_at
+"""
+
 _JSON_FIELDS = {
     "product_policy",
     "provenance",
@@ -82,6 +90,12 @@ _JSON_FIELDS = {
     "new_state",
     "event",
     "gate_e_session",
+    "final_publication_snapshot",
+    "final_manual_export_package",
+    "attribution_manifest",
+    "disclaimer_manifest",
+    "rights_evidence_manifest",
+    "verification",
 }
 
 
@@ -415,6 +429,24 @@ async def list_first_sale_activations(
         rows = await conn.fetch(
             f"SELECT {_FIRST_SALE_COLS} FROM product_first_sale_activation "
             "ORDER BY activated_at DESC"
+        )
+    return [_decode(row) for row in rows]
+
+
+@router.get("/production-packages")
+async def list_production_packages(
+    auth: Auth, conn: DB, product_code: str | None = Query(None)
+) -> list[dict]:
+    if product_code:
+        rows = await conn.fetch(
+            f"SELECT {_PRODUCTION_PACKAGE_COLS} FROM product_production_package "
+            "WHERE product_code = $1 ORDER BY generated_at DESC",
+            product_code,
+        )
+    else:
+        rows = await conn.fetch(
+            f"SELECT {_PRODUCTION_PACKAGE_COLS} FROM product_production_package "
+            "ORDER BY generated_at DESC"
         )
     return [_decode(row) for row in rows]
 
