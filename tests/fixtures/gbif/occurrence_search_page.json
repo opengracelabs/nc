@@ -1,0 +1,57 @@
+{
+  "offset": 0,
+  "limit": 2,
+  "endOfRecords": false,
+  "count": 10000,
+  "results": [
+    {
+      "key": 3001,
+      "gbifID": "3001",
+      "taxonKey": 5219404,
+      "acceptedTaxonKey": 5219404,
+      "scientificName": "Panthera leo (Linnaeus, 1758)",
+      "taxonRank": "SPECIES",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetKey": "dataset-cc0",
+      "datasetName": "Open savanna observations",
+      "datasetDOI": "10.15468/example.cc0",
+      "publishingOrgKey": "publisher-1",
+      "publisher": "Example Museum",
+      "citation": "Example Museum (2026). Open savanna observations. GBIF.",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "rightsHolder": "Example Museum",
+      "recordedBy": "A. Observer",
+      "identifiedBy": "B. Taxonomist",
+      "countryCode": "KE",
+      "stateProvince": "Rift Valley",
+      "locality": "Maasai Mara",
+      "decimalLatitude": -1.4061,
+      "decimalLongitude": 35.0081,
+      "coordinateUncertaintyInMeters": 1000,
+      "eventDate": "2020-06-01",
+      "year": 2020,
+      "month": 6,
+      "day": 1,
+      "issues": ["COORDINATE_ROUNDED"]
+    },
+    {
+      "key": 3002,
+      "gbifID": "3002",
+      "taxonKey": 5219404,
+      "acceptedTaxonKey": 5219404,
+      "scientificName": "Panthera leo (Linnaeus, 1758)",
+      "taxonRank": "SPECIES",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "datasetKey": "dataset-cc-by",
+      "datasetName": "Attributed mammal records",
+      "datasetDOI": "10.15468/example.ccby",
+      "publishingOrgKey": "publisher-2",
+      "publisher": "Attributed Herbarium",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsHolder": "Attributed Herbarium",
+      "countryCode": "TZ",
+      "eventDate": "2019-01-15"
+    }
+  ]
+}
+

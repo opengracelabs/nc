@@ -1,0 +1,19 @@
+{
+  "key": 3002,
+  "gbifID": "3002",
+  "taxonKey": 5219404,
+  "acceptedTaxonKey": 5219404,
+  "scientificName": "Panthera leo (Linnaeus, 1758)",
+  "taxonRank": "SPECIES",
+  "basisOfRecord": "PRESERVED_SPECIMEN",
+  "datasetKey": "dataset-cc-by",
+  "datasetName": "Attributed mammal records",
+  "datasetDOI": "10.15468/example.ccby",
+  "publishingOrgKey": "publisher-2",
+  "publisher": "Attributed Herbarium",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "rightsHolder": "Attributed Herbarium",
+  "countryCode": "TZ",
+  "eventDate": "2019-01-15"
+}
+

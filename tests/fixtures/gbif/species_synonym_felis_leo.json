@@ -1,0 +1,20 @@
+{
+  "usageKey": 5219404,
+  "acceptedUsageKey": 5219404,
+  "scientificName": "Felis leo Linnaeus, 1758",
+  "acceptedScientificName": "Panthera leo (Linnaeus, 1758)",
+  "canonicalName": "Felis leo",
+  "rank": "SPECIES",
+  "status": "SYNONYM",
+  "matchType": "EXACT",
+  "confidence": 94,
+  "synonym": true,
+  "kingdom": "Animalia",
+  "phylum": "Chordata",
+  "class": "Mammalia",
+  "order": "Carnivora",
+  "family": "Felidae",
+  "genus": "Panthera",
+  "species": "Panthera leo"
+}
+

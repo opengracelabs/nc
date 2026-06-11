@@ -1,0 +1,14 @@
+{
+  "key": 3003,
+  "gbifID": "3003",
+  "taxonKey": 5219404,
+  "scientificName": "Panthera leo (Linnaeus, 1758)",
+  "basisOfRecord": "MACHINE_OBSERVATION",
+  "datasetKey": "dataset-cc-by-nc",
+  "datasetName": "Non-commercial camera trap records",
+  "datasetDOI": "10.15468/example.nc",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "rightsHolder": "Camera Trap NGO",
+  "countryCode": "ZA"
+}
+

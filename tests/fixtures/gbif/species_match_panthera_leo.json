@@ -1,0 +1,17 @@
+{
+  "usageKey": 5219404,
+  "scientificName": "Panthera leo (Linnaeus, 1758)",
+  "canonicalName": "Panthera leo",
+  "rank": "SPECIES",
+  "status": "ACCEPTED",
+  "matchType": "EXACT",
+  "confidence": 99,
+  "kingdom": "Animalia",
+  "phylum": "Chordata",
+  "class": "Mammalia",
+  "order": "Carnivora",
+  "family": "Felidae",
+  "genus": "Panthera",
+  "species": "Panthera leo"
+}
+
