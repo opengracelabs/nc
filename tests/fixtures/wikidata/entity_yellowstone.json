@@ -1,0 +1,124 @@
+{
+  "entities": {
+    "Q351": {
+      "id": "Q351",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Yellowstone National Park"
+        }
+      },
+      "descriptions": {
+        "en": {
+          "language": "en",
+          "value": "national park in the United States"
+        }
+      },
+      "aliases": {
+        "en": [
+          {
+            "language": "en",
+            "value": "Yellowstone"
+          },
+          {
+            "language": "en",
+            "value": "Yellowstone Park"
+          }
+        ]
+      },
+      "claims": {
+        "P31": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 46169,
+                  "id": "Q46169"
+                },
+                "type": "wikibase-entityid"
+              }
+            }
+          }
+        ],
+        "P17": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 30,
+                  "id": "Q30"
+                },
+                "type": "wikibase-entityid"
+              }
+            }
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "value": {
+                  "latitude": 44.6,
+                  "longitude": -110.5,
+                  "precision": 0.1,
+                  "globe": "http://www.wikidata.org/entity/Q2"
+                },
+                "type": "globecoordinate"
+              }
+            }
+          }
+        ],
+        "P1566": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "value": "5844046",
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "P402": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "value": "1453307",
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "P373": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "value": "Yellowstone National Park",
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "sitelinks": {
+        "enwiki": {
+          "site": "enwiki",
+          "title": "Yellowstone National Park",
+          "url": "https://en.wikipedia.org/wiki/Yellowstone_National_Park"
+        },
+        "frwiki": {
+          "site": "frwiki",
+          "title": "Parc national de Yellowstone",
+          "url": "https://fr.wikipedia.org/wiki/Parc_national_de_Yellowstone"
+        },
+        "commonswiki": {
+          "site": "commonswiki",
+          "title": "Yellowstone National Park"
+        }
+      }
+    }
+  },
+  "success": 1
+}
+

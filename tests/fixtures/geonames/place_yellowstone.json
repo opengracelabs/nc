@@ -1,0 +1,35 @@
+{
+  "geonameId": 5843591,
+  "name": "Yellowstone National Park",
+  "toponymName": "Yellowstone National Park",
+  "lat": "44.42796",
+  "lng": "-110.58846",
+  "fcl": "L",
+  "fcode": "PRKA",
+  "countryCode": "US",
+  "countryName": "United States",
+  "adminCode1": "WY",
+  "adminName1": "Wyoming",
+  "adminCode2": "029",
+  "adminName2": "Park County",
+  "population": 0,
+  "timezone": {
+    "timeZoneId": "America/Denver"
+  },
+  "alternateNames": [
+    {
+      "name": "Yellowstone",
+      "lang": "en",
+      "isPreferredName": true
+    },
+    {
+      "name": "Parque Nacional Yellowstone",
+      "lang": "es"
+    },
+    {
+      "name": "Yellowstone",
+      "lang": "en"
+    }
+  ]
+}
+

@@ -10,7 +10,9 @@ from .routers import (
     discovery,
     health,
     knowledge,
+    pilot,
     places,
+    products,
     research,
     sources,
     taxa,
@@ -44,6 +46,8 @@ app.include_router(health.router)
 app.include_router(sources.router)
 app.include_router(places.router)
 app.include_router(knowledge.router)
+app.include_router(pilot.router)
+app.include_router(products.router)
 app.include_router(research.router)
 app.include_router(collections.router)
 app.include_router(taxa.router)

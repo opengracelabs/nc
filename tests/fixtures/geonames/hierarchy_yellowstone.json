@@ -1,0 +1,27 @@
+{
+  "geonames": [
+    {
+      "geonameId": 6295630,
+      "name": "Earth",
+      "fcl": "L",
+      "fcode": "AREA"
+    },
+    {
+      "geonameId": 6252001,
+      "name": "United States",
+      "countryCode": "US",
+      "fcl": "A",
+      "fcode": "PCLI"
+    },
+    {
+      "geonameId": 5843591,
+      "name": "Yellowstone National Park",
+      "countryCode": "US",
+      "adminCode1": "WY",
+      "adminCode2": "029",
+      "fcl": "L",
+      "fcode": "PRKA"
+    }
+  ]
+}
+
