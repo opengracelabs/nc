@@ -5,14 +5,13 @@ type ManualPurchaseCTAProps = {
 export function ManualPurchaseCTA({ productName = "Earthrise" }: ManualPurchaseCTAProps) {
   return (
     <div className="purchase-panel">
-      <p className="eyebrow">Manual purchase</p>
-      <h2>Request purchase</h2>
+      <p className="eyebrow">Availability</p>
+      <h2>Contact for availability</h2>
       <p>
-        Send a purchase request for {productName}. A manual invoice and fulfillment details will
-        follow after review.
+        Ask about {productName}. We will reply with availability, payment, and fulfillment details.
       </p>
-      <a className="button" href="mailto:natureandculture@protonmail.com?subject=Earthrise purchase request">
-        Request purchase
+      <a className="button" href="mailto:natureandculture@protonmail.com?subject=Earthrise availability inquiry">
+        Contact us
       </a>
     </div>
   );

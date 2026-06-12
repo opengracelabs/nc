@@ -3,11 +3,12 @@ import Link from "next/link";
 import "./styles.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
     default: "Nature & Culture",
     template: "%s | Nature & Culture"
   },
-  description: "Verified public-domain heritage stories, places, and products."
+  description: "Source-traceable public-domain stories, collections, and editions."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -19,15 +20,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             Nature & Culture
           </Link>
           <nav aria-label="Primary navigation">
-            <Link href="/places">Places</Link>
-            <Link href="/stories/earthrise">Stories</Link>
-            <Link href="/products">Products</Link>
+            <Link href="/collections">Collections</Link>
+            <Link href="/places">Discover</Link>
+            <Link href="/products">Editions</Link>
             <Link href="/about">About</Link>
           </nav>
         </header>
         <main>{children}</main>
         <footer className="site-footer">
-          <p>Verified public-domain sources, visible attribution, manual commerce only.</p>
+          <p>Public-domain sources, visible attribution, source-traceable editions.</p>
         </footer>
       </body>
     </html>

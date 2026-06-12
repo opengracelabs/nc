@@ -14,13 +14,13 @@ export default async function PlacesPage() {
       <p className="eyebrow">Places</p>
       <h1>Explore public-domain heritage by place.</h1>
       <p className="lead">
-        Phase 0 keeps place pages as governed previews while source authority gates complete.
+        Explore source-led journeys as new places open for public stories, collections, and editions.
       </p>
       <div className="grid">
         {places.map((place) => (
           <article className="card" key={place.slug}>
             <h2>{place.title}</h2>
-            <p>{place.status}</p>
+            <p>Stories, collections, and editions connected to this place.</p>
           </article>
         ))}
       </div>

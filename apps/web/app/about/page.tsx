@@ -9,10 +9,9 @@ export default function AboutPage() {
   return (
     <section className="page">
       <p className="eyebrow">About</p>
-      <h1>Public-domain commerce with visible provenance.</h1>
+      <h1>Public-domain works, source-traceable editions.</h1>
       <p className="lead">
-        Nature & Culture sells and publishes works only when source, rights, and attribution checks
-        can be shown clearly to the public.
+        Nature & Culture publishes stories and editions from public-domain works with clear source, rights, and attribution records.
       </p>
       <div className="grid">
         <article className="card">
@@ -21,7 +20,7 @@ export default function AboutPage() {
         </article>
         <article className="card">
           <h2>Rights verification</h2>
-          <p>Every asset is reviewed against governed source and rights records before launch.</p>
+          <p>Every asset is reviewed against source and rights records before launch.</p>
         </article>
         <article className="card">
           <h2>Attribution visible</h2>

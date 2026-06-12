@@ -14,28 +14,25 @@ export type ProductSummary = {
   title: string;
   route: string;
   status: ProductStatus;
-  phase: "Phase 0";
   description: string;
 };
 
-export const phaseZeroProducts: ProductSummary[] = [
+export const earthriseProducts: ProductSummary[] = [
   {
     code: "NC-PROD-001",
     title: "Earthrise Museum Giclee",
     route: "/products/earthrise",
     status: "manual_purchase_available",
-    phase: "Phase 0",
     description:
-      "Museum-grade print from the Apollo 8 Earthrise photograph, available through manual purchase."
+      "A 24 x 20 inch museum-grade print made from the Apollo 8 Earthrise photograph."
   },
   {
     code: "NC-PROD-008",
     title: "Earthrise Digital Download",
     route: "/products/earthrise",
     status: "manual_purchase_available",
-    phase: "Phase 0",
     description:
-      "Governed digital edition from the same verified public-domain Earthrise source."
+      "A high-resolution digital edition for study, display, and personal archival use."
   }
 ];
 
@@ -43,7 +40,7 @@ export const placeTeasers = [
   {
     slug: "earthrise",
     title: "Earthrise",
-    status: "Live Phase 0"
+    status: "Live"
   },
   {
     slug: "yellowstone",
