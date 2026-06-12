@@ -261,7 +261,7 @@ INSERT INTO pilot_anchor (
 )
 VALUES
     ('yellowstone', 'Yellowstone', 'place', 'active',
-     '{"kind":"place","preferred_geonames_id":"5843642","preferred_wikidata_qid":"Q351","country_codes":["US"]}'::jsonb,
+     '{"kind":"place","preferred_geonames_id":"5843591","preferred_wikidata_qid":"Q351","country_codes":["US"]}'::jsonb,
      '{"geonames":"canonical","wikidata":"context_only","gbif":"validation_only","nasa":"support","noaa":"support","nara":"support","bhl":"primary_discovery","museums":"support"}'::jsonb,
      '{"geonames":true,"osm_tiles":false,"source_specific":true}'::jsonb, 10,
      '{"document":"NC-PILOT-001","seeded":true}'::jsonb),

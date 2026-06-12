@@ -1,0 +1,34 @@
+{
+  "geonames": [
+    {
+      "fcl": "L",
+      "fcode": "AREA",
+      "geonameId": 6295630,
+      "name": "Earth"
+    },
+    {
+      "countryCode": "AU",
+      "fcl": "A",
+      "fcode": "PCLI",
+      "geonameId": 2077456,
+      "name": "Australia"
+    },
+    {
+      "adminCode1": "04",
+      "countryCode": "AU",
+      "fcl": "A",
+      "fcode": "ADM1",
+      "geonameId": 2152274,
+      "name": "Queensland"
+    },
+    {
+      "adminCode1": "04",
+      "countryCode": "AU",
+      "fcl": "H",
+      "fcode": "RF",
+      "geonameId": 2164628,
+      "name": "Great Barrier Reef"
+    }
+  ],
+  "source": "Derived from GeoNames RDF parent chain 2026-06-12 (hierarchyJSON rate-limited)"
+}

@@ -1,0 +1,18 @@
+{
+  "search": [
+    {
+      "description": "over 2300 km long coral reef off Australia's northeast coast, UNESCO World Heritage Site",
+      "id": "Q7343",
+      "label": "Great Barrier Reef",
+      "match": {
+        "language": "en",
+        "text": "Great Barrier Reef",
+        "type": "label"
+      }
+    }
+  ],
+  "searchinfo": {
+    "search": "Great Barrier Reef"
+  },
+  "success": 1
+}

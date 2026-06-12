@@ -1,0 +1,16 @@
+{
+  "geonames": [
+    {
+      "adminName1": "Queensland",
+      "countryCode": "AU",
+      "fcl": "H",
+      "fcode": "RF",
+      "geonameId": 2164628,
+      "lat": "-17.98722",
+      "lng": "146.76979",
+      "name": "Great Barrier Reef"
+    }
+  ],
+  "source": "Derived from GeoNames RDF 2026-06-12 (searchJSON rate-limited)",
+  "totalResultsCount": 1
+}

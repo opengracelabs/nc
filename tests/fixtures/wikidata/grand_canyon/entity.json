@@ -1,0 +1,170 @@
+{
+  "entities": {
+    "Q220289": {
+      "aliases": {
+        "en": [
+          {
+            "language": "en",
+            "value": "Marble Canyon National Monument"
+          },
+          {
+            "language": "en",
+            "value": "GRCA"
+          }
+        ]
+      },
+      "claims": {
+        "P131": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q58684",
+                  "numeric-id": 58684
+                }
+              }
+            }
+          },
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q58696",
+                  "numeric-id": 58696
+                }
+              }
+            }
+          }
+        ],
+        "P1566": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "string",
+                "value": "5296401"
+              }
+            }
+          }
+        ],
+        "P17": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q30",
+                  "numeric-id": 30
+                }
+              }
+            }
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q34918903",
+                  "numeric-id": 34918903
+                }
+              }
+            }
+          },
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q46169",
+                  "numeric-id": 46169
+                }
+              }
+            }
+          }
+        ],
+        "P373": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "string",
+                "value": "Grand Canyon National Park"
+              }
+            }
+          }
+        ],
+        "P402": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "string",
+                "value": "183377"
+              }
+            }
+          }
+        ],
+        "P625": [
+          {
+            "mainsnak": {
+              "datavalue": {
+                "type": "globecoordinate",
+                "value": {
+                  "altitude": null,
+                  "globe": "http://www.wikidata.org/entity/Q2",
+                  "latitude": 36.0553,
+                  "longitude": -112.122,
+                  "precision": 0.0001
+                }
+              }
+            }
+          }
+        ]
+      },
+      "descriptions": {
+        "en": {
+          "language": "en",
+          "value": "national park in Coconino and Mohave counties in Arizona, United States"
+        }
+      },
+      "id": "Q220289",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Grand Canyon National Park"
+        },
+        "es": {
+          "language": "es",
+          "value": "Parque nacional del Gran Cañón"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "parc national du Grand Canyon"
+        }
+      },
+      "sitelinks": {
+        "commonswiki": {
+          "site": "commonswiki",
+          "title": "Grand Canyon National Park"
+        },
+        "enwiki": {
+          "site": "enwiki",
+          "title": "Grand Canyon National Park",
+          "url": "https://en.wikipedia.org/wiki/Grand_Canyon_National_Park"
+        },
+        "frwiki": {
+          "site": "frwiki",
+          "title": "Parc national du Grand Canyon",
+          "url": "https://fr.wikipedia.org/wiki/Parc_national_du_Grand_Canyon"
+        }
+      }
+    }
+  },
+  "success": 1
+}

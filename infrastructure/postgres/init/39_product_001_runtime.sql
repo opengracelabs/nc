@@ -236,7 +236,7 @@ WITH seeded_lines AS (
          'https://catalog.archives.gov/',
          '{"width_px":7200,"height_px":9600,"media_type":"image","derived_from":"nara_public_domain"}'::jsonb,
          '{"rights_decision":"ALLOWED","rights_basis":"NARA unrestricted public-domain map evidence","proof_url":"https://www.archives.gov/research/catalog","license":"public_domain"}'::jsonb,
-         '[{"source":"nara","statement":"Source: U.S. National Archives and Records Administration.","url":"https://www.archives.gov"},{"source":"geonames","statement":"Geographic data © GeoNames (geonames.org) — CC BY 4.0","url":"https://www.geonames.org/5843642","license":"https://creativecommons.org/licenses/by/4.0/"}]'::jsonb),
+         '[{"source":"nara","statement":"Source: U.S. National Archives and Records Administration.","url":"https://www.archives.gov"},{"source":"geonames","statement":"Geographic data © GeoNames (geonames.org) — CC BY 4.0","url":"https://www.geonames.org/5843591","license":"https://creativecommons.org/licenses/by/4.0/"}]'::jsonb),
         ('grand-canyon-dutton-atlas-print', 'grand-canyon-24x36-manual', 'grand-canyon-dutton-atlas-print',
          'Grand Canyon Dutton Atlas Print', 'grand-canyon', 'nara', 'dutton-grand-canyon-atlas',
          'https://catalog.archives.gov/',

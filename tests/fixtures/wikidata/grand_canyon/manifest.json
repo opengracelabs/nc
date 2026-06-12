@@ -1,0 +1,32 @@
+{
+  "anchor_slug": "grand-canyon",
+  "canonical_assignment": false,
+  "captures": [
+    {
+      "file": "search.json",
+      "kind": "search",
+      "request_params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Grand Canyon National Park"
+      },
+      "source_endpoint": "Action API wbsearchentities"
+    },
+    {
+      "file": "entity.json",
+      "kind": "entity",
+      "request_params": {
+        "action": "wbgetentities",
+        "format": "json",
+        "ids": "Q220289",
+        "languages": "en",
+        "props": "labels|descriptions|aliases|claims|sitelinks"
+      },
+      "source_endpoint": "Action API wbgetentities"
+    }
+  ],
+  "fixture_set": "NC-DATA-003 wikidata grand_canyon",
+  "provider": "wikidata"
+}

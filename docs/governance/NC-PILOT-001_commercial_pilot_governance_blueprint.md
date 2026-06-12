@@ -129,8 +129,8 @@ For pilot assets sourced from NASA, NOAA, NARA, or MIA, the source role is `"pri
 
 | Layer | Source | Data | Governance |
 |---|---|---|---|
-| **Identity** | GeoNames | geonames_id: 5513679 · fcode: PRKA · country: US | S-3; DD-GEONAMES-001 Art. 2 |
-| **Crosswalk** | Wikidata | Q131648 | DD-WIKIDATA-001 §VI.3 |
+| **Identity** | GeoNames | geonames_id: 5513679 · fcode: PRKA · country: US (**ERRATA NC-DATA-002:** 5513679 unverified — awaiting GCA-001 fixture) | S-3; DD-GEONAMES-001 Art. 2 |
+| **Crosswalk** | Wikidata | ~~Q131648~~ **Q220289** (**ERRATA NC-DATA-002:** Q131648 = geological canyon feature, not the park; Q220289 = Grand Canyon National Park) | DD-WIKIDATA-001 §VI.3 |
 | **Biological evidence** | GBIF | Gymnogyps californianus (California condor, gbif_taxon_key: 2481789), Oncorhynchus clarki (cutthroat trout), canyon wren | SA-GBIF-001 — occurrence count capped at 100 |
 | **Orbital imagery** | NASA | NC-NASA-027 "Grand Canyon Depth" (ASTER-GC) | DD-NASA-001; § 105 |
 | **Cartographic** | NARA | Powell Colorado River Survey 1869–1872; Wheeler Survey maps 1871–1879; USGS canyon cross-sections | DD-NARA-001; Rights Class 9 |
@@ -147,8 +147,8 @@ For pilot assets sourced from NASA, NOAA, NARA, or MIA, the source role is `"pri
 
 | Layer | Source | Data | Governance |
 |---|---|---|---|
-| **Identity** | GeoNames | fcode: RFU · country: AU | S-3; DD-GEONAMES-001 Art. 2 |
-| **Crosswalk** | Wikidata | Q37901 | DD-WIKIDATA-001 §VI.3 |
+| **Identity** | GeoNames | ~~fcode: RFU~~ **fcode: RF (H.RF) · GeoNames 2164628** (NC-DATA-005) · country: AU | S-3; DD-GEONAMES-001 Art. 2 |
+| **Crosswalk** | Wikidata | ~~Q37901~~ **Q7343** (NC-DATA-005) | DD-WIKIDATA-001 §VI.3 |
 | **Biological evidence** | GBIF | Acropora spp. (coral), Chelonia mydas (green turtle), Dugong dugon, Hemiscyllium ocellatum | SA-GBIF-001 — occurrence count capped at 100 |
 | **Orbital imagery** | NASA | NC-NASA-029 "GBR Whitsundays" (ISS-GBR) | DD-NASA-001; § 105 |
 | **Marine imagery** | NOAA | NOAA coral reef collections; marine species from NOAA fisheries — federal-employee credit images only | DD-NOAA-001; SA-NOAA-001 §I.1 Gate: license 8 or 7 only |

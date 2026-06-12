@@ -1,0 +1,28 @@
+{
+  "adminCode1": "04",
+  "adminName1": "Queensland",
+  "alternateNames": [
+    {
+      "name": "Bol'shoy Bar'yernyy Rif"
+    },
+    {
+      "name": "The Great Barrier Reef"
+    },
+    {
+      "name": "The Great Barrier Reefs"
+    }
+  ],
+  "countryCode": "AU",
+  "fcl": "H",
+  "fcode": "RF",
+  "featureClass": "H",
+  "geonameId": 2164628,
+  "lat": "-17.98722",
+  "lng": "146.76979",
+  "name": "Great Barrier Reef",
+  "parentCountryId": 2077456,
+  "parentFeatureId": 2152274,
+  "rdf_url": "https://sws.geonames.org/2164628/about.rdf",
+  "source": "GeoNames RDF live 2026-06-12",
+  "wikipedia": "en.wikipedia.org/wiki/Great_Barrier_Reef"
+}

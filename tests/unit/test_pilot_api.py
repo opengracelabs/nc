@@ -52,10 +52,10 @@ def test_pilot_attribution_links_geonames_place_id() -> None:
     attribution = pilot.assemble_attribution(
         anchor,
         evidence=[],
-        places=[{"identity_snapshot": {"geonames_id": "5843642"}}],
+        places=[{"identity_snapshot": {"geonames_id": "5843591"}}],
     )
 
-    assert any(item["url"] == "https://www.geonames.org/5843642" for item in attribution)
+    assert any(item["url"] == "https://www.geonames.org/5843591" for item in attribution)
 
 
 def test_pilot_attribution_verification_reports_missing_notices() -> None:

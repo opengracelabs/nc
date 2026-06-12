@@ -1,0 +1,32 @@
+{
+  "anchor_slug": "great-barrier-reef",
+  "canonical_assignment": false,
+  "captures": [
+    {
+      "file": "search.json",
+      "kind": "search",
+      "request_params": {
+        "action": "wbsearchentities",
+        "format": "json",
+        "language": "en",
+        "limit": "5",
+        "search": "Great Barrier Reef"
+      },
+      "source_endpoint": "Action API wbsearchentities"
+    },
+    {
+      "file": "entity.json",
+      "kind": "entity",
+      "request_params": {
+        "action": "wbgetentities",
+        "format": "json",
+        "ids": "Q7343",
+        "languages": "en",
+        "props": "labels|descriptions|aliases|claims|sitelinks"
+      },
+      "source_endpoint": "Action API wbgetentities"
+    }
+  ],
+  "fixture_set": "NC-DATA-004 wikidata great_barrier_reef",
+  "provider": "wikidata"
+}

@@ -1,0 +1,18 @@
+{
+  "search": [
+    {
+      "description": "national park in Coconino and Mohave counties in Arizona, United States",
+      "id": "Q220289",
+      "label": "Grand Canyon National Park",
+      "match": {
+        "language": "en",
+        "text": "Grand Canyon National Park",
+        "type": "label"
+      }
+    }
+  ],
+  "searchinfo": {
+    "search": "Grand Canyon National Park"
+  },
+  "success": 1
+}

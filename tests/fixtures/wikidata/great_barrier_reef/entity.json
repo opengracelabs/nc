@@ -1,0 +1,688 @@
+{
+  "entities": {
+    "Q7343": {
+      "aliases": {
+        "en": [
+          {
+            "language": "en",
+            "value": "The Great Barrier Reef"
+          },
+          {
+            "language": "en",
+            "value": "Great Barrier Reef World Heritage Site (natural or mixed)"
+          },
+          {
+            "language": "en",
+            "value": "La Grande Barrière"
+          }
+        ]
+      },
+      "claims": {
+        "P131": [
+          {
+            "id": "Q7343$2B4E8D8A-0FE2-4A98-A2E3-869154BDF8BE",
+            "mainsnak": {
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q36074",
+                  "numeric-id": 36074
+                }
+              },
+              "hash": "6d272a731d91b7d7fe5c33816773f0d3e263f7e3",
+              "property": "P131",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "23e33231e3788534651812d3549bc86d8c0c6e2a",
+                "snaks": {
+                  "P577": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-06-07T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "5300c175730575cffc445761413bd32fe20c6b62",
+                      "property": "P577",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-07-21T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "e7fa2f9f9299dac69694c5bf0fa613c57e9af171",
+                      "property": "P813",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P854": [
+                    {
+                      "datatype": "url",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "http://data.gov.au/dataset/2016-soe-her-aus-national-heritage"
+                      },
+                      "hash": "04958de86022288fcc13c2bced749695bb9c4b70",
+                      "property": "P854",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P577",
+                  "P813",
+                  "P854"
+                ]
+              }
+            ],
+            "type": "statement"
+          }
+        ],
+        "P1566": [
+          {
+            "id": "Q7343$F9AFD957-63D8-48AF-A233-DD7D3BDB6886",
+            "mainsnak": {
+              "datatype": "external-id",
+              "datavalue": {
+                "type": "string",
+                "value": "2164628"
+              },
+              "hash": "cd21f2c1fbd376e83d1b312edf455fd7c165b286",
+              "property": "P1566",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "88694a0f4d1486770c269f7db16a1982f74da69d",
+                "snaks": {
+                  "P248": [
+                    {
+                      "datatype": "wikibase-item",
+                      "datavalue": {
+                        "type": "wikibase-entityid",
+                        "value": {
+                          "entity-type": "item",
+                          "id": "Q830106",
+                          "numeric-id": 830106
+                        }
+                      },
+                      "hash": "1b3ef912a2bd61e18dd43abd184337eb010b2e96",
+                      "property": "P248",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              },
+              {
+                "hash": "bd49d3e4f67bc460ce7a06b6ac3027347cf5ee55",
+                "snaks": {
+                  "P143": [
+                    {
+                      "datatype": "wikibase-item",
+                      "datavalue": {
+                        "type": "wikibase-entityid",
+                        "value": {
+                          "entity-type": "item",
+                          "id": "Q169514",
+                          "numeric-id": 169514
+                        }
+                      },
+                      "hash": "e84b0343e79e2a9aa8abadd7301051e15fba52d6",
+                      "property": "P143",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P143"
+                ]
+              }
+            ],
+            "type": "statement"
+          }
+        ],
+        "P17": [
+          {
+            "id": "Q7343$5568AF45-EEFF-4DFD-9E23-CEEB94029571",
+            "mainsnak": {
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q408",
+                  "numeric-id": 408
+                }
+              },
+              "hash": "47a4df2f191b139665df3bd52a8081d3e7303b3e",
+              "property": "P17",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "9bbf6d139d35bee061bf2bb9e781621aa99ede2a",
+                "snaks": {
+                  "P854": [
+                    {
+                      "datatype": "url",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "http://www.greatbarrierreef.org/about-the-reef/"
+                      },
+                      "hash": "bfa3ec7514cfda67f9e2e3a1864831de968bf61e",
+                      "property": "P854",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854"
+                ]
+              },
+              {
+                "hash": "23e33231e3788534651812d3549bc86d8c0c6e2a",
+                "snaks": {
+                  "P577": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-06-07T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "5300c175730575cffc445761413bd32fe20c6b62",
+                      "property": "P577",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-07-21T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "e7fa2f9f9299dac69694c5bf0fa613c57e9af171",
+                      "property": "P813",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P854": [
+                    {
+                      "datatype": "url",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "http://data.gov.au/dataset/2016-soe-her-aus-national-heritage"
+                      },
+                      "hash": "04958de86022288fcc13c2bced749695bb9c4b70",
+                      "property": "P854",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P577",
+                  "P813",
+                  "P854"
+                ]
+              },
+              {
+                "hash": "d23aa58054ac4792c13376a91923fe29bd237817",
+                "snaks": {
+                  "P809": [
+                    {
+                      "datatype": "external-id",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "2571"
+                      },
+                      "hash": "02040406296638128e550ffaae7e893eb54127c2",
+                      "property": "P809",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P809"
+                ]
+              }
+            ],
+            "type": "statement"
+          }
+        ],
+        "P18": [
+          {
+            "id": "Q7343$42BDFFD7-C168-47B7-AC16-53FBE42A5096",
+            "mainsnak": {
+              "datatype": "commonsMedia",
+              "datavalue": {
+                "type": "string",
+                "value": "GreatBarrierReef-EO.JPG"
+              },
+              "hash": "40651277fc3abb75b01b190487a43cfbe466161a",
+              "property": "P18",
+              "snaktype": "value"
+            },
+            "qualifiers": {
+              "P2096": [
+                {
+                  "datatype": "monolingualtext",
+                  "datavalue": {
+                    "type": "monolingualtext",
+                    "value": {
+                      "language": "cy",
+                      "text": "Llun lloeren o'r Baligma skididrrif Mawr"
+                    }
+                  },
+                  "hash": "53546f16cdfd31304581365b2d604fdbf7f85d36",
+                  "property": "P2096",
+                  "snaktype": "value"
+                },
+                {
+                  "datatype": "monolingualtext",
+                  "datavalue": {
+                    "type": "monolingualtext",
+                    "value": {
+                      "language": "be",
+                      "text": "Выгляд Вялікага бар’ернага рыфа з космасу"
+                    }
+                  },
+                  "hash": "c0c4b8935b988a6f130e157678f024a44b932068",
+                  "property": "P2096",
+                  "snaktype": "value"
+                },
+                {
+                  "datatype": "monolingualtext",
+                  "datavalue": {
+                    "type": "monolingualtext",
+                    "value": {
+                      "language": "ru",
+                      "text": "Участок Большого барьерного рифа — вид из [[космос]]а. Большой барьерный риф — не целостное образование, он состоит из тысяч связанных между собой сегментов, самые массивные и старые из которых находятся на его северной оконечности"
+                    }
+                  },
+                  "hash": "549719cc9943aceadff024556be1a220d444a8b7",
+                  "property": "P2096",
+                  "snaktype": "value"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P2096"
+            ],
+            "rank": "normal",
+            "type": "statement"
+          }
+        ],
+        "P31": [
+          {
+            "id": "Q7343$272934d6-442b-9675-b6a1-a8928cfa1dcc",
+            "mainsnak": {
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q11292",
+                  "numeric-id": 11292
+                }
+              },
+              "hash": "6781da51ad6064bcd7bb84ff4e22e38cdd63b829",
+              "property": "P31",
+              "snaktype": "value"
+            },
+            "rank": "preferred",
+            "type": "statement"
+          },
+          {
+            "id": "Q7343$7002BCFF-44C0-4F68-9EBE-08639953D02E",
+            "mainsnak": {
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q38048753",
+                  "numeric-id": 38048753
+                }
+              },
+              "hash": "8da03bd903aed4ed37c096326d3cc6ec64ff982e",
+              "property": "P31",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "23e33231e3788534651812d3549bc86d8c0c6e2a",
+                "snaks": {
+                  "P577": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-06-07T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "5300c175730575cffc445761413bd32fe20c6b62",
+                      "property": "P577",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P813": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-07-21T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "e7fa2f9f9299dac69694c5bf0fa613c57e9af171",
+                      "property": "P813",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P854": [
+                    {
+                      "datatype": "url",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "http://data.gov.au/dataset/2016-soe-her-aus-national-heritage"
+                      },
+                      "hash": "04958de86022288fcc13c2bced749695bb9c4b70",
+                      "property": "P854",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P577",
+                  "P813",
+                  "P854"
+                ]
+              }
+            ],
+            "type": "statement"
+          },
+          {
+            "id": "Q7343$be5444f1-4c33-2b65-1a94-aaec2ab460d5",
+            "mainsnak": {
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q570116",
+                  "numeric-id": 570116
+                }
+              },
+              "hash": "acd295a6dc52036dea8eb0527f179013bbd07906",
+              "property": "P31",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "type": "statement"
+          },
+          {
+            "id": "Q7343$56DDEF57-3BAE-4D4F-902B-B5CC0653D2BD",
+            "mainsnak": {
+              "datatype": "wikibase-item",
+              "datavalue": {
+                "type": "wikibase-entityid",
+                "value": {
+                  "entity-type": "item",
+                  "id": "Q9259",
+                  "numeric-id": 9259
+                }
+              },
+              "hash": "80afe3b37227683ce6b58375ebaa71d762ecaab2",
+              "property": "P31",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "d23aa58054ac4792c13376a91923fe29bd237817",
+                "snaks": {
+                  "P809": [
+                    {
+                      "datatype": "external-id",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "2571"
+                      },
+                      "hash": "02040406296638128e550ffaae7e893eb54127c2",
+                      "property": "P809",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P809"
+                ]
+              }
+            ],
+            "type": "statement"
+          }
+        ],
+        "P373": [
+          {
+            "id": "q7343$2BAC0A0E-560D-42FF-AABD-53487EE0035B",
+            "mainsnak": {
+              "datatype": "string",
+              "datavalue": {
+                "type": "string",
+                "value": "Great Barrier Reef"
+              },
+              "hash": "0df8ceca7cac466f48f5612f08b1891a3b4aa0f1",
+              "property": "P373",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "type": "statement"
+          }
+        ],
+        "P571": [
+          {
+            "id": "Q7343$2CDF1FD0-4CF7-4005-AE30-E055744B5959",
+            "mainsnak": {
+              "datatype": "time",
+              "datavalue": {
+                "type": "time",
+                "value": {
+                  "after": 0,
+                  "before": 0,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                  "precision": 9,
+                  "time": "+1981-00-00T00:00:00Z",
+                  "timezone": 0
+                }
+              },
+              "hash": "1df16e2a5d110c4f4c69a77e38d072613f733523",
+              "property": "P571",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "d23aa58054ac4792c13376a91923fe29bd237817",
+                "snaks": {
+                  "P809": [
+                    {
+                      "datatype": "external-id",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "2571"
+                      },
+                      "hash": "02040406296638128e550ffaae7e893eb54127c2",
+                      "property": "P809",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P809"
+                ]
+              }
+            ],
+            "type": "statement"
+          }
+        ],
+        "P625": [
+          {
+            "id": "Q7343$210F6AF4-511F-4982-BE65-D70109656D57",
+            "mainsnak": {
+              "datatype": "globe-coordinate",
+              "datavalue": {
+                "type": "globecoordinate",
+                "value": {
+                  "altitude": null,
+                  "globe": "http://www.wikidata.org/entity/Q2",
+                  "latitude": -16.4,
+                  "longitude": 145.8,
+                  "precision": 0.016666666666666666
+                }
+              },
+              "hash": "1737db855b52ff78a4e9114e8a61e98963a96993",
+              "property": "P625",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "420af871519c4462774888d31882addad7b3edd6",
+                "snaks": {
+                  "P813": [
+                    {
+                      "datatype": "time",
+                      "datavalue": {
+                        "type": "time",
+                        "value": {
+                          "after": 0,
+                          "before": 0,
+                          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                          "precision": 11,
+                          "time": "+2017-08-13T00:00:00Z",
+                          "timezone": 0
+                        }
+                      },
+                      "hash": "4b616aeea38bb035c221b7ff65e65df9b2c4ace7",
+                      "property": "P813",
+                      "snaktype": "value"
+                    }
+                  ],
+                  "P854": [
+                    {
+                      "datatype": "url",
+                      "datavalue": {
+                        "type": "string",
+                        "value": "http://www.environment.gov.au/heritage/places/national-heritage-list"
+                      },
+                      "hash": "8525bc1a082beeca60f8776a70d799f2203d3c61",
+                      "property": "P854",
+                      "snaktype": "value"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P813",
+                  "P854"
+                ]
+              }
+            ],
+            "type": "statement"
+          }
+        ]
+      },
+      "descriptions": {
+        "en": {
+          "language": "en",
+          "value": "over 2300 km long coral reef off Australia's northeast coast, UNESCO World Heritage Site"
+        }
+      },
+      "id": "Q7343",
+      "labels": {
+        "de": {
+          "language": "de",
+          "value": "Great Barrier Reef"
+        },
+        "en": {
+          "language": "en",
+          "value": "Great Barrier Reef"
+        },
+        "es": {
+          "language": "es",
+          "value": "Gran barrera de coral"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "grande barrière de corail"
+        }
+      },
+      "sitelinks": {
+        "commonswiki": {
+          "badges": [],
+          "site": "commonswiki",
+          "title": "Great Barrier Reef"
+        },
+        "enwiki": {
+          "badges": [],
+          "site": "enwiki",
+          "title": "Great Barrier Reef"
+        }
+      }
+    }
+  },
+  "success": 1
+}

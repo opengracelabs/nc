@@ -1,0 +1,38 @@
+{
+  "anchor_slug": "grand-canyon",
+  "canonical_assignment": false,
+  "captures": [
+    {
+      "file": "search.json",
+      "kind": "search",
+      "request_params": {
+        "country": "US",
+        "fcode": "PRK",
+        "maxRows": "1",
+        "q": "Grand Canyon National Park",
+        "username": "<redacted>"
+      },
+      "source_endpoint": "/searchJSON"
+    },
+    {
+      "file": "direct.json",
+      "kind": "direct",
+      "request_params": {
+        "geonameId": "5296401",
+        "username": "<redacted>"
+      },
+      "source_endpoint": "/getJSON"
+    },
+    {
+      "file": "hierarchy.json",
+      "kind": "hierarchy",
+      "request_params": {
+        "geonameId": "5296401",
+        "username": "<redacted>"
+      },
+      "source_endpoint": "/hierarchyJSON"
+    }
+  ],
+  "fixture_set": "NC-DATA-003 geonames grand_canyon",
+  "provider": "geonames"
+}

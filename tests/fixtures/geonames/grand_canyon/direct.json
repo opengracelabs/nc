@@ -1,0 +1,38 @@
+{
+  "adminCode1": "AZ",
+  "adminCode2": "005",
+  "adminName1": "Arizona",
+  "adminName2": "Coconino",
+  "alternateNames": [
+    {
+      "lang": "en",
+      "name": "Marble Canyon National Monument"
+    },
+    {
+      "lang": "abbr",
+      "name": "GRCA"
+    },
+    {
+      "lang": "fr",
+      "name": "Parc national du Grand Canyon"
+    },
+    {
+      "lang": "es",
+      "name": "Parque nacional del Gran Cañón"
+    }
+  ],
+  "altitude": 1767,
+  "countryCode": "US",
+  "countryName": "United States",
+  "fcl": "L",
+  "fcode": "PRK",
+  "geonameId": 5296401,
+  "lat": "36.10697",
+  "lng": "-112.113",
+  "name": "Grand Canyon National Park",
+  "population": 0,
+  "timezone": {
+    "timeZoneId": "America/Phoenix"
+  },
+  "toponymName": "Grand Canyon National Park"
+}

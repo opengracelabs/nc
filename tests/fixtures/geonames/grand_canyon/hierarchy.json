@@ -1,0 +1,26 @@
+{
+  "geonames": [
+    {
+      "fcl": "L",
+      "fcode": "AREA",
+      "geonameId": 6295630,
+      "name": "Earth"
+    },
+    {
+      "countryCode": "US",
+      "fcl": "A",
+      "fcode": "PCLI",
+      "geonameId": 6252001,
+      "name": "United States"
+    },
+    {
+      "adminCode1": "AZ",
+      "adminCode2": "005",
+      "countryCode": "US",
+      "fcl": "L",
+      "fcode": "PRK",
+      "geonameId": 5296401,
+      "name": "Grand Canyon National Park"
+    }
+  ]
+}

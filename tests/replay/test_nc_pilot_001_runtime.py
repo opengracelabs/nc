@@ -68,7 +68,7 @@ def test_pilot_runtime_seeds_all_target_anchors() -> None:
 def test_pilot_runtime_resolves_geonames_identity_conflicts() -> None:
     sql = MIGRATION_38.read_text(encoding="utf-8")
 
-    assert '"preferred_geonames_id":"5843642"' in sql
+    assert '"preferred_geonames_id":"5843591"' in sql   # NC-DATA-001: 5843642 retired
     assert '"preferred_geonames_id":"5296401"' in sql
     assert '"preferred_wikidata_qid":"Q220289"' in sql
     assert '"preferred_geonames_id":"2164628"' in sql
@@ -76,7 +76,7 @@ def test_pilot_runtime_resolves_geonames_identity_conflicts() -> None:
     assert '"preferred_geonames_id":"3658931"' in sql
     assert '"preferred_wikidata_qid":"Q787425"' in sql
     assert '"geonames_status":"unconfirmed"' in sql
-    assert '"preferred_geonames_id":"5843591"' not in sql
+    assert '"preferred_geonames_id":"5843642"' not in sql  # NC-DATA-001: erroneous ID retired
     assert '"preferred_wikidata_qid":"Q118841"' not in sql
 
 

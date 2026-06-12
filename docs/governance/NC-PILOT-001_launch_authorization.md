@@ -221,9 +221,9 @@ Complete for each place before that place's Gate E. Confirmed GeoNames IDs from 
 
 | # | Place | Canonical GeoNames ID | Wikidata QID | fcode | Written to `places` table? |
 |---|---|---|---|---|---|
-| C-1 | Yellowstone NP | **5843642** | Q351 | PRKN | ☐ |
-| C-2 | Grand Canyon NP | **5296401** | Q220289 | PRKN | ☐ |
-| C-3 | Great Barrier Reef | **2164628** | Q7343 | RFSU | ☐ |
+| C-1 | Yellowstone NP | ~~5843642~~ **5843591** (NC-DATA-001) | Q351 | PRKA (H.PRKA) | ☐ |
+| C-2 | Grand Canyon NP | **5296401** (NC-DATA-003) | Q220289 | PRK (L.PRK) | ☐ |
+| C-3 | Great Barrier Reef | **2164628** | Q7343 | RF (H.RF) | ☐ |
 | C-4 | Papahānaumokuākea | **TBD** — NC GeoNames lookup required | Q787425 | MAR (expected) | ☐ |
 | C-5 | Venice | **3164603** | Q641 | PPLA | ☐ |
 | C-6 | Galápagos Islands | **3658931** | Q38095 | ISLS | ☐ |

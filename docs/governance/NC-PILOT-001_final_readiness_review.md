@@ -148,13 +148,15 @@ For the Venice place page, the header asset should be substituted with a confirm
 
 ## III. Confirmed GeoNames ID Register
 
+> **ERRATA — 2026-06-12 — NC-DATA-001:** The Yellowstone row below is incorrect. The Wikidata P1566 lookup that produced 5843642 was erroneous — the actual Wikidata Q351 P1566 value is 5844046 (per `entity_yellowstone.json` fixture), and the GeoNames direct API returns 5843591 for "Yellowstone National Park" (fcode=PRKA). NC-DATA-001 is the authoritative superseding document. **Canonical Yellowstone GeoNames ID = 5843591.** All other rows in this table remain valid.
+
 This is the canonical reference. All prior governance documents that carried conflicting IDs are superseded on this point by the Wikidata P1566 lookups performed 2026-06-11.
 
 | Place | Canonical GeoNames ID | Feature | Wikidata |
 |---|---|---|---|
-| Yellowstone National Park | **5843642** | PRKN (national park) | Q351 |
-| Grand Canyon National Park | **5296401** | PRKN (national park) | Q220289 |
-| Great Barrier Reef | **2164628** | RFSU (coral reef) | Q7343 |
+| Yellowstone National Park | ~~**5843642**~~ **5843591** (NC-DATA-001) | PRKA (park area) | Q351 |
+| Grand Canyon National Park | **5296401** | PRK (park) | Q220289 |
+| Great Barrier Reef | **2164628** | RF (reef) | Q7343 |
 | Galápagos Islands | **3658931** | ISLS (islands) | Q38095 |
 | Venice | **3164603** | PPLA (administrative city) | Q641 |
 | Papahānaumokuākea | **TBD** — requires NC GeoNames account lookup | — | Q787425 |
