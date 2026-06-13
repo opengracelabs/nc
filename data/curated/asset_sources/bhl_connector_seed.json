@@ -1,0 +1,133 @@
+{
+  "pages": [
+    {
+      "caption": "Acanthaster planci plate",
+      "common_names": [
+        "crown-of-thorns starfish"
+      ],
+      "gbif_match": {
+        "canonicalName": "Acanthaster planci",
+        "class": "Asteroidea",
+        "confidence": 99,
+        "family": "Acanthasteridae",
+        "genus": "Acanthaster",
+        "kingdom": "Animalia",
+        "matchType": "EXACT",
+        "order": "Valvatida",
+        "phylum": "Echinodermata",
+        "rank": "SPECIES",
+        "scientificName": "Acanthaster planci (Linnaeus, 1758)",
+        "species": "planci",
+        "status": "ACCEPTED",
+        "usageKey": 2279059
+      },
+      "has_illustration": true,
+      "height_px": 5200,
+      "iiif_manifest_url": "https://iiif.biodiversitylibrary.org/page/2001/manifest",
+      "illustration_type": "plate",
+      "image_url": "https://www.biodiversitylibrary.org/pageimage/2001",
+      "item_id": "bhl-item-1001",
+      "page_id": "page-2001",
+      "page_number": "Plate 12",
+      "page_type": "Plate",
+      "page_url": "https://www.biodiversitylibrary.org/page/2001",
+      "place_slug": "great-barrier-reef",
+      "scientific_names": [
+        "Acanthaster planci"
+      ],
+      "thumbnail_url": "https://www.biodiversitylibrary.org/pagethumb/2001",
+      "width_px": 4200
+    },
+    {
+      "caption": "Bison bison range plate",
+      "common_names": [
+        "American bison"
+      ],
+      "gbif_match": {
+        "canonicalName": "Bison bison",
+        "class": "Mammalia",
+        "confidence": 99,
+        "family": "Bovidae",
+        "genus": "Bison",
+        "kingdom": "Animalia",
+        "matchType": "EXACT",
+        "order": "Artiodactyla",
+        "phylum": "Chordata",
+        "rank": "SPECIES",
+        "scientificName": "Bison bison (Linnaeus, 1758)",
+        "species": "bison",
+        "status": "ACCEPTED",
+        "usageKey": 2441022
+      },
+      "has_illustration": true,
+      "height_px": 4600,
+      "iiif_manifest_url": "https://iiif.biodiversitylibrary.org/page/2002/manifest",
+      "illustration_type": "plate",
+      "image_url": "https://www.biodiversitylibrary.org/pageimage/2002",
+      "item_id": "bhl-item-1002",
+      "page_id": "page-2002",
+      "page_number": "Plate 4",
+      "page_type": "Plate",
+      "page_url": "https://www.biodiversitylibrary.org/page/2002",
+      "place_slug": "yellowstone",
+      "scientific_names": [
+        "Bison bison"
+      ],
+      "thumbnail_url": "https://www.biodiversitylibrary.org/pagethumb/2002",
+      "width_px": 3900
+    },
+    {
+      "caption": "Distribution notes without a plate image",
+      "has_illustration": false,
+      "item_id": "bhl-item-1002",
+      "page_id": "page-2003",
+      "page_number": "12",
+      "page_type": "Text",
+      "page_url": "https://www.biodiversitylibrary.org/page/2003",
+      "place_slug": "yellowstone",
+      "scientific_names": [
+        "Canis lupus"
+      ]
+    }
+  ],
+  "runtime": "NC-BHL-001",
+  "source_system": "BHL",
+  "titles": [
+    {
+      "collection_hints": [
+        "biodiversity-library",
+        "great-barrier-reef"
+      ],
+      "creator": "George Shaw; Frederick Polydore Nodder",
+      "item_id": "bhl-item-1001",
+      "publication_year": "1789",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "rights_status": "verified_pd",
+      "source_url": "https://www.biodiversitylibrary.org/bibliography/1001",
+      "theme_hints": [
+        "historic-natural-history",
+        "marine-life"
+      ],
+      "title": "The Naturalist's Miscellany",
+      "title_id": "bhl-title-001"
+    },
+    {
+      "collection_hints": [
+        "biodiversity-library",
+        "yellowstone"
+      ],
+      "creator": "United States Bureau of Biological Survey",
+      "item_id": "bhl-item-1002",
+      "publication_year": "1902",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "rights_status": "verified_pd",
+      "source_url": "https://www.biodiversitylibrary.org/bibliography/1002",
+      "theme_hints": [
+        "historic-natural-history",
+        "mammals"
+      ],
+      "title": "North American Fauna",
+      "title_id": "bhl-title-002"
+    }
+  ]
+}

@@ -6,6 +6,8 @@ from uuid import UUID
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
+from services.data.taxon_factory import build_taxon_factory_runtime
+
 from ..dependencies import DB, Auth
 
 router = APIRouter(prefix="/taxa", tags=["taxa"])
@@ -71,6 +73,21 @@ async def _candidate_detail(conn: DB, candidate_id: UUID) -> dict:
     result["evidence"] = [_decode(item) for item in evidence]
     result["bhl_search_targets"] = [_decode(item) for item in targets]
     return result
+
+
+@router.get("/factory")
+async def get_taxon_factory_runtime(auth: Auth) -> dict:
+    return build_taxon_factory_runtime()
+
+
+@router.get("/factory/candidates")
+async def list_taxon_factory_candidates(auth: Auth) -> list[dict]:
+    return build_taxon_factory_runtime()["taxon_candidates"]
+
+
+@router.get("/factory/summary")
+async def get_taxon_factory_summary(auth: Auth) -> dict:
+    return build_taxon_factory_runtime()["summary"]
 
 
 @router.get("/candidates")

@@ -8,6 +8,7 @@ import {
   ProvenanceGlance
 } from "@/components/CollectionExperience";
 import { earthriseCollection as collection } from "@/lib/collections";
+import { getCollectionTrustProfile } from "@/lib/trust";
 
 export const metadata: Metadata = {
   title: collection.seoTitle,
@@ -24,6 +25,8 @@ export const metadata: Metadata = {
 };
 
 export default function EarthriseCollectionPage() {
+  const trustProfile = getCollectionTrustProfile(collection.slug);
+
   return (
     <article className="collection-detail-page">
       <section className="collection-hero">
@@ -43,6 +46,16 @@ export default function EarthriseCollectionPage() {
             A curated suite of records documenting the moment humanity first saw its home from the
             cradle of the Moon.
           </p>
+          {trustProfile ? (
+            <div className="collection-trust-byline">
+              <Link href={`/curators/${trustProfile.curator.slug}`}>
+                {trustProfile.curator.byline}
+              </Link>
+              <Link href={`/institutions/${trustProfile.institution.slug}`}>
+                Source institution: {trustProfile.institution.name}
+              </Link>
+            </div>
+          ) : null}
         </div>
         <p className="hero-credit">{collection.credit}</p>
       </section>

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://natureandculture.example/standards/nc-pdps-v1.schema.json",
+  "title": "NC-PDPS v1 Public Domain Provenance Standard",
+  "type": "object",
+  "required": [
+    "standard",
+    "version",
+    "source_institution",
+    "source_identifier",
+    "rights_basis",
+    "attribution_text",
+    "provenance_chain"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "standard": {
+      "const": "NC-PDPS"
+    },
+    "version": {
+      "const": "v1"
+    },
+    "source_institution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_identifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rights_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attribution_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nonendorsement_notice": {
+      "type": "string"
+    },
+    "provenance_chain": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "step",
+          "title",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "step": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

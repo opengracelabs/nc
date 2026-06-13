@@ -1,0 +1,122 @@
+{
+  "source_list": "factory_smoke_places",
+  "records": [
+    {
+      "designation_type": "UNESCO",
+      "display_name": "Yellowstone",
+      "country": "United States",
+      "region": "North America",
+      "latitude": 44.6,
+      "longitude": -110.5,
+      "source_url": "https://whc.unesco.org/en/list/",
+      "authority_status": "unverified",
+      "ich_connections": [],
+      "public_domain_source_hints": [
+        "nara",
+        "loc",
+        "usgs"
+      ]
+    },
+    {
+      "designation_type": "Biosphere",
+      "display_name": "Sian Ka-an Biosphere Reserve",
+      "country": "Mexico",
+      "region": "North America",
+      "latitude": 19.5,
+      "longitude": -87.7,
+      "source_url": "https://www.unesco.org/en/mab",
+      "authority_status": "unverified",
+      "ich_connections": [],
+      "public_domain_source_hints": [
+        "nasa",
+        "gbif"
+      ]
+    },
+    {
+      "designation_type": "Geopark",
+      "display_name": "Arouca Geopark",
+      "country": "Portugal",
+      "region": "Europe",
+      "latitude": 40.9,
+      "longitude": -8.2,
+      "source_url": "https://www.unesco.org/en/iggp/geoparks",
+      "authority_status": "unverified",
+      "ich_connections": [],
+      "public_domain_source_hints": [
+        "europeana",
+        "wikimedia"
+      ]
+    },
+    {
+      "designation_type": "Ramsar",
+      "display_name": "Okavango Delta",
+      "country": "Botswana",
+      "region": "Africa",
+      "latitude": -19.3,
+      "longitude": 22.9,
+      "source_url": "https://rsis.ramsar.org/",
+      "authority_status": "unverified",
+      "ich_connections": [
+        "delta fishing knowledge"
+      ],
+      "public_domain_source_hints": [
+        "gbif",
+        "bhl",
+        "wikimedia"
+      ]
+    },
+    {
+      "designation_type": "ICH",
+      "display_name": "Pacific Wayfinding",
+      "country": "Multiple",
+      "region": "Oceania",
+      "latitude": null,
+      "longitude": null,
+      "source_url": "https://ich.unesco.org/",
+      "authority_status": "unverified",
+      "ich_connections": [
+        "traditional navigation",
+        "star knowledge"
+      ],
+      "public_domain_source_hints": [
+        "nasa",
+        "noaa",
+        "bhl"
+      ]
+    },
+    {
+      "designation_type": "Dark Sky",
+      "display_name": "Aoraki Mackenzie Dark Sky Reserve",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "latitude": -43.9,
+      "longitude": 170.5,
+      "source_url": "https://darksky.org/",
+      "authority_status": "unverified",
+      "ich_connections": [
+        "southern sky knowledge"
+      ],
+      "public_domain_source_hints": [
+        "nasa"
+      ]
+    },
+    {
+      "designation_type": "Marine Protected Area",
+      "display_name": "Papahanaumokuakea",
+      "country": "United States",
+      "region": "Oceania",
+      "latitude": 25.7,
+      "longitude": -171.7,
+      "source_url": "https://www.protectedplanet.net/",
+      "authority_status": "unverified",
+      "ich_connections": [
+        "ocean navigation"
+      ],
+      "public_domain_source_hints": [
+        "noaa",
+        "nasa",
+        "gbif"
+      ]
+    }
+  ]
+}

@@ -19,5 +19,10 @@ class Settings(BaseSettings):
 
     redis_url: str = "redis://localhost:6379/0"
 
+    neo4j_uri: str | None = None
+    neo4j_user: str = "neo4j"
+    neo4j_password: str = "nc-dev-password"
+    neo4j_database: str = "neo4j"
+
 
 settings = Settings()

@@ -1,5 +1,10 @@
 # Final Conversion Package v2: NC-FIRST-SALE
 
+> ⚠ **SUPERSEDED — DO NOT USE FOR PRODUCTION.**
+> FS-001 violations present (NARA false attribution on product page §1, email body §2, social caption §3, COA §4).
+> Authoritative production file: `docs/implementation/nc_first_sale_campaign_package.md`
+> Superseded by NC-WEB-001-LA (2026-06-12).
+
 **Subject:** Earthrise Master Restoration — Inaugural Sale
 **Asset:** NASA AS08-14-2383
 **Compliance:** Includes mandatory NASA attribution and non-endorsement disclaimers.

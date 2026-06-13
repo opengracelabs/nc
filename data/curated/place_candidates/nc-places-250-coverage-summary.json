@@ -1,0 +1,1275 @@
+{
+  "authority_gap_counts": {
+    "missing_coordinates": 43,
+    "needs_review": 0,
+    "source_observed_only": 218,
+    "unverified": 0
+  },
+  "canonical_identity_written": false,
+  "collection_family_counts": {
+    "biosphere_collection": 42,
+    "geopark_collection": 45,
+    "ich_collection": 43,
+    "wetland_collection": 45,
+    "world_heritage_collection": 43
+  },
+  "collection_family_gaps": {
+    "missing_expected_families": [
+      "dark_sky_collection",
+      "marine_collection"
+    ],
+    "review_or_hold_by_family": {
+      "geopark_collection": 45,
+      "ich_collection": 43,
+      "wetland_collection": 45
+    }
+  },
+  "designation_family_counts": {
+    "Biosphere": 42,
+    "Geopark": 45,
+    "ICH": 43,
+    "Ramsar": 45,
+    "UNESCO": 43
+  },
+  "map_points": [
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Ak-Zhayik",
+      "latitude": 46.9167,
+      "longitude": 51.75,
+      "place_slug": "ak-zhayik"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Al-Ahsa Oasis",
+      "latitude": 25.429444,
+      "longitude": 49.621944,
+      "place_slug": "al-ahsa-oasis"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Alakol",
+      "latitude": 46.1833,
+      "longitude": 81.7667,
+      "place_slug": "alakol"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Aland-Elbe-Niederung und Elbaue Jerichow",
+      "latitude": 52.75,
+      "longitude": 11.816666666667,
+      "place_slug": "aland-elbe-niederung-und-elbaue-jerichow"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Artists' Colony in Darmstadt",
+      "latitude": 49.87543334529,
+      "longitude": 8.6665039701752,
+      "place_slug": "artists-colony-in-darmstadt"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Arxan",
+      "latitude": 47.174166666667,
+      "longitude": 119.93888888889,
+      "place_slug": "arxan"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Aya",
+      "latitude": 32.0567,
+      "longitude": 131.1906,
+      "place_slug": "aya"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "A\u00eft Benhaddou",
+      "latitude": 31.05,
+      "longitude": -7.1333333333333,
+      "place_slug": "ait-benhaddou"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Babelsberg Park",
+      "latitude": 52.405386,
+      "longitude": 13.092721,
+      "place_slug": "babelsberg-park"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Bashkirskiyi Ural",
+      "latitude": 53.0022,
+      "longitude": 56.75,
+      "place_slug": "bashkirskiyi-ural"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Bhimbetka rock shelters",
+      "latitude": 22.93863333,
+      "longitude": 77.61438056,
+      "place_slug": "bhimbetka-rock-shelters"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Bohemian Paradise",
+      "latitude": 50.519722,
+      "longitude": 15.170556,
+      "place_slug": "bohemian-paradise"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Boyana Church",
+      "latitude": 42.644672222222,
+      "longitude": 23.266172222222,
+      "place_slug": "boyana-church"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Br\u00fa na B\u00f3inne",
+      "latitude": 53.69284,
+      "longitude": -6.44932,
+      "place_slug": "bru-na-boinne"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Bura'a",
+      "latitude": 15.11,
+      "longitude": 43.31,
+      "place_slug": "bura-a"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Cabo de Gata-N\u00edjar Natural Park",
+      "latitude": 36.9,
+      "longitude": -2.03,
+      "place_slug": "cabo-de-gata-nijar-natural-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Cahokia",
+      "latitude": 38.653888888889,
+      "longitude": -90.064444444444,
+      "place_slug": "cahokia"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Cairngorm Lochs",
+      "latitude": 57.066666666667,
+      "longitude": -3.7,
+      "place_slug": "cairngorm-lochs"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Caithness Lochs",
+      "latitude": 58.516666666667,
+      "longitude": -3.4333333333333,
+      "place_slug": "caithness-lochs"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Caldeir\u00e3o do Corvo",
+      "latitude": 39.7,
+      "longitude": -31.1,
+      "place_slug": "caldeirao-do-corvo"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Cangshan",
+      "latitude": 25.648888888889,
+      "longitude": 100.09805555556,
+      "place_slug": "cangshan"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Causses du Quercy",
+      "latitude": 44.593,
+      "longitude": 1.683,
+      "place_slug": "causses-du-quercy"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Cerrado",
+      "latitude": -14.005693888889,
+      "longitude": -47.684611111111,
+      "place_slug": "cerrado"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Chan Chan",
+      "latitude": -8.1105555555556,
+      "longitude": -79.075,
+      "place_slug": "chan-chan"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Chauvet Cave",
+      "latitude": 44.3881219,
+      "longitude": 4.4161408,
+      "place_slug": "chauvet-cave"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Cheongsong",
+      "latitude": 36.436111111111,
+      "longitude": 129.05694444444,
+      "place_slug": "cheongsong"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Ciletuh-Palabuhanratu Geopark",
+      "latitude": -6.7686111111111,
+      "longitude": 106.52611111111,
+      "place_slug": "ciletuh-palabuhanratu-geopark"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "City of Vicenza and the Palladian Villas of the Veneto",
+      "latitude": 45.55,
+      "longitude": 11.55,
+      "place_slug": "city-of-vicenza-and-the-palladian-villas-of-the-veneto"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Complexo Vulc\u00e2nico das Furnas",
+      "latitude": 37.75,
+      "longitude": -25.316666666667,
+      "place_slug": "complexo-vulcanico-das-furnas"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Dinosaur Provincial Park",
+      "latitude": 50.7617,
+      "longitude": -111.485,
+      "place_slug": "dinosaur-provincial-park"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Donauauen & Donaumoos",
+      "latitude": 48.466666666667,
+      "longitude": 10.216666666667,
+      "place_slug": "donauauen-donaumoos"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Dong Van Karst Plateau UNESCO Global Geopark",
+      "latitude": 23.192222222222,
+      "longitude": 105.19694444444,
+      "place_slug": "dong-van-karst-plateau-unesco-global-geopark"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Dunhuang Yardang National Geopark",
+      "latitude": 40.5305,
+      "longitude": 93.0643,
+      "place_slug": "dunhuang-yardang-national-geopark"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "East Coast Cape Barren Island Lagoons",
+      "latitude": -40.366666666667,
+      "longitude": 148.4,
+      "place_slug": "east-coast-cape-barren-island-lagoons"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "East Sanday Coast",
+      "latitude": 59.26667,
+      "longitude": -2.51667,
+      "place_slug": "east-sanday-coast"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Elbauen, Schnackenburg-Lauenburg",
+      "latitude": 53.116666666667,
+      "longitude": 11.066666666667,
+      "place_slug": "elbauen-schnackenburg-lauenburg"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Fuerteventura Biosphere reserve",
+      "latitude": 28.45,
+      "longitude": -13.85,
+      "place_slug": "fuerteventura-biosphere-reserve"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Garamba National Park",
+      "latitude": 4.19559,
+      "longitude": 29.48093,
+      "place_slug": "garamba-national-park"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Geoparque Mundial de la UNESCO Comarca Minera, Hidalgo",
+      "latitude": 20.214722222222,
+      "longitude": -98.730555555556,
+      "place_slug": "geoparque-mundial-de-la-unesco-comarca-minera-hidalgo"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Ger\u00eas-Xur\u00e9s Transboundary Biosphere Reserve",
+      "latitude": 41.95,
+      "longitude": -8.25,
+      "place_slug": "geres-xures-transboundary-biosphere-reserve"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Glarus thrust",
+      "latitude": 46.91667,
+      "longitude": 9.25,
+      "place_slug": "glarus-thrust"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Glenelg Estuary and Discovery Bay Wetlands",
+      "latitude": -38.083333333333,
+      "longitude": 141.11666666667,
+      "place_slug": "glenelg-estuary-and-discovery-bay-wetlands"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Glienicke Palace",
+      "latitude": 52.4142,
+      "longitude": 13.0953,
+      "place_slug": "glienicke-palace"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Gobustan State Historical and Cultural Reserve",
+      "latitude": 40.10555556,
+      "longitude": 49.38888889,
+      "place_slug": "gobustan-state-historical-and-cultural-reserve"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Gochang",
+      "latitude": 35.483333333333,
+      "longitude": 126.7,
+      "place_slug": "gochang"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Goguryeo tombs",
+      "latitude": 38.863055555556,
+      "longitude": 125.415,
+      "place_slug": "goguryeo-tombs"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Gouritz Cluster",
+      "latitude": -33.8681,
+      "longitude": 21.6753,
+      "place_slug": "gouritz-cluster"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Gran Canaria Biosphere Reserve",
+      "latitude": 27.95,
+      "longitude": -15.63,
+      "place_slug": "gran-canaria-biosphere-reserve"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Guangwushan-Nuoshuihe",
+      "latitude": 32.311666666667,
+      "longitude": 106.63638888889,
+      "place_slug": "guangwushan-nuoshuihe"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Gunbower Forest",
+      "latitude": -35.816666666667,
+      "longitude": 144.31666666667,
+      "place_slug": "gunbower-forest"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Hanma",
+      "latitude": 51.59,
+      "longitude": 122.6792,
+      "place_slug": "hanma"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Huanggang Dabieshan",
+      "latitude": 30.729444444444,
+      "longitude": 115.05361111111,
+      "place_slug": "huanggang-dabieshan"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Inlay Lake",
+      "latitude": 20.45,
+      "longitude": 96.8333,
+      "place_slug": "inlay-lake"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Island of Mozambique",
+      "latitude": -15.036666666667,
+      "longitude": 40.732777777778,
+      "place_slug": "island-of-mozambique"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Island of Pr\u00edncipe Biosphere Reserve",
+      "latitude": 1.583333,
+      "longitude": 7.383333,
+      "place_slug": "island-of-principe-biosphere-reserve"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Ismaninger Speichersee & Fischteichen",
+      "latitude": 48.216666666667,
+      "longitude": 11.666666666667,
+      "place_slug": "ismaninger-speichersee-fischteichen"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Izu Peninsula Geopark",
+      "latitude": 34.97269444,
+      "longitude": 138.93330556,
+      "place_slug": "izu-peninsula-geopark"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Ja\u00fa National Park",
+      "latitude": -2.1702777777778,
+      "longitude": -62.617222222222,
+      "place_slug": "jau-national-park"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Jeju Island UNESCO Global Geopark",
+      "latitude": 33.5,
+      "longitude": 126.57,
+      "place_slug": "jeju-island-unesco-global-geopark"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Kasubi Tombs",
+      "latitude": 0.32916666666667,
+      "longitude": 32.553333333333,
+      "place_slug": "kasubi-tombs"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Katon-Karagay",
+      "latitude": 49.3514,
+      "longitude": 86.7361,
+      "place_slug": "katon-karagay"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Keketouhai",
+      "latitude": 47.318055555556,
+      "longitude": 90.026388888889,
+      "place_slug": "keketouhai"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Kula-Salihli Geopark",
+      "latitude": 38.59638889,
+      "longitude": 28.6625,
+      "place_slug": "kula-salihli-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "La Palma",
+      "latitude": 28.68,
+      "longitude": -17.86,
+      "place_slug": "la-palma"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Laguna del Indio - Dique de los Espa\u00f1oles",
+      "latitude": -15.766666666667,
+      "longitude": -71.05,
+      "place_slug": "laguna-del-indio-dique-de-los-espanoles"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Lagunas de Palos y Las Madres",
+      "latitude": 37.15443202365,
+      "longitude": -6.8702723715466,
+      "place_slug": "lagunas-de-palos-y-las-madres"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Lake Feh\u00e9r at Kardosk\u00fat",
+      "latitude": 46.469654,
+      "longitude": 20.618883,
+      "place_slug": "lake-feher-at-kardoskut"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Lake V\u00e4nern Archipelago",
+      "latitude": 58.7289,
+      "longitude": 13.3211,
+      "place_slug": "lake-vanern-archipelago"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Langbiang",
+      "latitude": 12.0167,
+      "longitude": 108.45,
+      "place_slug": "langbiang"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Langkawi UNESCO Global Geopark",
+      "latitude": 6.33,
+      "longitude": 99.82,
+      "place_slug": "langkawi-unesco-global-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Lanzarote Biosphere reserve",
+      "latitude": 29.02,
+      "longitude": -13.64,
+      "place_slug": "lanzarote-biosphere-reserve"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Lanzarote and Chinijo Islands",
+      "latitude": 29.05,
+      "longitude": -13.6,
+      "place_slug": "lanzarote-and-chinijo-islands"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Las Loras Geopark",
+      "latitude": 42.655555555556,
+      "longitude": -4.1541666666667,
+      "place_slug": "las-loras-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Las Sierras de B\u00e9jar y Francia Biosphere Reserve",
+      "latitude": 40.23,
+      "longitude": -5.46,
+      "place_slug": "las-sierras-de-bejar-y-francia-biosphere-reserve"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Las Sierras de Cazorla y Segura Biosphere Reserve",
+      "latitude": 38.15,
+      "longitude": -2.7,
+      "place_slug": "las-sierras-de-cazorla-y-segura-biosphere-reserve"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Ledro Alps and Judicaria",
+      "latitude": 46.031,
+      "longitude": 10.867,
+      "place_slug": "ledro-alps-and-judicaria"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Lena Pillars",
+      "latitude": 61.106944444444,
+      "longitude": 127.36166666667,
+      "place_slug": "lena-pillars"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Lewis Peatlands",
+      "latitude": 58.25,
+      "longitude": -6.5833,
+      "place_slug": "lewis-peatlands"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Liberty Island",
+      "latitude": 40.69,
+      "longitude": -74.045,
+      "place_slug": "liberty-island"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Loch of Kinnordy",
+      "latitude": 56.675613,
+      "longitude": -3.045408,
+      "place_slug": "loch-of-kinnordy"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Los Kat\u00edos National Park",
+      "latitude": 7.8,
+      "longitude": -77.15,
+      "place_slug": "los-katios-national-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Madara Rider",
+      "latitude": 43.2773746,
+      "longitude": 27.1188945,
+      "place_slug": "madara-rider"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Madriu-Perafita-Claror Valley",
+      "latitude": 42.492147,
+      "longitude": 1.594426,
+      "place_slug": "madriu-perafita-claror-valley"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Maiella National Park",
+      "latitude": 42.08194444,
+      "longitude": 14.06,
+      "place_slug": "maiella-national-park"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Mao'er Mountain",
+      "latitude": 25.7333,
+      "longitude": 110.3166,
+      "place_slug": "mao-er-mountain"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Margravial Opera House",
+      "latitude": 49.944344697677,
+      "longitude": 11.578663620864,
+      "place_slug": "margravial-opera-house"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Mari\u00f1as Coru\u00f1esas e Terras do Mandeo",
+      "latitude": 43.2269,
+      "longitude": -8.2884,
+      "place_slug": "marinas-corunesas-e-terras-do-mandeo"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Middle Zambezi",
+      "latitude": -15.92,
+      "longitude": 29.45,
+      "place_slug": "middle-zambezi"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Mixteca Alta Unesco Global Geopark",
+      "latitude": 17.518055555556,
+      "longitude": -97.342222222222,
+      "place_slug": "mixteca-alta-unesco-global-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Mont-Viso / Area della Biosfera del Monviso Transboundary Biosphere Reserve (France/Italy)",
+      "latitude": 44.62,
+      "longitude": 7.4211111111111,
+      "place_slug": "mont-viso-area-della-biosfera-del-monviso-transboundary-biosphere-reserve-france-italy"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Moray and Nairn Coast",
+      "latitude": 57.64833,
+      "longitude": -3.73,
+      "place_slug": "moray-and-nairn-coast"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Mount Apoi Geopark",
+      "latitude": 42.107777777778,
+      "longitude": 143.02555555556,
+      "place_slug": "mount-apoi-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Mount Chilbo",
+      "latitude": 41.4333,
+      "longitude": 129.5736,
+      "place_slug": "mount-chilbo"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Mount Danxia",
+      "latitude": 25.031944444444,
+      "longitude": 113.74611111111,
+      "place_slug": "mount-danxia"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Mountain Sewu Geopark",
+      "latitude": -8.043888888,
+      "longitude": 110.776111111,
+      "place_slug": "mountain-sewu-geopark"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Mudeungsan UNESCO Global Geopark",
+      "latitude": 35.134166666667,
+      "longitude": 126.95555555556,
+      "place_slug": "mudeungsan-unesco-global-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Mujib Biosphere Reserve",
+      "latitude": 31.455484,
+      "longitude": 35.593855,
+      "place_slug": "mujib-biosphere-reserve"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Mura Drava Danube Transboundary Biosphere Reserve (Croatia/Hungary)",
+      "latitude": 45.61,
+      "longitude": 18.56,
+      "place_slug": "mura-drava-danube-transboundary-biosphere-reserve-croatia-hungary"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Muroto Geopark",
+      "latitude": 33.242778,
+      "longitude": 134.176389,
+      "place_slug": "muroto-geopark"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Narran Lake Nature Reserve",
+      "latitude": -29.716666666667,
+      "longitude": 147.41666666667,
+      "place_slug": "narran-lake-nature-reserve"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Ngorongoro Lengai",
+      "latitude": -2.943,
+      "longitude": 35.585,
+      "place_slug": "ngorongoro-lengai"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Niederelbe, Barnkrug-Otterndorf",
+      "latitude": 53.766666666667,
+      "longitude": 9.1166666666667,
+      "place_slug": "niederelbe-barnkrug-otterndorf"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Niederung der Untere Havel/G\u00fclper See, Schollener See",
+      "latitude": 52.75,
+      "longitude": 12.216666666667,
+      "place_slug": "niederung-der-untere-havel-gulper-see-schollener-see"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Niubeiliang",
+      "latitude": 33.8558,
+      "longitude": 108.915,
+      "place_slug": "niubeiliang"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Ohrid-Prespa Transboundary Biosphere Reserve (Republic of Albania / North Macedonia)",
+      "latitude": 41.01,
+      "longitude": 20.7,
+      "place_slug": "ohrid-prespa-transboundary-biosphere-reserve-republic-of-albania-north-macedonia"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Olympic National Park",
+      "latitude": 47.7,
+      "longitude": -123.75,
+      "place_slug": "olympic-national-park"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Ore of the Alps Global Geopark",
+      "latitude": 47.37,
+      "longitude": 13.2,
+      "place_slug": "ore-of-the-alps-global-geopark"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Ornithological Park of Mendixur",
+      "latitude": 42.890037,
+      "longitude": -2.53977,
+      "place_slug": "ornithological-park-of-mendixur"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Or\u00edgens UNESCO Global Geopark",
+      "latitude": 42.23792,
+      "longitude": 0.87017,
+      "place_slug": "origens-unesco-global-geopark"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Ostseeboddengew\u00e4sser Westr\u00fcgen-Hiddensee-Zingst",
+      "latitude": 54.5,
+      "longitude": 12.75,
+      "place_slug": "ostseeboddengewasser-westrugen-hiddensee-zingst"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Ostufer M\u00fcritz",
+      "latitude": 53.45,
+      "longitude": 12.816666666667,
+      "place_slug": "ostufer-muritz"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Parco Geominerario della Sardegna",
+      "latitude": 39.312771345084,
+      "longitude": 8.5269409998158,
+      "place_slug": "parco-geominerario-della-sardegna"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Parco naturale regionale del Beigua",
+      "latitude": 44.43277778,
+      "longitude": 8.54861111,
+      "place_slug": "parco-naturale-regionale-del-beigua"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Pateira de Fermentelos Lake and \u00c1gueda and C\u00e9rtima Valleys",
+      "latitude": 40.5752,
+      "longitude": -8.5158,
+      "place_slug": "pateira-de-fermentelos-lake-and-agueda-and-certima-valleys"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Peel-Yalgorup system",
+      "latitude": -32.816666666667,
+      "longitude": 115.7,
+      "place_slug": "peel-yalgorup-system"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Perc\u00e9 Geopark",
+      "latitude": 48.521666666667,
+      "longitude": -64.216944444444,
+      "place_slug": "perce-geopark"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Pollino National Park",
+      "latitude": 39.9406,
+      "longitude": 16.13584,
+      "place_slug": "pollino-national-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Putorana Plateau",
+      "latitude": 69.0,
+      "longitude": 93.0,
+      "place_slug": "putorana-plateau"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Q24464000",
+      "latitude": -32.454155555556,
+      "longitude": -67.027588888889,
+      "place_slug": "q24464000"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Q27961254",
+      "latitude": 37.429463694363,
+      "longitude": -4.8217698384225,
+      "place_slug": "q27961254"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Q305044",
+      "latitude": 25.03111111,
+      "longitude": 88.97694444,
+      "place_slug": "q305044"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Q367395",
+      "latitude": 47.51056,
+      "longitude": 19.0713,
+      "place_slug": "q367395"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Q95974444",
+      "latitude": -22.166666666667,
+      "longitude": -67.4,
+      "place_slug": "q95974444"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Quirigu\u00e1",
+      "latitude": 15.269444444444,
+      "longitude": -89.040277777778,
+      "place_slug": "quirigua"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Real Sitio de San Ildefonso-El Espinar Biosphere Reserve",
+      "latitude": 40.7903,
+      "longitude": -4.0985,
+      "place_slug": "real-sitio-de-san-ildefonso-el-espinar-biosphere-reserve"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Reykjanes",
+      "latitude": 63.973055555556,
+      "longitude": -22.516666666667,
+      "place_slug": "reykjanes"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Rheinauen zwischen Eltville und Bingen",
+      "latitude": 50.0,
+      "longitude": 8.0,
+      "place_slug": "rheinauen-zwischen-eltville-und-bingen"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Ria Formosa",
+      "latitude": 37.043918,
+      "longitude": -7.741066,
+      "place_slug": "ria-formosa"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Ria Formosa Nature Park",
+      "latitude": 37.063181,
+      "longitude": -7.723598,
+      "place_slug": "ria-formosa-nature-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Roman Monuments, Cathedral of St. Peter and Church of Our Lady in Trier UNESCO World Heritage Site",
+      "latitude": 49.75,
+      "longitude": 6.63306,
+      "place_slug": "roman-monuments-cathedral-of-st-peter-and-church-of-our-lady-in-trier-unesco-world-heritage-site"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "R\u00edo Eo, Oscos y Terras de Buron Biosphere Reserve",
+      "latitude": 43.425,
+      "longitude": -7.151,
+      "place_slug": "rio-eo-oscos-y-terras-de-buron-biosphere-reserve"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Sacred Island of Okinoshima and Associated Sites in the Munakata Region",
+      "latitude": 34.245,
+      "longitude": 130.1056,
+      "place_slug": "sacred-island-of-okinoshima-and-associated-sites-in-the-munakata-region"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Salonga National Park",
+      "latitude": -2.0,
+      "longitude": 21.0,
+      "place_slug": "salonga-national-park"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "San'in Kaigan Geopark",
+      "latitude": 35.588,
+      "longitude": 134.8043,
+      "place_slug": "san-in-kaigan-geopark"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Sand River Dam",
+      "latitude": -25.992,
+      "longitude": 31.704,
+      "place_slug": "sand-river-dam"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Satun Geopark",
+      "latitude": 7.0986111111111,
+      "longitude": 99.825833333333,
+      "place_slug": "satun-geopark"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Schleswig-Holstein Wadden Sea and adjacent areas",
+      "latitude": 54.5,
+      "longitude": 8.6666666666667,
+      "place_slug": "schleswig-holstein-wadden-sea-and-adjacent-areas"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Shoalwater and Corio Bays Area",
+      "latitude": -22.55,
+      "longitude": 150.48333333333,
+      "place_slug": "shoalwater-and-corio-bays-area"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Sierra Norte de Sevilla Natural Park",
+      "latitude": 37.93138889,
+      "longitude": -5.70472222,
+      "place_slug": "sierra-norte-de-sevilla-natural-park"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Sierras Subb\u00e9ticas Natural Park",
+      "latitude": 37.451944444444,
+      "longitude": -4.3358333333333,
+      "place_slug": "sierras-subbeticas-natural-park"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Sila",
+      "latitude": 39.3406,
+      "longitude": 16.4417,
+      "place_slug": "sila"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Silver Flowe",
+      "latitude": 55.1175,
+      "longitude": -4.4022222222222,
+      "place_slug": "silver-flowe"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Sitia",
+      "latitude": 35.166944444444,
+      "longitude": 26.116666666667,
+      "place_slug": "sitia"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Snake Island, Laotie Mountain",
+      "latitude": 38.8394,
+      "longitude": 121.1108,
+      "place_slug": "snake-island-laotie-mountain"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Sobrarbe Geopark",
+      "latitude": 42.484418836662,
+      "longitude": 0.093992102760882,
+      "place_slug": "sobrarbe-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Songor",
+      "latitude": 6.0069444444444,
+      "longitude": 0.31666666666667,
+      "place_slug": "songor"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "South Tayside Goose Roosts",
+      "latitude": 56.264306,
+      "longitude": -3.832452,
+      "place_slug": "south-tayside-goose-roosts"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "South Uist Machair and Lochs",
+      "latitude": 57.31625,
+      "longitude": -7.34832,
+      "place_slug": "south-uist-machair-and-lochs"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Stone Forest",
+      "latitude": 24.8178,
+      "longitude": 103.325,
+      "place_slug": "stone-forest"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Stone spheres of Costa Rica",
+      "latitude": 8.91138889,
+      "longitude": -83.4775,
+      "place_slug": "stone-spheres-of-costa-rica"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Stonehammer Geopark",
+      "latitude": 45.579444444444,
+      "longitude": -65.544444444444,
+      "place_slug": "stonehammer-geopark"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Tadami Biosphere Reserve",
+      "latitude": 37.2872,
+      "longitude": 139.2553,
+      "place_slug": "tadami-biosphere-reserve"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Tadrart Acacus",
+      "latitude": 24.833429166667,
+      "longitude": 10.333319444444,
+      "place_slug": "tadrart-acacus"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Taka Bonerate-Kepulauan Selayar",
+      "latitude": -6.6431,
+      "longitude": 121.3728,
+      "place_slug": "taka-bonerate-kepulauan-selayar"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Tang-e-Sayad & Sabzkuh",
+      "latitude": 31.54,
+      "longitude": 50.2,
+      "place_slug": "tang-e-sayad-sabzkuh"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Ta\u00ef National Park",
+      "latitude": 5.75,
+      "longitude": -7.6666666666667,
+      "place_slug": "tai-national-park"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Terres de l\u2019Ebre, Catalonia Biosphere Reserve",
+      "latitude": 40.7088,
+      "longitude": 0.5769,
+      "place_slug": "terres-de-lebre-catalonia-biosphere-reserve"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "The Gearagh",
+      "latitude": 51.885,
+      "longitude": -8.999,
+      "place_slug": "the-gearagh"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "The Karst",
+      "latitude": 45.4,
+      "longitude": 13.79,
+      "place_slug": "the-karst"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Thracian Tomb of Kazanlak",
+      "latitude": 42.625555555556,
+      "longitude": 25.399166666667,
+      "place_slug": "thracian-tomb-of-kazanlak"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Tingon",
+      "latitude": 60.53,
+      "longitude": -1.54,
+      "place_slug": "tingon"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Trataw mountain",
+      "latitude": 53.554444444444,
+      "longitude": 56.098888888889,
+      "place_slug": "trataw-mountain"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Unterer Inn, Haiming-Neuhaus",
+      "latitude": 48.316666666667,
+      "longitude": 13.15,
+      "place_slug": "unterer-inn-haiming-neuhaus"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Unteres Odertal, Schwedt",
+      "latitude": 53.066666666667,
+      "longitude": 14.316666666667,
+      "place_slug": "unteres-odertal-schwedt"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Vikos\u2013Ao\u00f6s National Park",
+      "latitude": 39.92472222,
+      "longitude": 20.76194444,
+      "place_slug": "vikosaoos-national-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Vredefort crater",
+      "latitude": -26.816666666667,
+      "longitude": 27.416666666667,
+      "place_slug": "vredefort-crater"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Waddensea Area",
+      "latitude": 52.92,
+      "longitude": 5.79,
+      "place_slug": "waddensea-area"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Wattenmeer, Jadebusen & westliche Weserm\u00fcndung",
+      "latitude": 53.666666666667,
+      "longitude": 8.3166666666667,
+      "place_slug": "wattenmeer-jadebusen-westliche-wesermundung"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Wattenmeer, Ostfriesisches Wattenmeer & Dollart",
+      "latitude": 53.7,
+      "longitude": 7.35,
+      "place_slug": "wattenmeer-ostfriesisches-wattenmeer-dollart"
+    },
+    {
+      "designation_family": "Ramsar",
+      "display_name": "Weserstaustufe Schl\u00fcsselburg",
+      "latitude": 52.45,
+      "longitude": 8.9666666666667,
+      "place_slug": "weserstaustufe-schlusselburg"
+    },
+    {
+      "designation_family": "Geopark",
+      "display_name": "Wudalianchi Geological Park",
+      "latitude": 48.6667,
+      "longitude": 126.222,
+      "place_slug": "wudalianchi-geological-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "Yungang Grottoes",
+      "latitude": 40.109722222222,
+      "longitude": 113.12222222222,
+      "place_slug": "yungang-grottoes"
+    },
+    {
+      "designation_family": "Biosphere",
+      "display_name": "Ziarat Juniper Forest",
+      "latitude": 30.3983,
+      "longitude": 67.7333,
+      "place_slug": "ziarat-juniper-forest"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "iSimangaliso Wetland Park",
+      "latitude": -27.8389,
+      "longitude": 32.55,
+      "place_slug": "isimangaliso-wetland-park"
+    },
+    {
+      "designation_family": "UNESCO",
+      "display_name": "pont Saint-B\u00e9n\u00e9zet",
+      "latitude": 43.953888888889,
+      "longitude": 4.805,
+      "place_slug": "pont-saint-benezet"
+    }
+  ],
+  "mapped_candidates": 175,
+  "missing_coordinate_candidates": 43,
+  "region_counts": {
+    "Africa": 15,
+    "Asia": 48,
+    "Central America": 2,
+    "Eurasia": 6,
+    "Europe": 96,
+    "North America": 8,
+    "Oceania": 6,
+    "South America": 7,
+    "Transregional": 30
+  },
+  "total_candidates": 218
+}

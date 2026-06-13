@@ -7,6 +7,10 @@ from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from services.product.audit import build_audit_event
+from services.product.commerce_runtime_v2 import (
+    SEED_COLLECTION_SOURCES,
+    build_commerce_runtime_v2,
+)
 from services.product.export import build_product_snapshot_export
 from services.product.provider.manual import (
     build_manual_export_manifest,
@@ -175,6 +179,19 @@ async def _write_audit(conn: DB, audit: dict, package_id: UUID | str | None = No
         audit["event_sha256"],
     )
 
+
+
+@router.get("/commerce-runtime-v2")
+async def get_commerce_runtime_v2(auth: Auth) -> dict:
+    return build_commerce_runtime_v2()
+
+
+@router.get("/commerce-runtime-v2/{collection_slug}")
+async def get_commerce_runtime_v2_collection(collection_slug: str, auth: Auth) -> dict:
+    source = SEED_COLLECTION_SOURCES.get(collection_slug)
+    if not source:
+        raise HTTPException(404, "Commerce Runtime v2 collection source not found")
+    return build_commerce_runtime_v2(source)
 
 @router.get("/lines")
 async def list_product_lines(auth: Auth, conn: DB, status: str | None = Query(None)) -> list[dict]:

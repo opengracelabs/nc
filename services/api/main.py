@@ -3,12 +3,18 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from services.ai import router as ai_router
+
 from .config import settings
 from .database import close_pool, init_pool
 from .routers import (
+    assets,
     collections,
     discovery,
+    graph,
+    discover,
     health,
+    io,
     knowledge,
     pilot,
     places,
@@ -43,6 +49,8 @@ app.add_middleware(
 )
 
 app.include_router(health.router)
+app.include_router(io.router)
+app.include_router(assets.router)
 app.include_router(sources.router)
 app.include_router(places.router)
 app.include_router(knowledge.router)
@@ -52,3 +60,6 @@ app.include_router(research.router)
 app.include_router(collections.router)
 app.include_router(taxa.router)
 app.include_router(discovery.router)
+app.include_router(discover.router)
+app.include_router(graph.router)
+app.include_router(ai_router.router)

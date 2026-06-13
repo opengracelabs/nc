@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://natureandculture.example/standards/nc-coas-v1.schema.json",
+  "title": "NC-COAS v1 Certificate of Authenticity Standard",
+  "type": "object",
+  "required": [
+    "standard",
+    "version",
+    "certificate_id",
+    "work_title",
+    "collection_title",
+    "source_identifier",
+    "verification_status",
+    "signatory_name",
+    "signatory_title",
+    "curator_statement",
+    "edition_registry_ids"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "standard": {
+      "const": "NC-COAS"
+    },
+    "version": {
+      "const": "v1"
+    },
+    "certificate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "work_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collection_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_institution": {
+      "type": "string"
+    },
+    "source_identifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rights_basis": {
+      "type": "string"
+    },
+    "verification_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "curator_statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "edition_registry_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "signatory_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signatory_title": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

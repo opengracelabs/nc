@@ -1,0 +1,13 @@
+CREATE CONSTRAINT nc_place_id IF NOT EXISTS FOR (n:Place) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_collection_id IF NOT EXISTS FOR (n:Collection) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_product_id IF NOT EXISTS FOR (n:Product) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_asset_id IF NOT EXISTS FOR (n:Asset) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_species_id IF NOT EXISTS FOR (n:Species) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_person_id IF NOT EXISTS FOR (n:Person) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_institution_id IF NOT EXISTS FOR (n:Institution) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_theme_id IF NOT EXISTS FOR (n:Theme) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_event_id IF NOT EXISTS FOR (n:Event) REQUIRE n.id IS UNIQUE;
+CREATE CONSTRAINT nc_expedition_id IF NOT EXISTS FOR (n:Expedition) REQUIRE n.id IS UNIQUE;
+CREATE INDEX nc_place_slug IF NOT EXISTS FOR (n:Place) ON (n.slug);
+CREATE INDEX nc_collection_slug IF NOT EXISTS FOR (n:Collection) ON (n.slug);
+CREATE INDEX nc_asset_slug IF NOT EXISTS FOR (n:Asset) ON (n.slug);

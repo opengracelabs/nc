@@ -1,0 +1,1704 @@
+[
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "geology and preservation",
+    "country": "United States",
+    "display_name": "Yellowstone",
+    "place_slug": "yellowstone",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "deep time landscapes",
+    "country": "United States",
+    "display_name": "Grand Canyon",
+    "place_slug": "grand-canyon",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "marine biodiversity",
+    "country": "Australia",
+    "display_name": "Great Barrier Reef",
+    "place_slug": "great-barrier-reef",
+    "place_type": "reef",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "planetary perspective",
+    "country": "Moon orbit",
+    "display_name": "Earthrise",
+    "place_slug": "earthrise",
+    "place_type": "space_viewpoint",
+    "public_domain_potential": "high",
+    "region": "Space",
+    "risk_level": "low",
+    "source_hints": [
+      "nasa"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "wilderness photography",
+    "country": "United States",
+    "display_name": "Yosemite",
+    "place_slug": "yosemite",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "sandstone canyons",
+    "country": "United States",
+    "display_name": "Zion",
+    "place_slug": "zion",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "geology and night sky",
+    "country": "United States",
+    "display_name": "Bryce Canyon",
+    "place_slug": "bryce-canyon",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "desert arches",
+    "country": "United States",
+    "display_name": "Arches",
+    "place_slug": "arches",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "desert iconography",
+    "country": "United States",
+    "display_name": "Monument Valley",
+    "place_slug": "monument-valley",
+    "place_type": "cultural_landscape",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "wetlands and species",
+    "country": "United States",
+    "display_name": "Everglades",
+    "place_slug": "everglades",
+    "place_type": "wetland",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "mountains and wildlife",
+    "country": "United States",
+    "display_name": "Denali",
+    "place_slug": "denali",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "volcanology",
+    "country": "United States",
+    "display_name": "Hawaii Volcanoes",
+    "place_slug": "hawaii-volcanoes",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "Oceania",
+    "risk_level": "low",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ancient forests",
+    "country": "United States",
+    "display_name": "Redwood",
+    "place_slug": "redwood",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "temperate rainforest",
+    "country": "United States",
+    "display_name": "Olympic National Park",
+    "place_slug": "olympic-national-park",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ice and alpine ecology",
+    "country": "United States",
+    "display_name": "Glacier National Park",
+    "place_slug": "glacier-national-park",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "coastal granite",
+    "country": "United States",
+    "display_name": "Acadia",
+    "place_slug": "acadia",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "alpine ecology",
+    "country": "United States",
+    "display_name": "Rocky Mountain National Park",
+    "place_slug": "rocky-mountain-national-park",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "biodiversity and mist",
+    "country": "United States",
+    "display_name": "Great Smoky Mountains",
+    "place_slug": "great-smoky-mountains",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "subterranean worlds",
+    "country": "United States",
+    "display_name": "Mammoth Cave",
+    "place_slug": "mammoth-cave",
+    "place_type": "cave_system",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "desert extremes",
+    "country": "United States",
+    "display_name": "Death Valley",
+    "place_slug": "death-valley",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "evolution and islands",
+    "country": "Ecuador",
+    "display_name": "Galapagos Islands",
+    "place_slug": "galapagos",
+    "place_type": "archipelago",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "tropical biodiversity",
+    "country": "Brazil",
+    "display_name": "Amazon Rainforest",
+    "place_slug": "amazon-rainforest",
+    "place_type": "rainforest",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "waterfalls and rainforest",
+    "country": "Argentina/Brazil",
+    "display_name": "Iguazu Falls",
+    "place_slug": "iguazu-falls",
+    "place_type": "waterfall",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ice and mountains",
+    "country": "Argentina/Chile",
+    "display_name": "Patagonia",
+    "place_slug": "patagonia",
+    "place_type": "region",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "granite towers",
+    "country": "Chile",
+    "display_name": "Torres del Paine",
+    "place_slug": "torres-del-paine",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "dry worlds and astronomy",
+    "country": "Chile",
+    "display_name": "Atacama Desert",
+    "place_slug": "atacama-desert",
+    "place_type": "desert",
+    "public_domain_potential": "high",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "mountain archaeology",
+    "country": "Peru",
+    "display_name": "Machu Picchu",
+    "place_slug": "machu-picchu",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "aerial archaeology",
+    "country": "Peru",
+    "display_name": "Nazca Lines",
+    "place_slug": "nazca-lines",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "vertical landscapes",
+    "country": "Venezuela",
+    "display_name": "Angel Falls",
+    "place_slug": "angel-falls",
+    "place_type": "waterfall",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "salt flats and reflection",
+    "country": "Bolivia",
+    "display_name": "Salar de Uyuni",
+    "place_slug": "salar-de-uyuni",
+    "place_type": "salt_flat",
+    "public_domain_potential": "medium",
+    "region": "South America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "migration and wildlife",
+    "country": "Tanzania",
+    "display_name": "Serengeti",
+    "place_slug": "serengeti",
+    "place_type": "savanna",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "mountain ecology",
+    "country": "Tanzania",
+    "display_name": "Kilimanjaro",
+    "place_slug": "kilimanjaro",
+    "place_type": "mountain",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "waterfall spectacle",
+    "country": "Zambia/Zimbabwe",
+    "display_name": "Victoria Falls",
+    "place_slug": "victoria-falls",
+    "place_type": "waterfall",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "desert earth observation",
+    "country": "Multiple",
+    "display_name": "Sahara",
+    "place_slug": "sahara",
+    "place_type": "desert",
+    "public_domain_potential": "high",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "inland delta biodiversity",
+    "country": "Botswana",
+    "display_name": "Okavango Delta",
+    "place_slug": "okavango-delta",
+    "place_type": "wetland",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "dunes and coast",
+    "country": "Namibia",
+    "display_name": "Namib Desert",
+    "place_slug": "namib-desert",
+    "place_type": "desert",
+    "public_domain_potential": "high",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "crater ecosystems",
+    "country": "Tanzania",
+    "display_name": "Ngorongoro Crater",
+    "place_slug": "ngorongoro-crater",
+    "place_type": "caldera",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "endemic biodiversity",
+    "country": "Madagascar",
+    "display_name": "Madagascar Rainforests",
+    "place_slug": "madagascar-rainforests",
+    "place_type": "rainforest",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "botanical landscapes",
+    "country": "South Africa",
+    "display_name": "Table Mountain",
+    "place_slug": "table-mountain",
+    "place_type": "mountain",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "extreme geology",
+    "country": "Ethiopia",
+    "display_name": "Danakil Depression",
+    "place_slug": "danakil-depression",
+    "place_type": "geologic_region",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "alpine culture and ice",
+    "country": "Multiple",
+    "display_name": "Alps",
+    "place_slug": "alps",
+    "place_type": "mountain_range",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "mountain exploration",
+    "country": "France/Italy",
+    "display_name": "Mont Blanc",
+    "place_slug": "mont-blanc",
+    "place_type": "mountain",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "mountain iconography",
+    "country": "Switzerland/Italy",
+    "display_name": "Matterhorn",
+    "place_slug": "matterhorn",
+    "place_type": "mountain",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "lagoon urbanism",
+    "country": "Italy",
+    "display_name": "Venice",
+    "place_slug": "venice",
+    "place_type": "city",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "classical cities",
+    "country": "Italy",
+    "display_name": "Rome",
+    "place_slug": "rome",
+    "place_type": "city",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "classical archaeology",
+    "country": "Greece",
+    "display_name": "Athens",
+    "place_slug": "athens",
+    "place_type": "city",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "prehistoric monuments",
+    "country": "United Kingdom",
+    "display_name": "Stonehenge",
+    "place_slug": "stonehenge",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "geology and romantic travel",
+    "country": "United Kingdom",
+    "display_name": "Staffa",
+    "place_slug": "staffa",
+    "place_type": "island",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "basalt formations",
+    "country": "United Kingdom",
+    "display_name": "Giant's Causeway",
+    "place_slug": "giants-causeway",
+    "place_type": "geologic_site",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "lakes and waterfalls",
+    "country": "Croatia",
+    "display_name": "Plitvice Lakes",
+    "place_slug": "plitvice-lakes",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "fjord landscapes",
+    "country": "Norway",
+    "display_name": "Fjordland",
+    "place_slug": "fjordland",
+    "place_type": "fjord_region",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "volcanic islands",
+    "country": "Greece",
+    "display_name": "Santorini",
+    "place_slug": "santorini",
+    "place_type": "island",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "river castles",
+    "country": "France",
+    "display_name": "Loire Valley",
+    "place_slug": "loire-valley",
+    "place_type": "cultural_landscape",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "rock settlements",
+    "country": "Turkey",
+    "display_name": "Cappadocia",
+    "place_slug": "cappadocia",
+    "place_type": "geologic_cultural_landscape",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "highest mountains",
+    "country": "Multiple",
+    "display_name": "Himalayas",
+    "place_slug": "himalayas",
+    "place_type": "mountain_range",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "high-altitude exploration",
+    "country": "Nepal/China",
+    "display_name": "Mount Everest",
+    "place_slug": "mount-everest",
+    "place_type": "mountain",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "sacred rivers",
+    "country": "India/Bangladesh",
+    "display_name": "Ganges",
+    "place_slug": "ganges",
+    "place_type": "river",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "high",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "temple landscapes",
+    "country": "Cambodia",
+    "display_name": "Angkor",
+    "place_slug": "angkor",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "buddhist monuments",
+    "country": "Indonesia",
+    "display_name": "Borobudur",
+    "place_slug": "borobudur",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "island culture and biodiversity",
+    "country": "Indonesia",
+    "display_name": "Bali",
+    "place_slug": "bali",
+    "place_type": "island",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "sacred mountain imagery",
+    "country": "Japan",
+    "display_name": "Mount Fuji",
+    "place_slug": "mount-fuji",
+    "place_type": "mountain",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "temples and seasonal landscapes",
+    "country": "Japan",
+    "display_name": "Kyoto",
+    "place_slug": "kyoto",
+    "place_type": "city",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "frontier architecture",
+    "country": "China",
+    "display_name": "Great Wall of China",
+    "place_slug": "great-wall-of-china",
+    "place_type": "cultural_landscape",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "mountain painting landscapes",
+    "country": "China",
+    "display_name": "Huangshan",
+    "place_slug": "huangshan",
+    "place_type": "mountain_range",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "sandstone pillars",
+    "country": "China",
+    "display_name": "Zhangjiajie",
+    "place_slug": "zhangjiajie",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "river deltas",
+    "country": "Vietnam",
+    "display_name": "Mekong Delta",
+    "place_slug": "mekong-delta",
+    "place_type": "delta",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "karst seascapes",
+    "country": "Vietnam",
+    "display_name": "Ha Long Bay",
+    "place_slug": "ha-long-bay",
+    "place_type": "bay",
+    "public_domain_potential": "high",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "rock-cut architecture",
+    "country": "Jordan",
+    "display_name": "Petra",
+    "place_slug": "petra",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "medium",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "salt lakes",
+    "country": "Jordan/Israel/Palestine",
+    "display_name": "Dead Sea",
+    "place_slug": "dead-sea",
+    "place_type": "lake",
+    "public_domain_potential": "medium",
+    "region": "Asia",
+    "risk_level": "high",
+    "source_hints": [
+      "met",
+      "wikimedia",
+      "loc"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "sacred desert landscapes",
+    "country": "Australia",
+    "display_name": "Uluru",
+    "place_slug": "uluru",
+    "place_type": "monolith",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "high",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "wetlands and rock art",
+    "country": "Australia",
+    "display_name": "Kakadu",
+    "place_slug": "kakadu",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ancient rainforest",
+    "country": "Australia",
+    "display_name": "Daintree",
+    "place_slug": "daintree",
+    "place_type": "rainforest",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "temperate wilderness",
+    "country": "Australia",
+    "display_name": "Tasmanian Wilderness",
+    "place_slug": "tasmanian-wilderness",
+    "place_type": "wilderness",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "fjord landscapes",
+    "country": "New Zealand",
+    "display_name": "Milford Sound",
+    "place_slug": "milford-sound",
+    "place_type": "fjord",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "geothermal culture",
+    "country": "New Zealand",
+    "display_name": "Rotorua",
+    "place_slug": "rotorua",
+    "place_type": "geothermal_region",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "navigation and islands",
+    "country": "French Polynesia",
+    "display_name": "Raiatea",
+    "place_slug": "raiatea",
+    "place_type": "island",
+    "public_domain_potential": "medium",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "marine conservation",
+    "country": "United States",
+    "display_name": "Papahanaumokuakea",
+    "place_slug": "papahanaumokuakea",
+    "place_type": "marine_protected_area",
+    "public_domain_potential": "high",
+    "region": "Oceania",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ice and climate",
+    "country": "International",
+    "display_name": "Antarctica",
+    "place_slug": "antarctica",
+    "place_type": "continent",
+    "public_domain_potential": "medium",
+    "region": "Antarctica",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "noaa",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "polar ice",
+    "country": "Antarctica",
+    "display_name": "Ross Ice Shelf",
+    "place_slug": "ross-ice-shelf",
+    "place_type": "ice_shelf",
+    "public_domain_potential": "high",
+    "region": "Antarctica",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "noaa",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "polar wildlife",
+    "country": "South Georgia and the South Sandwich Islands",
+    "display_name": "South Georgia",
+    "place_slug": "south-georgia",
+    "place_type": "island",
+    "public_domain_potential": "medium",
+    "region": "Subantarctic",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ice and climate",
+    "country": "Greenland",
+    "display_name": "Greenland Ice Sheet",
+    "place_slug": "greenland-ice-sheet",
+    "place_type": "ice_sheet",
+    "public_domain_potential": "high",
+    "region": "Arctic",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "noaa",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "arctic ecology",
+    "country": "Norway",
+    "display_name": "Svalbard",
+    "place_slug": "svalbard",
+    "place_type": "archipelago",
+    "public_domain_potential": "medium",
+    "region": "Arctic",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "noaa",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "polar exploration",
+    "country": "Canada",
+    "display_name": "Northwest Passage",
+    "place_slug": "northwest-passage",
+    "place_type": "sea_route",
+    "public_domain_potential": "medium",
+    "region": "Arctic",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "noaa",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "deep ocean",
+    "country": "Pacific Ocean",
+    "display_name": "Mariana Trench",
+    "place_slug": "mariana-trench",
+    "place_type": "ocean_trench",
+    "public_domain_potential": "high",
+    "region": "Oceans",
+    "risk_level": "medium",
+    "source_hints": [
+      "noaa",
+      "nasa",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ocean geology",
+    "country": "Atlantic Ocean",
+    "display_name": "Mid-Atlantic Ridge",
+    "place_slug": "mid-atlantic-ridge",
+    "place_type": "ocean_ridge",
+    "public_domain_potential": "high",
+    "region": "Oceans",
+    "risk_level": "medium",
+    "source_hints": [
+      "noaa",
+      "nasa",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ocean ecology",
+    "country": "Atlantic Ocean",
+    "display_name": "Sargasso Sea",
+    "place_slug": "sargasso-sea",
+    "place_type": "sea",
+    "public_domain_potential": "medium",
+    "region": "Oceans",
+    "risk_level": "medium",
+    "source_hints": [
+      "noaa",
+      "nasa",
+      "gbif"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "spaceflight launch landscapes",
+    "country": "United States",
+    "display_name": "Cape Canaveral",
+    "place_slug": "cape-canaveral",
+    "place_type": "spaceport",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nasa",
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "spaceflight infrastructure",
+    "country": "United States",
+    "display_name": "Kennedy Space Center",
+    "place_slug": "kennedy-space-center",
+    "place_type": "space_center",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nasa",
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "astronomy and sacred mountain",
+    "country": "United States",
+    "display_name": "Mauna Kea",
+    "place_slug": "mauna-kea",
+    "place_type": "mountain",
+    "public_domain_potential": "high",
+    "region": "Oceania",
+    "risk_level": "high",
+    "source_hints": [
+      "nasa",
+      "gbif",
+      "ala"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "radio astronomy",
+    "country": "United States",
+    "display_name": "Very Large Array",
+    "place_slug": "very-large-array",
+    "place_type": "observatory",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "medium",
+    "source_hints": [
+      "nasa",
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "cave art",
+    "country": "France",
+    "display_name": "Lascaux",
+    "place_slug": "lascaux",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "cave art",
+    "country": "Spain",
+    "display_name": "Altamira",
+    "place_slug": "altamira",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Europe",
+    "risk_level": "medium",
+    "source_hints": [
+      "europeana",
+      "gallica",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ancient monuments",
+    "country": "Egypt",
+    "display_name": "Giza",
+    "place_slug": "giza",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ancient river cities",
+    "country": "Egypt",
+    "display_name": "Luxor",
+    "place_slug": "luxor",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "medium",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "manuscript cities",
+    "country": "Mali",
+    "display_name": "Timbuktu",
+    "place_slug": "timbuktu",
+    "place_type": "city",
+    "public_domain_potential": "medium",
+    "region": "Africa",
+    "risk_level": "high",
+    "source_hints": [
+      "gbif",
+      "bhl",
+      "wikimedia"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "ancestral pueblos",
+    "country": "United States",
+    "display_name": "Chaco Canyon",
+    "place_slug": "chaco-canyon",
+    "place_type": "archaeological_site",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "high",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "cliff dwellings",
+    "country": "United States",
+    "display_name": "Mesa Verde",
+    "place_slug": "mesa-verde",
+    "place_type": "national_park",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "high",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "migration and harbor imagery",
+    "country": "United States",
+    "display_name": "New York Harbor",
+    "place_slug": "new-york-harbor",
+    "place_type": "harbor",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "urban ecology and bridges",
+    "country": "United States",
+    "display_name": "San Francisco Bay",
+    "place_slug": "san-francisco-bay",
+    "place_type": "bay",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  },
+  {
+    "authority_status": "unverified",
+    "candidate_status": "candidate",
+    "collection_theme": "estuary ecology",
+    "country": "United States",
+    "display_name": "Chesapeake Bay",
+    "place_slug": "chesapeake-bay",
+    "place_type": "bay",
+    "public_domain_potential": "high",
+    "region": "North America",
+    "risk_level": "low",
+    "source_hints": [
+      "nara",
+      "loc",
+      "usgs"
+    ]
+  }
+]

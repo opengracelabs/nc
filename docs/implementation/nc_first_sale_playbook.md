@@ -63,6 +63,12 @@ A 4-step flow designed to maintain the "Museum-Quality" feel.
 *   **CTA:** "Discover the Collection."
 
 ### **Email 3: The Story (Launch + 24 Hours)**
+
+> ⚠ **HELD INDEFINITELY — DO NOT SEND.**
+> Thomas Moran *Grand Canyon of the Yellowstone* is a deferred asset (DD-SMITHSONIAN-001 required).
+> This email must not be sent until Moran Collection is formally product-activated.
+> Superseded by NC-WEB-001-LA (2026-06-12), §IV.3 (FS-002).
+
 *   **Subject:** Why Yellowstone?
 *   **Visual:** Thomas Moran's *Grand Canyon of the Yellowstone*.
 *   **Copy:** "Explore the art that convinced a nation to save its wilderness. Discover the intelligence behind the National Park idea."

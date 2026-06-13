@@ -1,0 +1,187 @@
+{
+  "source_list": "factory_smoke_assets",
+  "records": [
+    {
+      "source_system": "Europeana",
+      "source_record_id": "EU-ALHAMBRA-001",
+      "title": "Alhambra courtyard photograph",
+      "source_url": "https://www.europeana.eu/item/eu-alhambra-001",
+      "asset_url": "https://example.org/europeana/alhambra.jpg",
+      "thumbnail_url": "https://example.org/europeana/alhambra-thumb.jpg",
+      "iiif_manifest_url": "https://example.org/europeana/alhambra/manifest",
+      "rights_status": "verified_pd",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "place_slug": "alhambra",
+      "media_type": "image",
+      "width_px": 4200,
+      "height_px": 3200,
+      "collection_hints": [
+        "alhambra"
+      ],
+      "theme_hints": [
+        "architecture",
+        "water"
+      ],
+      "product_hints": [
+        "fine_art_print",
+        "framed_print",
+        "digital_download"
+      ]
+    },
+    {
+      "source_system": "Smithsonian",
+      "source_record_id": "SI-YELLOWSTONE-MORAN",
+      "title": "Yellowstone landscape study",
+      "creator": "Thomas Moran",
+      "source_url": "https://www.si.edu/object/yellowstone-moran",
+      "asset_url": "https://example.org/si/yellowstone.jpg",
+      "thumbnail_url": "https://example.org/si/yellowstone-thumb.jpg",
+      "rights_status": "open_access",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "place_slug": "yellowstone",
+      "media_type": "illustration",
+      "width_px": 5000,
+      "height_px": 3600,
+      "collection_hints": [
+        "yellowstone"
+      ],
+      "theme_hints": [
+        "landscape",
+        "geology"
+      ]
+    },
+    {
+      "source_system": "Rijksmuseum",
+      "source_record_id": "RP-YOSEMITE-001",
+      "title": "Yosemite valley print",
+      "source_url": "https://www.rijksmuseum.nl/en/collection/RP-YOSEMITE-001",
+      "asset_url": "https://example.org/rijks/yosemite.jpg",
+      "iiif_manifest_url": "https://example.org/rijks/yosemite/manifest",
+      "rights_status": "verified_pd",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "place_slug": "yosemite",
+      "media_type": "image",
+      "width_px": 3600,
+      "height_px": 3600,
+      "collection_hints": [
+        "yosemite"
+      ],
+      "product_hints": [
+        "fine_art_print",
+        "postcard",
+        "calendar"
+      ]
+    },
+    {
+      "source_system": "NHM",
+      "source_record_id": "NHM-BOT-001",
+      "title": "Botanical specimen sheet",
+      "source_url": "https://data.nhm.ac.uk/object/NHM-BOT-001",
+      "asset_url": "https://example.org/nhm/botany.jpg",
+      "rights_status": "verified_cc0",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "place_slug": "global",
+      "media_type": "specimen",
+      "width_px": 2800,
+      "height_px": 3600,
+      "collection_hints": [
+        "natural-history"
+      ],
+      "species_hints": [
+        "Plantae"
+      ],
+      "theme_hints": [
+        "botany"
+      ]
+    },
+    {
+      "source_system": "BHL",
+      "source_record_id": "BHL-PAGE-56",
+      "title": "American bison plate",
+      "creator": "John James Audubon",
+      "date": "1845",
+      "source_url": "https://www.biodiversitylibrary.org/page/56",
+      "asset_url": "https://www.biodiversitylibrary.org/pageimage/56",
+      "thumbnail_url": "https://example.org/bhl/bison-thumb.jpg",
+      "rights_status": "verified_pd",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "place_slug": "yellowstone",
+      "media_type": "book_page",
+      "width_px": 3000,
+      "height_px": 4200,
+      "collection_hints": [
+        "yellowstone",
+        "biodiversity-library"
+      ],
+      "species_hints": [
+        "Bison bison"
+      ],
+      "theme_hints": [
+        "wildlife"
+      ]
+    },
+    {
+      "source_system": "NASA",
+      "source_record_id": "AS08-14-2383",
+      "title": "Earthrise",
+      "creator": "William Anders",
+      "date": "1968-12-24",
+      "source_url": "https://www.nasa.gov/image-article/apollo-8-earthrise/",
+      "asset_url": "/images/earthrise-as08-14-2383.jpg",
+      "thumbnail_url": "/images/earthrise-as08-14-2383.jpg",
+      "iiif_manifest_url": "https://images-assets.nasa.gov/image/AS08-14-2383/manifest.json",
+      "rights_status": "verified_pd",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "place_slug": "earthrise",
+      "media_type": "satellite",
+      "width_px": 6000,
+      "height_px": 6000,
+      "collection_hints": [
+        "earthrise"
+      ],
+      "theme_hints": [
+        "space",
+        "planetary"
+      ]
+    },
+    {
+      "source_system": "NOAA",
+      "source_record_id": "NOAA-REEF-TEMP-001",
+      "title": "Coral reef temperature map",
+      "source_url": "https://www.noaa.gov/reef-temp-001",
+      "asset_url": "https://example.org/noaa/reef-temp.png",
+      "rights_status": "source_observed",
+      "rights_statement_uri": "",
+      "place_slug": "great-barrier-reef",
+      "media_type": "map",
+      "width_px": 2200,
+      "height_px": 1800,
+      "collection_hints": [
+        "great-barrier-reef"
+      ],
+      "theme_hints": [
+        "ocean",
+        "climate"
+      ]
+    },
+    {
+      "source_system": "NARA",
+      "source_record_id": "NARA-GRAND-CANYON-001",
+      "title": "Grand Canyon expedition photograph",
+      "source_url": "https://catalog.archives.gov/id/NARA-GRAND-CANYON-001",
+      "asset_url": "https://example.org/nara/grand-canyon.jpg",
+      "rights_status": "pending_verification",
+      "rights_statement_uri": "",
+      "place_slug": "grand-canyon",
+      "media_type": "image",
+      "width_px": 2400,
+      "height_px": 1800,
+      "collection_hints": [
+        "grand-canyon"
+      ],
+      "theme_hints": [
+        "expedition"
+      ]
+    }
+  ]
+}

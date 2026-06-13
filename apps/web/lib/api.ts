@@ -1,4 +1,5 @@
 import { earthriseProducts, placeTeasers, type ProductSummary } from "./governed-content";
+import { fallbackGraphJourney, type GraphJourney } from "./graph";
 
 const apiBaseUrl = process.env.NC_API_BASE_URL;
 const apiToken = process.env.NC_API_TOKEN;
@@ -89,4 +90,9 @@ export async function getReviewedPageGeneration(
     return null;
   }
   return page;
+}
+
+export async function getGraphJourney(slug: string): Promise<GraphJourney> {
+  const journey = await getJson<GraphJourney>(`/graph/journey/${slug}`);
+  return journey ?? fallbackGraphJourney;
 }
