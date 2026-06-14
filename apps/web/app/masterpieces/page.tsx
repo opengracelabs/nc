@@ -21,6 +21,7 @@ export default function MasterpiecesPage() {
             readiness, collection fit, and edition potential.
           </p>
           <div className="button-row">
+            <Link className="button" href="/masterpieces/activation">Activation dashboard</Link>
             <Link className="button" href="/masterpieces/top-100">View top 100</Link>
             <Link className="button secondary-button" href={`/masterpieces/${lead.slug}`}>Top masterpiece</Link>
           </div>

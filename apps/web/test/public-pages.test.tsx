@@ -10,11 +10,18 @@ import InstitutionFactoryPage from "@/app/institutions/factory/page";
 import MasterpieceDetailPage from "@/app/masterpieces/[slug]/page";
 import MasterpiecesPage from "@/app/masterpieces/page";
 import Top100MasterpiecesPage from "@/app/masterpieces/top-100/page";
+import MasterpieceActivationPage from "@/app/masterpieces/activation/page";
 import InstitutionProfilePage from "@/app/institutions/[slug]/page";
 import InstitutionsPage from "@/app/institutions/page";
 import SignatureCollectionHubPage from "@/app/signature/page";
 import HomePage from "@/app/page";
 import CollectionsPage from "@/app/collections/page";
+import CollectionFactoryPage from "@/app/collections/factory/page";
+import CanonPage from "@/app/canon/page";
+import CanonTop100Page from "@/app/canon/top-100/page";
+import CanonExtinctionPage from "@/app/canon/extinction/page";
+import CanonExplorationPage from "@/app/canon/exploration/page";
+import CanonPlanetaryPage from "@/app/canon/planetary/page";
 import DiscoverPage from "@/app/discover/page";
 import DiscoverGraphPage from "@/app/discover/graph/page";
 import PlaceFactoryDashboardPage from "@/app/place-factory/page";
@@ -259,6 +266,44 @@ describe("NC-WEB-001 public pages", () => {
   });
 
 
+  test("Canon Runtime renders requested canon routes", () => {
+    const indexHtml = renderToStaticMarkup(<CanonPage />);
+    const topHtml = renderToStaticMarkup(<CanonTop100Page />);
+    const extinctionHtml = renderToStaticMarkup(<CanonExtinctionPage />);
+    const explorationHtml = renderToStaticMarkup(<CanonExplorationPage />);
+    const planetaryHtml = renderToStaticMarkup(<CanonPlanetaryPage />);
+
+    expect(indexHtml).toContain("Canon Runtime");
+    expect(indexHtml).toContain("Masterpiece Registry");
+    expect(indexHtml).toContain("Extinction Archive");
+    expect(topHtml).toContain("Canon Top 100");
+    expect(topHtml).toContain("Earthrise");
+    expect(extinctionHtml).toContain("Extinction Archive");
+    expect(extinctionHtml).toContain("Bison bison range plate");
+    expect(explorationHtml).toContain("Exploration");
+    expect(explorationHtml).toContain("Acanthaster planci plate");
+    expect(planetaryHtml).toContain("Planetary");
+    expect(planetaryHtml).toContain("Earthrise");
+  });
+
+
+  test("Masterpiece Activation Dashboard renders Top 25 activation columns", () => {
+    const html = renderToStaticMarkup(<MasterpieceActivationPage />);
+
+    expect(html).toContain("NC-MASTERPIECES-002");
+    expect(html).toContain("Masterpiece Dashboard");
+    expect(html).toContain("Top 25");
+    expect(html).toContain("Readiness");
+    expect(html).toContain("Institution");
+    expect(html).toContain("Collection");
+    expect(html).toContain("Rights");
+    expect(html).toContain("Commerce");
+    expect(html).toContain("Radiolaria");
+    expect(html).toContain("Biodiversity Heritage Library");
+    expect(html).toContain("Museum Giclee + Digital");
+  });
+
+
   test("Institution Factory dashboard renders candidate-only institution runtime", () => {
     const html = renderToStaticMarkup(<InstitutionFactoryPage />);
 
@@ -338,6 +383,30 @@ describe("NC-WEB-001 public pages", () => {
     expect(indexHtml).toContain("Product Review");
     expect(indexHtml).toContain("Graph Ready");
   });
+
+  test("Collection Factory v2 renders scale runtime outputs", () => {
+    const html = renderToStaticMarkup(<CollectionFactoryPage />);
+
+    expect(html).toContain("NC-SCALE-001");
+    expect(html).toContain("Collection Factory v2");
+    expect(html).toContain("Collection Factory Runtime");
+    expect(html).toContain("Smithsonian Open Access");
+    expect(html).toContain("Europeana");
+    expect(html).toContain("Google Arts &amp; Culture");
+    expect(html).toContain("GBIF");
+    expect(html).toContain("BHL");
+    expect(html).toContain("collection_candidates");
+    expect(html).toContain("collection_readiness");
+    expect(html).toContain("collection_activation");
+    expect(html).toContain("collection_family_registry");
+    expect(html).toContain("places");
+    expect(html).toContain("institutions");
+    expect(html).toContain("assets");
+    expect(html).toContain("taxa");
+    expect(html).toContain("collections");
+    expect(html).toContain("masterpieces");
+  });
+
 
   test("Collection family page renders readiness indicators", async () => {
     const page = await CollectionFamilyPage({

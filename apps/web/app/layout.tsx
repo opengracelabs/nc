@@ -21,6 +21,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav aria-label="Primary navigation">
             <Link href="/collections">Collections</Link>
+            <Link href="/collections/factory">Collection Factory</Link>
+            <Link href="/canon">Canon</Link>
             <Link href="/masterpieces">Masterpieces</Link>
             <Link href="/signature">Signature</Link>
             <Link href="/institution">Institution</Link>
